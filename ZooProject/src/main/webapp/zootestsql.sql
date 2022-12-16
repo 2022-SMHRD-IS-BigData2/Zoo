@@ -11,3 +11,4 @@ values('이우철','student');
 
 
 select *from zoo_member
+select *from TBL_CUSTOMER
