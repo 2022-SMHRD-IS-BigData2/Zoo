@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor // 기본생성자 생성
 
-public class Member {
+public class ZooMember {
 	
 private	String cust_id =  "";
 private	String cust_pw =  "";

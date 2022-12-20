@@ -12,37 +12,24 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-import com.zoo.controller.Controller;
+import com.zoo.controller.ZooController;
 
-
+/**
+ * Servlet implementation class FrontController
+ */
 @WebServlet("*.do")
-public class FrontController extends HttpServlet {
+public class ZooFrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	// HashMap : dict,key - value 형태로 데이터를 저장하고 조회하는 자료구조
-	// HashMap<K,V>
-	// K : Key값의 자료형
-	// V : Value의 자료형
-	private HashMap<String,Controller> handlerMapping;
 	
-	
-	
+	private HashMap<String,ZooController> handlerMapping;
 	
 	public void init(ServletConfig config) throws ServletException {
+	
+		System.out.println("Selvlet 실행");
 		
-				// Servlet은 요청을 받아야 객체 생성이 이루어진다.
-				// Servlet이 생성될 때 실행되는 메소드
-				// 최대 1번까지만 실행 된다.
-				System.out.println("Selvlet 실행");
-				
-				// 새로운 HashMap 생성
-				handlerMapping = new HashMap<>();
-				
-				// .put(Key, Value)
-			
-				// 예시 handlerMapping.put("/goMain.do", new GomainCon());
-		
-		
+		// 새로운 HashMap 생성
+		handlerMapping = new HashMap<>();
 		
 		
 		
@@ -52,8 +39,8 @@ public class FrontController extends HttpServlet {
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+				// 1. UrlMapping 확인
 		
-		// 1. UrlMapping 확인
 				// 전체 주소 : FrontController/join.do
 				String uri = request.getRequestURI();
 				
@@ -75,10 +62,12 @@ public class FrontController extends HttpServlet {
 				
 				String nextPage = null;
 				// Controller Interface로 업캐스팅해서 모든 Con들을 담아줄 수 있게 만듦
-				Controller con = null;
+				ZooController con = null;
 				
 				// 요청에 맞는 POJO 꺼내기
 				con = handlerMapping.get(mapping);
+				
+				
 				
 				
 
@@ -103,18 +92,13 @@ public class FrontController extends HttpServlet {
 						RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/views/"+nextPage+".jsp");
 						rd.forward(request, response);
 					}
-				}
-				
-				
 		
 		
-		
-		
-		
-		
-		
-		
-		
+	
+	
+	
+	
 	}
 
+	}
 }
