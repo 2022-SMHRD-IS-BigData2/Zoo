@@ -5,14 +5,16 @@
 
 
 <insert id="join" parameterType="com.zoo.entity.ZooMember">
-	insert into msg_member
+	insert into tbl_customer
 	values(
 	#{cust_id},
 	#{cust_pw},
 	#{cust_name},
 	#{cust_addr},
 	#{cust_tel},
-	#{cust_joindate} <!-- 여기 부분 생각해 봐야한다. -->
+	current_date,
+	0 
+	<!-- 여기 부분 생각해 봐야한다. -->
 	)
 </insert>
 

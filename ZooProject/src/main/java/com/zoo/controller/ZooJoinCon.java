@@ -6,9 +6,10 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 import com.zoo.dao.ZooMemberDAO;
 import com.zoo.entity.ZooMember;
+
+
 
 public class ZooJoinCon implements ZooController {
 
@@ -16,25 +17,27 @@ public class ZooJoinCon implements ZooController {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-			//pojo (단순한 자바 객체)
+		
+		//pojo (단순한 자바 객체)
 				String nextPage = null;
 				// 0. 인코딩
 				request.setCharacterEncoding("UTF-8");
 				// 1. 파라미터(데이터) 수집
-				String cust_id = request.getParameter("email");
-				String cust_pw = request.getParameter("pw");
-				String cust_name = request.getParameter("name");
-				String cust_addr = request.getParameter("addr");
-				String cust_tel = request.getParameter("tel");
+				String id = request.getParameter("id");
+				String pw = request.getParameter("pw");
+				String tel = request.getParameter("tel");
+				String nick = request.getParameter("nick");
+				String addr = request.getParameter("addr");
 				// 2. DTO로 묶기
 				ZooMember dto = new ZooMember();
-				dto.setCust_id(cust_id);
-				dto.setCust_pw(cust_pw);
-				dto.setCust_name(cust_name);
-				dto.setCust_addr(cust_addr);
-				dto.setCust_tel(cust_tel);
+				dto.setCust_id(id);
+				dto.setCust_pw(pw);
+				dto.setCust_name(nick);
+				dto.setCust_tel(tel);
+				dto.setCust_addr(addr);
 				// 3. DAO
 				ZooMemberDAO dao = new ZooMemberDAO();
+				
 				int cnt = dao.join(dto);
 				// 4. 성공실패 구분
 				nextPage = "";
@@ -45,10 +48,10 @@ public class ZooJoinCon implements ZooController {
 					nextPage = "redirect:/goSuccess.do";
 				} else {
 					System.out.println("회원가입 실패...!");
-					nextPage = "redirect:/goMain.do";
+					nextPage = "redirect:/ZooMain.do";
 				}
 				return nextPage;
-		
+			
 		
 	}
 

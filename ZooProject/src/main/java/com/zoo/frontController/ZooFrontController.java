@@ -13,6 +13,10 @@ import javax.servlet.http.HttpServletResponse;
 
 
 import com.zoo.controller.ZooController;
+import com.zoo.controller.ZooGoSuccessCon;
+import com.zoo.controller.ZooGomainCon;
+import com.zoo.controller.ZooJoinCon;
+
 
 /**
  * Servlet implementation class FrontController
@@ -30,6 +34,9 @@ public class ZooFrontController extends HttpServlet {
 		
 		// 새로운 HashMap 생성
 		handlerMapping = new HashMap<>();
+		handlerMapping.put("/ZooMain.do",new ZooGomainCon() );
+		handlerMapping.put("/join.do",new ZooJoinCon() );
+		handlerMapping.put("/goSuccess.do", new ZooGoSuccessCon());
 		
 		
 		

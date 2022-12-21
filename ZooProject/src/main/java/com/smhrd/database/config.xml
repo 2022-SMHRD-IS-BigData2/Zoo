@@ -34,6 +34,6 @@
    -->
   <mappers>
     
-    <mapper resource="com/zoo/dao/MemberMapper.xml"/>
+    <mapper resource="com/zoo/dao/ZooMemberMapper.xml"/>
   </mappers>
 </configuration>

@@ -16,10 +16,11 @@ public class ZooMemberDAO  {
 
 		
 		// SqlSessionFactory 받아오기
-		SqlSessionFactory sqlsessionFactory 
-					= SessionManager.getSqlSessionFactory();
+		SqlSessionFactory sqlsessionFactory = SessionManager.getSqlSessionFactory();
+	
 		
-		// 회원가입 메소드
+		
+		// 1. 회원가입 메소드
 		public int join(ZooMember dto) {
 		//1) Connection 빌려오기
 		SqlSession session = sqlsessionFactory.openSession(true); // true : commit의 역할

@@ -7,10 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>테스트 중 입니다.</h1>
 
+	<h1>회원가입 성공 후 페이지 입니다.</h1>
 
-<span>문승주 테스트입니다.123456</span>
 
 </body>
 </html>

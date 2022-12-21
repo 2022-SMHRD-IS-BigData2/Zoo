@@ -7,7 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div class="wrap">
+	<form action="">
+	 <div class="wrap">
+        <form action="success.do">
         <div class="login">
             <h2>회원 로그인</h2>
             <div class="login_sns">
@@ -21,6 +23,7 @@
             <div class="login_pw">
                 <input type="password" name="" id="" placeholder="비밀번호">
             </div>
+            
             <div class="login_etc">
                 <div class="checkbox">
                 <input type="checkbox" name="" id=""> 아이디 저장
@@ -31,6 +34,8 @@
                 <input type="submit" value="로그인">
             </div>
         </div>
+    </form>
     </div>
+    </form>
 </body>
 </html>
