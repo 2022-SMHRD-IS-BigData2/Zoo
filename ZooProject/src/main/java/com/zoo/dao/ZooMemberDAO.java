@@ -1,0 +1,39 @@
+package com.zoo.dao;
+
+
+
+
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+
+import com.smhrd.database.SessionManager;
+import com.zoo.entity.ZooMember;
+
+
+
+public class ZooMemberDAO  {
+
+		
+		// SqlSessionFactory 받아오기
+		SqlSessionFactory sqlsessionFactory 
+					= SessionManager.getSqlSessionFactory();
+		
+		// 회원가입 메소드
+		public int join(ZooMember dto) {
+		//1) Connection 빌려오기
+		SqlSession session = sqlsessionFactory.openSession(true); // true : commit의 역할
+		//2) SQL문 실행
+		int cnt = session.insert("join",dto);
+		//3) 빌린 Connection 반환
+		session.close();	
+		//4) 실행결과 리턴
+		return cnt;
+		
+		}
+		
+		
+		
+
+
+}
