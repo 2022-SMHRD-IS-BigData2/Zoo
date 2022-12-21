@@ -7,7 +7,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1> Git Test중입니다. </h1>
-<h1> Git Test1중입니다.1 </h1>
+
+
+
+
+
+
+<jsp:forward page="ZooMain.do"></jsp:forward>
+
+
+
+
 </body>
 </html>
