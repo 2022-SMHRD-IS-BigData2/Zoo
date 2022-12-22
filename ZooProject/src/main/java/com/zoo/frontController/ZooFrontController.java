@@ -18,6 +18,7 @@ import com.zoo.controller.ZooGoLoginCon;
 import com.zoo.controller.ZooGomainCon;
 import com.zoo.controller.ZooJoinCon;
 import com.zoo.controller.ZooLoginCon;
+import com.zoo.controller.ZooLogoutCon;
 
 
 /**
@@ -44,6 +45,7 @@ public class ZooFrontController extends HttpServlet {
 		//======================================
 		handlerMapping.put("/join.do",new ZooJoinCon() );
 		handlerMapping.put("/login.do", new ZooLoginCon());
+		handlerMapping.put("/logout.do", new ZooLogoutCon());
 		
 		
 		
