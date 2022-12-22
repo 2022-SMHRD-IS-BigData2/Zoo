@@ -1,0 +1,83 @@
+@charset "UTF-8";
+* {
+  margin: -7px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+.wrap {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, -0.9);
+}
+
+.join {
+  width: 450px;
+  height: 600px;
+  background: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h2 {
+  color: tomato;
+  font-size: 2em;
+
+}
+
+
+.join_id, .join_pw, .join_pw_ck, .join_phone, .join_nick, .join_address {
+  margin-top: 20px;
+  width: 80%;
+}
+
+.join_id input, .join_pw input, .join_pw_ck input, .join_phone input, .join_nick input, .join_address input {
+  width: 100%;
+  height: 50px;
+  border-radius: 30px;
+  margin-top: -1px;
+  padding: 0px 20px;
+  border: 1px solid lightgray;
+  outline: none;
+}
+
+
+.btn_member_cancel, .btn_member_join {
+  border-radius: 40px;
+  width: 172px;
+  height: 50px;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  margin-inline: 6px;
+}
+#btnCancel{
+  border-color: rgb(255, 77, 46);
+  background: white;
+  color :rgb(255, 77, 46);
+}
+#btnJoin{
+  color: white;
+  border: 0;
+  background: linear-gradient(to left, rgb(255, 77, 46), rgb(255, 155, 47));
+}
+
+
+
+
