@@ -160,7 +160,7 @@ In-Demand Professions, ​Top ten most popular courses for international student
 </div>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">인기상품</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">공지사항</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="donationPage.html">기부</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="godonation.do">기부</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">ABOUT - 나누민족</a>
 </li></ul>
               </div>
