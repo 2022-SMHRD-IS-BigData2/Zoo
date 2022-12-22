@@ -255,7 +255,7 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
         </nav>
-        <a href="mainPage.html" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200" title="메인페이지">
+        <a href="gomainpage.do" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200" title="메인페이지">
           <img src="images/logo.png" class="u-logo-image u-logo-image-1">
         </a>
         <p class="u-align-left u-text u-text-1">
