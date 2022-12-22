@@ -61,15 +61,15 @@ In-Demand Professions, ​Top ten most popular courses for international student
           <%if(user==null){ %>
         <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gologin.do">로그인</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gojoin.do">회원가입</a><%}else{ %>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="마이페이지"><%=user.getCust_name() %></a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gomyPageform.do"><%=user.getCust_name() %></a>
 
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="logout.do">로그아웃</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;">주문조회</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;">장바구니</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" href="myPage.html" style="padding: 14px 10px;">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">주문 내역</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" href="gomyPageform.do" style="padding: 14px 10px;">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">주문 내역</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">위시리스트</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">게시글</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">정보 수정</a><%} %>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white"href="gomemberUpdate.do">정보 수정</a><%} %>
 </li></ul>
 </div>
 </li></ul>
@@ -82,10 +82,10 @@ In-Demand Professions, ​Top ten most popular courses for international student
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" >회원가입</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">주문조회</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">장바구니</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="myPage.html">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link">주문 내역</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link">주문 내역</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">위시리스트</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">게시글</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">정보 수정</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" >정보 수정</a>
 </li></ul>
 </div>
 </li></ul>
@@ -829,7 +829,7 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
         </nav>
-        <a href="mainPage.html" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200" title="메인페이지">
+        <a href="gomainpage.do" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200" title="메인페이지">
           <img src="images/logo.png" class="u-logo-image u-logo-image-1">
         </a>
         <p class="u-align-left u-text u-text-1">
