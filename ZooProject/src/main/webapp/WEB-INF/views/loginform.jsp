@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <title>로그인</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="joinform.css" media="screen">
+<link rel="stylesheet" href="loginform.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 5.1.5, nicepage.com">
@@ -180,45 +180,32 @@
     <script src="https://kit.fontawesome.com/53a8c415f1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./login.css">
 </head>
-
-
-
-
-
-
 <body>
-  <form action="#">
     <div class="wrap">
-        <div class="join">
-            <h2>회원가입</h2>
-            <div class="join_id">
+        <div class="login">
+            <h2>회원 로그인</h2>
+            <div class="login_sns">
+            <li><a href="인스타.html"><i class="fab fa-instagram"></i></a></li>
+            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href=""><i class="fab fa-twitter"></i></a></li>
+            </div>
+            <div class="login_id">
                 <input type="id" name="" id="" placeholder="아이디">
             </div>
-            <div class="join_pw">
+            <div class="login_pw">
                 <input type="password" name="" id="" placeholder="비밀번호">
             </div>
-            <div class="join_pw_ck">
-              <input type="password_ck" name="" id="" placeholder="비밀번호 확인">
-          </div>
-            <div class="join_nick">
-            <input type="nick" name="" id="" placeholder="닉네임">
-           </div>
-            
-            <div class="join_address">
-            <input type="address" name="" id="" placeholder="주소">
-           </div>
-            <div class="join_phone">
-              <input type="phone" name="" id="" placeholder="휴대폰번호">
+            <div class="login_etc">
+                <div class="checkbox">
+                <input type="checkbox" name="" id=""> 아이디 저장
+                </div>
+                
             </div>
-            
-            <div class="info_box">
-              <button type="button" id="btnCancel" class="btn_member_cancel">취소</button>
-              <button type="button" id="btnJoin" class="btn_member_join">회원가입</button>
+            <div class="submit">
+                <input type="submit" value="로그인">
             </div>
-            
         </div>
     </div>
-  </form>
 </body>
 </html>
         

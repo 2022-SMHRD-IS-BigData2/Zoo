@@ -1,0 +1,113 @@
+@charset "UTF-8";
+.frame{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+* {
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  
+  .wrap {
+    width: 100%;
+    height: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+  }
+  
+  .update {
+    margin : 10%;
+    width: 1060px;
+    height: 500px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .usermodify-table, .usermodify-password th{
+    border-collapse: collapse;
+    font-weight: normal;
+    padding: 5px 6px 11px 0;
+    background-color: #fff;
+    white-space: nowrap;
+    width: 1%;
+    border-bottom: 0;
+    
+
+  }
+
+  .usermodify-table td {
+    border-left: 0px solid #ddd;
+    padding: 14px 30px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .usermodify-table th {
+    width: 100px;
+    background-color: #eef1f8;
+    text-align: left;
+    white-space: nowrap;
+    padding: 14px 30px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  input {
+    line-height: normal;
+    vertical-align: middle;
+    color: inherit;
+    font: inherit;
+    margin: 0px;
+}
+.usermodify-phone-current-number {
+    margin-right: 1em;
+}
+b, strong {
+    font-weight: bold;
+}
+
+
+.usermodify-password-submit, .usermodify-address-change, .usermodify-phone-change, .usermodify-nick-changenick-btn{
+    border-color: #bcbfc6;
+    color: #777;
+    background-color: #fafbf6;
+    background-image: linear-gradient(#fff,#f1f1f1);
+    font-size: 14px;
+}
+
+.usermodify-password th, .usermodify-password td{
+    background-color: white;
+    border-bottom: 0px solid #ddd;
+}
+  
+.btn_member_cancel{
+    border-color: #bcbfc6;
+    color: #777;
+    background-color: #fafbf6;
+    background-image: linear-gradient(#fff,#f1f1f1);
+    font-size: 20px;
+    margin-top: 30px;
+    margin-left: 350px;
+}
+
+.btn_member_out{
+    border-color: #898989;
+    color: #fff;
+    background-color: #a8a8a8;
+    font-size: 12px;
+    margin-left: 230px;
+
+}
+
+
+  
+  
+  
+  
+  
+  
+  
+  
