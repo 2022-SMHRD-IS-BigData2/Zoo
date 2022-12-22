@@ -7,10 +7,10 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <title>로그인</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="loginform.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <link rel="stylesheet" href="assets/css/nicepage.css" media="screen">
+<link rel="stylesheet" href="assets/css/loginform.css" media="screen">
+    <script class="u-script" type="text/javascript" src="assets/js/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="assets/js/nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 5.1.5, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     
@@ -181,6 +181,7 @@
     <link rel="stylesheet" href="./login.css">
 </head>
 <body>
+    <form action="login.do">
     <div class="wrap">
         <div class="login">
             <h2>회원 로그인</h2>
@@ -190,10 +191,10 @@
             <li><a href=""><i class="fab fa-twitter"></i></a></li>
             </div>
             <div class="login_id">
-                <input type="id" name="" id="" placeholder="아이디">
+                <input type="text" name="id" id="" placeholder="아이디">
             </div>
             <div class="login_pw">
-                <input type="password" name="" id="" placeholder="비밀번호">
+                <input type="text" name="pw" id="" placeholder="비밀번호">
             </div>
             <div class="login_etc">
                 <div class="checkbox">
@@ -206,6 +207,7 @@
             </div>
         </div>
     </div>
+    </form>
 </body>
 </html>
         

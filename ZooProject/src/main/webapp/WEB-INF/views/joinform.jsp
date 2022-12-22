@@ -7,10 +7,10 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <title>로그인</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="joinform.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <link rel="stylesheet" href="assets/css/nicepage.css" media="screen">
+<link rel="stylesheet" href="assets/css/joinform.css" media="screen">
+    <script class="u-script" type="text/javascript" src="assets/js/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="assets/js/nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 5.1.5, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     
@@ -187,33 +187,33 @@
 
 
 <body>
-  <form action="#">
+  <form action="join.do">
+  
     <div class="wrap">
         <div class="join">
             <h2>회원가입</h2>
             <div class="join_id">
-                <input type="id" name="" id="" placeholder="아이디">
+                <input type="text" name="id" id="" placeholder="아이디">
             </div>
             <div class="join_pw">
-                <input type="password" name="" id="" placeholder="비밀번호">
+                <input type="text" name="pw" id="" placeholder="비밀번호">
             </div>
-            <div class="join_pw_ck">
-              <input type="password_ck" name="" id="" placeholder="비밀번호 확인">
-          </div>
+            
             <div class="join_nick">
-            <input type="nick" name="" id="" placeholder="닉네임">
+            <input type="text" name="nick" id="" placeholder="닉네임">
            </div>
             
             <div class="join_address">
-            <input type="address" name="" id="" placeholder="주소">
+            <input type="text" name="addr" id="" placeholder="주소">
            </div>
             <div class="join_phone">
-              <input type="phone" name="" id="" placeholder="휴대폰번호">
+              <input type="text" name="tel" id="" placeholder="휴대폰번호">
             </div>
             
             <div class="info_box">
               <button type="button" id="btnCancel" class="btn_member_cancel">취소</button>
               <button type="button" id="btnJoin" class="btn_member_join">회원가입</button>
+              <input type="submit" value="전송">
             </div>
             
         </div>

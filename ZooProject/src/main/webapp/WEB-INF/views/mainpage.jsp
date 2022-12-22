@@ -1,3 +1,5 @@
+<%@page import="com.zoo.entity.ZooMember"%>
+<%@page import="java.lang.reflect.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -8,10 +10,10 @@
 In-Demand Professions, ​Top ten most popular courses for international students, ​What Is a Life Coach?, ​Leader in Executive Education, ​Flexible Distance Learning, ​Need Help?">
     <meta name="description" content="">
     <title>mainPage</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="mainPage.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <link rel="stylesheet" href="assets/css/nicepage.css" media="screen">
+<link rel="stylesheet" href="assets/css/mainPage.css" media="screen">
+    <script class="u-script" type="text/javascript" src="assets/js/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="assets/js/nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 5.1.5, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     
@@ -40,6 +42,12 @@ In-Demand Professions, ​Top ten most popular courses for international student
     <meta property="og:title" content="mainPage">
     <meta property="og:type" content="website">
   </head>
+  <%	
+  ZooMember user = (ZooMember)session.getAttribute("user");
+  		
+  %>
+  
+  
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><div class="u-clearfix u-sheet u-sheet-1">
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
@@ -50,14 +58,15 @@ In-Demand Professions, ​Top ten most popular courses for international student
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;">로그인</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;">회원가입</a>
+          <%if(user==null){ %>
+        <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gologin.do">로그인</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gojoin.do">회원가입</a><%}else{ %>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;">주문조회</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;">장바구니</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" href="myPage.html" style="padding: 14px 10px;">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">주문 내역</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">위시리스트</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">게시글</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">정보 수정</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">정보 수정</a><%} %>
 </li></ul>
 </div>
 </li></ul>
@@ -67,7 +76,7 @@ In-Demand Professions, ​Top ten most popular courses for international student
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
                 <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-3"><li class="u-nav-item"><a class="u-button-style u-nav-link">로그인</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">회원가입</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" >회원가입</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">주문조회</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">장바구니</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="myPage.html">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link">주문 내역</a>

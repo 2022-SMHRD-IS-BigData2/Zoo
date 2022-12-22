@@ -45,7 +45,7 @@ public class ZooJoinCon implements ZooController {
 					System.out.println("회원가입 성공");
 					// 이미 이동하는 컨트롤러가 있는 경우, 컨트롤러로 이동시키자.
 					// redirect를 하는 경우, 앞에 redirect:/ 를 붙이기로 약속
-					nextPage = "redirect:/goSuccess.do";
+					nextPage = "redirect:/gomainpage.do";
 				} else {
 					System.out.println("회원가입 실패...!");
 					nextPage = "redirect:/ZooMain.do";

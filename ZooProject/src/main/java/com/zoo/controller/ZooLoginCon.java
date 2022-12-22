@@ -31,7 +31,7 @@ public class ZooLoginCon implements ZooController {
 		
 		if(result ==null) {
 			System.out.println("로그인 실패");
-			nextPage = "redirect:/goZooMain.do";
+//			nextPage = "redirect:/goZooMain.do";
 		}else {
 			System.out.println("로그인 성공");
 			
@@ -39,7 +39,7 @@ public class ZooLoginCon implements ZooController {
 			HttpSession session = request.getSession();
 			session.setAttribute("user",result);
 		
-			nextPage = "redirect:/goAfterLogin.do";
+			nextPage = "redirect:/gomainpage.do";
 		}
 		
 
