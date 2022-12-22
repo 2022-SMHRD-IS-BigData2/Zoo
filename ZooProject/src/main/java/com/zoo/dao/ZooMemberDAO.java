@@ -33,6 +33,14 @@ public class ZooMemberDAO  {
 		
 		}
 		
+		// 2. 로그인 메소드
+		public ZooMember login(ZooMember dto) {
+			SqlSession session = sqlsessionFactory.openSession(true);
+			ZooMember result = session.selectOne("login", dto);
+			session.close();
+			return result;
+		}
+		
 		
 		
 

@@ -18,6 +18,14 @@
 	)
 </insert>
 
+<select id="login" parameterType="com.zoo.entity.ZooMember"
+resultType="com.zoo.entity.ZooMember">
+select*from tbl_customer
+where cust_id = #{cust_id}
+and cust_pw = #{cust_pw}
+
+</select>
+
 
 
 
