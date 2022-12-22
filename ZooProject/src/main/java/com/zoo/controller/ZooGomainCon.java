@@ -13,7 +13,7 @@ public class ZooGomainCon implements ZooController {
 			throws ServletException, IOException {
 		
 		// 다음 페이지가 어디인가를 리턴
-		return "ZooMain";
+		return "mainpage";
 	}
 
 }

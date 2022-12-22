@@ -13,7 +13,7 @@
 
 
 
-<jsp:forward page="goZooMain.do"></jsp:forward>
+<jsp:forward page="gomainpage.do"></jsp:forward>
 
 
 

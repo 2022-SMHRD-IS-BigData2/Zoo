@@ -36,7 +36,7 @@ public class ZooFrontController extends HttpServlet {
 		
 		// 새로운 HashMap 생성
 		handlerMapping = new HashMap<>();
-		handlerMapping.put("/goZooMain.do",new ZooGomainCon() );
+		handlerMapping.put("/gomainpage.do",new ZooGomainCon() );
 		handlerMapping.put("/goSuccess.do", new ZooGoSuccessCon());
 		handlerMapping.put("/goAfterLogin.do", new ZooGoAfterLogin());
 		//======================================
