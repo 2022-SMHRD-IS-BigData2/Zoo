@@ -1,21 +1,20 @@
-<%@page import="com.zoo.entity.ZooMember"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="en"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="">
+    <meta name="keywords" content="​Need Help?">
     <meta name="description" content="">
-    <title>myPage</title>
+    <title>wishListPage</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="myPage.css" media="screen">
+<link rel="stylesheet" href="wishListPage.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 5.1.5, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" >   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" >  
     
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
@@ -31,12 +30,11 @@
     <meta name="theme-color" content="#478ac9">
     <meta name="twitter:site" content="@">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="myPage">
+    <meta name="twitter:title" content="wishListPage">
     <meta name="twitter:description" content="Site1">
-    <meta property="og:title" content="myPage">
+    <meta property="og:title" content="wishListPage">
     <meta property="og:type" content="website">
   </head>
-  <%ZooMember user =(ZooMember)session.getAttribute("user"); %>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><div class="u-clearfix u-sheet u-sheet-1">
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
@@ -47,18 +45,14 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-          <%if(user==null){ %>
-        <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gologin.do">로그인</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gojoin.do">회원가입</a><%}else{ %>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gomyPageform.do"><%=user.getCust_name() %></a>
-
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="logout.do">로그아웃</a>
+            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;">로그인</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;">회원가입</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;">주문조회</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;">장바구니</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" href="gomyPageform.do" style="padding: 14px 10px;">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">주문 내역</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">위시리스트</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" href="myPage.html" style="padding: 14px 10px;">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">주문 내역</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="wishListPage.html">위시리스트</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">게시글</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white"href="gomemberUpdate.do">정보 수정</a><%} %>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">정보 수정</a>
 </li></ul>
 </div>
 </li></ul>
@@ -68,13 +62,13 @@
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
                 <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-3"><li class="u-nav-item"><a class="u-button-style u-nav-link">로그인</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" >회원가입</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link">회원가입</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">주문조회</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">장바구니</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link">주문 내역</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">위시리스트</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="myPage.html">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link">주문 내역</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="wishListPage.html">위시리스트</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">게시글</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" >정보 수정</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link">정보 수정</a>
 </li></ul>
 </div>
 </li></ul>
@@ -92,8 +86,8 @@
           </button>
           <input class="u-search-input" type="search" name="search" value="" placeholder="Search">
         </form>
-        <a href="gomainpage.do" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200" title="메인페이지">
-          <img src="images/logo.png" class="u-logo-image u-logo-image-1" >
+        <a href="mainPage.html" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200" title="메인페이지">
+          <img src="images/logo.png" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-2">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 700; text-transform: uppercase;">
@@ -104,7 +98,7 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-spacing-30 u-unstyled u-nav-5"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">상품 카테고리</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do">🍴 식품</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">농산물</a>
+            <ul class="u-nav u-spacing-30 u-unstyled u-nav-5"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">상품 카테고리</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="foodPage.html">🍴 식품</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">농산물</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">축산물</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">수산물</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">떡·쿠키·간식</a>
@@ -131,7 +125,7 @@
 </div>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">인기상품</a>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">공지사항</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="godonation.do" style="padding: 10px 48px;">기부</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="donationPage.html" style="padding: 10px 48px;">기부</a>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">ABOUT - 나누민족</a>
 </li></ul>
           </div>
@@ -139,7 +133,7 @@
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-9"><li class="u-nav-item"><a class="u-button-style u-nav-link">상품 카테고리</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="">🍴 식품</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link">농산물</a>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-9"><li class="u-nav-item"><a class="u-button-style u-nav-link">상품 카테고리</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="foodPage.html">🍴 식품</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link">농산물</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">축산물</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">수산물</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">떡·쿠키·간식</a>
@@ -166,7 +160,7 @@
 </div>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">인기상품</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">공지사항</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="">기부</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="donationPage.html">기부</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">ABOUT - 나누민족</a>
 </li></ul>
               </div>
@@ -174,10 +168,10 @@
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
         </nav>
-      </div></header>
-    <section class="u-clearfix u-section-1" id="sec-5a6f">
+      </div></header> 
+    <section class="u-clearfix u-section-1" id="sec-1dbb">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h3 class="u-align-center u-text u-text-1">마이 페이지</h3>
+        <h3 class="u-align-center u-text u-text-1">위시 리스트</h3>
         <div class="u-border-2 u-border-grey-50 u-container-style u-group u-group-1">
           <div class="u-container-layout u-container-layout-1">
             <div class="u-border-1 u-border-grey-50 u-line u-line-vertical u-line-1"></div>
@@ -195,7 +189,7 @@
             <div class="u-container-style u-group u-shape-rectangle u-group-3">
               <div class="u-container-layout u-container-layout-3"><span class="u-align-left u-file-icon u-icon u-icon-2"><img src="images/user.png" alt=""></span>
                 <p class="u-align-center u-text u-text-3">
-                  <span style="font-size: 1.5rem;"><b>안​녕하세요 <%=user.getCust_name() %> 님!</b>
+                  <span style="font-size: 1.5rem;"><b>안​녕하세요 smart 님!</b>
                   </span>
                   <br>
                   <span style="font-size: 1.125rem;">고객님의 회원등급은 <span style="font-weight: 700;">SILVER</span>
@@ -231,7 +225,7 @@
         </div>
       </div>
     </section>
-    <section class="u-clearfix u-section-2" id="sec-e441">
+    <section class="u-clearfix u-section-2" id="sec-9301">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
           <div class="u-layout">
@@ -243,7 +237,9 @@
                   <p class="u-text u-text-grey-70 u-text-3">적립금 내역</p>
                   <p class="u-text u-text-grey-70 u-text-4">쿠폰 내역</p>
                   <p class="u-text u-text-5">활동 정보</p>
-                  <p class="u-text u-text-grey-70 u-text-6">나의 위시리스트</p>
+                  <p class="u-text u-text-grey-70 u-text-6">
+                    <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="wishListPage.html">나의 위시리스트</a>
+                  </p>
                   <p class="u-text u-text-grey-70 u-text-7">나의 게시글</p>
                   <p class="u-text u-text-8">나의 정보</p>
                   <p class="u-text u-text-grey-70 u-text-9">회원 정보 수정</p>
@@ -252,11 +248,11 @@
               </div>
               <div class="u-container-style u-layout-cell u-shape-rectangle u-size-49 u-layout-cell-2">
                 <div class="u-container-layout u-container-layout-2">
-                  <p class="u-text u-text-grey-80 u-text-11">주문내역 조회</p>
+                  <p class="u-text u-text-grey-80 u-text-11">관심 내역</p>
                   <div class="u-border-2 u-border-grey-60 u-line u-line-horizontal u-line-1"></div>
-                  <div class="u-align-center u-container-style u-group u-palette-5-light-3 u-shape-rectangle u-group-1">
+                  <div class="u-container-style u-group u-palette-5-light-3 u-shape-rectangle u-group-1">
                     <div class="u-container-layout u-container-layout-3">
-                      <h6 class="u-text u-text-12">상품정보</h6>
+                      <h6 class="u-text u-text-12">상품정보 / 옵션</h6>
                       <h6 class="u-text u-text-13">가격</h6>
                     </div>
                   </div>
@@ -267,31 +263,26 @@
                   <div class="u-container-style u-group u-shape-rectangle u-group-2">
                     <div class="u-container-layout u-container-layout-4">
                       <img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/pd_4.jpg" alt="" data-image-width="600" data-image-height="600">
-                      <a href="https://nicepage.com/templates" class="u-border-2 u-border-grey-75 u-btn u-btn-round u-button-style u-hover-palette-5-light-1 u-palette-5-light-2 u-radius-6 u-btn-1"> 주 문 취 소</a>
-                      <h6 class="u-text u-text-14"> 마카롱꼬끄 100% 아몬드 가루<br>마카롱 쿠키
-                      </h6>
+                      <div class="u-container-style u-group u-group-3">
+                        <div class="u-container-layout">
+                          <h6 class="u-text u-text-14">틔움긴생각</h6>
+                          <h6 class="u-text u-text-15"> 마카롱꼬끄 후레이크 100%아몬드 가루로 만든 마카롱쿠키 답례품 틔움긴생각</h6>
+                          <p class="u-text u-text-palette-5-dark-1 u-text-16">옵션 : 없음</p>
+                        </div>
+                      </div>
+                      <a href="https://nicepage.com/templates" class="u-border-2 u-border-grey-75 u-btn u-btn-round u-button-style u-hover-palette-5-light-1 u-palette-5-light-2 u-radius-6 u-btn-2">장바구니 담기</a>
                       <div class="u-clearfix u-custom-html u-custom-html-2">
                         <input type="checkbox">
                       </div>
-                      <h6 class="u-text u-text-15">5,000 원</h6>
-                      <a href="https://nicepage.com/templates" class="u-border-2 u-border-grey-75 u-btn u-btn-round u-button-style u-hover-palette-5-light-1 u-palette-5-light-2 u-radius-6 u-btn-2">리 뷰 작 성</a>
+                      <h6 class="u-text u-text-17">5,000 원</h6>
+                      <a href="https://nicepage.com/templates" class="u-border-2 u-border-grey-75 u-btn u-btn-round u-button-style u-hover-palette-5-light-1 u-palette-5-light-2 u-radius-6 u-btn-3">상품 삭제</a>
                       <div class="u-border-1 u-border-palette-5-light-1 u-line u-line-horizontal u-line-3"></div>
                     </div>
                   </div>
-                  <div class="u-container-style u-group u-shape-rectangle u-group-3">
-                    <div class="u-container-layout u-container-layout-5"><span class="u-file-icon u-icon u-icon-1"><img src="images/my_arrow_left.png" alt=""></span><span class="u-file-icon u-icon u-icon-2"><img src="images/my_arrow_right.png" alt=""></span>
-                      <div class="u-table u-table-responsive u-table-1">
-                        <table class="u-table-entity">
-                          <colgroup>
-                            <col width="100%">
-                          </colgroup>
-                          <tbody class="u-align-center u-table-body u-text-grey-70 u-table-body-1">
-                            <tr style="height: 31px;">
-                              <td class="u-table-cell">1</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
+                  <div class="u-container-style u-group u-group-4">
+                    <div class="u-container-layout">
+                      <a href="https://nicepage.com/templates" class="u-border-1 u-border-grey-15 u-btn u-btn-round u-button-style u-grey-5 u-hover-grey-10 u-radius-6 u-btn-4"> 선택 상품 삭제</a>
+                      <a href="https://nicepage.com/templates" class="u-border-1 u-border-grey-10 u-btn u-btn-round u-button-style u-grey-5 u-hover-grey-10 u-radius-6 u-btn-5"> 선택 상품 장바구니</a>
                     </div>
                   </div>
                 </div>
@@ -349,7 +340,7 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
         </nav>
-        <a href="gomainpage.do" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200" title="메인페이지">
+        <a href="mainPage.html" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200" title="메인페이지">
           <img src="images/logo.png" class="u-logo-image u-logo-image-1">
         </a>
         <p class="u-align-left u-text u-text-1">
@@ -371,5 +362,7 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
         <span>Website Builder Software</span>
       </a>. 
     </section>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" ></script>
+
 </body></html>
