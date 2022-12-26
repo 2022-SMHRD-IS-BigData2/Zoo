@@ -270,7 +270,7 @@
                         <div class="u-container-layout u-container-layout-5">
                           <h6 class="u-align-center u-text u-text-17">2022/12/22</h6>
                           <h6 class="u-align-center u-text u-text-grey-40 u-text-18">미답변</h6>
-                          <h6 class="u-text u-text-19">배송이 얼마나 걸릴까요?</h6>
+                          <h6 class="u-text u-text-19">배송이 얼마나 걸릴까요?<% %></h6>
                           <div class="u-clearfix u-custom-html u-custom-html-2">
                             <input type="checkbox">
                           </div>
