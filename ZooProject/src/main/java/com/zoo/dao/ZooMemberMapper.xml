@@ -26,7 +26,6 @@ and cust_pw = #{cust_pw}
 
 </select>
 
-
 <update id="update"
 	parameterType="com.zoo.entity.ZooMember">
 	update tbl_customer
@@ -37,19 +36,5 @@ and cust_pw = #{cust_pw}
 		 
 	where cust_id = #{cust_id}	
 	</update>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </mapper>
