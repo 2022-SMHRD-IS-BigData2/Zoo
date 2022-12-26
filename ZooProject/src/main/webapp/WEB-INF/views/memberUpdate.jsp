@@ -191,7 +191,7 @@
 
 
 <body>
-    <form action="#">
+    <form action="update.do">
         <div class="frame">
             <div class="wrap">
                 <div class="update">
@@ -202,14 +202,14 @@
                                 <tr>
                                     <th scope="row">아이디(이메일)</th>
                                     <td>
-                                        <div class="usermodify-ID">777tmdwn@naver.com</div>
+                                        <div class="usermodify-ID">변경하고자 하는 아이디를 입력하시오<input type="text" name="id"></div>
                                     </td>
                                 </tr>
 
                                 <tr>
                                     <th scope="row">닉네임</th>
                                     <td>
-                                        <div class="usermodify-nick"><span>고라파덕</span> <button type="button" class="usermodify-nick-changenick-btn">닉네임변경 </button></div>
+                                        <div class="usermodify-nick"><span><input type="text" name="nick"></span> </div>
                                     </td>
                                 </tr>
                                 
@@ -217,7 +217,7 @@
                                     <th scope="row">휴대폰 번호</th>
                                     <td>
                                         <div class="usermodify-phone">
-                                            <input type="hidden" id="originPhoneNumber" value="01093198956"><strong class="usermodify-phone-current-number">01093198956</strong><button type="button" class="usermodify-phone-change">휴대폰 번호 변경</button>
+                                            <input type="hidden" id="originPhoneNumber" value="01093198956"><strong class="usermodify-phone-current-number"><input type="text" name="tel"></strong>
                                         </div>
                                     </td>
                                 </tr>
@@ -226,18 +226,14 @@
                                     <th scope="row">비밀번호변경</th>
                                     <td>
                                         <div class="usermodify-password">
-                                            <table class="usermodify-input-table"><tbody><tr><th>현재 비밀번호</th><td><input type="password" class="usermodify-password-currentpassword-tf member__input-border"><div class="member_input-guide_area"></div></td></tr>
-                                            <tr><th>새 비밀번호</th><td><input type="password" class="usermodify-password-newpassword-tf member__input-border"><div class="member_input-guide-area"></div></td></tr>
-                                            <tr><th>비밀번호 다시입력</th><td><input type="password" class="usermodify-password-newpassword-confirm-tf member__input-border"><div class="member_input-guide-area"></div></td></tr>
-                                            <tr><td></td><td><button type="button" class="usermodify-password-submit">비밀번호 변경</button></td></tr>
-                                            
-                                            </tbody></table>
+                                            <table class="usermodify-input-table"><tbody><tr><th></th><td><input type="text" class="usermodify-password-currentpassword-tf member__input-border" name="pw"><div class="member_input-guide_area"></div></td></tr>
+                                            </table>
                                         </div>
                                     </td>
                                 </tr>
 
                                 <tr><th scope="row">배송지</th><td><div class="usermodify-address">
-                                    <input type="hidden" id="address" value=""><strong class=""></strong><button type="button" class="usermodify-address-change">배송지 변경</button>
+                                    <input type="hidden" id="address" value=""><strong class=""></strong><input type="text" name="addr">
                                 </div>
                                                 
                                             </td></tr>
@@ -248,8 +244,8 @@
                             
                         </table>
                         <div class="info_box">
-                            <button type="button" id="btnCancel" class="btn_member_cancel">나가기</button>
-                            <button type="button" id="btnout" class="btn_member_out">회원탈퇴</button>
+                            <button type="button" id="btnCancel" class="btn_member_cancel"><a href="gomainpage.do">나가기</a></button>
+                            <input type="submit" value="바꾸기">
                         </div>
                     </section>
                 </div>

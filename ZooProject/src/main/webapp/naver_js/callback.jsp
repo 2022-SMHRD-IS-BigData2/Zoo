@@ -19,6 +19,7 @@
     alert(naver_id_login.getProfileData('email'));
     alert(naver_id_login.getProfileData('nickname'));
     alert(naver_id_login.getProfileData('age'));
+    alert(naver_id_login.getProfileData('mobile'));
   }
 </script>
 </body>
