@@ -187,24 +187,39 @@ In-Demand Professions, ​Top ten most popular courses for international student
         <a href="https://nicepage.com/website-design" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-dark-1 u-palette-2-dark-2 u-radius-14 u-btn-1"> &nbsp;기부하기</a>
         <img class="u-image u-image-default u-image-6" src="images/donation_write2.png" alt="" data-image-width="498" data-image-height="126">
         <img class="u-expanded-width u-image u-image-round u-radius-37 u-image-7" src="images/donation_back3.png" alt="" data-image-width="1080" data-image-height="1080">
-        <div class="u-clearfix u-custom-html u-custom-html-1"><!-- 온도계 자리
-<div id="wrapper">	
-	<div id="termometer">
-		<div id="temperature" style="height:0" data-value="0°C"></div>
-		<div id="graduations"></div>
-	</div>
-	
-	<div id="playground">		
-		<div id="range">
-			<input id="minTemp" type="text" value="-20">
-			<input type="range" min="-20" max="50" value="42">
-			<input id="maxTemp" type="text" value="50">
+        <div class="u-clearfix u-custom-html u-custom-html-1">
+
+			
+			<div class="container-fluid">
+	  <div class="row">
+	    
+	    <div class="col-md-6">
+	      <div> 
+	        
+	      </div> 
+	    </div> 
+	    
+	    <div class="col-md-6">
+	      <div class="center-block" id="thermometer">
+	        <h1 class="thermH1Text">온도계</h1>
+	        <div class="track">
+	          <div>
+	            <div class="soFar" style="bottom:95%;">1,201,000원</div>
+	            <div class="goal1"><h4>100%</h4></div>
+	            <div class="goal2"><h4>80%</h4></div>
+	            <div class="goal3"><h4>60%</h4></div>
+	            <div class="goal4"><h4>40%</h4></div>
+	            <div class="goal5"><h4>20%</h4></div>
+	          </div>
+	             <div id="progress" style="height:300px;";>
+	            </div>
+	        </div>
+	      </div> 
+	    </div>
+	    </div> 
+	</div> 
+			
 		</div>
-		<p id="unit">Celcius C°</p>
-	</div>
-	
-	<p id="info">Click on the values to change them!</p>
-</div> --></div>
       </div>
     </section>
     

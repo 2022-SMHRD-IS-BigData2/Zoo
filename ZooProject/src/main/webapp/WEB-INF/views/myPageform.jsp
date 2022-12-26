@@ -8,14 +8,14 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <title>myPage</title>
-    <link rel="stylesheet" href="assets/css/nicepage.css" media="screen">
-<link rel="stylesheet" href="assets/css/myPage.css" media="screen">
-    <script class="u-script" type="text/javascript" src="assets/js/jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="assets/js/nicepage.js" defer=""></script>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+<link rel="stylesheet" href="myPage.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 5.1.5, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" >   
     
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
@@ -371,5 +371,5 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
         <span>Website Builder Software</span>
       </a>. 
     </section>
-  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" ></script>
 </body></html>
