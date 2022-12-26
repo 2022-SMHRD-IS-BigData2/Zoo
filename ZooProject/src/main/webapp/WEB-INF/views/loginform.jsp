@@ -34,6 +34,11 @@
     <meta name="twitter:description" content="Site1">
     <meta property="og:title" content="로그인">
     <meta property="og:type" content="website">
+    
+    <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    
+    
   </head>
   <% ZooMember user =(ZooMember)session.getAttribute("user"); %>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><div class="u-clearfix u-sheet u-sheet-1">
@@ -209,6 +214,26 @@
             <div class="submit">
                 <input type="submit" value="로그인">
             </div>
+            <button><a href="#">네이버 로그인</a></button>
+            
+            <!-- 네이버 로그인 버튼 노출 영역 -->
+  <div id="naver_id_login"></div>
+  <!-- //네이버 로그인 버튼 노출 영역 -->
+  <script type="text/javascript">
+  	var naver_id_login = new naver_id_login("ocl43uCuwjsRNJJY5u6W", "http://localhost:8083/Zoo_Git/naver_js/callback.jsp");
+  	var state = naver_id_login.getUniqState();
+  	naver_id_login.setButton("white", 2,40);
+  	naver_id_login.setDomain("http://localhost:8083/Zoo_Git/naver_js/callback.jsp");
+  	naver_id_login.setState(state);
+  	naver_id_login.setPopup();
+  	naver_id_login.init_naver_id_login();
+  </script>
+            
+            
+            
+            
+            
+            
         </div>
     </div>
     </form>
@@ -222,8 +247,8 @@
     
     
     <footer class="u-align-center u-clearfix u-footer u-gradient u-footer" id="sec-e204"><div class="u-clearfix u-sheet u-sheet-1">
-        <a href="/메인페이지.html" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200" title="메인페이지">
-          <img src="/images/c64cf47d-9299-74e8-02ff-c280d9ca18da.png" class="u-logo-image u-logo-image-1">
+        <a href="/메인페이지.html" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200" style="position: relative; top: 100px;" title="메인페이지">
+          <img src="images/logo.png" class="u-logo-image u-logo-image-1">
         </a>
         <div class="u-social-icons u-spacing-10 u-social-icons-1">
           <a class="u-social-url" title="facebook" target="_blank" href="https://facebook.com/name"><span class="u-icon u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-6c75"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-6c75"><path fill="currentColor" d="M75.5,28.8H65.4c-1.5,0-4,0.9-4,4.3v9.4h13.9l-1.5,15.8H61.4v45.1H42.8V58.3h-8.8V42.4h8.8V32.2
@@ -287,7 +312,7 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
       </p>
       <a class="u-link" href="" target="_blank">
         <span>Website Builder Software</span>
-      </a>. 
+      </a>
     </section>
   
 </body></html>
