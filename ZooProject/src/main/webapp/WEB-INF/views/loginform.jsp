@@ -222,7 +222,7 @@
     
     
     <footer class="u-align-center u-clearfix u-footer u-gradient u-footer" id="sec-e204"><div class="u-clearfix u-sheet u-sheet-1">
-        <a href="/메인페이지.html" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200" title="메인페이지">
+        <a href="/메인페이지.html" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200" style="position: relative; top: 100px;" title="메인페이지">
           <img src="images/logo.png" class="u-logo-image u-logo-image-1">
         </a>
         <div class="u-social-icons u-spacing-10 u-social-icons-1">
