@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.zoo.controller.ZooController;
 import com.zoo.controller.ZooGoJoinCon;
 import com.zoo.controller.ZooGoLoginCon;
+import com.zoo.controller.ZooGoboardCon;
 import com.zoo.controller.ZooGodonation;
 import com.zoo.controller.ZooGofoodformCon;
 import com.zoo.controller.ZooGomainCon;
@@ -54,6 +55,7 @@ public class ZooFrontController extends HttpServlet {
 		handlerMapping.put("/join.do",new ZooJoinCon() );
 		handlerMapping.put("/login.do", new ZooLoginCon());
 		handlerMapping.put("/logout.do", new ZooLogoutCon());
+		handlerMapping.put("/goboard.do", new ZooGoboardCon());
 		
 		
 		
