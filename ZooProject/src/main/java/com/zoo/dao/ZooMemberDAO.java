@@ -40,6 +40,13 @@ public class ZooMemberDAO  {
 			session.close();
 			return result;
 		}
+		// 3. 정보수정 메소드
+		public int update(ZooMember dto) {
+			SqlSession session = sqlsessionFactory.openSession(true);
+			int cnt = session.update("update", dto);
+			session.close();
+			return cnt;
+		}
 		
 		
 		
