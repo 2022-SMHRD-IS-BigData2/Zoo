@@ -11,10 +11,12 @@
 		values(
 			board_num_seq.nextval,
 			#{title},
-			#{writer},
-			sysdate,
 			#{content},
-			#{img, jdbcType=VARCHAR}
+			#{img, jdbcType=VARCHAR},
+			sysdate,
+			#{writer},
+			#{like},
+			#{score}
 			
 		)
 	</insert>

@@ -9,8 +9,11 @@ import lombok.NoArgsConstructor;
 public class ZooBoard {
 	private int num;
 	private String title;
-	private String writer;
-	private String indate;
 	private String content;
 	private String img;
+	private String indate;
+	private String writer;
+	private int like;
+	private int cnt;
+	private double score;
 }
