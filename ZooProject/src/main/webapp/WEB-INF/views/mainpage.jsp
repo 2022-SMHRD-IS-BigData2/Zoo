@@ -398,7 +398,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                   <a href="gopdlistbudget.do?budget=c"><h5 class="u-text u-text-4">3-4만원대</h5></a>
               </div>
               <div class="u-container-style u-group u-shape-rectangle u-group-6">
-                  <a href="gopdlistbudget.do?budget=d"><h5 class="u-text u-text-5">5만원 이상</h5></a>
+                  <a href="gopdlistbudget.do?budget=d"><h5 class="u-text u-text-5">5~10만원</h5></a>
               </div>
             </div>
           </div>

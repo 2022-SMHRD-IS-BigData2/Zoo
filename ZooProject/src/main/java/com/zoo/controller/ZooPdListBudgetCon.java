@@ -44,16 +44,16 @@ public class ZooPdListBudgetCon implements ZooController {
 			budget.setLonum(30000);
 			budget.setHinum(50000);
 		} else {
-			System.out.println("5만원 이상");
+			System.out.println("5~10만원");
 			budget.setLonum(50000);
-			budget.setHinum(999999999);
+			budget.setHinum(100000);
 		}
 
 		// DAO 객체 생성, 가격대별 상품 list 생성
 		ZooProductListDAO dao = new ZooProductListDAO();
 		
 		List<ZooProductList> list = dao.prod_budget(budget);
-		System.out.println(list.size());
+		System.out.println("상품 개수 : "+list.size());
 		
 		// 상품정보 Session 저장
 		HttpSession session = request.getSession();
