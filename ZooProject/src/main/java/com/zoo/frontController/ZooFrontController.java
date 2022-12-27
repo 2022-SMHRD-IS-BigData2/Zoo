@@ -13,15 +13,20 @@ import javax.servlet.http.HttpServletResponse;
 
 
 import com.zoo.controller.ZooController;
+import com.zoo.controller.ZooDeleteCon;
 import com.zoo.controller.ZooGoCartCon;
 import com.zoo.controller.ZooGoJoinCon;
 import com.zoo.controller.ZooGoLoginCon;
+import com.zoo.controller.ZooGoWishListformCon;
 import com.zoo.controller.ZooGoboardCon;
+import com.zoo.controller.ZooGocouponCon;
 import com.zoo.controller.ZooGodonation;
 import com.zoo.controller.ZooGofoodformCon;
 import com.zoo.controller.ZooGomainCon;
+import com.zoo.controller.ZooGomemberDeleteCon;
 import com.zoo.controller.ZooGomemberUpdateCon;
 import com.zoo.controller.ZooGomyPageCon;
+import com.zoo.controller.ZooGomyPostformCon;
 import com.zoo.controller.ZooJoinCon;
 import com.zoo.controller.ZooLoginCon;
 import com.zoo.controller.ZooLogoutCon;
@@ -50,15 +55,20 @@ public class ZooFrontController extends HttpServlet {
 		handlerMapping.put("/gofoodform.do",new ZooGofoodformCon() );
 		handlerMapping.put("/godonation.do",new ZooGodonation() );
 		handlerMapping.put("/gomemberUpdate.do", new ZooGomemberUpdateCon() );
+		handlerMapping.put("/gomemberDelete.do", new ZooGomemberDeleteCon() );
 		handlerMapping.put("/gomyPageform.do", new ZooGomyPageCon()  );
 		handlerMapping.put("/gocartform.do", new ZooGoCartCon()  );
 		handlerMapping.put("/goboardform.do", new ZooGoboardCon());
+		handlerMapping.put("/gocoupon.do", new ZooGocouponCon());
+		handlerMapping.put("/gowishListform.do", new ZooGoWishListformCon());
+		handlerMapping.put("/gomyPostform.do", new ZooGomyPostformCon());
 		
 		//======================================
 		handlerMapping.put("/join.do",new ZooJoinCon() );
 		handlerMapping.put("/login.do", new ZooLoginCon());
 		handlerMapping.put("/logout.do", new ZooLogoutCon());
 		handlerMapping.put("/update.do", new ZooUpdateCon());
+		handlerMapping.put("/delete.do", new ZooDeleteCon());
 		
 		
 		
