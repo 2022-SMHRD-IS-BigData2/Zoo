@@ -33,6 +33,8 @@ public class ZooMemberDAO  {
 		
 		}
 		
+// ==============================================================================
+		
 		// 2. 로그인 메소드
 		public ZooMember login(ZooMember dto) {
 			SqlSession session = sqlsessionFactory.openSession(true);
@@ -40,6 +42,9 @@ public class ZooMemberDAO  {
 			session.close();
 			return result;
 		}
+		
+// ==============================================================================
+		
 		// 3. 정보수정 메소드
 		public int update(ZooMember dto) {
 			SqlSession session = sqlsessionFactory.openSession(true);
@@ -47,9 +52,27 @@ public class ZooMemberDAO  {
 			session.close();
 			return cnt;
 		}
+
+// ==============================================================================		
+
+		// 4. 회원 삭제 메소드
+		public int delete( ZooMember dto) {
+			
+			// 1) connection pool로부터 빌려오기
+			// openSession( true ); --> auto commit
+			SqlSession session = sqlsessionFactory.openSession( true );
+			
+			// 2) 실행
+			int cnt = session.delete("delete", dto);
+			
+			// 3) close
+			session.close();
+			
+			// 4) 리턴 : sql문을 실행한 결과를 리턴
+			return cnt;
+		}
 		
-		
-		
+// ==============================================================================
 
 
 }
