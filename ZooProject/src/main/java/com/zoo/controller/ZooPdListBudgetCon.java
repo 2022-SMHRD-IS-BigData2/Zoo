@@ -20,25 +20,29 @@ public class ZooPdListBudgetCon implements ZooController {
 
 		System.out.println("ZooProductListCon execute() 호출");
 
+		// 2022-12-27 오후 김원경 작성
+		// 인코딩
 		request.setCharacterEncoding("UTF-8");
 
+		// budget 값 수집
 		String level = request.getParameter("budget");
 		
+		// budget 객체(dto) 생성
 		ZooPdBudget budget = new ZooPdBudget();
 		
-		// 카테고리별 파라미터값 수집 방법???
+		// 가격대별 parameter 수집하여 budget 객체(dto)에 set
 		if (level.equals("a")) {
 			System.out.println("1만원 미만");
 			budget.setLonum(0);
 			budget.setHinum(10000);
 		} else if (level.equals("b")) {
-			System.out.println("1~2만원");
+			System.out.println("1~2만원대");
 			budget.setLonum(10000);
-			budget.setHinum(20000);
+			budget.setHinum(30000);
 		} else if (level.equals("c")) {
-			System.out.println("2~4만원");
-			budget.setLonum(20000);
-			budget.setHinum(40000);
+			System.out.println("2~4만원대");
+			budget.setLonum(30000);
+			budget.setHinum(50000);
 		} else {
 			System.out.println("5만원 이상");
 			budget.setLonum(50000);
@@ -51,9 +55,9 @@ public class ZooPdListBudgetCon implements ZooController {
 		List<ZooProductList> list = dao.prod_budget(budget);
 		System.out.println(list.size());
 		
-		// Session 이름 통일 (우철)
-//		HttpSession session = request.getSession();
-//		session.setAttribute("PdList", session);
+		// 상품정보 Session 저장
+		HttpSession session = request.getSession();
+	    session.setAttribute("list", list);
 
 		return "foodform";
 	}
