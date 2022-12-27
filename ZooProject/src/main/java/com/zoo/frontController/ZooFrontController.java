@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 import com.zoo.controller.ZooController;
 import com.zoo.controller.ZooDeleteCon;
 import com.zoo.controller.ZooGoCartCon;
@@ -29,7 +28,11 @@ import com.zoo.controller.ZooGowishListCon;
 import com.zoo.controller.ZooJoinCon;
 import com.zoo.controller.ZooLoginCon;
 import com.zoo.controller.ZooLogoutCon;
+import com.zoo.controller.ZooPdListBudgetCon;
+import com.zoo.controller.ZooPdListKeywordCon;
 import com.zoo.controller.ZooUpdateCon;
+import com.zoo.controller.ZooWriteCon;
+import com.zoo.controller.ZooWriteReviewCon;
 
 
 /**
@@ -51,7 +54,9 @@ public class ZooFrontController extends HttpServlet {
 		handlerMapping.put("/gomainpage.do",new ZooGomainCon() );
 		handlerMapping.put("/gojoin.do",new ZooGoJoinCon() );
 		handlerMapping.put("/gologin.do",new ZooGoLoginCon() );
-		handlerMapping.put("/gofoodform.do",new ZooGofoodformCon() );
+		handlerMapping.put("/gofoodform.do",new ZooGofoodformCon() ); // 카테고리별 상품목록 조회
+		handlerMapping.put("/gopdlistbudget.do",new ZooPdListBudgetCon() ); // 예산별 상품목록 조회
+		handlerMapping.put("/gopdlistkeyword.do",new ZooPdListKeywordCon() ); // 키워드별 상품목록 조회
 		handlerMapping.put("/godonation.do",new ZooGodonation() );
 		handlerMapping.put("/gomemberUpdate.do", new ZooGomemberUpdateCon() );
 		handlerMapping.put("/gomemberDelete.do", new ZooGomemberDeleteCon() );
@@ -66,6 +71,8 @@ public class ZooFrontController extends HttpServlet {
 		handlerMapping.put("/login.do", new ZooLoginCon());
 		handlerMapping.put("/logout.do", new ZooLogoutCon());
 		handlerMapping.put("/update.do", new ZooUpdateCon());
+		handlerMapping.put("/writeReviewPage.do", new ZooWriteReviewCon());
+		handlerMapping.put("/write.do", new ZooWriteCon() );
 		handlerMapping.put("/delete.do", new ZooDeleteCon());
 		
 		

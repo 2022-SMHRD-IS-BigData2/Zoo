@@ -1,3 +1,4 @@
+<%@page import="com.zoo.entity.ZooMember"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -7,10 +8,10 @@
     <meta name="keywords" content="​Need Help?">
     <meta name="description" content="">
     <title>writeReviewPage</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="writeReviewPage.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <link rel="stylesheet" href="assets/css/nicepage.css" media="screen">
+<link rel="stylesheet" href="assets/css/writeReviewPage.css" media="screen">
+    <script class="u-script" type="text/javascript" src="assets/js/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="assets/js/nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 5.2.0, nicepage.com">
     <meta name="referrer" content="origin">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
@@ -228,15 +229,16 @@
               <form action="https://forms.nicepagesrv.com/Form/Process" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px;">
                 <div class="u-form-group u-label-none u-form-group-1">
                   <label for="text-ec9f" class="u-label">Input</label>
-                  <input type="text" placeholder="제목" id="text-ec9f" name="titleInput" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
+                  <% ZooMember info = (ZooMember)session.getAttribute("info"); %>
+                  <input type="text" placeholder="제목" id="text-ec9f" name="title" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
                 </div>
                 <div class="u-form-group u-form-message u-label-none">
                   <label for="message-ec68" class="u-label">리뷰 쓰기</label>
-                  <textarea placeholder="내용을 입력하세요" rows="4" cols="50" id="message-ec68" name="writeInput" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required=""></textarea>
+                  <textarea placeholder="내용을 입력하세요" rows="4" cols="50" id="message-ec68" name="writer" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required=""></textarea>
                 </div>
                 <div class="u-align-left u-form-group u-form-submit u-label-none">
-                  <a href="#" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-palette-4-base u-radius-6 u-text-white u-btn-1">등록<br>
-                  </a>
+                <form action="write.do" method="post" enctype="multipart/form-data">
+                  <input type="submit" value="등록">
                   <input type="submit" value="submit" class="u-form-control-hidden">
                 </div>
                 <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
@@ -245,7 +247,7 @@
                 <input type="hidden" name="formServices" value="5246bc5fabddefcb36d8ad6fa376e624">
               </form>
             </div>
-            <a href="https://nicepage.review" class="u-border-1 u-border-grey-40 u-btn u-btn-round u-button-style u-grey-10 u-hover-grey-10 u-radius-6 u-text-hover-white u-text-white u-btn-2">취소</a>
+            <a href="gomyPageform.do" class="u-border-1 u-border-grey-40 u-btn u-btn-round u-button-style u-grey-10 u-hover-grey-10 u-radius-6 u-text-hover-white u-text-white u-btn-2">취소</a>
           </div>
         </div>
       </div>
