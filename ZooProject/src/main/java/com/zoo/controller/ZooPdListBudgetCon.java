@@ -18,7 +18,7 @@ public class ZooPdListBudgetCon implements ZooController {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		System.out.println("ZooProductListCon execute() 호출");
+		System.out.println("ZooPdListBudgetCon execute() 호출");
 
 		// 2022-12-27 오후 김원경 작성
 		// 인코딩
@@ -43,9 +43,13 @@ public class ZooPdListBudgetCon implements ZooController {
 			System.out.println("2~4만원대");
 			budget.setLonum(30000);
 			budget.setHinum(50000);
-		} else {
+		} else if (level.equals("d")){
 			System.out.println("5~10만원");
 			budget.setLonum(50000);
+			budget.setHinum(100000);
+		} else if (level.equals("e")){
+			System.out.println("가격대별 상품 >> 더보기");
+			budget.setLonum(0);
 			budget.setHinum(100000);
 		}
 

@@ -23,7 +23,7 @@
 	</select>
 
 
-	<!-- 3. 가격대별 상품 리스트 출력문 -->
+	<!-- 3. 가격대별 상품 리스트 뷸러오기 -->
 	<select id="prod_budget"
 		parameterType="com.zoo.entity.ZooPdBudget"
 		resultType="com.zoo.entity.ZooProductList">
@@ -32,5 +32,14 @@
 		where prod_price between #{lonum} and #{hinum}
 	</select>
 
+
+	<!-- 4. 키워드별 상품 리스트 불러오기 : 키워드가 1개일 때 -->
+	<select id="prod_keyword"
+		parameterType="com.zoo.entity.ZooProductList"
+		resultType="com.zoo.entity.ZooProductList">
+		select * 
+		from tbl_product 
+		where prod_keyword1 = #{prod_keyword1}
+	</select>
 
 </mapper>
