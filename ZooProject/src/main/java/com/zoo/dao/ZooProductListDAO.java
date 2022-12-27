@@ -14,11 +14,11 @@ public class ZooProductListDAO {
 	SqlSessionFactory sqlsessionFactory = SessionManager.getSqlSessionFactory();
 
 	// 대분류 카테고리 클릭했을 때 상품정보 출력
-	public List<ZooProductList> productList1(String prod_category) {
+	public List<ZooProductList> productList1(ZooProductList dto) {
 
 		SqlSession session = sqlsessionFactory.openSession(true);
 
-		List<ZooProductList> productList = session.selectList("prod_category");
+		List<ZooProductList> productList = session.selectList("prod_category",dto);
 
 		session.close();
 		return productList;
