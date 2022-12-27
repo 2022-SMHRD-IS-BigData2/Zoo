@@ -1,0 +1,85 @@
+body{
+    font-family: 'Playfair Display', serif;
+    background: radial-gradient(#485563, #29323c);
+    height:500vh;
+  }
+  h1 {
+    color:#fff;
+    text-transform: uppercase;
+    font-size: 115px;
+    letter-spacing: 2px;
+
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
+  h1:before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 1.02em;
+    transform: rotateX(180deg);
+    transform-origin: bottom;
+
+    background: linear-gradient(to top, #fff 0%, transparent 80%);
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: 0.5;
+  }
+
+  .play{
+    position: relative;
+    top: 315px;
+    left: 10%;
+  }
+
+  .pic{
+    position: relative;
+    left: 5%;
+    top: 10%;
+  }
+  
+  .btn_{
+    position: relative;
+    top: 9%;
+    left: -37.3%;
+    width: 150px;
+    height: 50px;
+    font-size: 28px;
+    font-family: 'Jua', sans-serif;
+  }
+
+
+  /* 맨위로 보내는 화살표 */
+  .child3{
+    width: 50px;
+    height: 50px;
+    left: 97%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 25px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    text-align: center;
+    /* 
+        line-height로 텍스트 수직정렬 방법
+        1. 한 줄의 문장이어야 한다.(조건)
+        2. 부모태그의 높이값과 동일하게 맞춰준다.
+    */
+    line-height: 50px; /*줄간격*/
+
+}
+.child3 > a{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+.child3 > a:hover{
+    color: white;
+    background-color: #0984c3;
+    border-radius: 25px;
+}
