@@ -3,43 +3,42 @@ package com.zoo.controller;
 import java.io.IOException;
 import java.util.List;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import org.apache.ibatis.reflection.SystemMetaObject;
-import org.eclipse.jdt.internal.compiler.ast.RequiresStatement;
-
 import com.zoo.dao.ZooProductListDAO;
 import com.zoo.entity.ZooProductList;
 
-public class ZooGofoodformCon implements ZooController {
+public class ZooPdListKeywordCon implements ZooController {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		System.out.println("ZooProductListCon execute() 호출");
-		
+		System.out.println("ZooPdListKeywordCon execute() 호출");
+
+		// 2022-12-27 오후 김원경 작성
+		// 인코딩
 		request.setCharacterEncoding("UTF-8");
 
-		String category = request.getParameter("category");
+		// budget 값 수집
+		String keyword = request.getParameter("keyword");
+		
+		// keyword 값 set
 		ZooProductList dto = new ZooProductList();
-		
-		dto.setProd_category(category);
-		System.out.println(category + "로 이동");
+		dto.setProd_keyword1(keyword);
+		System.out.println("상품키워드 : " + dto.getProd_keyword1());
 
-		// DAO 객체 생성
+		// prod_keyword 상품 data 가져오기
 		ZooProductListDAO dao = new ZooProductListDAO();
-		List<ZooProductList> list = dao.productList1(dto);
+		List<ZooProductList> list = dao.prod_keyword(dto);
 
-		System.out.println(list.size());
-		
+		// 상품정보 Session 저장
 		HttpSession session = request.getSession();
 		session.setAttribute("list", list);
-		
+
 		return "foodform";
 	}
 

@@ -29,9 +29,9 @@ public class ZooLoginCon implements ZooController {
 		ZooMemberDAO dao = new ZooMemberDAO();
 		ZooMember result = dao.login(dto);
 		
-		if(result ==null) {
+		if(result == null) {
 			System.out.println("로그인 실패");
-//			nextPage = "redirect:/goZooMain.do";
+			nextPage = "redirect:/gologin.do";
 		}else {
 			System.out.println("로그인 성공");
 			

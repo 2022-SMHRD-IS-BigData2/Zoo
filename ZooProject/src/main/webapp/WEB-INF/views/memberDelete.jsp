@@ -5,24 +5,22 @@
 <html style="font-size: 16px;" lang="en"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="​Need Help?">
+    <meta name="keywords" content="">
     <meta name="description" content="">
-    <title>searchPage</title>
+    <title>로그인</title>
     <link rel="stylesheet" href="assets/css/nicepage.css" media="screen">
-<link rel="stylesheet" href="assets/css/searchPage.css" media="screen">
+<link rel="stylesheet" href="assets/css/memberUpdate.css" media="screen">
     <script class="u-script" type="text/javascript" src="assets/js/jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="assets/js/nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 5.1.5, nicepage.com">
-    <meta name="referrer" content="origin">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
-    
     
     
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
 		"name": "Site1",
-		"logo": "images/logo.png",
+		"logo": "/images/c64cf47d-9299-74e8-02ff-c280d9ca18da.png",
 		"sameAs": [
 				"https://facebook.com/name",
 				"https://twitter.com/name",
@@ -32,12 +30,12 @@
     <meta name="theme-color" content="#478ac9">
     <meta name="twitter:site" content="@">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="searchPage">
+    <meta name="twitter:title" content="로그인">
     <meta name="twitter:description" content="Site1">
-    <meta property="og:title" content="searchPage">
+    <meta property="og:title" content="로그인">
     <meta property="og:type" content="website">
   </head>
-  <%ZooMember user =(ZooMember)session.getAttribute("user"); %>
+  <% ZooMember user =(ZooMember)session.getAttribute("user"); %>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
   <div class="u-clearfix u-sheet u-sheet-1">
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
@@ -198,256 +196,66 @@
           </div>
         </nav>
       </header>
-    <section class="u-clearfix u-section-1" id="sec-fdd9">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-align-left u-text u-text-1"><b>
-            <span style="font-weight: 400;">Home &gt;</span> 상품검색</b>
-        </p>
-        <div class="u-border-3 u-border-palette-4-light-3 u-container-style u-custom-color-1 u-expanded-width u-group u-radius-20 u-shape-round u-group-1" data-animation-name="" data-animation-duration="0" data-animation-direction="">
-          <div class="u-container-layout u-container-layout-1">
-            <h6 class="u-text u-text-grey-70 u-text-2"><b>💡&nbsp; 키워드로 검색해보는건 어떠세​요?</b>
-            </h6>
-            <a href="https://nicepage.com/c/table-html-templates" class="u-border-2 u-border-palette-5-light-2 u-btn u-btn-round u-button-style u-hover-palette-1-light-2 u-palette-1-light-3 u-radius-6 u-text-grey-70 u-text-hover-white u-btn-1"># 간식</a>
-            <a href="https://nicepage.com/c/table-html-templates" class="u-border-2 u-border-palette-5-light-2 u-btn u-btn-round u-button-style u-hover-palette-1-light-2 u-palette-1-light-3 u-radius-6 u-text-grey-70 u-text-hover-white u-btn-2"># 선물</a>
-            <a href="https://nicepage.com/c/table-html-templates" class="u-border-2 u-border-palette-5-light-2 u-btn u-btn-round u-button-style u-hover-palette-1-light-2 u-palette-1-light-3 u-radius-6 u-text-grey-70 u-text-hover-white u-btn-3"># 천연</a>
-            <a href="https://nicepage.com/c/table-html-templates" class="u-border-2 u-border-palette-5-light-2 u-btn u-btn-round u-button-style u-hover-palette-1-light-2 u-palette-1-light-3 u-radius-6 u-text-grey-70 u-text-hover-white u-btn-4"># 면역</a>
-            <a href="https://nicepage.com/c/table-html-templates" class="u-border-2 u-border-palette-5-light-2 u-btn u-btn-round u-button-style u-hover-palette-1-light-2 u-palette-1-light-3 u-radius-6 u-text-grey-70 u-text-hover-white u-btn-5"># 유아</a>
-            <a href="https://nicepage.com/c/table-html-templates" class="u-border-2 u-border-palette-5-light-2 u-btn u-btn-round u-button-style u-hover-palette-1-light-2 u-palette-1-light-3 u-radius-6 u-text-grey-70 u-text-hover-white u-btn-6"># 내몸을위한</a>
-            <a href="https://nicepage.com/c/table-html-templates" class="u-border-2 u-border-palette-5-light-2 u-btn u-btn-round u-button-style u-hover-palette-1-light-2 u-palette-1-light-3 u-radius-6 u-text-grey-70 u-text-hover-white u-btn-7"> # 로컬푸드</a>
-            <a href="https://nicepage.com/c/table-html-templates" class="u-border-2 u-border-palette-5-light-2 u-btn u-btn-round u-button-style u-hover-palette-1-light-2 u-palette-1-light-3 u-radius-6 u-text-grey-70 u-text-hover-white u-btn-8"># 못난이농산물</a>
-            <a href="https://nicepage.com/c/table-html-templates" class="u-border-2 u-border-palette-5-light-2 u-btn u-btn-round u-button-style u-hover-palette-1-light-2 u-palette-1-light-3 u-radius-6 u-text-grey-70 u-text-hover-white u-btn-9"># 가성비</a>
-            <a href="https://nicepage.com/c/table-html-templates" class="u-border-2 u-border-palette-5-light-2 u-btn u-btn-round u-button-style u-hover-palette-1-light-2 u-palette-1-light-3 u-radius-6 u-text-grey-70 u-text-hover-white u-btn-10"># 밀키트</a>
-            <a href="https://nicepage.com/c/table-html-templates" class="u-border-2 u-border-palette-5-light-2 u-btn u-btn-round u-button-style u-hover-palette-1-light-2 u-palette-1-light-3 u-radius-6 u-text-grey-70 u-text-hover-white u-btn-11"># 친환경</a>
-            <a href="https://nicepage.com/c/table-html-templates" class="u-border-2 u-border-palette-5-light-2 u-btn u-btn-round u-button-style u-hover-palette-1-light-2 u-palette-1-light-3 u-radius-6 u-text-grey-70 u-text-hover-white u-btn-12"># 필수템</a>
-            <a href="https://nicepage.com/c/table-html-templates" class="u-border-2 u-border-palette-5-light-2 u-btn u-btn-round u-button-style u-hover-palette-1-light-2 u-palette-1-light-3 u-radius-6 u-text-grey-70 u-text-hover-white u-btn-13"># 핸드메이드</a>
-            <a href="https://nicepage.com/c/table-html-templates" class="u-border-1 u-border-grey-60 u-border-hover-grey-75 u-border-no-left u-border-no-right u-border-no-top u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-button-style u-none u-radius-0 u-text-grey-70 u-text-hover-black u-top-left-radius-0 u-top-right-radius-0 u-btn-14"># 키워드 더 보기</a>
-            <div class="u-border-1 u-border-palette-1-light-3 u-expanded-width u-line u-line-horizontal u-line-1"></div>
-            <div class="u-form u-form-1">
-              <form action="https://forms.nicepagesrv.com/Form/Process" class="u-clearfix u-form-horizontal u-form-spacing-15 u-inner-form" style="padding: 15px;" source="email" name="form">
-                <div class="u-form-checkbox u-form-group u-label-top">
-                  <input type="checkbox" id="checkbox-a10d" name="(예비)사회적기업" value="On">
-                  <label for="checkbox-a10d" class="u-label u-text-grey-70 u-label-1">(예비)사회적기업</label>
+      <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/53a8c415f1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./login.css">
+</head>
+
+
+
+<body>
+   <form action="delete.do" method="post">
+       <div class="frame">
+           <div class="wrap">
+               <div class="delete">
+                   <section class="usermodify">
+                       <h3>회원탈퇴</h3>
+                       <table class="usermodify-table">
+                           <tbody>
+<!-- ============================================================================================================================================================================================================================================================ -->
+                               <tr>
+                                   <th scope="row">아이디(이메일)</th>
+                                   <td>
+                                       <div class="usermodify-ID">
+                                       <input type="text" name="id">
+                                       </div>
+                                   </td>
+                               </tr>
+<!-- ============================================================================================================================================================================================================================================================ -->
+                               <tr>
+                                   <th scope="row">비밀번호</th>
+                                   <td>
+                                       <div class="usermodify-password">
+                                       <input type="text" name="pw">
+                                       </div>
+                                   </td>
+                               </tr>
+<!-- ============================================================================================================================================================================================================================================================ -->
+                           </tbody>
+                            
+                        </table>
+                        <div class="info_box">
+                            <button type="button" id="btnCancel" class="btn_member_cancel"><a href="gomainpage.do">나가기</a></button>
+                            <input type="submit" value="탈퇴하기">
+                        </div>
+                    </section>
                 </div>
-                <div class="u-form-checkbox u-form-group u-label-top">
-                  <input type="checkbox" placeholder="Name" id="name-6797" name="name" class="u-border-1 u-border-grey-30 u-input-rectangle" required="required" style="">
-                  <label for="name-6797" class="u-label u-text-grey-70 u-label-2">협동조합</label>
-                </div>
-                <div class="u-form-checkbox u-form-group u-label-top">
-                  <input type="checkbox" placeholder="Email" id="email-6797" name="email" class="u-border-1 u-border-grey-30 u-input-rectangle" required="required" style="">
-                  <label for="email-6797" class="u-label u-text-grey-70 u-label-3">마을기업</label>
-                </div>
-                <div class="u-form-checkbox u-form-group u-label-top">
-                  <input type="checkbox" id="checkbox-8f20" name="checkbox" value="On">
-                  <label for="checkbox-8f20" class="u-label u-text-grey-70 u-label-4">장애인기업</label>
-                </div>
-                <div class="u-form-checkbox u-form-group u-label-top">
-                  <input type="checkbox" id="checkbox-51ac" name="checkbox-1" value="On">
-                  <label for="checkbox-51ac" class="u-label u-text-grey-70 u-label-5">여성기업</label>
-                </div>
-                <div class="u-form-checkbox u-form-group u-label-top">
-                  <input type="checkbox" id="checkbox-2ba0" name="checkbox-3" value="On">
-                  <label for="checkbox-2ba0" class="u-label u-text-grey-70 u-label-6">자활기업</label>
-                </div>
-                <div class="u-align-right u-form-group u-form-submit u-label-top">
-                  <input type="submit" value="submit" class="u-form-control-hidden">
-                  <a href="#" class="u-border-1 u-border-active-white u-border-hover-white u-border-no-left u-border-no-right u-border-no-top u-btn u-btn-submit u-button-style u-none u-text-active-white u-text-hover-white u-text-white u-btn-15">
-                    <br>
-                  </a>
-                </div>
-                <div class="u-form-send-message u-form-send-success">Thank you! Your message has been sent.</div>
-                <div class="u-form-send-error u-form-send-message">Unable to send your message. Please fix errors then try again.</div>
-                <input type="hidden" value="" name="recaptchaResponse">
-                <input type="hidden" name="formServices" value="5246bc5fabddefcb36d8ad6fa376e624">
-              </form>
             </div>
-            <div class="display div inline-block u-clearfix u-custom-html u-custom-html-1">
-              <div class="search" float:="" left;="">
-                <input type="text" placeholder="검색어를 입력해주세요.">
-                <button>검색</button>
-              </div>
-            </div>
-          </div>
         </div>
-        <div class="u-clearfix u-custom-html u-custom-html-2">
-          <ul class="lineUp"> 정렬 &nbsp;&nbsp; <select name="lineUp" id="lineup" onchange="lineUp(81, this, '');">
-              <option value="81" selected="selected">등록순</option>
-              <option value="82">낮은가격순</option>
-              <option value="83">높은가격순</option>
-              <option value="84">인기순</option>
-            </select>
-          </ul>
-        </div>
-        <h6 class="u-text u-text-3"><b>30</b>개의 상품
-        </h6>
-      </div>
-    </section>
-    <section class="u-clearfix u-section-2" id="sec-9565">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-container-style u-expanded-width u-group u-shape-rectangle u-group-1">
-          <div class="u-container-layout u-container-layout-1">
-            <div class="u-list u-list-1">
-              <div class="u-repeater u-repeater-1">
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-2">
-                    <img class="u-image u-image-1" src="images/pd_1.jpg" data-image-width="1920" data-image-height="1406">
-                    <h6 class="u-align-center u-text u-text-1"> 국내산 수제 쌀빵 4종&nbsp;<br>틔움긴생각<br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-2">2,500원</h6>
-                  </div>
-                </div>
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-3">
-                    <img class="u-image u-image-2" src="images/pd_2.jpg" data-image-width="228" data-image-height="228">
-                    <h6 class="u-align-center u-text u-text-3"> 다향
-아로마 힐링
-스프레이<br>
-                      <span style="font-weight: 700;"></span>
-                      <br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-4">20,000원</h6>
-                  </div>
-                </div>
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-4">
-                    <img class="u-image u-image-3" src="images/pd_3.jpg" data-image-width="228" data-image-height="228">
-                    <h6 class="u-align-center u-text u-text-5"> 패브릭섬유 향수<br>(100ml, 50ml)<span style="font-weight: 700;"></span>
-                      <br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-6">10,000원</h6>
-                  </div>
-                </div>
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-5">
-                    <img class="u-image u-image-4" src="images/pd_4.jpg" data-image-width="600" data-image-height="600">
-                    <h6 class="u-align-center u-text u-text-7"> 마카롱꼬끄100%아몬드 가루&nbsp;<br>마카롱쿠키<br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-8">5,000원</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="u-list u-list-2">
-              <div class="u-repeater u-repeater-2">
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-6">
-                    <img class="u-image u-image-5" src="images/pd_1.jpg" data-image-width="1920" data-image-height="1406">
-                    <h6 class="u-align-center u-text u-text-9"> 국내산 수제 쌀빵 4종&nbsp;<br>틔움긴생각<br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-10">2,500원</h6>
-                  </div>
-                </div>
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-7">
-                    <img class="u-image u-image-6" src="images/pd_2.jpg" data-image-width="228" data-image-height="228">
-                    <h6 class="u-align-center u-text u-text-11"> 다향
-아로마 힐링
-스프레이<br>
-                      <span style="font-weight: 700;"></span>
-                      <br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-12">20,000원</h6>
-                  </div>
-                </div>
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-8">
-                    <img class="u-image u-image-7" src="images/pd_3.jpg" data-image-width="228" data-image-height="228">
-                    <h6 class="u-align-center u-text u-text-13"> 패브릭섬유 향수<br>(100ml, 50ml)<span style="font-weight: 700;"></span>
-                      <br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-14">10,000원</h6>
-                  </div>
-                </div>
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-9">
-                    <img class="u-image u-image-8" src="images/pd_4.jpg" data-image-width="600" data-image-height="600">
-                    <h6 class="u-align-center u-text u-text-15"> 마카롱꼬끄100%아몬드 가루&nbsp;<br>마카롱쿠키<br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-16">5,000원</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="u-list u-list-3">
-              <div class="u-repeater u-repeater-3">
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-10">
-                    <img class="u-image u-image-9" src="images/pd_1.jpg" data-image-width="1920" data-image-height="1406">
-                    <h6 class="u-align-center u-text u-text-17"> 국내산 수제 쌀빵 4종&nbsp;<br>틔움긴생각<br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-18">2,500원</h6>
-                  </div>
-                </div>
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-11">
-                    <img class="u-image u-image-10" src="images/pd_2.jpg" data-image-width="228" data-image-height="228">
-                    <h6 class="u-align-center u-text u-text-19"> 다향
-아로마 힐링
-스프레이<br>
-                      <span style="font-weight: 700;"></span>
-                      <br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-20">20,000원</h6>
-                  </div>
-                </div>
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-12">
-                    <img class="u-image u-image-11" src="images/pd_3.jpg" data-image-width="228" data-image-height="228">
-                    <h6 class="u-align-center u-text u-text-21"> 패브릭섬유 향수<br>(100ml, 50ml)<span style="font-weight: 700;"></span>
-                      <br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-22">10,000원</h6>
-                  </div>
-                </div>
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-13">
-                    <img class="u-image u-image-12" src="images/pd_4.jpg" data-image-width="600" data-image-height="600">
-                    <h6 class="u-align-center u-text u-text-23"> 마카롱꼬끄100%아몬드 가루&nbsp;<br>마카롱쿠키<br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-24">5,000원</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="u-container-style u-group u-shape-rectangle u-group-2">
-          <div class="u-container-layout u-container-layout-14">
-            <div class="u-table u-table-responsive u-table-1">
-              <table class="u-table-entity">
-                <colgroup>
-                  <col width="10.6%">
-                  <col width="10.6%">
-                  <col width="10.9%">
-                  <col width="10.6%">
-                  <col width="10.4%">
-                  <col width="10.6%">
-                  <col width="11.3%">
-                  <col width="10.6%">
-                  <col width="14.40000000000001%">
-                </colgroup>
-                <tbody class="u-align-center u-table-body u-text-grey-70 u-table-body-1">
-                  <tr style="height: 26px;">
-                    <td class="u-table-cell">1</td>
-                    <td class="u-table-cell">2<br>
-                    </td>
-                    <td class="u-table-cell">3</td>
-                    <td class="u-table-cell">4</td>
-                    <td class="u-table-cell">5</td>
-                    <td class="u-table-cell">6</td>
-                    <td class="u-table-cell">7</td>
-                    <td class="u-table-cell">8</td>
-                    <td class="u-table-cell">9</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div><span class="u-align-left u-file-icon u-icon u-icon-1"><img src="images/arrow_left.png" alt=""></span><span class="u-align-left u-file-icon u-icon u-icon-2"><img src="images/arrow_right.png" alt=""></span>
-          </div>
-        </div>
-      </div>
-    </section>
-    
+    </form>
+</body>
+
+</html>
     
     <footer class="u-align-center u-clearfix u-footer u-gradient u-footer" id="sec-e204"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="/메인페이지.html" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200" title="메인페이지">
+          <img src="/images/c64cf47d-9299-74e8-02ff-c280d9ca18da.png" class="u-logo-image u-logo-image-1">
+        </a>
         <div class="u-social-icons u-spacing-10 u-social-icons-1">
           <a class="u-social-url" title="facebook" target="_blank" href="https://facebook.com/name"><span class="u-icon u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-6c75"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-6c75"><path fill="currentColor" d="M75.5,28.8H65.4c-1.5,0-4,0.9-4,4.3v9.4h13.9l-1.5,15.8H61.4v45.1H42.8V58.3h-8.8V42.4h8.8V32.2
 c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
@@ -493,9 +301,6 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
         </nav>
-        <a href="gomainpage.do" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200" title="메인페이지">
-          <img src="images/logo.png" class="u-logo-image u-logo-image-1">
-        </a>
         <p class="u-align-left u-text u-text-1">
           <span style="font-weight: 700;">상호명</span>&nbsp; &nbsp;나누민족&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="font-weight: 700;">대표자명</span>&nbsp; 문승주&nbsp;&nbsp;<br>
           <span style="font-weight: 700;">사업장 주소&nbsp;</span> &nbsp; &nbsp; 광주광역시 남구 송암로 60(송하동 373-3)&nbsp;<br>
@@ -504,16 +309,6 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
         <p class="u-align-left u-text u-text-2"><b>나누민족은 광주·전남 사회적경제쇼핑몰 입니다.</b>
         </p>
       </div></footer>
-    <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
-        <span>Website Templates</span>
-      </a>
-      <p class="u-text">
-        <span>created with</span>
-      </p>
-      <a class="u-link" href="" target="_blank">
-        <span>Website Builder Software</span>
-      </a>. 
-    </section>
+
   
 </body></html>
