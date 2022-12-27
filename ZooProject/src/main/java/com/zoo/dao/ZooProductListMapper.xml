@@ -41,5 +41,13 @@
 		from tbl_product 
 		where prod_keyword1 = #{prod_keyword1}
 	</select>
+	
+	<select id="pddetail" parameterType="com.zoo.entity.ZooProductList"
+	resultType="com.zoo.entity.ZooProductList">
+	select * 
+		from tbl_product 
+		where prod_id = #{prod_id}
+
+	</select>
 
 </mapper>

@@ -60,4 +60,14 @@ public class ZooProductListDAO {
 		session.close();
 		return productList;
 	}
+	
+	// 상세페이지 상품 정보 불러오기
+	public ZooProductList pdDetail(ZooProductList dto ) {
+		SqlSession session = sqlsessionFactory.openSession(true);
+		ZooProductList pdDetail = session.selectOne("pddetail",dto);
+		session.close();
+		return pdDetail;
+	}
+	
+	
 }

@@ -289,7 +289,7 @@
                 <div class="u-container-style u-custom-item u-list-item u-repeater-item">
                   <div class="u-container-layout u-similar-container u-container-layout-2">
                     <img class="u-image u-image-1" src="<%=pdlist.get(i).getProd_main_img() %>" data-image-width="1920" data-image-height="1406">
-                    <h6 class="u-align-center u-text u-text-1"> <a href="gopdDetailPage.do"><%=pdlist.get(i).getProd_name() %></a><br>
+                    <h6 class="u-align-center u-text u-text-1"> <a href="gopdDetailPage.do?prod_id=<%=pdlist.get(i).getProd_id() %>"><%=pdlist.get(i).getProd_name() %></a><br>
                     </h6>
                     <h6 class="u-align-left u-text u-text-2"><%=pdlist.get(i).getProd_price()%>원</h6>
                   </div>

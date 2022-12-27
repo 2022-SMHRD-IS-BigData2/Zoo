@@ -41,7 +41,8 @@
     <meta property="og:type" content="website">
   </head>
   <% ZooMember user = (ZooMember)session.getAttribute("user"); %>
-  <% List<ZooProductList> pdlist= (List<ZooProductList> )session.getAttribute("list");%>
+  
+  <%ZooProductList detail = (ZooProductList)session.getAttribute("detail"); %>
   
   
   
@@ -193,7 +194,7 @@
             <div class="u-layout-row">
               <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
                 <div class="u-container-layout u-valign-middle u-container-layout-1">
-                  <img class="u-image u-image-1" src="https://cdn-pro-web-212-222-godomall.spdycdn.net/gachi72852_godomall_com/data/goods/22/06/25/1000002667/1000002667_detail_07.jpg" data-image-width="548" data-image-height="548">
+                  <img class="u-image u-image-1" src="<%=detail.getProd_main_img() %>>" data-image-width="548" data-image-height="548">
                 </div>
               </div>
               <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
@@ -204,19 +205,19 @@
                       </p>
                     </div>
                   </div>
-                  <h4 class="u-text u-text-2"> 빠지는 죽 늙은호박 1박스 (150g*14ea)</h4>
+                  <h4 class="u-text u-text-2"> <%=detail.getProd_name()%></h4>
                   <div class="u-clearfix u-group-elements u-group-elements-1">
                     <h6 class="u-text u-text-default u-text-palette-5-dark-2 u-text-3">상품번호 </h6>
-                    <h6 class="u-text u-text-palette-5-dark-2 u-text-4"> 1000002667 </h6>
+                    <h6 class="u-text u-text-palette-5-dark-2 u-text-4"> <%=detail.getProd_id() %> </h6>
                   </div>
                   <div class="u-clearfix u-group-elements u-group-elements-2">
                     <h6 class="u-text u-text-default u-text-grey-80 u-text-5">판매<span style="font-weight: 700;"></span>가
                     </h6>
-                    <h6 class="u-text u-text-grey-80 u-text-6">36,400원</h6>
+                    <h6 class="u-text u-text-grey-80 u-text-6"><%=detail.getProd_price() %></h6>
                   </div>
                   <div class="u-clearfix u-group-elements u-group-elements-3">
                     <h6 class="u-text u-text-default u-text-grey-80 u-text-7">제조사</h6>
-                    <h6 class="u-text u-text-grey-80 u-text-8">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(주)디자인앤본두</h6>
+                    <h6 class="u-text u-text-grey-80 u-text-8">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<%=detail.getMaker_id() %></h6>
                   </div>
                   <div class="u-border-1 u-border-grey-40 u-container-style u-group u-palette-5-light-3 u-group-2">
                     <div class="u-container-layout u-container-layout-4">
@@ -237,8 +238,9 @@
                           </div>
                         </div>
                       </div>
-                      <h6 class="u-align-right u-text u-text-grey-80 u-text-10"><%=pdlist.get %></h6>
-                      <h4 class="u-text u-text-default u-text-11"> 빠지는 죽 늙은호박 1박스 (150g*14ea)</h4>
+                      <!-- 사이드 쪽  -->
+                      <h6 class="u-align-right u-text u-text-grey-80 u-text-10"></h6>
+                      <h4 class="u-text u-text-default u-text-11"> <%=detail.getProd_name() %></h4>
                     </div>
                   </div>
                   <div class="u-clearfix u-group-elements u-group-elements-4">
@@ -246,9 +248,9 @@
                     <h6 class="u-text u-text-default u-text-grey-80 u-text-13">합계금액</h6>
                   </div>
                   <div class="u-clearfix u-group-elements u-group-elements-5">
-                    <a href="https://nicepage.com/c/contact-form-html-templates" class="u-border-2 u-border-white u-btn u-btn-round u-button-style u-hover-custom-color-2 u-palette-4-dark-1 u-radius-6 u-text-hover-white u-btn-1">바로 구매</a>
-                    <a href="https://nicepage.com/c/contact-form-html-templates" class="u-align-center u-border-2 u-border-hover-palette-4-dark-2 u-border-palette-4-dark-2 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-2">장바구니</a>
-                    <a href="https://nicepage.com/c/contact-form-html-templates" class="u-border-2 u-border-hover-palette-4-dark-2 u-border-palette-4-dark-2 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-3">관심상품</a>
+                    <a href="#" class="u-border-2 u-border-white u-btn u-btn-round u-button-style u-hover-custom-color-2 u-palette-4-dark-1 u-radius-6 u-text-hover-white u-btn-1">바로 구매</a>
+                    <a href="gocartform.do" class="u-align-center u-border-2 u-border-hover-palette-4-dark-2 u-border-palette-4-dark-2 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-2">장바구니</a>
+                    <a href="gowishListform.do" class="u-border-2 u-border-hover-palette-4-dark-2 u-border-palette-4-dark-2 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-3">관심상품</a>
                   </div>
                 </div>
               </div>
@@ -280,17 +282,17 @@
                     <div class="u-container-layout u-container-layout-3">
                       <div class="u-clearfix u-group-elements u-group-elements-1">
                         <h6 class="u-text u-text-default u-text-palette-5-dark-2 u-text-1">상품번호 </h6>
-                        <h6 class="u-text u-text-palette-5-dark-2 u-text-2"> 1000002667 </h6>
+                        <h6 class="u-text u-text-palette-5-dark-2 u-text-2"> <%=detail.getProd_id() %> </h6>
                       </div>
-                      <h4 class="u-text u-text-3"> 빠지는 죽 늙은호박 1박스 (150g*14ea)</h4>
+                      <h4 class="u-text u-text-3"> <%=detail.getProd_name() %></h4>
                       <div class="u-clearfix u-group-elements u-group-elements-2">
                         <h6 class="u-text u-text-default u-text-grey-80 u-text-4">판매<span style="font-weight: 700;"></span>가
                         </h6>
-                        <h6 class="u-align-right u-text u-text-grey-80 u-text-5">36,400원</h6>
+                        <h6 class="u-align-right u-text u-text-grey-80 u-text-5"><%=detail.getProd_price() %></h6>
                       </div>
                       <div class="u-border-1 u-border-grey-40 u-container-style u-group u-palette-5-light-3 u-group-2">
                         <div class="u-container-layout u-container-layout-4">
-                          <h4 class="u-text u-text-6"> 빠지는 죽 늙은호박 1박스 (150g*14ea)</h4>
+                          <h4 class="u-text u-text-6"> <%=detail.getProd_name() %></h4>
                           <div class="u-container-style u-group u-shape-rectangle u-group-3">
                             <div class="u-container-layout">
                               <div class="u-align-center u-border-1 u-border-palette-5-light-1 u-container-style u-group u-group-4">
@@ -308,16 +310,16 @@
                               </div>
                             </div>
                           </div>
-                          <h6 class="u-align-right u-text u-text-grey-80 u-text-8">36,400원</h6>
+                          <h6 class="u-align-right u-text u-text-grey-80 u-text-8"><%=detail.getProd_price() %></h6>
                         </div>
                       </div>
                       <div class="u-clearfix u-group-elements u-group-elements-3">
-                        <h6 class="u-align-right u-text u-text-grey-80 u-text-9">36,400원</h6>
+                        <h6 class="u-align-right u-text u-text-grey-80 u-text-9"><%=detail.getProd_price() %></h6>
                         <h6 class="u-text u-text-default u-text-grey-80 u-text-10">합계금액</h6>
                       </div>
-                      <a href="https://nicepage.com/c/contact-form-html-templates" class="u-border-2 u-border-white u-btn u-btn-round u-button-style u-hover-custom-color-2 u-palette-4-dark-1 u-radius-6 u-text-hover-white u-btn-5">바로 구매</a>
-                      <a href="https://nicepage.com/c/contact-form-html-templates" class="u-border-2 u-border-hover-palette-4-dark-2 u-border-palette-4-dark-2 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-6">장바구니</a>
-                      <a href="https://nicepage.com/c/contact-form-html-templates" class="u-border-2 u-border-hover-palette-4-dark-2 u-border-palette-4-dark-2 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-7">관심상품</a>
+                      <a href="#" class="u-border-2 u-border-white u-btn u-btn-round u-button-style u-hover-custom-color-2 u-palette-4-dark-1 u-radius-6 u-text-hover-white u-btn-5">바로 구매</a>
+                      <a href="gocartform.do" class="u-border-2 u-border-hover-palette-4-dark-2 u-border-palette-4-dark-2 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-6">장바구니</a>
+                      <a href="gowishListform.do" class="u-border-2 u-border-hover-palette-4-dark-2 u-border-palette-4-dark-2 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-7">관심상품</a>
                     </div>
                   </div>
                 </div>
