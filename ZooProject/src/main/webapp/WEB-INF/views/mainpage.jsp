@@ -518,9 +518,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                 <div class="u-container-style u-custom-item u-list-item u-repeater-item">
                   <div class="u-container-layout u-similar-container u-container-layout-3">
                     <img class="u-image u-image-2" src="images/pd_2.jpg" data-image-width="228" data-image-height="228">
-                    <h6 class="u-align-center u-text u-text-4"> 다향
-아로마 힐링
-스프레이<br>
+                    <h6 class="u-align-center u-text u-text-4"> 다향 아로마 힐링 스프레이<br>
                       <span style="font-weight: 700;"></span>
                       <br>
                     </h6>
@@ -605,9 +603,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                 <div class="u-container-style u-custom-item u-list-item u-repeater-item">
                   <div class="u-container-layout u-similar-container u-container-layout-9">
                     <img class="u-image u-image-2" src="images/pd_2.jpg" data-image-width="228" data-image-height="228">
-                    <h6 class="u-align-center u-text u-text-10"> 다향
-아로마 힐링
-스프레이<br>
+                    <h6 class="u-align-center u-text u-text-10"> 다향 아로마 힐링 스프레이<br>
                       <span style="font-weight: 700;"></span>
                       <br>
                     </h6>
