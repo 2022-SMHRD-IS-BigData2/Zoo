@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
+import com.smhrd.controller.WriteCon;
 import com.zoo.controller.ZooController;
 import com.zoo.controller.ZooGoCartCon;
 import com.zoo.controller.ZooGoDetailCon;
@@ -28,6 +28,8 @@ import com.zoo.controller.ZooJoinCon;
 import com.zoo.controller.ZooLoginCon;
 import com.zoo.controller.ZooLogoutCon;
 import com.zoo.controller.ZooUpdateCon;
+import com.zoo.controller.ZooWriteCon;
+import com.zoo.controller.ZooWriteReviewCon;
 
 
 /**
@@ -63,7 +65,8 @@ public class ZooFrontController extends HttpServlet {
 		handlerMapping.put("/login.do", new ZooLoginCon());
 		handlerMapping.put("/logout.do", new ZooLogoutCon());
 		handlerMapping.put("/update.do", new ZooUpdateCon());
-		
+		handlerMapping.put("/writeReviewPage.do", new ZooWriteReviewCon());
+		handlerMapping.put("/write.do", new ZooWriteCon() );
 		
 		
 		
