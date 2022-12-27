@@ -28,14 +28,15 @@ public class ZooProductListDAO {
 		return productList;
 	}
 
-	// 대분류 - 중분류 카테고리 클릭했을 때 상품정보 출력
-	public List<ZooProductList> productList2(String prod_category2) {
+	// 중분류 카테고리 클릭했을 때 상품정보 출력 12/27 17:33 김원경 작성중
+	public List<ZooProductList> productList2(ZooProductList dto) {
 		
 		SqlSession session = sqlsessionFactory.openSession(true);
 
-		List<ZooProductList> productList = session.selectList(prod_category2);
+		List<ZooProductList> productList = session.selectList("prod_category2", dto);
 
-		return null;
+		session.close();
+		return productList;
 	}
 	
 	// 가격대별 상품 리스트 출력

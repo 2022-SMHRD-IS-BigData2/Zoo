@@ -57,7 +57,7 @@
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;"href="gocartform.do">장바구니</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" href="gomyPageform.do" style="padding: 14px 10px;">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gomyPageform.do">주문 내역</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gowishListform.do">위시리스트</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" >게시글</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goboardform.do">게시글</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white"href="gomemberUpdate.do">정보 수정</a><%} %>
 </li></ul>
 </div>
@@ -73,7 +73,7 @@
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gocartform.do">장바구니</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gomyPageform.do">주문 내역</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gowishListform.do">위시리스트</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">게시글</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="goboardform.do">게시글</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gomemberUpdate.do">정보 수정</a>
 </li></ul>
 </div>
@@ -240,11 +240,11 @@
                 <div class="u-container-layout u-container-layout-1">
                   <p class="u-text u-text-1">나의 쇼핑 정보</p>
                   <p class="u-text u-text-grey-70 u-text-2"><a href="gomyPageform.do">주문내역 조회</a></p>
-                  <p class="u-text u-text-grey-70 u-text-3"><a href="#">적립금 내역</a></p>
-                  <p class="u-text u-text-grey-70 u-text-4"><a href="gocoupon.do">쿠폰 내역</a></p>
+                  <p class="u-text u-text-grey-70 u-text-3"><a>적립금 내역</a></p>
+                  <p class="u-text u-text-grey-70 u-text-4"><a>쿠폰 내역</a></p>
                   <p class="u-text u-text-5">활동 정보</p>
                   <p class="u-text u-text-grey-70 u-text-6"><a href="gowishListform.do">나의 위시리스트</a></p>
-                  <p class="u-text u-text-grey-70 u-text-7"><a href="gomyPostform.do">나의 게시글</a></p>
+                  <p class="u-text u-text-grey-70 u-text-7"><a href="goboardform.do">나의 게시글</a></p>
                   <p class="u-text u-text-8">나의 정보</p>
                   <p class="u-text u-text-grey-70 u-text-9"><a href="gomemberUpdate.do">회원 정보 수정</a></p>
                   <p class="u-text u-text-grey-70 u-text-10"><a href="gomemberDelete.do">회원 탈퇴</a></p>
@@ -274,7 +274,7 @@
                         <input type="checkbox">
                       </div>
                       <h6 class="u-text u-text-15">5,000 원</h6>
-                      <a href="https://nicepage.com/templates" class="u-border-2 u-border-grey-75 u-btn u-btn-round u-button-style u-hover-palette-5-light-1 u-palette-5-light-2 u-radius-6 u-btn-2">리 뷰 작 성</a>
+                      <a href="writeReviewPage.do" class="u-border-2 u-border-grey-75 u-btn u-btn-round u-button-style u-hover-palette-5-light-1 u-palette-5-light-2 u-radius-6 u-btn-2">리 뷰 작 성</a>
                       <div class="u-border-1 u-border-palette-5-light-1 u-line u-line-horizontal u-line-3"></div>
                     </div>
                   </div>

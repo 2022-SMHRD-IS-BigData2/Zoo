@@ -13,13 +13,13 @@
 	</select>
 
 
-	<!-- 2. 중분류 category까지 적용하여 상품정보 데이터 불러오기 -->
-	<select id="productList" parameterType="String"
+	<!-- 2. 중분류 category까지 적용하여 상품정보 데이터 불러오기 12/27 17:33 김원경 작성중 -->
+	<select id="prod_category2"
+		parameterType="com.zoo.entity.ZooProductList"
 		resultType="com.zoo.entity.ZooProductList">
 		select *
 		from tbl_product
 		where prod_category2 = #{prod_category2}
-		<!-- #{prod_category2} 대문자로 작성 -->
 	</select>
 
 
@@ -27,8 +27,8 @@
 	<select id="prod_budget"
 		parameterType="com.zoo.entity.ZooPdBudget"
 		resultType="com.zoo.entity.ZooProductList">
-		select * 
-		from tbl_product 
+		select *
+		from tbl_product
 		where prod_price between #{lonum} and #{hinum}
 	</select>
 
@@ -37,8 +37,8 @@
 	<select id="prod_keyword"
 		parameterType="com.zoo.entity.ZooProductList"
 		resultType="com.zoo.entity.ZooProductList">
-		select * 
-		from tbl_product 
+		select *
+		from tbl_product
 		where prod_keyword1 = #{prod_keyword1}
 	</select>
 	

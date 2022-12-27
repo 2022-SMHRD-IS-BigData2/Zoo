@@ -87,7 +87,7 @@
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
         </nav>
-        <form action="#" method="get" class="u-border-1 u-border-grey-30 u-search u-search-right u-white u-search-1">
+        <form action="#" method="get" class="u-border-1 u-border-grey-30 u-search u-search-right u-white u-search-1" style="position: relative; top: -112px; left: 445px;">
           <button class="u-search-button" type="submit">
             <span class="u-search-icon u-spacing-10 u-search-icon-1">
               <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 56.966 56.966"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-762a"></use></svg>
@@ -96,8 +96,9 @@
           </button>
           <input class="u-search-input" type="search" name="search" value="" placeholder="Search">
         </form>
-        <a href="gomainpage.do" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200" title="메인페이지">
-          <img src="images/logo.png" class="u-logo-image u-logo-image-1" >
+        <a href="gomainpage.do" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200" title="메인페이지" style="position: relative;
+    margin: -60px;">
+          <img src="images/logo.png" class="u-logo-image u-logo-image-1" style="position: relative; left: 465px; top: -112px;">
         </a>
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-2">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 700; text-transform: uppercase;">

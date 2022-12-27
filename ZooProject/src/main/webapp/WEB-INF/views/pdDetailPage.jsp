@@ -238,13 +238,16 @@
                           </div>
                         </div>
                       </div>
+
                       <!-- 사이드 쪽  -->
                       <h6 class="u-align-right u-text u-text-grey-80 u-text-10"></h6>
                       <h4 class="u-text u-text-default u-text-11"> <%=detail.getProd_name() %></h4>
+
+                      
                     </div>
                   </div>
                   <div class="u-clearfix u-group-elements u-group-elements-4">
-                    <h6 class="u-align-right u-text u-text-grey-80 u-text-12">36,400원</h6>
+                    <h6 class="u-align-right u-text u-text-grey-80 u-text-12"><%=detail.getProd_price() %>>원</h6>
                     <h6 class="u-text u-text-default u-text-grey-80 u-text-13">합계금액</h6>
                   </div>
                   <div class="u-clearfix u-group-elements u-group-elements-5">

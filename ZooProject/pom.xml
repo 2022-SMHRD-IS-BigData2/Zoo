@@ -45,10 +45,19 @@
 	    <scope>provided</scope>
 	</dependency>
 
-  
-  
-  
-  
+
+	<dependency>
+	    <groupId>servlets.com</groupId>
+	    <artifactId>cos</artifactId>
+	    <version>05Nov2002</version>
+	</dependency>
+
+
+	<dependency>
+		<groupId>com.smhrd</groupId>
+		<artifactId>FrontController</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
   </dependencies>
   
   
