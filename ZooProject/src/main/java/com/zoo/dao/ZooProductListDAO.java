@@ -18,11 +18,10 @@ public class ZooProductListDAO {
 
 		SqlSession session = sqlsessionFactory.openSession(true);
 
-		List<ZooProductList> productList = session.selectList("prod_category");
+		List<ZooProductList> productList = session.selectList("productList", prod_category);
 
 		session.close();
 		return productList;
-		// productList 형변환(ZooProductList)하여 페이지에서 출력
 	}
 
 	// 대분류 - 중분류 카테고리 클릭했을 때 상품정보 출력

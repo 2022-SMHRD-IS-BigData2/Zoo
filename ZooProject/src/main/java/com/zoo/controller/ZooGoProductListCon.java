@@ -1,10 +1,14 @@
 package com.zoo.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.zoo.dao.ZooProductListDAO;
+import com.zoo.entity.ZooProductList;
 
 public class ZooGoProductListCon implements ZooController {
 
@@ -12,14 +16,6 @@ public class ZooGoProductListCon implements ZooController {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		
-		System.out.println("ZooProductListCon execute() 호출");
-		
-		request.setCharacterEncoding("UTF-8");
-		
-		String prod_category = request.getParameter("");
-		System.out.println(prod_category+" 카테고리로 이동");
-		
 		
 		
 		return "foodform";
