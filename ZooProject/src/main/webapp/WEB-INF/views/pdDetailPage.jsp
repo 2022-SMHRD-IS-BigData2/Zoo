@@ -237,7 +237,7 @@
                           </div>
                         </div>
                       </div>
-                      <h6 class="u-align-right u-text u-text-grey-80 u-text-10"><%=pdlist.get %></h6>
+                      <h6 class="u-align-right u-text u-text-grey-80 u-text-10"></h6>
                       <h4 class="u-text u-text-default u-text-11"> 빠지는 죽 늙은호박 1박스 (150g*14ea)</h4>
                     </div>
                   </div>

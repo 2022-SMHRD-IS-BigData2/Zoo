@@ -49,12 +49,12 @@
           <div class="u-custom-menu u-nav-container">
             <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;">로그인</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;">회원가입</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;">주문조회</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;">장바구니</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" href="myPage.html" style="padding: 14px 10px;">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">주문 내역</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gomyPageform.do">주문조회</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gocartform.do">장바구니</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" href="myPage.html" style="padding: 14px 10px;">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gomyPageform.do">주문 내역</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="boardPage.html">위시리스트</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">게시글</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">정보 수정</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goboardform.do">게시글</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gomemberUpdate.do">정보 수정</a>
 </li></ul>
 </div>
 </li></ul>
@@ -65,12 +65,12 @@
                 <div class="u-menu-close"></div>
                 <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-3"><li class="u-nav-item"><a class="u-button-style u-nav-link">로그인</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">회원가입</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">주문조회</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">장바구니</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="myPage.html">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link">주문 내역</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gomyPageform.do">주문조회</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gocartform.do">장바구니</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="myPage.html">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gomyPageform.do">주문 내역</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="boardPage.html">위시리스트</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">게시글</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">정보 수정</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="goboardform.do">게시글</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gomemberUpdate.do">정보 수정</a>
 </li></ul>
 </div>
 </li></ul>
@@ -88,7 +88,7 @@
           </button>
           <input class="u-search-input" type="search" name="search" value="" placeholder="Search">
         </form>
-        <a href="mainPage.html" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200" title="메인페이지">
+        <a href="gomainpage.do" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200" title="메인페이지">
           <img src="images/logo.png" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-2">
@@ -235,15 +235,15 @@
               <div class="u-align-left u-container-style u-layout-cell u-size-11 u-layout-cell-1">
                 <div class="u-container-layout u-container-layout-1">
                   <p class="u-text u-text-1">나의 쇼핑 정보</p>
-                  <p class="u-text u-text-grey-70 u-text-2">주문내역 조회</p>
-                  <p class="u-text u-text-grey-70 u-text-3">적립금 내역</p>
-                  <p class="u-text u-text-grey-70 u-text-4">쿠폰 내역</p>
+                  <p class="u-text u-text-grey-70 u-text-2"><a href="gomyPageform.do">주문내역 조회</a></p>
+                  <p class="u-text u-text-grey-70 u-text-3"><a>적립금 내역</a></p>
+                  <p class="u-text u-text-grey-70 u-text-4"><a>쿠폰 내역</a></p>
                   <p class="u-text u-text-5">활동 정보</p>
-                  <p class="u-text u-text-grey-70 u-text-6">나의 위시리스트</p>
-                  <p class="u-text u-text-grey-70 u-text-7">나의 게시글</p>
+                  <p class="u-text u-text-grey-70 u-text-6"><a href="gowishListform.do">나의 위시리스트</a></p>
+                  <p class="u-text u-text-grey-70 u-text-7"><a href="goboardform.do">나의 게시글</a></p>
                   <p class="u-text u-text-8">나의 정보</p>
-                  <p class="u-text u-text-grey-70 u-text-9">회원 정보 수정</p>
-                  <p class="u-text u-text-grey-70 u-text-10">회원 탈퇴</p>
+                  <p class="u-text u-text-grey-70 u-text-9"><a href="gomemberUpdate.do">회원 정보 수정</a></p>
+                  <p class="u-text u-text-grey-70 u-text-10"><a href="gomemberDelete.do">회원 탈퇴</a></p>
                 </div>
               </div>
               <div class="u-container-style u-layout-cell u-shape-rectangle u-size-49 u-layout-cell-2">
@@ -405,7 +405,7 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
         </nav>
-        <a href="mainPage.html" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200" title="메인페이지">
+        <a href="gomainpage.do" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200" title="메인페이지">
           <img src="images/logo.png" class="u-logo-image u-logo-image-1">
         </a>
         <p class="u-align-left u-text u-text-1">
