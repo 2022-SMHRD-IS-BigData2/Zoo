@@ -3,11 +3,13 @@ package com.zoo.controller;
 import java.io.IOException;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.ibatis.reflection.SystemMetaObject;
+import org.eclipse.jdt.internal.compiler.ast.RequiresStatement;
 
 import com.zoo.dao.ZooProductListDAO;
 import com.zoo.entity.ZooProductList;
@@ -19,7 +21,7 @@ public class ZooGofoodformCon implements ZooController {
 			throws ServletException, IOException {
 
 		System.out.println("ZooProductListCon execute() 호출");
-
+		
 		request.setCharacterEncoding("UTF-8");
 
 		String category = request.getParameter("category");
@@ -27,18 +29,12 @@ public class ZooGofoodformCon implements ZooController {
 		dto.setProd_category(category);
 		// 카테고리별 파라미터값 수집 방법???
 		System.out.println(category + "로 이동");
-
 		
 		// DAO 객체 생성
 		ZooProductListDAO dao = new ZooProductListDAO();
 		List<ZooProductList> list = dao.productList1(dto);
 
 		System.out.println(list.size());
-		
-		
-		
-		
-		
 		
 //		if (category.equals("FOOD")) {
 //			List<ZooProductList> list = dao.productList1(category);

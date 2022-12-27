@@ -375,24 +375,16 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
           <div class="u-container-style u-group u-shape-rectangle u-group-2">
             <div class="u-container-layout u-container-layout-2">
               <div class="u-container-style u-group u-shape-rectangle u-group-3">
-                <div class="u-container-layout u-container-layout-3"><span class="u-align-left u-file-icon u-icon u-icon-circle u-palette-3-light-3 u-icon-1"><img src="images/woman1.png" alt=""></span>
-                  <h5 class="u-text u-text-2">Woman</h5>
-                </div>
+                  <h5 class="u-text u-text-2">만원 미만</h5>
               </div>
               <div class="u-container-style u-group u-shape-rectangle u-group-4">
-                <div class="u-container-layout u-container-layout-4"><span class="u-align-left u-file-icon u-icon u-icon-circle u-palette-3-light-3 u-icon-2"><img src="images/man.png" alt=""></span>
-                  <h5 class="u-text u-text-3">man</h5>
-                </div>
+                  <h5 class="u-text u-text-3">1-2만원대</h5>
               </div>
               <div class="u-container-style u-group u-shape-rectangle u-group-5">
-                <div class="u-container-layout u-valign-bottom u-container-layout-5"><span class="u-align-left u-file-icon u-icon u-icon-circle u-palette-3-light-3 u-icon-3"><img src="images/price.png" alt=""></span>
-                  <h5 class="u-text u-text-4">money</h5>
-                </div>
+                  <h5 class="u-text u-text-4">3-4만원대</h5>
               </div>
               <div class="u-container-style u-group u-shape-rectangle u-group-6">
-                <div class="u-container-layout u-container-layout-6"><span class="u-align-left u-file-icon u-icon u-icon-circle u-palette-3-light-3 u-icon-4"><img src="images/giftbox.png" alt=""></span>
-                  <h5 class="u-text u-text-5">gift</h5>
-                </div>
+                  <h5 class="u-text u-text-5">5만원 이상</h5>
               </div>
             </div>
           </div>
@@ -690,16 +682,5 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
         <p class="u-align-left u-text u-text-2"><b>나누민족은 광주·전남 사회적경제쇼핑몰 입니다.</b>
         </p>
       </div></footer>
-    <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/website-design" target="_blank">
-        <span>Website Design Ideas</span>
-      </a>
-      <p class="u-text">
-        <span>created with</span>
-      </p>
-      <a class="u-link" href="https://nicepage.com/website-builder" target="_blank">
-        <span>Website Builder</span>
-      </a>. 
-    </section>
   
 </body></html>
