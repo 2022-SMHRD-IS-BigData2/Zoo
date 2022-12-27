@@ -38,17 +38,12 @@ public class ZooGofoodformCon implements ZooController {
 
 		System.out.println(list.size());
 		
+
 		HttpSession session = request.getSession();
 		session.setAttribute("list",list);
 		
 		
-//		if (category.equals("FOOD")) {
-//			List<ZooProductList> list = dao.productList1(category);
-//			System.out.println(list.get(0).getProd_name());
-//
-//		} else {
-//			List<ZooProductList> list = dao.productList2(category);
-//		}
+
 
 		return "foodform";
 	}

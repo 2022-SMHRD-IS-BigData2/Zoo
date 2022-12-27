@@ -6,10 +6,14 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.smhrd.database.SessionManager;
+import com.zoo.entity.ZooPdBudget;
 import com.zoo.entity.ZooProductList;
+
+import lombok.Data;
 
 public class ZooProductListDAO {
 
+	
 	// SqlSessionFactory 받아오기
 	SqlSessionFactory sqlsessionFactory = SessionManager.getSqlSessionFactory();
 
@@ -18,7 +22,7 @@ public class ZooProductListDAO {
 
 		SqlSession session = sqlsessionFactory.openSession(true);
 
-		List<ZooProductList> productList = session.selectList("prod_category",dto);
+		List<ZooProductList> productList = session.selectList("prod_category", dto);
 
 		session.close();
 		return productList;
@@ -32,5 +36,17 @@ public class ZooProductListDAO {
 		List<ZooProductList> productList = session.selectList(prod_category2);
 
 		return null;
+	}
+	
+	// 가격대별 상품 리스트 출력
+	public List<ZooProductList> prod_budget(ZooPdBudget budget) {
+		
+		SqlSession session = sqlsessionFactory.openSession(true);
+
+		List<ZooProductList> productList = session.selectList("prod_budget", budget);
+		
+		session.close();
+		return productList;
+		
 	}
 }

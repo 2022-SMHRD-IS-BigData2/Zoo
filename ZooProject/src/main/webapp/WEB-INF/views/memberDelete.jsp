@@ -1,31 +1,26 @@
-<%@page import="com.zoo.entity.ZooProductList"%>
-<%@page import="java.util.List"%>
 <%@page import="com.zoo.entity.ZooMember"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html style="font-size: 16px;" lang="en"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="​Need Help?">
+    <meta name="keywords" content="">
     <meta name="description" content="">
-    <title>pdDetailPage</title>
+    <title>로그인</title>
     <link rel="stylesheet" href="assets/css/nicepage.css" media="screen">
-<link rel="stylesheet" href="assets/css/pdDetailPage.css" media="screen">
+<link rel="stylesheet" href="assets/css/memberUpdate.css" media="screen">
     <script class="u-script" type="text/javascript" src="assets/js/jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="assets/js/nicepage.js" defer=""></script>
-    <meta name="generator" content="Nicepage 5.2.0, nicepage.com">
+    <meta name="generator" content="Nicepage 5.1.5, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
-    
-    
-    
     
     
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
 		"name": "Site1",
-		"logo": "images/logo.png",
+		"logo": "/images/c64cf47d-9299-74e8-02ff-c280d9ca18da.png",
 		"sameAs": [
 				"https://facebook.com/name",
 				"https://twitter.com/name",
@@ -35,18 +30,13 @@
     <meta name="theme-color" content="#478ac9">
     <meta name="twitter:site" content="@">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="pdDetailPage">
+    <meta name="twitter:title" content="로그인">
     <meta name="twitter:description" content="Site1">
-    <meta property="og:title" content="pdDetailPage">
+    <meta property="og:title" content="로그인">
     <meta property="og:type" content="website">
   </head>
-  <% ZooMember user = (ZooMember)session.getAttribute("user"); %>
-  <% List<ZooProductList> pdlist= (List<ZooProductList> )session.getAttribute("list");%>
-  
-  
-  
-  <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
-  <div class="u-clearfix u-sheet u-sheet-1">
+  <% ZooMember user =(ZooMember)session.getAttribute("user"); %>
+  <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><div class="u-clearfix u-sheet u-sheet-1">
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
             <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
@@ -62,12 +52,12 @@
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gomyPageform.do"><%=user.getCust_name() %></a>
 
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="logout.do">로그아웃</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;"href="gomyPageform.do">주문조회</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" href="gocartform.do" style="padding: 14px 10px;">장바구니</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" href="gomyPageform.do" style="padding: 14px 10px;">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white"href="gomyPageform.do">주문 내역</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white"href="gowishListform.do">위시리스트</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gomyPageform.do">주문조회</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gocartform.do">장바구니</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" href="gomyPageform.do" style="padding: 14px 10px;">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">주문 내역</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">위시리스트</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">게시글</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white"href="gomemberUpdate.do">정보 수정</a><%} %>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gomemberUpdate.do">정보 수정</a><%} %>
 </li></ul>
 </div>
 </li></ul>
@@ -78,12 +68,12 @@
                 <div class="u-menu-close"></div>
                 <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-3"><li class="u-nav-item"><a class="u-button-style u-nav-link">로그인</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" >회원가입</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">주문조회</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">장바구니</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link">주문 내역</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">위시리스트</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gomyPageform.do">주문조회</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gocartform.do">장바구니</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gomyPageform.do">주문 내역</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gowishListform.do">위시리스트</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">게시글</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" >정보 수정</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gomemberUpdate.do">정보 수정</a>
 </li></ul>
 </div>
 </li></ul>
@@ -104,7 +94,6 @@
         <a href="gomainpage.do" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200" title="메인페이지">
           <img src="images/logo.png" class="u-logo-image u-logo-image-1" >
         </a>
-        
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-2">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 700; text-transform: uppercase;">
             <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
@@ -112,7 +101,6 @@
               <svg class="u-svg-content" version="1.1" id="svg-7445" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
 </g></svg>
             </a>
-          </div>
           </div>
           <div class="u-custom-menu u-nav-container">
             <ul class="u-nav u-spacing-30 u-unstyled u-nav-5"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">상품 카테고리</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do">🍴 식품</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">농산물</a>
@@ -185,218 +173,68 @@
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
         </nav>
-      </header>
-    <section class="u-clearfix u-section-1" id="sec-ba9d">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
-                <div class="u-container-layout u-valign-middle u-container-layout-1">
-                  <img class="u-image u-image-1" src="https://cdn-pro-web-212-222-godomall.spdycdn.net/gachi72852_godomall_com/data/goods/22/06/25/1000002667/1000002667_detail_07.jpg" data-image-width="548" data-image-height="548">
-                </div>
-              </div>
-              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
-                <div class="u-container-layout u-container-layout-2">
-                  <div class="u-container-style u-grey-10 u-group u-radius-10 u-shape-round u-group-1">
-                    <div class="u-container-layout u-container-layout-3">
-                      <p class="u-small-text u-text u-text-default u-text-variant u-text-1">사회적<span style="font-size: 0.875rem;"></span>기업
-                      </p>
-                    </div>
-                  </div>
-                  <h4 class="u-text u-text-2"> 빠지는 죽 늙은호박 1박스 (150g*14ea)</h4>
-                  <div class="u-clearfix u-group-elements u-group-elements-1">
-                    <h6 class="u-text u-text-default u-text-palette-5-dark-2 u-text-3">상품번호 </h6>
-                    <h6 class="u-text u-text-palette-5-dark-2 u-text-4"> 1000002667 </h6>
-                  </div>
-                  <div class="u-clearfix u-group-elements u-group-elements-2">
-                    <h6 class="u-text u-text-default u-text-grey-80 u-text-5">판매<span style="font-weight: 700;"></span>가
-                    </h6>
-                    <h6 class="u-text u-text-grey-80 u-text-6">36,400원</h6>
-                  </div>
-                  <div class="u-clearfix u-group-elements u-group-elements-3">
-                    <h6 class="u-text u-text-default u-text-grey-80 u-text-7">제조사</h6>
-                    <h6 class="u-text u-text-grey-80 u-text-8">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(주)디자인앤본두</h6>
-                  </div>
-                  <div class="u-border-1 u-border-grey-40 u-container-style u-group u-palette-5-light-3 u-group-2">
-                    <div class="u-container-layout u-container-layout-4">
-                      <div class="u-container-style u-group u-shape-rectangle u-group-3">
-                        <div class="u-container-layout">
-                          <div class="u-align-center u-border-1 u-border-palette-5-light-1 u-container-style u-group u-group-4">
-                            <div class="u-container-layout">
-                              <p class="u-align-center u-text u-text-9">1</p>
-                            </div>
-                          </div>
-                          <div class="u-border-1 u-border-palette-5-light-1 u-container-style u-group u-group-5">
-                            <div class="u-container-layout u-container-layout-7"><span class="u-align-left u-file-icon u-icon u-icon-1"><img src="images/up_arrow1.png" alt=""></span>
-                            </div>
-                          </div>
-                          <div class="u-border-1 u-border-palette-5-light-1 u-container-style u-group u-group-6">
-                            <div class="u-container-layout u-container-layout-8"><span class="u-align-left u-file-icon u-icon u-icon-2"><img src="images/down_arrow1.png" alt=""></span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <h6 class="u-align-right u-text u-text-grey-80 u-text-10"><%=pdlist.get %></h6>
-                      <h4 class="u-text u-text-default u-text-11"> 빠지는 죽 늙은호박 1박스 (150g*14ea)</h4>
-                    </div>
-                  </div>
-                  <div class="u-clearfix u-group-elements u-group-elements-4">
-                    <h6 class="u-align-right u-text u-text-grey-80 u-text-12">36,400원</h6>
-                    <h6 class="u-text u-text-default u-text-grey-80 u-text-13">합계금액</h6>
-                  </div>
-                  <div class="u-clearfix u-group-elements u-group-elements-5">
-                    <a href="https://nicepage.com/c/contact-form-html-templates" class="u-border-2 u-border-white u-btn u-btn-round u-button-style u-hover-custom-color-2 u-palette-4-dark-1 u-radius-6 u-text-hover-white u-btn-1">바로 구매</a>
-                    <a href="https://nicepage.com/c/contact-form-html-templates" class="u-align-center u-border-2 u-border-hover-palette-4-dark-2 u-border-palette-4-dark-2 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-2">장바구니</a>
-                    <a href="https://nicepage.com/c/contact-form-html-templates" class="u-border-2 u-border-hover-palette-4-dark-2 u-border-palette-4-dark-2 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-3">관심상품</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-section-2" id="sec-2708">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-container-style u-layout-cell u-size-43 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <div class="u-border-1 u-border-grey-40 u-line u-line-horizontal u-line-1"></div>
-                  <a href="#detail" class="u-border-2 u-border-hover-palette-4-light-3 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-1">상세설명</a>
-                  <a href="#review" class="u-border-2 u-border-hover-palette-4-light-3 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-2">구매후기 ( 1 )</a>
-                  <a href="#Qbuy" class="u-border-2 u-border-hover-palette-4-light-3 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-3">구매문의 ( 1 )</a>
-                  <a href="https://nicepage.com/c/contact-form-html-templates" class="u-border-2 u-border-hover-palette-4-light-3 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-4">상품구매안내</a>
-                  <div class="u-border-1 u-border-grey-40 u-line u-line-horizontal u-line-2"></div>
-                  <img class="u-image u-image-default u-image-1" src="https://cdn-pro-web-212-222-godomall.spdycdn.net/gachi72852_godomall_com/data/editor/goods/220622/e5064242260d7cc267c0c255f73248ce_100656.jpg" id="detail" alt="" data-image-width="1000" data-image-height="8693">
-                  <img class="u-image u-image-default u-image-2" src="https://cdn-pro-web-212-222-godomall.spdycdn.net/gachi72852_godomall_com/data/editor/goods/220622/257e10fb846ba15f9ac2a9dd5bdcb7d4_100656.jpg" alt="" data-image-width="1000" data-image-height="9587">
-                </div>
-              </div>
-              <div class="u-container-style u-layout-cell u-size-17 u-layout-cell-2">
-                <div class="u-border-1 u-border-grey-40 u-container-layout u-container-layout-2">
-                  <div class="u-container-style u-group u-white u-group-1" id="stickybox">
-                    <div class="u-container-layout u-container-layout-3">
-                      <div class="u-clearfix u-group-elements u-group-elements-1">
-                        <h6 class="u-text u-text-default u-text-palette-5-dark-2 u-text-1">상품번호 </h6>
-                        <h6 class="u-text u-text-palette-5-dark-2 u-text-2"> 1000002667 </h6>
-                      </div>
-                      <h4 class="u-text u-text-3"> 빠지는 죽 늙은호박 1박스 (150g*14ea)</h4>
-                      <div class="u-clearfix u-group-elements u-group-elements-2">
-                        <h6 class="u-text u-text-default u-text-grey-80 u-text-4">판매<span style="font-weight: 700;"></span>가
-                        </h6>
-                        <h6 class="u-align-right u-text u-text-grey-80 u-text-5">36,400원</h6>
-                      </div>
-                      <div class="u-border-1 u-border-grey-40 u-container-style u-group u-palette-5-light-3 u-group-2">
-                        <div class="u-container-layout u-container-layout-4">
-                          <h4 class="u-text u-text-6"> 빠지는 죽 늙은호박 1박스 (150g*14ea)</h4>
-                          <div class="u-container-style u-group u-shape-rectangle u-group-3">
-                            <div class="u-container-layout">
-                              <div class="u-align-center u-border-1 u-border-palette-5-light-1 u-container-style u-group u-group-4">
-                                <div class="u-container-layout">
-                                  <p class="u-align-center u-text u-text-7">1</p>
-                                </div>
-                              </div>
-                              <div class="u-border-1 u-border-palette-5-light-1 u-container-style u-group u-group-5">
-                                <div class="u-container-layout u-container-layout-7"><span class="u-align-left u-file-icon u-icon u-icon-1"><img src="images/my_arrow_left.png" alt=""></span>
-                                </div>
-                              </div>
-                              <div class="u-border-1 u-border-palette-5-light-1 u-container-style u-group u-group-6">
-                                <div class="u-container-layout u-container-layout-8"><span class="u-align-left u-file-icon u-icon u-icon-2"><img src="images/my_arrow_right.png" alt=""></span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <h6 class="u-align-right u-text u-text-grey-80 u-text-8">36,400원</h6>
-                        </div>
-                      </div>
-                      <div class="u-clearfix u-group-elements u-group-elements-3">
-                        <h6 class="u-align-right u-text u-text-grey-80 u-text-9">36,400원</h6>
-                        <h6 class="u-text u-text-default u-text-grey-80 u-text-10">합계금액</h6>
-                      </div>
-                      <a href="https://nicepage.com/c/contact-form-html-templates" class="u-border-2 u-border-white u-btn u-btn-round u-button-style u-hover-custom-color-2 u-palette-4-dark-1 u-radius-6 u-text-hover-white u-btn-5">바로 구매</a>
-                      <a href="https://nicepage.com/c/contact-form-html-templates" class="u-border-2 u-border-hover-palette-4-dark-2 u-border-palette-4-dark-2 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-6">장바구니</a>
-                      <a href="https://nicepage.com/c/contact-form-html-templates" class="u-border-2 u-border-hover-palette-4-dark-2 u-border-palette-4-dark-2 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-7">관심상품</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-section-3" id="sec-2091">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-container-style u-layout-cell u-size-43 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <h6 class="u-text u-text-default u-text-1" id="review">구매후기 ( 1 )</h6>
-                  <div class="u-border-1 u-border-grey-40 u-expanded-width u-line u-line-horizontal u-line-1"></div>
-                  <h5 class="u-text u-text-default u-text-palette-3-base u-text-2"> ★★★★★</h5>
-                  <h6 class="u-text u-text-default u-text-3">박주* </h6>
-                  <h6 class="u-text u-text-default u-text-4">2022.12.20</h6>
-                  <h6 class="u-text u-text-default u-text-5">일단 맛은 있어요 살도 잘 빠졌으면 좋겠네요~</h6>
-                  <div class="u-border-1 u-border-grey-40 u-expanded-width u-line u-line-horizontal u-line-2"></div>
-                  <div class="u-align-center u-border-1 u-border-palette-5-light-1 u-container-style u-group u-group-1">
-                    <div class="u-container-layout">
-                      <p class="u-align-center u-text u-text-6">1</p>
-                    </div>
-                  </div>
-                  <div class="u-clearfix u-group-elements u-group-elements-1">
-                    <a href="https://nicepage.com/one-page-template" class="u-border-2 u-border-hover-palette-5-dark-2 u-border-palette-5-dark-2 u-btn u-button-style u-hover-grey-5 u-none u-text-black u-btn-1">상품후기 전체보기</a>
-                    <a href="https://nicepage.com/one-page-template" class="u-border-2 u-border-hover-palette-5-dark-2 u-border-palette-5-dark-2 u-btn u-button-style u-hover-grey-5 u-none u-text-black u-text-hover-black u-btn-2">상품후기 글쓰기</a>
-                  </div>
-                </div>
-              </div>
-              <div class="u-container-style u-layout-cell u-shape-rectangle u-size-17 u-layout-cell-2">
-                <div class="u-container-layout u-container-layout-3"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-section-4" id="sec-68ba">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-container-style u-layout-cell u-size-43 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <h6 class="u-text u-text-default u-text-1" id="Qbuy">구매문의 ( 1 )</h6>
-                  <div class="u-border-1 u-border-grey-40 u-expanded-width u-line u-line-horizontal u-line-1"></div>
-                  <h5 class="u-text u-text-default u-text-palette-5-dark-2 u-text-2">문의글</h5>
-                  <h6 class="u-text u-text-default u-text-3">배송이 3일째 안와요..</h6>
-                  <h6 class="u-text u-text-default u-text-4">이우* </h6>
-                  <h6 class="u-text u-text-default u-text-5">2022.12.24</h6>
-                  <div class="u-border-1 u-border-grey-40 u-expanded-width u-line u-line-horizontal u-line-2"></div>
-                  <div class="u-align-center u-border-1 u-border-palette-5-light-1 u-container-style u-group u-group-1">
-                    <div class="u-container-layout">
-                      <p class="u-align-center u-text u-text-6">1</p>
-                    </div>
-                  </div>
-                  <div class="u-clearfix u-group-elements u-group-elements-1">
-                    <a href="https://nicepage.com/one-page-template" class="u-border-2 u-border-hover-palette-5-dark-2 u-border-palette-5-dark-2 u-btn u-button-style u-hover-grey-5 u-none u-text-black u-btn-1">상품문의 전체보기</a>
-                    <a href="https://nicepage.com/one-page-template" class="u-border-2 u-border-hover-palette-5-dark-2 u-border-palette-5-dark-2 u-btn u-button-style u-hover-grey-5 u-none u-text-black u-text-hover-black u-btn-2">상품문의 글쓰기</a>
-                  </div>
-                </div>
-              </div>
-              <div class="u-container-style u-layout-cell u-shape-rectangle u-size-17 u-layout-cell-2">
-                <div class="u-container-layout u-container-layout-3"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <a href="#sec-d939" class="u-border-none u-btn u-btn-round u-button-style u-palette-4-dark-1 u-radius-50 u-btn-3">UP</a>
-      </div>
-    </section>
+      </div></header>
     
+      <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/53a8c415f1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./login.css">
+</head>
+
+
+
+<body>
+   <form action="delete.do" method="post">
+       <div class="frame">
+           <div class="wrap">
+               <div class="delete">
+                   <section class="usermodify">
+                       <h3>회원탈퇴</h3>
+                       <table class="usermodify-table">
+                           <tbody>
+<!-- ============================================================================================================================================================================================================================================================ -->
+                               <tr>
+                                   <th scope="row">아이디(이메일)</th>
+                                   <td>
+                                       <div class="usermodify-ID">
+                                       <input type="text" name="id">
+                                       </div>
+                                   </td>
+                               </tr>
+<!-- ============================================================================================================================================================================================================================================================ -->
+                               <tr>
+                                   <th scope="row">비밀번호</th>
+                                   <td>
+                                       <div class="usermodify-password">
+                                       <input type="text" name="pw">
+                                       </div>
+                                   </td>
+                               </tr>
+<!-- ============================================================================================================================================================================================================================================================ -->
+                           </tbody>
+                            
+                        </table>
+                        <div class="info_box">
+                            <button type="button" id="btnCancel" class="btn_member_cancel"><a href="gomainpage.do">나가기</a></button>
+                            <input type="submit" value="탈퇴하기">
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
     
     <footer class="u-align-center u-clearfix u-footer u-gradient u-footer" id="sec-e204"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="/메인페이지.html" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200" title="메인페이지">
+          <img src="/images/c64cf47d-9299-74e8-02ff-c280d9ca18da.png" class="u-logo-image u-logo-image-1">
+        </a>
         <div class="u-social-icons u-spacing-10 u-social-icons-1">
           <a class="u-social-url" title="facebook" target="_blank" href="https://facebook.com/name"><span class="u-icon u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-6c75"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-6c75"><path fill="currentColor" d="M75.5,28.8H65.4c-1.5,0-4,0.9-4,4.3v9.4h13.9l-1.5,15.8H61.4v45.1H42.8V58.3h-8.8V42.4h8.8V32.2
 c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
@@ -442,9 +280,6 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
         </nav>
-        <a href="mainPage.html" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200" title="메인페이지">
-          <img src="images/logo.png" class="u-logo-image u-logo-image-1">
-        </a>
         <p class="u-align-left u-text u-text-1">
           <span style="font-weight: 700;">상호명</span>&nbsp; &nbsp;나누민족&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="font-weight: 700;">대표자명</span>&nbsp; 문승주&nbsp;&nbsp;<br>
           <span style="font-weight: 700;">사업장 주소&nbsp;</span> &nbsp; &nbsp; 광주광역시 남구 송암로 60(송하동 373-3)&nbsp;<br>
@@ -453,16 +288,6 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
         <p class="u-align-left u-text u-text-2"><b>나누민족은 광주·전남 사회적경제쇼핑몰 입니다.</b>
         </p>
       </div></footer>
-    <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
-        <span>Website Templates</span>
-      </a>
-      <p class="u-text">
-        <span>created with</span>
-      </p>
-      <a class="u-link" href="" target="_blank">
-        <span>Website Builder Software</span>
-      </a>. 
-    </section>
+
   
 </body></html>

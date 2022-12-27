@@ -124,29 +124,39 @@ In-Demand Professions, ​Top ten most popular courses for international student
           </div>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-spacing-30 u-unstyled u-nav-5"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">상품 카테고리</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FOOD">🍴 식품</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">농산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">축산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">수산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">떡·쿠키·간식</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">커피·차·음료</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">건강식품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">김치·반찬·밀키트</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">양념·소스·장류</a>
+            <ul class="u-nav u-spacing-30 u-unstyled u-nav-5"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">상품 카테고리</a>
+            <div class="u-nav-popup">
+            <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+            <li class="u-nav-item">
+            <a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FOOD">🍴 식품</a>
+            <div class="u-nav-popup">
+            <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+     <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=NS">농산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=CS">축산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=SS">수산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=SNACK">떡·쿠키·간식</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=DRINK">커피·차·음료</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=HFOOD">건강식품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=MK">김치·반찬·밀키트</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=SOURCE">양념·소스·장류</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">🛒 생활용품</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">방역</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">홈데코</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">세안·뷰티</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">유아용품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">주방용품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">청소·세탁용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=LIVING">🛒 생활용품</a>
+<div class="u-nav-popup">
+<ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+<li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=QT">방역</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=DECO">홈데코</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=BEAU">세안·뷰티</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=BABY">유아용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=KITCH">주방용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=CLEAN">청소·세탁용품</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">🌳 친환경</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">👕 패션/잡화</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">💪🏻 헬스·건강</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">🌼 꽃·화훼</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">🪑 가구</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=ECO">🌳 친환경</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FASHION">👕 패션/잡화</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=HEALTH">💪🏻 헬스·건강</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FLOWER">🌼 꽃·화훼</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FUR">🪑 가구</a>
 </li></ul>
 </div>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">인기상품</a>
@@ -159,29 +169,33 @@ In-Demand Professions, ​Top ten most popular courses for international student
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-9"><li class="u-nav-item"><a class="u-button-style u-nav-link">상품 카테고리</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="">🍴 식품</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link">농산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">축산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">수산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">떡·쿠키·간식</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">커피·차·음료</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">건강식품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">김치·반찬·밀키트</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">양념·소스·장류</a>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-9"><li class="u-nav-item"><a class="u-button-style u-nav-link">상품 카테고리</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item">
+                <a class="u-button-style u-nav-link" href="gofoodform.do?category=FOOD">🍴 식품</a>
+                <div class="u-nav-popup">
+                <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+     <li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=NS">농산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=CS">축산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=SS">수산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=SNACK">떡·쿠키·간식</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=DRINK">커피·차·음료</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=HEALTH">건강식품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=MK">김치·반찬·밀키트</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=SOURCE">양념·소스·장류</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">🛒 생활용품</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link">방역</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">홈데코</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">세안·뷰티</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">유아용품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">주방용품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">청소·세탁용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=LIVING">🛒 생활용품</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link">방역</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=DECO">홈데코</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=BEAU">세안·뷰티</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=BABY">유아용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=KITCH">주방용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=CLEAN">청소·세탁용품</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">🌳 친환경</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">👕 패션/잡화</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">💪🏻 헬스·건강</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">🌼 꽃·화훼</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">🪑 가구</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=ECO">🌳 친환경</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=FASHION">👕 패션/잡화</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=HEALTH">💪🏻 헬스·건강</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=FLOWER">🌼 꽃·화훼</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=FUR">🪑 가구</a>
 </li></ul>
 </div>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">인기상품</a>
@@ -375,16 +389,16 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
           <div class="u-container-style u-group u-shape-rectangle u-group-2">
             <div class="u-container-layout u-container-layout-2">
               <div class="u-container-style u-group u-shape-rectangle u-group-3">
-                  <h5 class="u-text u-text-2">만원 미만</h5>
+                  <a href="gopdlistbudget.do?budget=a"><h5 class="u-text u-text-2">1만원 미만</h5></a>
               </div>
               <div class="u-container-style u-group u-shape-rectangle u-group-4">
-                  <h5 class="u-text u-text-3">1-2만원대</h5>
+                  <a href="gopdlistbudget.do?budget=b"><h5 class="u-text u-text-3">1-2만원대</h5></a>
               </div>
               <div class="u-container-style u-group u-shape-rectangle u-group-5">
-                  <h5 class="u-text u-text-4">3-4만원대</h5>
+                  <a href="gopdlistbudget.do?budget=c"><h5 class="u-text u-text-4">3-4만원대</h5></a>
               </div>
               <div class="u-container-style u-group u-shape-rectangle u-group-6">
-                  <h5 class="u-text u-text-5">5만원 이상</h5>
+                  <a href="gopdlistbudget.do?budget=d"><h5 class="u-text u-text-5">5~10만원</h5></a>
               </div>
             </div>
           </div>

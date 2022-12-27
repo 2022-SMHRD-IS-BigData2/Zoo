@@ -10,7 +10,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <!-- 카테고리 클릭 시 전송받은 데이터값 >> pagename 출력 -->
-    <title>foodPage(수정)<% %></title>
+    <title>productPage<% %></title>
     <link rel="stylesheet" href="assets/css/nicepage.css" media="screen">
 <link rel="stylesheet" href="assets/css/foodPage.css" media="screen">
     <script class="u-script" type="text/javascript" src="assets/js/jquery.js" defer=""></script>
@@ -58,12 +58,12 @@
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gomyPageform.do"><%=user.getCust_name() %></a>
 
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="logout.do">로그아웃</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;">주문조회</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;"href="gocartform.do">장바구니</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" href="gomyPageform.do" style="padding: 14px 10px;">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">주문 내역</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">위시리스트</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gomyPageform.do">주문조회</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gocartform.do">장바구니</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" href="gomyPageform.do" style="padding: 14px 10px;">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gomyPageform.do">주문 내역</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gowishListform.do">위시리스트</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">게시글</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white"href="gomemberUpdate.do">정보 수정</a><%} %>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gomemberUpdate.do">정보 수정</a><%} %>
 </li></ul>
 </div>
 </li></ul>
@@ -74,12 +74,12 @@
                 <div class="u-menu-close"></div>
                 <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-3"><li class="u-nav-item"><a class="u-button-style u-nav-link">로그인</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" >회원가입</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">주문조회</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">장바구니</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link">주문 내역</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">위시리스트</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gomyPageform.do">주문조회</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gocartform.do">장바구니</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gomyPageform.do">주문 내역</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gowishListform.do">위시리스트</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">게시글</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" >정보 수정</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gomemberUpdate.do">정보 수정</a>
 </li></ul>
 </div>
 </li></ul>
@@ -125,19 +125,20 @@
 </li></ul>
 </div>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=LIVING">🛒 생활용품</a>
-<div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">방역</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">홈데코</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">세안·뷰티</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">유아용품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">주방용품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">청소·세탁용품</a>
+<div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+	 <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=QT">방역</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=DECO">홈데코</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=BEAU">세안·뷰티</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=BABY">유아용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=KITCH">주방용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=CLEAN">청소·세탁용품</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">🌳 친환경</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">👕 패션/잡화</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">💪🏻 헬스·건강</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">🌼 꽃·화훼</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">🪑 가구</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=ECO">🌳 친환경</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FASHION">👕 패션/잡화</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=HEALTH">💪🏻 헬스·건강</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FLOWER">🌼 꽃·화훼</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FUR">🪑 가구</a>
 </li></ul>
 </div>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">인기상품</a>
@@ -150,29 +151,39 @@
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-9"><li class="u-nav-item"><a class="u-button-style u-nav-link">상품 카테고리</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="">🍴 식품</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link">농산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">축산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">수산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">떡·쿠키·간식</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">커피·차·음료</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">건강식품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">김치·반찬·밀키트</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">양념·소스·장류</a>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-9">
+                <li class="u-nav-item">
+                <a class="u-button-style u-nav-link">상품 카테고리</a>
+                <div class="u-nav-popup">
+                <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+     <li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=FOOD">🍴 식품</a>
+     <div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+     <li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=NS">농산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=CS">축산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=SS">수산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=SNACK">떡·쿠키·간식</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=DRINK">커피·차·음료</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=HFOOD">건강식품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=MK">김치·반찬·밀키트</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=SOURCE">양념·소스·장류</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">🛒 생활용품</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link">방역</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">홈데코</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">세안·뷰티</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">유아용품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">주방용품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">청소·세탁용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=LIVING">🛒 생활용품</a>
+<div class="u-nav-popup">
+<ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+<li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=QT">방역</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=DECO">홈데코</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=BEAU">세안·뷰티</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=BABY">유아용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=KITCH">주방용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=CLEAN">청소·세탁용품</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">🌳 친환경</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">👕 패션/잡화</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">💪🏻 헬스·건강</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">🌼 꽃·화훼</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">🪑 가구</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=ECO">🌳 친환경</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=FASHION">👕 패션/잡화</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=HEALTH">💪🏻 헬스·건강</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=FLOWER">🌼 꽃·화훼</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=FUR">🪑 가구</a>
 </li></ul>
 </div>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">인기상품</a>
@@ -277,7 +288,7 @@
           <%for(int i=0;i< pdlist.size();i++){ %>
                 <div class="u-container-style u-custom-item u-list-item u-repeater-item">
                   <div class="u-container-layout u-similar-container u-container-layout-2">
-                    <img class="u-image u-image-1" src="<%=pdlist.get(i).getProd_img() %>" data-image-width="1920" data-image-height="1406">
+                    <img class="u-image u-image-1" src="<%=pdlist.get(i).getProd_main_img() %>" data-image-width="1920" data-image-height="1406">
                     <h6 class="u-align-center u-text u-text-1"> <a href="gopdDetailPage.do"><%=pdlist.get(i).getProd_name() %></a><br>
                     </h6>
                     <h6 class="u-align-left u-text u-text-2"><%=pdlist.get(i).getProd_price()%>원</h6>
@@ -390,16 +401,6 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
         <p class="u-align-left u-text u-text-2"><b>나누민족은 광주·전남 사회적경제쇼핑몰 입니다.</b>
         </p>
       </div></footer>
-    <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
-        <span>Website Templates</span>
-      </a>
-      <p class="u-text">
-        <span>created with</span>
-      </p>
-      <a class="u-link" href="" target="_blank">
-        <span>Website Builder Software</span>
-      </a>. 
-    </section>
+
   
 </body></html>
