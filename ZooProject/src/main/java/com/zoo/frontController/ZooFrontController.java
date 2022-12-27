@@ -27,11 +27,8 @@ import com.zoo.controller.ZooGomainCon;
 import com.zoo.controller.ZooGomemberDeleteCon;
 import com.zoo.controller.ZooGomemberUpdateCon;
 import com.zoo.controller.ZooGomyPageCon;
-<<<<<<< HEAD
 import com.zoo.controller.ZooGomyPostformCon;
-=======
 import com.zoo.controller.ZooGowishListCon;
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-BigData2/Zoo.git
 import com.zoo.controller.ZooJoinCon;
 import com.zoo.controller.ZooLoginCon;
 import com.zoo.controller.ZooLogoutCon;
@@ -64,14 +61,10 @@ public class ZooFrontController extends HttpServlet {
 		handlerMapping.put("/gomyPageform.do", new ZooGomyPageCon()  );
 		handlerMapping.put("/gocartform.do", new ZooGoCartCon()  );
 		handlerMapping.put("/goboardform.do", new ZooGoboardCon());
-<<<<<<< HEAD
 		handlerMapping.put("/gocoupon.do", new ZooGocouponCon());
-		handlerMapping.put("/gowishListform.do", new ZooGoWishListformCon());
 		handlerMapping.put("/gomyPostform.do", new ZooGomyPostformCon());
-=======
 		handlerMapping.put("/gowishListform.do", new ZooGowishListCon());
 		handlerMapping.put("/gopdDetailPage.do", new ZooGoDetailCon());
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-BigData2/Zoo.git
 		
 		//======================================
 		handlerMapping.put("/join.do",new ZooJoinCon() );
