@@ -27,6 +27,7 @@ import com.zoo.controller.ZooGowishListCon;
 import com.zoo.controller.ZooJoinCon;
 import com.zoo.controller.ZooLoginCon;
 import com.zoo.controller.ZooLogoutCon;
+import com.zoo.controller.ZooPdListBudgetCon;
 import com.zoo.controller.ZooUpdateCon;
 
 
@@ -50,6 +51,7 @@ public class ZooFrontController extends HttpServlet {
 		handlerMapping.put("/gojoin.do",new ZooGoJoinCon() );
 		handlerMapping.put("/gologin.do",new ZooGoLoginCon() );
 		handlerMapping.put("/gofoodform.do",new ZooGofoodformCon() );
+		handlerMapping.put("/gopdlistbudget.do",new ZooPdListBudgetCon() );
 		handlerMapping.put("/godonation.do",new ZooGodonation() );
 		handlerMapping.put("/gomemberUpdate.do", new ZooGomemberUpdateCon() );
 		handlerMapping.put("/gomyPageform.do", new ZooGomyPageCon()  );

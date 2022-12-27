@@ -389,16 +389,16 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
           <div class="u-container-style u-group u-shape-rectangle u-group-2">
             <div class="u-container-layout u-container-layout-2">
               <div class="u-container-style u-group u-shape-rectangle u-group-3">
-                  <a href="gofoodform.do?budget=a"><h5 class="u-text u-text-2">1만원 미만</h5></a>
+                  <a href="gopdlistbudget.do?budget=a"><h5 class="u-text u-text-2">1만원 미만</h5></a>
               </div>
               <div class="u-container-style u-group u-shape-rectangle u-group-4">
-                  <a href="gofoodform.do?budget=b"><h5 class="u-text u-text-3">1-2만원대</h5></a>
+                  <a href="gopdlistbudget.do?budget=b"><h5 class="u-text u-text-3">1-2만원대</h5></a>
               </div>
               <div class="u-container-style u-group u-shape-rectangle u-group-5">
-                  <a href="gofoodform.do?budget=c"><h5 class="u-text u-text-4">3-4만원대</h5></a>
+                  <a href="gopdlistbudget.do?budget=c"><h5 class="u-text u-text-4">3-4만원대</h5></a>
               </div>
               <div class="u-container-style u-group u-shape-rectangle u-group-6">
-                  <a href="gofoodform.do?budget=d"><h5 class="u-text u-text-5">5만원 이상</h5></a>
+                  <a href="gopdlistbudget.do?budget=d"><h5 class="u-text u-text-5">5만원 이상</h5></a>
               </div>
             </div>
           </div>
