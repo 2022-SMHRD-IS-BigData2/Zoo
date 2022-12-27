@@ -49,4 +49,15 @@ public class ZooProductListDAO {
 		return productList;
 		
 	}
+	
+	// 키워드별 상품 리스트 출력
+	public List<ZooProductList> prod_keyword(ZooProductList dto) {
+		
+		SqlSession session = sqlsessionFactory.openSession(true);
+		
+		List<ZooProductList> productList = session.selectList("prod_keyword", dto);
+		
+		session.close();
+		return productList;
+	}
 }
