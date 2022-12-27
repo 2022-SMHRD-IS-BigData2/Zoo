@@ -2,8 +2,30 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zoo.dao.ZooProductListDAO">
 
+	<!-- 1. 대분류 category만 사용하여 상품정보 데이터 불러오기 -->
+	<select id="productList"
+		parameterType="com.zoo.entity.ZooProductList"
+		resultType="com.zoo.entity.ZooProductList">
+		select * 
+		from tbl_product 
+		where prod_category = #{prod_category}
+		<!-- #{prod_category} 대문자로 작성; FOOD, LIVING, FASHION ... -->
+	</select>
+	
 
+	<!-- 2. 중분류 category까지 적용하여 상품정보 데이터 불러오기 -->
+	<select id="productList"
+		parameterType="com.zoo.entity.ZooProductList"
+		resultType="com.zoo.entity.ZooProductList">
+		select * 
+		from tbl_product
+		where prod_category = #{prod_category}
+		and prod_category2 = #{prod_category2}
+		<!-- #{prod_category}, #{prod_category2} 대문자로 작성 -->
+	</select>
+	
 
+	<!-- 3. 검색된 단어와 부합하는 데이터 불러오기 -->
 
 
 
