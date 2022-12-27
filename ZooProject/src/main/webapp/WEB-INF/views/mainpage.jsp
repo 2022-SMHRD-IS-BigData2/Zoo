@@ -389,16 +389,16 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
           <div class="u-container-style u-group u-shape-rectangle u-group-2">
             <div class="u-container-layout u-container-layout-2">
               <div class="u-container-style u-group u-shape-rectangle u-group-3">
-                  <a href="gofoodform.do?budget=a"><h5 class="u-text u-text-2">1만원 미만</h5></a>
+                  <a href="gopdlistbudget.do?budget=a"><h5 class="u-text u-text-2">1만원 미만</h5></a>
               </div>
               <div class="u-container-style u-group u-shape-rectangle u-group-4">
-                  <a href="gofoodform.do?budget=b"><h5 class="u-text u-text-3">1-2만원대</h5></a>
+                  <a href="gopdlistbudget.do?budget=b"><h5 class="u-text u-text-3">1-2만원대</h5></a>
               </div>
               <div class="u-container-style u-group u-shape-rectangle u-group-5">
-                  <a href="gofoodform.do?budget=c"><h5 class="u-text u-text-4">3-4만원대</h5></a>
+                  <a href="gopdlistbudget.do?budget=c"><h5 class="u-text u-text-4">3-4만원대</h5></a>
               </div>
               <div class="u-container-style u-group u-shape-rectangle u-group-6">
-                  <a href="gofoodform.do?budget=d"><h5 class="u-text u-text-5">5만원 이상</h5></a>
+                  <a href="gopdlistbudget.do?budget=d"><h5 class="u-text u-text-5">5~10만원</h5></a>
               </div>
             </div>
           </div>
@@ -445,7 +445,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                   </div>
                 </div>
               </div>
-              <a href="https://nicepage.best" class="u-active-none u-align-center u-border-1 u-border-active-grey-60 u-border-black u-border-hover-grey-60 u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-1">more</a>
+              <a href="gopdlistbudget.do?budget=e" class="u-active-none u-align-center u-border-1 u-border-active-grey-60 u-border-black u-border-hover-grey-60 u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-1">more</a>
             </div>
           </div>
         </div>
@@ -546,7 +546,8 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                 </div>
               </div>
             </div>
-            <a href="https://nicepage.best" class="u-active-none u-align-center u-border-1 u-border-active-grey-60 u-border-black u-border-hover-grey-60 u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-1">more</a>
+            <!-- 선물 추천 상품 더보기 -->
+            <a href="gopdlistkeyword.do?keyword=GIFT" class="u-active-none u-align-center u-border-1 u-border-active-grey-60 u-border-black u-border-hover-grey-60 u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-1">more</a>
           </div>
         </div>
       </div>
