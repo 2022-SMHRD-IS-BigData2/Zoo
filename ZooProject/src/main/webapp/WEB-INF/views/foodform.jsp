@@ -8,7 +8,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <!-- 카테고리 클릭 시 전송받은 데이터값 >> pagename 출력 -->
-    <title>foodPage(수정)<% %></title>
+    <title>productPage<% %></title>
     <link rel="stylesheet" href="assets/css/nicepage.css" media="screen">
 <link rel="stylesheet" href="assets/css/foodPage.css" media="screen">
     <script class="u-script" type="text/javascript" src="assets/js/jquery.js" defer=""></script>

@@ -36,6 +36,8 @@ public class ZooGofoodformCon implements ZooController {
 
 		System.out.println(list.size());
 		
+		// 세션에 list 저장
+				
 //		if (category.equals("FOOD")) {
 //			List<ZooProductList> list = dao.productList1(category);
 //			System.out.println(list.get(0).getProd_name());
