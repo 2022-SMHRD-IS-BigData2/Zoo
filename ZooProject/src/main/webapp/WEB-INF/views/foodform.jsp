@@ -250,14 +250,16 @@
           </ul>
         </div>
         <h6 class="u-text u-text-1">
-          <span style="font-weight: 700;">467</span>개의 상품
+        <!-- 상품개수 출력 -->
+          <span style="font-weight: 700;">467(수정)</span>개의 상품
         </h6>
       </div>
-    </section>
+    </section>   
     <section class="u-clearfix u-section-2" id="sec-a88d">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-container-style u-expanded-width u-group u-shape-rectangle u-group-1">
           <div class="u-container-layout u-container-layout-1">
+          <!-- 상품리스트 1번째줄 시작 -->
             <div class="u-list u-list-1">
               <div class="u-repeater u-repeater-1">
                 <div class="u-container-style u-custom-item u-list-item u-repeater-item">
@@ -271,9 +273,7 @@
                 <div class="u-container-style u-custom-item u-list-item u-repeater-item">
                   <div class="u-container-layout u-similar-container u-container-layout-3">
                     <img class="u-image u-image-2" src="images/pd_2.jpg" data-image-width="228" data-image-height="228">
-                    <h6 class="u-align-center u-text u-text-3"> 다향
-아로마 힐링
-스프레이<br>
+                    <h6 class="u-align-center u-text u-text-3"> 다향 아로마 힐링 스프레이<br>
                       <span style="font-weight: 700;"></span>
                       <br>
                     </h6>
@@ -299,6 +299,8 @@
                 </div>
               </div>
             </div>
+            
+            <!-- 상품 list 2번째 줄 시작 -->
             <div class="u-list u-list-2">
               <div class="u-repeater u-repeater-2">
                 <div class="u-container-style u-custom-item u-list-item u-repeater-item">
@@ -312,9 +314,7 @@
                 <div class="u-container-style u-custom-item u-list-item u-repeater-item">
                   <div class="u-container-layout u-similar-container u-container-layout-7">
                     <img class="u-image u-image-6" src="images/pd_2.jpg" data-image-width="228" data-image-height="228">
-                    <h6 class="u-align-center u-text u-text-11"> 다향
-아로마 힐링
-스프레이<br>
+                    <h6 class="u-align-center u-text u-text-11"> 다향 아로마 힐링 스프레이<br>
                       <span style="font-weight: 700;"></span>
                       <br>
                     </h6>
@@ -340,6 +340,8 @@
                 </div>
               </div>
             </div>
+            
+            <!-- 상품 list 3번째 줄 시작 -->
             <div class="u-list u-list-3">
               <div class="u-repeater u-repeater-3">
                 <div class="u-container-style u-custom-item u-list-item u-repeater-item">
@@ -401,8 +403,7 @@
                 <tbody class="u-align-center u-table-body u-text-grey-70 u-table-body-1">
                   <tr style="height: 26px;">
                     <td class="u-table-cell">1</td>
-                    <td class="u-table-cell">2<br>
-                    </td>
+                    <td class="u-table-cell">2<br></td>
                     <td class="u-table-cell">3</td>
                     <td class="u-table-cell">4</td>
                     <td class="u-table-cell">5</td>
