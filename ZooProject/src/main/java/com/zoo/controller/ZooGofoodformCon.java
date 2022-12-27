@@ -25,18 +25,25 @@ public class ZooGofoodformCon implements ZooController {
 		request.setCharacterEncoding("UTF-8");
 
 		String category = request.getParameter("category");
-		
+		ZooProductList dto = new ZooProductList();
+		dto.setProd_category(category);
 		// 카테고리별 파라미터값 수집 방법???
 		System.out.println(category + "로 이동");
 		
-//		ZooProductListDAO dao = new ZooProductListDAO();
-//		List<ZooProductList> list = dao.productList1("FOOD");
+		// DAO 객체 생성
+		ZooProductListDAO dao = new ZooProductListDAO();
+		List<ZooProductList> list = dao.productList1(dto);
+
+		System.out.println(list.size());
 		
-//		System.out.println(list.get(0).getProd_name());
-//		System.out.println(list.get(1).getProd_name());
-//		System.out.println(list.get(2).getProd_name());
-		
-		
+//		if (category.equals("FOOD")) {
+//			List<ZooProductList> list = dao.productList1(category);
+//			System.out.println(list.get(0).getProd_name());
+//
+//		} else {
+//			List<ZooProductList> list = dao.productList2(category);
+//		}
+
 		return "foodform";
 	}
 

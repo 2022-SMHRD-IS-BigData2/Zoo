@@ -3,8 +3,8 @@
 <mapper namespace="com.zoo.dao.ZooProductListDAO">
 
 	<!-- 1. 대분류 category만 사용하여 상품정보 데이터 불러오기 -->
-	<select id="productList"
-		parameterType="String"
+	<select id="prod_category"
+		parameterType="com.zoo.entity.ZooProductList"
 		resultType="com.zoo.entity.ZooProductList">
 		select * 
 		from tbl_product 

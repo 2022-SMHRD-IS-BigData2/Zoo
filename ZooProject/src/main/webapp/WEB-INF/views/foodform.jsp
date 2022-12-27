@@ -266,16 +266,22 @@
         <div class="u-container-style u-expanded-width u-group u-shape-rectangle u-group-1">
           <div class="u-container-layout u-container-layout-1">
           <!-- 상품리스트 1번째줄 시작 -->
+          
+          
             <div class="u-list u-list-1">
               <div class="u-repeater u-repeater-1">
                 <div class="u-container-style u-custom-item u-list-item u-repeater-item">
                   <div class="u-container-layout u-similar-container u-container-layout-2">
                     <img class="u-image u-image-1" src="images/pd_1.jpg" data-image-width="1920" data-image-height="1406">
-                    <h6 class="u-align-center u-text u-text-1"> 국내산 수제 쌀빵 4종&nbsp;<br>틔움긴생각<br>
+                    <h6 class="u-align-center u-text u-text-1"> <a href="gopdDetailPage.do">국내산 수제 쌀빵 4종&nbsp;</a><br>틔움긴생각<br>
                     </h6>
                     <h6 class="u-align-left u-text u-text-2">2,500원</h6>
                   </div>
                 </div>
+                
+                
+                
+                
                 <div class="u-container-style u-custom-item u-list-item u-repeater-item">
                   <div class="u-container-layout u-similar-container u-container-layout-3">
                     <img class="u-image u-image-2" src="images/pd_2.jpg" data-image-width="228" data-image-height="228">
