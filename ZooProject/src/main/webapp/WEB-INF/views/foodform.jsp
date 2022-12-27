@@ -1,3 +1,5 @@
+<%@page import="java.util.List"%>
+<%@page import="com.zoo.entity.ZooProductList"%>
 <%@page import="com.zoo.entity.ZooMember"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -38,7 +40,7 @@
     <meta property="og:type" content="website">
   </head>
   <% ZooMember user = (ZooMember)session.getAttribute("user"); %>
-  
+  <%   List<ZooProductList> pdlist =(List<ZooProductList>)session.getAttribute("list");%>
   
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><div class="u-clearfix u-sheet u-sheet-1">
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
@@ -257,7 +259,7 @@
         </div>
         <h6 class="u-text u-text-1">
         <!-- 상품개수 출력 -->
-          <span style="font-weight: 700;">467(수정)</span>개의 상품
+          <span style="font-weight: 700;"><%=pdlist.size() %></span>개의 상품
         </h6>
       </div>
     </section>   
@@ -268,135 +270,33 @@
           <!-- 상품리스트 1번째줄 시작 -->
           
           
+        
+           
             <div class="u-list u-list-1">
               <div class="u-repeater u-repeater-1">
+          <%for(int i=0;i< pdlist.size();i++){ %>
                 <div class="u-container-style u-custom-item u-list-item u-repeater-item">
                   <div class="u-container-layout u-similar-container u-container-layout-2">
-                    <img class="u-image u-image-1" src="images/pd_1.jpg" data-image-width="1920" data-image-height="1406">
-                    <h6 class="u-align-center u-text u-text-1"> <a href="gopdDetailPage.do">국내산 수제 쌀빵 4종&nbsp;</a><br>틔움긴생각<br>
+                    <img class="u-image u-image-1" src="<%=pdlist.get(i).getProd_img() %>" data-image-width="1920" data-image-height="1406">
+                    <h6 class="u-align-center u-text u-text-1"> <a href="gopdDetailPage.do"><%=pdlist.get(i).getProd_name() %></a><br>
                     </h6>
-                    <h6 class="u-align-left u-text u-text-2">2,500원</h6>
+                    <h6 class="u-align-left u-text u-text-2"><%=pdlist.get(i).getProd_price()%>원</h6>
                   </div>
                 </div>
+                
+                <%} %>
                 
                 
                 
                 
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-3">
-                    <img class="u-image u-image-2" src="images/pd_2.jpg" data-image-width="228" data-image-height="228">
-                    <h6 class="u-align-center u-text u-text-3"> 다향 아로마 힐링 스프레이<br>
-                      <span style="font-weight: 700;"></span>
-                      <br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-4">20,000원</h6>
-                  </div>
-                </div>
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-4">
-                    <img class="u-image u-image-3" src="images/pd_3.jpg" data-image-width="228" data-image-height="228">
-                    <h6 class="u-align-center u-text u-text-5"> 패브릭섬유 향수<br>(100ml, 50ml)<span style="font-weight: 700;"></span>
-                      <br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-6">10,000원</h6>
-                  </div>
-                </div>
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-5">
-                    <img class="u-image u-image-4" src="images/pd_4.jpg" data-image-width="600" data-image-height="600">
-                    <h6 class="u-align-center u-text u-text-7"> 마카롱꼬끄100%아몬드 가루&nbsp;<br>마카롱쿠키<br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-8">5,000원</h6>
-                  </div>
-                </div>
+                
+                
+              
+               
               </div>
             </div>
             
-            <!-- 상품 list 2번째 줄 시작 -->
-            <div class="u-list u-list-2">
-              <div class="u-repeater u-repeater-2">
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-6">
-                    <img class="u-image u-image-5" src="images/pd_1.jpg" data-image-width="1920" data-image-height="1406">
-                    <h6 class="u-align-center u-text u-text-9"> 국내산 수제 쌀빵 4종&nbsp;<br>틔움긴생각<br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-10">2,500원</h6>
-                  </div>
-                </div>
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-7">
-                    <img class="u-image u-image-6" src="images/pd_2.jpg" data-image-width="228" data-image-height="228">
-                    <h6 class="u-align-center u-text u-text-11"> 다향 아로마 힐링 스프레이<br>
-                      <span style="font-weight: 700;"></span>
-                      <br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-12">20,000원</h6>
-                  </div>
-                </div>
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-8">
-                    <img class="u-image u-image-7" src="images/pd_3.jpg" data-image-width="228" data-image-height="228">
-                    <h6 class="u-align-center u-text u-text-13"> 패브릭섬유 향수<br>(100ml, 50ml)<span style="font-weight: 700;"></span>
-                      <br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-14">10,000원</h6>
-                  </div>
-                </div>
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-9">
-                    <img class="u-image u-image-8" src="images/pd_4.jpg" data-image-width="600" data-image-height="600">
-                    <h6 class="u-align-center u-text u-text-15"> 마카롱꼬끄100%아몬드 가루&nbsp;<br>마카롱쿠키<br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-16">5,000원</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <!-- 상품 list 3번째 줄 시작 -->
-            <div class="u-list u-list-3">
-              <div class="u-repeater u-repeater-3">
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-10">
-                    <img class="u-image u-image-9" src="images/pd_1.jpg" data-image-width="1920" data-image-height="1406">
-                    <h6 class="u-align-center u-text u-text-17"> 국내산 수제 쌀빵 4종&nbsp;<br>틔움긴생각<br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-18">2,500원</h6>
-                  </div>
-                </div>
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-11">
-                    <img class="u-image u-image-10" src="images/pd_2.jpg" data-image-width="228" data-image-height="228">
-                    <h6 class="u-align-center u-text u-text-19"> 다향
-아로마 힐링
-스프레이<br>
-                      <span style="font-weight: 700;"></span>
-                      <br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-20">20,000원</h6>
-                  </div>
-                </div>
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-12">
-                    <img class="u-image u-image-11" src="images/pd_3.jpg" data-image-width="228" data-image-height="228">
-                    <h6 class="u-align-center u-text u-text-21"> 패브릭섬유 향수<br>(100ml, 50ml)<span style="font-weight: 700;"></span>
-                      <br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-22">10,000원</h6>
-                  </div>
-                </div>
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-13">
-                    <img class="u-image u-image-12" src="images/pd_4.jpg" data-image-width="600" data-image-height="600">
-                    <h6 class="u-align-center u-text u-text-23"> 마카롱꼬끄100%아몬드 가루&nbsp;<br>마카롱쿠키<br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-24">5,000원</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+           
         <div class="u-container-style u-group u-shape-rectangle u-group-2">
           <div class="u-container-layout u-container-layout-14">
             <div class="u-table u-table-responsive u-table-1">
