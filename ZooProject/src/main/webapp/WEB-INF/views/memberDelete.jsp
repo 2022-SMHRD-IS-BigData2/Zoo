@@ -7,21 +7,20 @@
     <meta charset="utf-8">
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <title>myPage</title>
+    <title>로그인</title>
     <link rel="stylesheet" href="assets/css/nicepage.css" media="screen">
-<link rel="stylesheet" href="assets/css/myPage.css" media="screen">
+<link rel="stylesheet" href="assets/css/memberUpdate.css" media="screen">
     <script class="u-script" type="text/javascript" src="assets/js/jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="assets/js/nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 5.1.5, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" >   
     
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
 		"name": "Site1",
-		"logo": "images/logo.png",
+		"logo": "/images/c64cf47d-9299-74e8-02ff-c280d9ca18da.png",
 		"sameAs": [
 				"https://facebook.com/name",
 				"https://twitter.com/name",
@@ -31,12 +30,12 @@
     <meta name="theme-color" content="#478ac9">
     <meta name="twitter:site" content="@">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="myPage">
+    <meta name="twitter:title" content="로그인">
     <meta name="twitter:description" content="Site1">
-    <meta property="og:title" content="myPage">
+    <meta property="og:title" content="로그인">
     <meta property="og:type" content="website">
   </head>
-  <%ZooMember user =(ZooMember)session.getAttribute("user"); %>
+  <% ZooMember user =(ZooMember)session.getAttribute("user"); %>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><div class="u-clearfix u-sheet u-sheet-1">
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
@@ -54,17 +53,11 @@
 
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="logout.do">로그아웃</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gomyPageform.do">주문조회</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;"href="gocartform.do">장바구니</a>
-<<<<<<< HEAD
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" href="gomyPageform.do" style="padding: 14px 10px;">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gomyPageform.do">주문 내역</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gowishListform.do">위시리스트</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" >게시글</a>
-=======
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" href="gomyPageform.do" style="padding: 14px 10px;">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white"href="gomyPageform.do">주문 내역</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white"href="gowishListform.do">위시리스트</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gocartform.do">장바구니</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" href="gomyPageform.do" style="padding: 14px 10px;">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">주문 내역</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">위시리스트</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">게시글</a>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-BigData2/Zoo.git
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white"href="gomemberUpdate.do">정보 수정</a><%} %>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gomemberUpdate.do">정보 수정</a><%} %>
 </li></ul>
 </div>
 </li></ul>
@@ -77,7 +70,7 @@
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" >회원가입</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gomyPageform.do">주문조회</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gocartform.do">장바구니</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gomyPageform.do">주문 내역</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gomyPageform.do">주문 내역</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gowishListform.do">위시리스트</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">게시글</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gomemberUpdate.do">정보 수정</a>
@@ -181,135 +174,67 @@
           </div>
         </nav>
       </div></header>
-    <section class="u-clearfix u-section-1" id="sec-5a6f">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h3 class="u-align-center u-text u-text-1">마이 페이지</h3>
-        <div class="u-border-2 u-border-grey-50 u-container-style u-group u-group-1">
-          <div class="u-container-layout u-container-layout-1">
-            <div class="u-border-1 u-border-grey-50 u-line u-line-vertical u-line-1"></div>
-            <div class="u-border-1 u-border-grey-50 u-line u-line-vertical u-line-2"></div>
-            <div class="u-container-style u-group u-shape-rectangle u-group-2">
-              <div class="u-container-layout"><span class="u-align-left u-file-icon u-icon u-icon-1"><img src="images/cupon2.png" alt=""></span>
-                <p class="u-align-center u-text u-text-2">
-                  <span style="font-weight: 700;"> 0</span>
-                  <span style="font-weight: 700;">&nbsp;개</span>
-                  <br>
-                  <span class="u-text-grey-60">쿠폰</span>
-                </p>
-              </div>
-            </div>
-            <div class="u-container-style u-group u-shape-rectangle u-group-3">
-              <div class="u-container-layout u-container-layout-3"><span class="u-align-left u-file-icon u-icon u-icon-2"><img src="images/user.png" alt=""></span>
-                <p class="u-align-center u-text u-text-3">
-                  <span style="font-size: 1.5rem;"><b>안​녕하세요 <%=user.getCust_name() %> 님!</b>
-                  </span>
-                  <br>
-                  <span style="font-size: 1.125rem;">고객님의 회원등급은 <span style="font-weight: 700;">SILVER</span>
-                    <span style="font-weight: 700;">&nbsp;</span>입니다.
-                  </span>&nbsp;
-                </p>
-                <div class="u-container-style u-group u-shape-rectangle u-group-4">
-                  <div class="u-container-layout u-container-layout-4">
-                    <p class="u-align-center u-text u-text-4"><b>
-                        <span style="font-weight: 400;">총 구매 금액</span>&nbsp; 80,000 <span style="font-weight: 400;">원</span></b>
-                      <br>
-                    </p>
-                    <div class="u-clearfix u-custom-html u-custom-html-1">
-                      <div class="progress">
-                        <div class="bg-warning progress-bar progress-bar-striped" role="progressbar" aria-label="Warning striped example" style="width: 25%" aria-valuenow="25&quot;" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="u-container-style u-group u-shape-rectangle u-group-5">
-              <div class="u-container-layout"><span class="u-align-left u-file-icon u-icon u-icon-3"><img src="images/won.png" alt=""></span>
-                <p class="u-align-center u-text u-text-5">
-                  <span style="font-weight: 700;"></span>
-                  <span style="font-weight: 700;">1,000 원</span>
-                  <br>
-                  <span class="u-text-grey-60">총 적립금</span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-section-2" id="sec-e441">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-align-left u-container-style u-layout-cell u-size-11 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <p class="u-text u-text-1">나의 쇼핑 정보</p>
-                  <p class="u-text u-text-grey-70 u-text-2"><a href="gomyPageform.do">주문내역 조회</a></p>
-                  <p class="u-text u-text-grey-70 u-text-3"><a href="#">적립금 내역</a></p>
-                  <p class="u-text u-text-grey-70 u-text-4"><a href="gocoupon.do">쿠폰 내역</a></p>
-                  <p class="u-text u-text-5">활동 정보</p>
-                  <p class="u-text u-text-grey-70 u-text-6"><a href="gowishListform.do">나의 위시리스트</a></p>
-                  <p class="u-text u-text-grey-70 u-text-7"><a href="gomyPostform.do">나의 게시글</a></p>
-                  <p class="u-text u-text-8">나의 정보</p>
-                  <p class="u-text u-text-grey-70 u-text-9"><a href="gomemberUpdate.do">회원 정보 수정</a></p>
-                  <p class="u-text u-text-grey-70 u-text-10"><a href="gomemberDelete.do">회원 탈퇴</a></p>
-                </div>
-              </div>
-              <div class="u-container-style u-layout-cell u-shape-rectangle u-size-49 u-layout-cell-2">
-                <div class="u-container-layout u-container-layout-2">
-                  <p class="u-text u-text-grey-80 u-text-11">주문내역 조회</p>
-                  <div class="u-border-2 u-border-grey-60 u-line u-line-horizontal u-line-1"></div>
-                  <div class="u-align-center u-container-style u-group u-palette-5-light-3 u-shape-rectangle u-group-1">
-                    <div class="u-container-layout u-container-layout-3">
-                      <h6 class="u-text u-text-12">상품정보</h6>
-                      <h6 class="u-text u-text-13">가격</h6>
-                    </div>
-                  </div>
-                  <div class="u-clearfix u-custom-html u-custom-html-1">
-                    <input type="checkbox">
-                  </div>
-                  <div class="u-border-2 u-border-grey-60 u-line u-line-horizontal u-line-2"></div>
-                  <div class="u-container-style u-group u-shape-rectangle u-group-2">
-                    <div class="u-container-layout u-container-layout-4">
-                      <img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/pd_4.jpg" alt="" data-image-width="600" data-image-height="600">
-                      <a href="https://nicepage.com/templates" class="u-border-2 u-border-grey-75 u-btn u-btn-round u-button-style u-hover-palette-5-light-1 u-palette-5-light-2 u-radius-6 u-btn-1"> 주 문 취 소</a>
-                      <h6 class="u-text u-text-14"> 마카롱꼬끄 100% 아몬드 가루<br>마카롱 쿠키
-                      </h6>
-                      <div class="u-clearfix u-custom-html u-custom-html-2">
-                        <input type="checkbox">
-                      </div>
-                      <h6 class="u-text u-text-15">5,000 원</h6>
-                      <a href="https://nicepage.com/templates" class="u-border-2 u-border-grey-75 u-btn u-btn-round u-button-style u-hover-palette-5-light-1 u-palette-5-light-2 u-radius-6 u-btn-2">리 뷰 작 성</a>
-                      <div class="u-border-1 u-border-palette-5-light-1 u-line u-line-horizontal u-line-3"></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-group u-shape-rectangle u-group-3">
-                    <div class="u-container-layout u-container-layout-5"><span class="u-file-icon u-icon u-icon-1"><img src="images/my_arrow_left.png" alt=""></span><span class="u-file-icon u-icon u-icon-2"><img src="images/my_arrow_right.png" alt=""></span>
-                      <div class="u-table u-table-responsive u-table-1">
-                        <table class="u-table-entity">
-                          <colgroup>
-                            <col width="100%">
-                          </colgroup>
-                          <tbody class="u-align-center u-table-body u-text-grey-70 u-table-body-1">
-                            <tr style="height: 31px;">
-                              <td class="u-table-cell">1</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     
+      <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/53a8c415f1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./login.css">
+</head>
+
+
+
+<body>
+   <form action="delete.do" method="post">
+       <div class="frame">
+           <div class="wrap">
+               <div class="delete">
+                   <section class="usermodify">
+                       <h3>회원탈퇴</h3>
+                       <table class="usermodify-table">
+                           <tbody>
+<!-- ============================================================================================================================================================================================================================================================ -->
+                               <tr>
+                                   <th scope="row">아이디(이메일)</th>
+                                   <td>
+                                       <div class="usermodify-ID">
+                                       <input type="text" name="id">
+                                       </div>
+                                   </td>
+                               </tr>
+<!-- ============================================================================================================================================================================================================================================================ -->
+                               <tr>
+                                   <th scope="row">비밀번호</th>
+                                   <td>
+                                       <div class="usermodify-password">
+                                       <input type="text" name="pw">
+                                       </div>
+                                   </td>
+                               </tr>
+<!-- ============================================================================================================================================================================================================================================================ -->
+                           </tbody>
+                            
+                        </table>
+                        <div class="info_box">
+                            <button type="button" id="btnCancel" class="btn_member_cancel"><a href="gomainpage.do">나가기</a></button>
+                            <input type="submit" value="탈퇴하기">
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
     
     <footer class="u-align-center u-clearfix u-footer u-gradient u-footer" id="sec-e204"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="/메인페이지.html" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200" title="메인페이지">
+          <img src="/images/c64cf47d-9299-74e8-02ff-c280d9ca18da.png" class="u-logo-image u-logo-image-1">
+        </a>
         <div class="u-social-icons u-spacing-10 u-social-icons-1">
           <a class="u-social-url" title="facebook" target="_blank" href="https://facebook.com/name"><span class="u-icon u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-6c75"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-6c75"><path fill="currentColor" d="M75.5,28.8H65.4c-1.5,0-4,0.9-4,4.3v9.4h13.9l-1.5,15.8H61.4v45.1H42.8V58.3h-8.8V42.4h8.8V32.2
 c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
@@ -355,9 +280,6 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
         </nav>
-        <a href="gomainpage.do" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200" title="메인페이지">
-          <img src="images/logo.png" class="u-logo-image u-logo-image-1">
-        </a>
         <p class="u-align-left u-text u-text-1">
           <span style="font-weight: 700;">상호명</span>&nbsp; &nbsp;나누민족&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="font-weight: 700;">대표자명</span>&nbsp; 문승주&nbsp;&nbsp;<br>
           <span style="font-weight: 700;">사업장 주소&nbsp;</span> &nbsp; &nbsp; 광주광역시 남구 송암로 60(송하동 373-3)&nbsp;<br>
@@ -366,6 +288,6 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
         <p class="u-align-left u-text u-text-2"><b>나누민족은 광주·전남 사회적경제쇼핑몰 입니다.</b>
         </p>
       </div></footer>
-   
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" ></script>
+
+  
 </body></html>

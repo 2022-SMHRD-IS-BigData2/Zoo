@@ -7,7 +7,8 @@
     <meta charset="utf-8">
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <title>foodPage</title>
+    <!-- 카테고리 클릭 시 전송받은 데이터값 >> pagename 출력 -->
+    <title>productPage<% %></title>
     <link rel="stylesheet" href="assets/css/nicepage.css" media="screen">
 <link rel="stylesheet" href="assets/css/foodPage.css" media="screen">
     <script class="u-script" type="text/javascript" src="assets/js/jquery.js" defer=""></script>
@@ -15,7 +16,6 @@
     <meta name="generator" content="Nicepage 5.1.5, nicepage.com">
     <meta name="referrer" content="origin">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
-    
     
     
     <script type="application/ld+json">{
@@ -107,29 +107,36 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-spacing-30 u-unstyled u-nav-5"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">상품 카테고리</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do">🍴 식품</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">농산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">축산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">수산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">떡·쿠키·간식</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">커피·차·음료</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">건강식품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">김치·반찬·밀키트</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">양념·소스·장류</a>
+            <ul class="u-nav u-spacing-30 u-unstyled u-nav-5"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">상품 카테고리</a>
+            <div class="u-nav-popup">
+            <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+<li class="u-nav-item"><a class="u-button-style u-nav-link u-white" id="food" href="gofoodform.do?category=FOOD">🍴 식품</a>
+<div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+	<li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=NS">농산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=CS">축산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=SS">수산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=SNACK">떡·쿠키·간식</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=DRINK">커피·차·음료</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=HFOOD">건강식품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=MK">김치·반찬·밀키트</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=SOURCE">양념·소스·장류</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">🛒 생활용품</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">방역</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">홈데코</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">세안·뷰티</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">유아용품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">주방용품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">청소·세탁용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=LIVING">🛒 생활용품</a>
+<div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+	 <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=QT">방역</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=DECO">홈데코</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=BEAU">세안·뷰티</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=BABY">유아용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=KITCH">주방용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=CLEAN">청소·세탁용품</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">🌳 친환경</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">👕 패션/잡화</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">💪🏻 헬스·건강</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">🌼 꽃·화훼</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">🪑 가구</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=ECO">🌳 친환경</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FASHION">👕 패션/잡화</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=HEALTH">💪🏻 헬스·건강</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FLOWER">🌼 꽃·화훼</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FUR">🪑 가구</a>
 </li></ul>
 </div>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">인기상품</a>
@@ -142,29 +149,39 @@
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-9"><li class="u-nav-item"><a class="u-button-style u-nav-link">상품 카테고리</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="">🍴 식품</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link">농산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">축산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">수산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">떡·쿠키·간식</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">커피·차·음료</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">건강식품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">김치·반찬·밀키트</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">양념·소스·장류</a>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-9">
+                <li class="u-nav-item">
+                <a class="u-button-style u-nav-link">상품 카테고리</a>
+                <div class="u-nav-popup">
+                <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+     <li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=FOOD">🍴 식품</a>
+     <div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+     <li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=NS">농산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=CS">축산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=SS">수산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=SNACK">떡·쿠키·간식</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=DRINK">커피·차·음료</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=HFOOD">건강식품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=MK">김치·반찬·밀키트</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=SOURCE">양념·소스·장류</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">🛒 생활용품</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link">방역</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">홈데코</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">세안·뷰티</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">유아용품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">주방용품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">청소·세탁용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=LIVING">🛒 생활용품</a>
+<div class="u-nav-popup">
+<ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+<li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=QT">방역</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=DECO">홈데코</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=BEAU">세안·뷰티</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=BABY">유아용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=KITCH">주방용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=CLEAN">청소·세탁용품</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">🌳 친환경</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">👕 패션/잡화</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">💪🏻 헬스·건강</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">🌼 꽃·화훼</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">🪑 가구</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=ECO">🌳 친환경</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=FASHION">👕 패션/잡화</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=HEALTH">💪🏻 헬스·건강</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=FLOWER">🌼 꽃·화훼</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=FUR">🪑 가구</a>
 </li></ul>
 </div>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">인기상품</a>
@@ -260,16 +277,22 @@
         <div class="u-container-style u-expanded-width u-group u-shape-rectangle u-group-1">
           <div class="u-container-layout u-container-layout-1">
           <!-- 상품리스트 1번째줄 시작 -->
+          
+          
             <div class="u-list u-list-1">
               <div class="u-repeater u-repeater-1">
                 <div class="u-container-style u-custom-item u-list-item u-repeater-item">
                   <div class="u-container-layout u-similar-container u-container-layout-2">
                     <img class="u-image u-image-1" src="images/pd_1.jpg" data-image-width="1920" data-image-height="1406">
-                    <h6 class="u-align-center u-text u-text-1"> 국내산 수제 쌀빵 4종&nbsp;<br>틔움긴생각<br>
+                    <h6 class="u-align-center u-text u-text-1"> <a href="gopdDetailPage.do">국내산 수제 쌀빵 4종&nbsp;</a><br>틔움긴생각<br>
                     </h6>
                     <h6 class="u-align-left u-text u-text-2">2,500원</h6>
                   </div>
                 </div>
+                
+                
+                
+                
                 <div class="u-container-style u-custom-item u-list-item u-repeater-item">
                   <div class="u-container-layout u-similar-container u-container-layout-3">
                     <img class="u-image u-image-2" src="images/pd_2.jpg" data-image-width="228" data-image-height="228">
