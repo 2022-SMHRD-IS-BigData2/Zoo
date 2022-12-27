@@ -274,7 +274,7 @@
                         <input type="checkbox">
                       </div>
                       <h6 class="u-text u-text-15">5,000 원</h6>
-                      <a href="https://nicepage.com/templates" class="u-border-2 u-border-grey-75 u-btn u-btn-round u-button-style u-hover-palette-5-light-1 u-palette-5-light-2 u-radius-6 u-btn-2">리 뷰 작 성</a>
+                      <a href="writeReviewPage.do" class="u-border-2 u-border-grey-75 u-btn u-btn-round u-button-style u-hover-palette-5-light-1 u-palette-5-light-2 u-radius-6 u-btn-2">리 뷰 작 성</a>
                       <div class="u-border-1 u-border-palette-5-light-1 u-line u-line-horizontal u-line-3"></div>
                     </div>
                   </div>
