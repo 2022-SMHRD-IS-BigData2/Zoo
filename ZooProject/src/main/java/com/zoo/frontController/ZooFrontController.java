@@ -33,6 +33,7 @@ import com.zoo.controller.ZooJoinCon;
 import com.zoo.controller.ZooLoginCon;
 import com.zoo.controller.ZooLogoutCon;
 import com.zoo.controller.ZooPdListBudgetCon;
+import com.zoo.controller.ZooPdListCate2Con;
 import com.zoo.controller.ZooPdListKeywordCon;
 import com.zoo.controller.ZooUpdateCon;
 import com.zoo.controller.ZooWriteCon;
@@ -58,7 +59,8 @@ public class ZooFrontController extends HttpServlet {
 		handlerMapping.put("/gomainpage.do",new ZooGomainCon() );
 		handlerMapping.put("/gojoin.do",new ZooGoJoinCon() );
 		handlerMapping.put("/gologin.do",new ZooGoLoginCon() );
-		handlerMapping.put("/gofoodform.do",new ZooGofoodformCon() ); // 카테고리별 상품목록 조회
+		handlerMapping.put("/gofoodform.do",new ZooGofoodformCon() ); // 대분류 카테고리별 상품목록 조회
+		handlerMapping.put("/goPdListCate2.do",new ZooPdListCate2Con() ); // 중분류 카테고리별 상품목록 조회
 		handlerMapping.put("/gopdlistbudget.do",new ZooPdListBudgetCon() ); // 예산별 상품목록 조회
 		handlerMapping.put("/gopdlistkeyword.do",new ZooPdListKeywordCon() ); // 키워드별 상품목록 조회
 		handlerMapping.put("/godonation.do",new ZooGodonation() );
