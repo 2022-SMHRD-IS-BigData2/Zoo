@@ -38,7 +38,7 @@
     <meta property="og:title" content="boardPage">
     <meta property="og:type" content="website">
   </head>
-<<<<<<< HEAD
+
     <%	
   ZooMember user = (ZooMember)session.getAttribute("user");
   		
