@@ -160,7 +160,11 @@ In-Demand Professions, ​Top ten most popular courses for international student
 </li></ul>
 </div>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">인기상품</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">공지사항</a>
+</li>
+<ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-9"><li class="u-nav-item"><a class="u-button-style u-nav-link">게시판</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item">
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=review">리뷰게시판</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=qna">문의사항</a>
+</li></ul>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="godonation.do" style="padding: 10px 48px;">기부</a>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;"href="goaboutNanuform.do">ABOUT - 나누민족</a>
 </li></ul>
@@ -199,7 +203,11 @@ In-Demand Professions, ​Top ten most popular courses for international student
 </li></ul>
 </div>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">인기상품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">공지사항</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=board">게시판</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link">공지사항</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=review">리뷰게시판</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=qna">문의사항</a>
+</li></ul>
+</div>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="">기부</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">ABOUT - 나누민족</a>
 </li></ul>
