@@ -162,7 +162,7 @@
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
                 <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-9"><li class="u-nav-item"><a class="u-button-style u-nav-link">상품 카테고리</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item">
-                <a class="u-button-style u-nav-link" href="gofoodform.do?category=FOOD">🍴 식품</a>
+                <a class="u-button-style u-nav-link" href="gofoodform.do?category=식품">🍴 식품</a>
                 <div class="u-nav-popup">
                 <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
      <li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=NS">농산물</a>
@@ -260,7 +260,9 @@
             <div class="display div inline-block u-clearfix u-custom-html u-custom-html-2">
               <div class="search" float:="" left;="">
                 <input type="text" placeholder="검색어를 입력해주세요.">
+                
                 <button type="submit">검색</button>
+                
                 </form>
               </div>
             </div>
@@ -278,7 +280,7 @@
         </div>
         <h6 class="u-text u-text-1">
         <!-- 상품개수 출력 -->
-          <span style="font-weight: 700;"><%=pdlist.size() %></span>개의 상품
+          <span style="font-weight: 700;"><%=pdlist.get(0).getProd_category()%><br><%=pdlist.size() %></span>개의 상품
         </h6>
       </div>
     </section>   
