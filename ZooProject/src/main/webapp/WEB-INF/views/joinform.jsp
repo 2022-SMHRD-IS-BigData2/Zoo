@@ -231,7 +231,7 @@
             <div class="info_box">
               <button type="reset" id="btnCancel" class="btn_member_cancel">취소</button>
               <button type="submit" id="btnJoin" class="btn_member_join">회원가입</button>
-              <input type="submit" value="회원가입">
+              <!-- <input type="submit" value="회원가입"> -->
             </div>
             
         </div>
