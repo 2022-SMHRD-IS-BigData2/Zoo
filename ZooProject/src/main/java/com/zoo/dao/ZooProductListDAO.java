@@ -69,6 +69,16 @@ public class ZooProductListDAO {
 		session.close();
 		return pdDetail;
 	}
+	// 검색창 상품 검색 기능
+	public List<ZooProductList> Search(ZooProductList dto) {
+		SqlSession session = sqlsessionFactory.openSession(true);
+		
+		List<ZooProductList>searchlist = session.selectList("search", dto);
+		
+		
+		session.close();
+		return searchlist;
+	}
 	
 	
 }

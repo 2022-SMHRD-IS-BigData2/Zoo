@@ -49,5 +49,10 @@
 		where prod_id = #{prod_id}
 
 	</select>
-
+	<!-- 검색창 검색 기능 -->
+	<select id="search" resultType="com.zoo.entity.ZooProductList"
+	parameterType="com.zoo.entity.ZooProductList">
+	select*from tbl_product
+	where prod_name like '%'||#{prod_name}||'%'
+	</select>
 </mapper>

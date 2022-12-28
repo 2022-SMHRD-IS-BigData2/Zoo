@@ -99,7 +99,7 @@ In-Demand Professions, ​Top ten most popular courses for international student
         
         
         
-        <form action="#" method="get" class="u-border-1 u-border-grey-30 u-search u-search-right u-white u-search-1">
+        <form action="gosearchform.do" method="get" class="u-border-1 u-border-grey-30 u-search u-search-right u-white u-search-1">
           <button class="u-search-button" type="submit">
             <span class="u-search-icon u-spacing-10 u-search-icon-1">
               <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 56.966 56.966"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-762a"></use></svg>
