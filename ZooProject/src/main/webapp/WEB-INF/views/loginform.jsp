@@ -231,7 +231,7 @@
                 <input type="text" name="id" id="" placeholder="아이디">
             </div>
             <div class="login_pw">
-                <input type="text" name="pw" id="" placeholder="비밀번호">
+                <input type="password" name="pw" id="" placeholder="비밀번호">
             </div>
             <div class="login_etc">
                 <div class="checkbox">

@@ -56,6 +56,14 @@
 
 	</select>
 
+	<!-- 검색창 검색 기능 -->
+	<select id="search" resultType="com.zoo.entity.ZooProductList"
+	parameterType="com.zoo.entity.ZooProductList">
+	select*from tbl_product
+	where prod_name like '%'||#{prod_name}||'%'
+	</select>
+
+
 	<!-- 6. 기업 유형별 상품 리스트 불러오기 -->
 	<select id="prod_sellertype" parameterType="com.zoo.entity.ZooSeller"
 		resultType="com.zoo.entity.ZooProductList">
@@ -67,6 +75,7 @@
 		from tbl_seller 
 		where tbl_seller.seller_type = #{seller_type})
 	</select>
+
 
 
 

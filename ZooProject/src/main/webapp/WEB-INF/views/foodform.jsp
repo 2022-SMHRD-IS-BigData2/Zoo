@@ -9,7 +9,6 @@
     <meta charset="utf-8">
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <!-- 카테고리 클릭 시 전송받은 데이터값 >> pagename 출력 -->
     <title>productPage<% %></title>
     <link rel="stylesheet" href="assets/css/nicepage.css" media="screen">
 <link rel="stylesheet" href="assets/css/foodPage.css" media="screen">
@@ -40,7 +39,10 @@
     <meta property="og:type" content="website">
   </head>
   <% ZooMember user = (ZooMember)session.getAttribute("user"); %>
-  <%   List<ZooProductList> pdlist =(List<ZooProductList>)session.getAttribute("list");%>
+
+  <%   List<ZooProductList> pdlist =(List<ZooProductList>)session.getAttribute("list"); %>
+
+
   
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
   <div class="u-clearfix u-sheet u-sheet-1">
@@ -117,26 +119,31 @@
           </div>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-spacing-30 u-unstyled u-nav-5"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">상품 카테고리</a>
+            <ul class="u-nav u-spacing-30 u-unstyled u-nav-5"><li class="u-nav-item">
+            <a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">상품 카테고리</a>
+            
+            <!-- 드롭다운 박스 노출되는 부분 -->
             <div class="u-nav-popup">
             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
             <li class="u-nav-item">
-            <a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FOOD">🍴 식품</a>
+            <a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=식품">🍴 식품</a>
             <div class="u-nav-popup">
             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
-     <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=NS">농산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=CS">축산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=SS">수산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=SNACK">떡·쿠키·간식</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=DRINK">커피·차·음료</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=HFOOD">건강식품</a>
+     <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=농산물">농산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=축산물">축산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=수산물">수산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=간식">떡·쿠키·간식</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=음료">커피·차·음료</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=건강식품">건강식품</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=MK">김치·반찬·밀키트</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=SOURCE">양념·소스·장류</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=LIVING">🛒 생활용품</a>
-<div class="u-nav-popup">
-<ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+</li>
+	<li class="u-nav-item">
+	<a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=LIVING">🛒 생활용품</a>
+	<div class="u-nav-popup">
+	<ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
 <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=QT">방역</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=DECO">홈데코</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=BEAU">세안·뷰티</a>
@@ -145,15 +152,45 @@
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=CLEAN">청소·세탁용품</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=ECO">🌳 친환경 (click X)</a>
+</li>
+	<li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistkeyword.do?keyword=ECO">🌳 친환경</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FASHION">👕 패션/잡화</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=HEALTH">💪🏻 헬스·건강</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FLOWER">🌼 꽃·화훼</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FUR">🪑 가구</a>
-</li></ul>
+</li>
+</ul>
 </div>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">인기상품</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">공지사항</a>
+
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;" href="gopdlistsellertype.do?sellertype=A">기업유형</a>
+
+<div class="u-nav-popup">
+            <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+            <li class="u-nav-item">
+            <a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=A">(예비)사회적기업</a>
+</li>
+	<li class="u-nav-item">
+	<a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=B">협동조합</a>
+</li>
+	<li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=C">마을기업</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=D">장애인기업</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=E">여성기업</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=F">자활기업</a>
+</li>
+</ul>
+</div>
+
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">게시판</a>
+
+<div class="u-nav-popup">
+            <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+            <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="">공지사항</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="">리뷰게시판</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="">문의게시판</a>
+</li>
+</ul>
+</div>
+
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="godonation.do" style="padding: 10px 48px;">기부</a>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">ABOUT - 나누민족</a>
 </li></ul>
@@ -163,7 +200,7 @@
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
                 <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-9"><li class="u-nav-item"><a class="u-button-style u-nav-link">상품 카테고리</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item">
-                <a class="u-button-style u-nav-link" href="gofoodform.do?category=FOOD">🍴 식품</a>
+                <a class="u-button-style u-nav-link" href="gofoodform.do?category=식품">🍴 식품</a>
                 <div class="u-nav-popup">
                 <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
      <li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=NS">농산물</a>
@@ -176,7 +213,9 @@
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=SOURCE">양념·소스·장류</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=LIVING">🛒 생활용품</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link">방역</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=LIVING">🛒 생활용품</a>
+<div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+	 <li class="u-nav-item"><a class="u-button-style u-nav-link">방역</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=DECO">홈데코</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=BEAU">세안·뷰티</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=BABY">유아용품</a>
@@ -184,7 +223,7 @@
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=CLEAN">청소·세탁용품</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=ECO">🌳 친환경</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gopdlistkeyword.do?keyword=ECO">🌳 친환경</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=FASHION">👕 패션/잡화</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=HEALTH">💪🏻 헬스·건강</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=FLOWER">🌼 꽃·화훼</a>
@@ -204,44 +243,34 @@
       </header>
     <section class="u-clearfix u-section-1" id="sec-5216">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-clearfix u-custom-html u-custom-html-1">
-          <ul class="breadcrumb"> Home  &gt; <select name="ps" id="ps" onchange="submitCatagory(1, this, '');">
-              <option value="52" selected="selected">식품</option>
-              <option value="2">생활용품</option>
-              <option value="3">친환경</option>
-              <option value="4">패션잡화</option>
-              <option value="5">헬스·건강</option>
-              <option value="6">꽃·화훼</option>
-              <option value="7">가구</option>
-            </select>
-          </ul>
-        </div>
         <div class="u-border-3 u-border-palette-4-light-3 u-container-style u-custom-color-1 u-expanded-width u-group u-radius-20 u-shape-round u-group-1" data-animation-name="" data-animation-duration="0" data-animation-direction="">
           <div class="u-container-layout u-container-layout-1">
             <div class="u-form u-form-1">
-              <form action="https://forms.nicepagesrv.com/Form/Process" class="u-clearfix u-form-horizontal u-form-spacing-15 u-inner-form" style="padding: 15px;" source="email" name="form">
+            
+             <!-- checkbox 검색-->
+              <form action="gopdlistsellertype.do" class="u-clearfix u-form-horizontal u-form-spacing-15 u-inner-form" style="padding: 15px;" source="email" name="sellertype">
                 <div class="u-form-checkbox u-form-group u-label-top">
-                  <input type="checkbox" id="checkbox-a10d" name="(예비)사회적기업" value="On">
+                  <input type="checkbox" name="sellertype" value="A">
                   <label for="checkbox-a10d" class="u-custom-font u-heading-font u-label u-text-grey-70 u-label-1">(예비)사회적기업</label>
                 </div>
                 <div class="u-form-checkbox u-form-group u-label-top">
-                  <input type="checkbox" placeholder="Name" id="name-6797" name="name" class="u-border-1 u-border-grey-30 u-input-rectangle" required="required" style="">
+                  <input type="checkbox" name="sellertype" value="B">
                   <label for="name-6797" class="u-custom-font u-heading-font u-label u-text-grey-70 u-label-2">협동조합</label>
                 </div>
                 <div class="u-form-checkbox u-form-group u-label-top">
-                  <input type="checkbox" placeholder="Email" id="email-6797" name="email" class="u-border-1 u-border-grey-30 u-input-rectangle" required="required" style="">
+                  <input type="checkbox" name="sellertype" value="C">
                   <label for="email-6797" class="u-custom-font u-heading-font u-label u-text-grey-70 u-label-3">마을기업</label>
                 </div>
                 <div class="u-form-checkbox u-form-group u-label-top">
-                  <input type="checkbox" id="checkbox-8f20" name="checkbox" value="On">
+                  <input type="checkbox" name="sellertype" value="D">
                   <label for="checkbox-8f20" class="u-custom-font u-heading-font u-label u-text-grey-70 u-label-4">장애인기업</label>
                 </div>
                 <div class="u-form-checkbox u-form-group u-label-top">
-                  <input type="checkbox" id="checkbox-51ac" name="checkbox-1" value="On">
+                  <input type="checkbox" name="sellertype" value="E">
                   <label for="checkbox-51ac" class="u-custom-font u-heading-font u-label u-text-grey-70 u-label-5">여성기업</label>
                 </div>
                 <div class="u-form-checkbox u-form-group u-label-top">
-                  <input type="checkbox" id="checkbox-2ba0" name="checkbox-3" value="On">
+                  <input type="checkbox" name="sellertype" value="F">
                   <label for="checkbox-2ba0" class="u-custom-font u-heading-font u-label u-text-grey-70 u-label-6">자활기업</label>
                 </div>
                 <div class="u-align-right u-form-group u-form-submit u-label-top">
@@ -250,20 +279,23 @@
                     <br>
                   </a>
                 </div>
-                <div class="u-form-send-message u-form-send-success">Thank you! Your message has been sent.</div>
-                <div class="u-form-send-error u-form-send-message">Unable to send your message. Please fix errors then try again.</div>
+                <div class="u-form-send-message u-form-send-success">success</div>
+                <div class="u-form-send-error u-form-send-message">error</div>
                 <input type="hidden" value="" name="recaptchaResponse">
                 <input type="hidden" name="formServices" value="5246bc5fabddefcb36d8ad6fa376e624">
-              </form>
             </div>
             <div class="display div inline-block u-clearfix u-custom-html u-custom-html-2">
               <div class="search" float:="" left;="">
                 <input type="text" placeholder="검색어를 입력해주세요.">
-                <button>검색</button>
+                
+                <button type="submit">검색</button>
+                
+                </form>
               </div>
             </div>
           </div>
         </div>
+        
         <div class="u-clearfix u-custom-html u-custom-html-3">
           <ul class="lineUp"> 정렬 &nbsp;&nbsp; <select name="lineUp" id="lineup" onchange="lineUp(81, this, '');">
               <option value="81" selected="selected">등록순</option>
@@ -275,7 +307,7 @@
         </div>
         <h6 class="u-text u-text-1">
         <!-- 상품개수 출력 -->
-          <span style="font-weight: 700;"><%=pdlist.size() %></span>개의 상품
+          <span style="font-weight: 700;"><%=pdlist.get(0).getProd_category()%><br><%=pdlist.size() %></span>개의 상품
         </h6>
       </div>
     </section>   

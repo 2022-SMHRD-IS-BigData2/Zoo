@@ -1,3 +1,6 @@
+<%@page import="java.util.Random"%>
+<%@page import="java.util.List"%>
+<%@page import="com.zoo.entity.ZooProductList"%>
 <%@page import="com.zoo.entity.ZooMember"%>
 <%@page import="java.lang.reflect.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -44,7 +47,9 @@ In-Demand Professions, ​Top ten most popular courses for international student
   </head>
   <%   
   ZooMember user = (ZooMember)session.getAttribute("user");
-        
+  ZooProductList dto = new ZooProductList();
+  List<ZooProductList> pdlist_budget = (List<ZooProductList>)session.getAttribute("pdlist_budget");
+  List<ZooProductList> pdlist_gift = (List<ZooProductList>)session.getAttribute("pdlist_gift");
   %>
   
   
@@ -99,7 +104,7 @@ In-Demand Professions, ​Top ten most popular courses for international student
         
         
         
-        <form action="#" method="get" class="u-border-1 u-border-grey-30 u-search u-search-right u-white u-search-1">
+        <form action="gosearchform.do" method="get" class="u-border-1 u-border-grey-30 u-search u-search-right u-white u-search-1">
           <button class="u-search-button" type="submit">
             <span class="u-search-icon u-spacing-10 u-search-icon-1">
               <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 56.966 56.966"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-762a"></use></svg>
@@ -128,35 +133,35 @@ In-Demand Professions, ​Top ten most popular courses for international student
             <div class="u-nav-popup">
             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
             <li class="u-nav-item">
-            <a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FOOD">🍴 식품</a>
+            <a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=식품">🍴 식품</a>
             <div class="u-nav-popup">
             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
-     <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=NS">농산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=CS">축산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=SS">수산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=SNACK">떡·쿠키·간식</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=DRINK">커피·차·음료</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=HFOOD">건강식품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=MK">김치·반찬·밀키트</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=SOURCE">양념·소스·장류</a>
+     <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=농산물">농산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=축산물">축산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=수산물">수산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=간식">떡·쿠키·간식</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=음료">커피·차·음료</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=건강식품">건강식품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=반찬/밀키트">김치·반찬·밀키트</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=양념/소스">양념·소스·장류</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=LIVING">🛒 생활용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=생활용품">🛒 생활용품</a>
 <div class="u-nav-popup">
 <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
-<li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=QT">방역</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=DECO">홈데코</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=BEAU">세안·뷰티</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=BABY">유아용품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=KITCH">주방용품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=CLEAN">청소·세탁용품</a>
+<li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=방역">방역</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=홈데코">홈데코</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=뷰티">세안·뷰티</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=유아용품">유아용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=주방용품">주방용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=청소세탁용폼">청소·세탁용품</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=ECO">🌳 친환경 (click X)</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FASHION">👕 패션/잡화</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=HEALTH">💪🏻 헬스·건강</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FLOWER">🌼 꽃·화훼</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FUR">🪑 가구</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistkeyword.do?keyword=친환경">🌳 친환경</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=패션">👕 패션/잡화</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=헬스건강">💪🏻 헬스·건강</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=꽃/화훼">🌼 꽃·화훼</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=가구">🪑 가구</a>
 </li></ul>
 </div>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">인기상품</a>
@@ -174,32 +179,32 @@ In-Demand Professions, ​Top ten most popular courses for international student
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
                 <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-9"><li class="u-nav-item"><a class="u-button-style u-nav-link">상품 카테고리</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item">
-                <a class="u-button-style u-nav-link" href="gofoodform.do?category=FOOD">🍴 식품</a>
+                <a class="u-button-style u-nav-link" href="gofoodform.do?category=식품">🍴 식품</a>
                 <div class="u-nav-popup">
                 <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
-     <li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=NS">농산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=CS">축산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=SS">수산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=SNACK">떡·쿠키·간식</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=DRINK">커피·차·음료</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=HEALTH">건강식품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=MK">김치·반찬·밀키트</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=SOURCE">양념·소스·장류</a>
+     <li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category2=농산물">농산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category2=축산물">축산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category2=수산물">수산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category2=간식">떡·쿠키·간식</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category2=음료">커피·차·음료</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category2=건강식품">건강식품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category2=반찬/밀키트">김치·반찬·밀키트</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category2=양념/소스">양념·소스·장류</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=LIVING">🛒 생활용품</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link">방역</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=DECO">홈데코</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=BEAU">세안·뷰티</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=BABY">유아용품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=KITCH">주방용품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=CLEAN">청소·세탁용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=생활용품">🛒 생활용품</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link">방역</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category2=홈데코">홈데코</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category2=뷰티">세안·뷰티</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category2=유아용품">유아용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category2=주방용품">주방용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category2=청소세탁용품">청소·세탁용품</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=ECO">🌳 친환경</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=FASHION">👕 패션/잡화</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=HEALTH">💪🏻 헬스·건강</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=FLOWER">🌼 꽃·화훼</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=FUR">🪑 가구</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gopdlistkeyword.do?keyword=친환경">🌳 친환경</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=패션">👕 패션/잡화</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=헬스건강">💪🏻 헬스·건강</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=꽃/화훼">🌼 꽃·화훼</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=가구">🪑 가구</a>
 </li></ul>
 </div>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">인기상품</a>
@@ -413,143 +418,53 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
           <div class="u-border-3 u-border-white u-container-style u-group u-group-7">
             <div class="u-container-layout u-container-layout-7">
               <div class="u-list u-list-1">
-                <div class="u-repeater u-repeater-1">
-                  <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                    <div class="u-container-layout u-similar-container u-container-layout-8">
-                      <img class="u-image u-image-1" src="images/pd_1.jpg" data-image-width="1920" data-image-height="1406">
-                      <h6 class="u-align-center u-text u-text-6"> 국내산 수제 쌀빵 4종&nbsp;<br>틔움긴생각<br>
-                      </h6>
-                      <h6 class="u-align-left u-text u-text-7">2,500원</h6>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                    <div class="u-container-layout u-similar-container u-container-layout-9">
-                      <img class="u-image u-image-2" src="images/pd_2.jpg" data-image-width="228" data-image-height="228">
-                      <h6 class="u-align-center u-text u-text-8"> 다향
-아로마 힐링
-스프레이<br>
-                        <span style="font-weight: 700;"></span>
-                        <br>
-                      </h6>
-                      <h6 class="u-align-left u-text u-text-9">20,000원</h6>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                    <div class="u-container-layout u-similar-container u-container-layout-10">
-                      <img class="u-image u-image-3" src="images/pd_3.jpg" data-image-width="228" data-image-height="228">
-                      <h6 class="u-align-center u-text u-text-10"> 패브릭섬유 향수<br>(100ml, 50ml)<span style="font-weight: 700;"></span>
-                        <br>
-                      </h6>
-                      <h6 class="u-align-left u-text u-text-11">10,000원</h6>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                    <div class="u-container-layout u-similar-container u-container-layout-11">
-                      <img class="u-image u-image-4" src="images/pd_4.jpg" data-image-width="600" data-image-height="600">
-                      <h6 class="u-align-center u-text u-text-12"> 마카롱꼬끄100%아몬드 가루&nbsp;<br>마카롱쿠키<br>
-                      </h6>
-                      <h6 class="u-align-left u-text u-text-13">5,000원</h6>
-                    </div>
+               <div class="u-repeater u-repeater-1">
+				 <!-- ============ 가격대별 추천 상품 출력=========== -->                
+                <%for(int i = 0; i < 4; i++){ %>
+                <% Random rd = new Random(); %>
+                <% int num = rd.nextInt(630); %>
+                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
+                  <div class="u-container-layout u-similar-container u-container-layout-2">
+                    <img class="u-image u-image-1" src="<%=pdlist_budget.get(num).getProd_main_img() %>" data-image-width="1920" data-image-height="1406">
+                    <h6 class="u-align-center u-text u-text-1"> 
+                    <div class="test1" style="width: 268px; height: 50px;"><a href="gopdDetailPage.do?prod_id=<%=pdlist_budget.get(num).getProd_id() %>"><%=pdlist_budget.get(num).getProd_name() %></a></div>
+                    </h6>
+                    <h6 class="u-align-left u-text u-text-2"><%=pdlist_budget.get(num).getProd_price()%>원</h6>
                   </div>
                 </div>
-              </div>
+                <%} %>
+                </div>
+              </div> 
+              <!-- 가격대별 추천 상품 더보기 -->
               <a href="gopdlistbudget.do?budget=e" class="u-active-none u-align-center u-border-1 u-border-active-grey-60 u-border-black u-border-hover-grey-60 u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-1">more</a>
             </div>
           </div>
         </div>
-      </div>
+     </div>
     </section>
     <section class="u-clearfix u-section-3" id="sec-6815">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-text u-text-default u-text-1">선물 추천 상품</h2>
+        
         <div class="u-border-3 u-border-white u-container-style u-group u-group-1">
           <div class="u-container-layout u-container-layout-1">
             <div class="u-list u-list-1">
               <div class="u-repeater u-repeater-1">
+              
+              <!-- ============ 선물 추천 상품 출력=========== -->                
+                <%for(int i = 0; i < 8; i++){ %>
+                <% Random rd = new Random(); %>
+                <% int num = rd.nextInt(pdlist_gift.size()); %>
                 <div class="u-container-style u-custom-item u-list-item u-repeater-item">
                   <div class="u-container-layout u-similar-container u-container-layout-2">
-                    <img class="u-image u-image-1" src="images/pd_1.jpg" data-image-width="1920" data-image-height="1406">
-                    <h6 class="u-align-center u-text u-text-2"> 국내산 수제 쌀빵 4종&nbsp;<br>틔움긴생각<br>
+                    <img class="u-image u-image-1" src="<%=pdlist_gift.get(num).getProd_main_img() %>" data-image-width="1920" data-image-height="1406">
+                    <h6 class="u-align-center u-text u-text-1"> 
+                    <div class="test2" style="width: 268px; height: 50px;"><a href="gopdDetailPage.do?prod_id=<%=pdlist_gift.get(num).getProd_id() %>"><%=pdlist_gift.get(num).getProd_name() %></a></div>
                     </h6>
-                    <h6 class="u-align-left u-text u-text-3">2,500원</h6>
+                    <h6 class="u-align-left u-text u-text-2"><%=pdlist_gift.get(num).getProd_price()%>원</h6>
                   </div>
                 </div>
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-3">
-                    <img class="u-image u-image-2" src="images/pd_2.jpg" data-image-width="228" data-image-height="228">
-                    <h6 class="u-align-center u-text u-text-4"> 다향
-아로마 힐링
-스프레이<br>
-                      <span style="font-weight: 700;"></span>
-                      <br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-5">20,000원</h6>
-                  </div>
-                </div>
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-4">
-                    <img class="u-image u-image-3" src="images/pd_3.jpg" data-image-width="228" data-image-height="228">
-                    <h6 class="u-align-center u-text u-text-6"> 패브릭섬유 향수<br>(100ml, 50ml)<span style="font-weight: 700;"></span>
-                      <br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-7">10,000원</h6>
-                  </div>
-                </div>
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-5">
-                    <img class="u-image u-image-4" src="images/pd_4.jpg" data-image-width="600" data-image-height="600">
-                    <h6 class="u-align-center u-text u-text-8"> 마카롱꼬끄100%아몬드 가루&nbsp;<br>마카롱쿠키<br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-9">5,000원</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-section-4" id="sec-6810" style="margin-top: -80px;">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-border-3 u-border-white u-container-style u-group u-group-1">
-          <div class="u-container-layout u-container-layout-1">
-            <div class="u-list u-list-1">
-              <div class="u-repeater u-repeater-1">
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-2">
-                    <img class="u-image u-image-1" src="images/pd_1.jpg" data-image-width="1920" data-image-height="1406">
-                    <h6 class="u-align-center u-text u-text-2"> 국내산 수제 쌀빵 4종&nbsp;<br>틔움긴생각<br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-3">2,500원</h6>
-                  </div>
-                </div>
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-3">
-                    <img class="u-image u-image-2" src="images/pd_2.jpg" data-image-width="228" data-image-height="228">
-                    <h6 class="u-align-center u-text u-text-4"> 다향 아로마 힐링 스프레이<br>
-                      <span style="font-weight: 700;"></span>
-                      <br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-5">20,000원</h6>
-                  </div>
-                </div>
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-4">
-                    <img class="u-image u-image-3" src="images/pd_3.jpg" data-image-width="228" data-image-height="228">
-                    <h6 class="u-align-center u-text u-text-6"> 패브릭섬유 향수<br>(100ml, 50ml)<span style="font-weight: 700;"></span>
-                      <br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-7">10,000원</h6>
-                  </div>
-                </div>
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-5">
-                    <img class="u-image u-image-4" src="images/pd_4.jpg" data-image-width="600" data-image-height="600">
-                    <h6 class="u-align-center u-text u-text-8"> 마카롱꼬끄100%아몬드 가루&nbsp;<br>마카롱쿠키<br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-9">5,000원</h6>
-                  </div>
-                </div>
+                <%} %>        
               </div>
             </div>
             <!-- 선물 추천 상품 더보기 -->
@@ -561,9 +476,13 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
     
     <section class="u-align-center u-clearfix u-section-6" id="sec-1524">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h2 class="u-text u-text-1">인증 기업별 추천 상품</h2>
+        <h2 class="u-text u-text-1" style="
+    margin-top: 100px;
+">인증 기업별 추천 상품</h2>
+        
         <div class="u-list u-list-1">
           <div class="u-repeater u-repeater-1">
+          
             <div class="u-container-style u-list-item u-repeater-item u-shape-rectangle">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1"><span class="u-align-left u-file-icon u-icon u-icon-1"><a href="gopdlistsellertype.do?sellertype=A"><img src="images/giup_sociey.png" alt=""></span>
                 <p class="u-align-center u-text u-text-2">사회적기업 </p></a>
@@ -596,48 +515,30 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
             </div>
           </div>
         </div>
+        
         <div class="u-border-3 u-border-white u-container-style u-group u-group-1">
           <div class="u-container-layout u-container-layout-7">
             <div class="u-list u-list-2">
               <div class="u-repeater u-repeater-2">
+                
+                <!-- ============ 기업별 추천 상품 출력=========== -->                
+                <%for(int i = 0; i < 4; i++){ %>
+                <% Random rd = new Random(); %>
+                <% int num = rd.nextInt(200); %>
                 <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-8">
-                    <img class="u-image u-image-1" src="images/pd_1.jpg" data-image-width="1920" data-image-height="1406">
-                    <h6 class="u-align-center u-text u-text-8"> 국내산 수제 쌀빵 4종&nbsp;<br>틔움긴생각<br>
+                  <div class="u-container-layout u-similar-container u-container-layout-2">
+                    <img class="u-image u-image-1" src="<%=pdlist_budget.get(num).getProd_main_img() %>" data-image-width="1920" data-image-height="1406">
+                    <h6 class="u-align-center u-text u-text-1"> 
+                    <div class="test3" style="width: 268px; height: 50px;"><a href="gopdDetailPage.do?prod_id=<%=pdlist_budget.get(num).getProd_id() %>"><%=pdlist_budget.get(num).getProd_name() %></a></div>
                     </h6>
-                    <h6 class="u-align-left u-text u-text-9">2,500원</h6>
+                    <h6 class="u-align-left u-text u-text-2"><%=pdlist_budget.get(num).getProd_price()%>원</h6>
                   </div>
                 </div>
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-9">
-                    <img class="u-image u-image-2" src="images/pd_2.jpg" data-image-width="228" data-image-height="228">
-                    <h6 class="u-align-center u-text u-text-10"> 다향 아로마 힐링 스프레이<br>
-                      <span style="font-weight: 700;"></span>
-                      <br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-11">20,000원</h6>
-                  </div>
-                </div>
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-10">
-                    <img class="u-image u-image-3" src="images/pd_3.jpg" data-image-width="228" data-image-height="228">
-                    <h6 class="u-align-center u-text u-text-12"> 패브릭섬유 향수<br>(100ml, 50ml)<span style="font-weight: 700;"></span>
-                      <br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-13">10,000원</h6>
-                  </div>
-                </div>
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-11">
-                    <img class="u-image u-image-4" src="images/pd_4.jpg" data-image-width="600" data-image-height="600">
-                    <h6 class="u-align-center u-text u-text-14"> 마카롱꼬끄100%아몬드 가루&nbsp;<br>마카롱쿠키<br>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-15">5,000원</h6>
-                  </div>
-                </div>
+                <%} %>        
+                
               </div>
             </div>
-            <a href="https://nicepage.best" class="u-active-none u-align-center u-border-1 u-border-active-grey-60 u-border-black u-border-hover-grey-60 u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-1">more</a>
+            <a href="gopdlistsellertype.do?sellertype=A" class="u-active-none u-align-center u-border-1 u-border-active-grey-60 u-border-black u-border-hover-grey-60 u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-1">more</a>
           </div>
         </div>
       </div>
