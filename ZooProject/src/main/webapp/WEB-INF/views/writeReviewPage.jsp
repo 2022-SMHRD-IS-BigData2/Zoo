@@ -263,7 +263,7 @@
                   <textarea placeholder="내용을 입력하세요" rows="4" cols="50" id="message-ec68" name="contents" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required=""></textarea>
                 </div>
                 <div class="u-align-left u-form-group u-form-submit u-label-none">
-                  <input type="submit" value="등록">
+                  <input type="submit" value="등록" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-palette-4-base u-radius-6 u-text-white u-btn-1">
                   <input type="submit" value="submit" class="u-form-control-hidden">
                 </div>
                 <div class="u-form-send-message u-form-send-success"> Thank you! 당신의 리뷰가 도움이 됩니다. </div>
