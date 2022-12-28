@@ -557,33 +557,33 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
         <div class="u-list u-list-1">
           <div class="u-repeater u-repeater-1">
             <div class="u-container-style u-list-item u-repeater-item u-shape-rectangle">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1"><span class="u-align-left u-file-icon u-icon u-icon-1"><img src="images/giup_sociey.png" alt=""></span>
-                <p class="u-align-center u-text u-text-2">사회적기업 </p>
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1"><span class="u-align-left u-file-icon u-icon u-icon-1"><a href="gopdlistsellertype.do?sellertype=A"><img src="images/giup_sociey.png" alt=""></span>
+                <p class="u-align-center u-text u-text-2">사회적기업 </p></a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item u-shape-rectangle">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2"><span class="u-align-left u-file-icon u-icon u-icon-2"><img src="images/giup_cooperation.png" alt=""></span>
-                <p class="u-align-center u-text u-text-3">협동조합</p>
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2"><span class="u-align-left u-file-icon u-icon u-icon-2"><a href="gopdlistsellertype.do?sellertype=B"><img src="images/giup_cooperation.png" alt=""></span>
+                <p class="u-align-center u-text u-text-3">협동조합</p></a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item u-shape-rectangle">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3"><span class="u-align-left u-file-icon u-icon u-icon-3"><img src="images/giup_village.png" alt=""></span>
-                <p class="u-align-center u-text u-text-4">마을기업 </p>
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3"><span class="u-align-left u-file-icon u-icon u-icon-3"><a href="gopdlistsellertype.do?sellertype=C"><img src="images/giup_village.png" alt=""></span>
+                <p class="u-align-center u-text u-text-4">마을기업 </p></a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item u-shape-rectangle">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4"><span class="u-align-left u-file-icon u-icon u-icon-4"><img src="images/giup_disabled.png" alt=""></span>
-                <p class="u-align-center u-text u-text-5">장애인기업 </p>
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4"><span class="u-align-left u-file-icon u-icon u-icon-4"><a href="gopdlistsellertype.do?sellertype=D"><img src="images/giup_disabled.png" alt=""></span>
+                <p class="u-align-center u-text u-text-5">장애인기업 </p></a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item u-shape-rectangle">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-5"><span class="u-align-left u-file-icon u-icon u-icon-5"><img src="images/giup_women.png" alt=""></span>
-                <p class="u-align-center u-text u-text-6">여성기업 </p>
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-5"><span class="u-align-left u-file-icon u-icon u-icon-5"><a href="gopdlistsellertype.do?sellertype=E"><img src="images/giup_women.png" alt=""></span>
+                <p class="u-align-center u-text u-text-6">여성기업 </p></a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item u-shape-rectangle">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-6"><span class="u-align-left u-file-icon u-icon u-icon-6"><img src="images/giup_self.png" alt=""></span>
-                <p class="u-align-center u-text u-text-7">자활기업 </p>
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-6"><span class="u-align-left u-file-icon u-icon u-icon-6"><a href="gopdlistsellertype.do?sellertype=F"><img src="images/giup_self.png" alt=""></span>
+                <p class="u-align-center u-text u-text-7">자활기업 </p></a>
               </div>
             </div>
           </div>

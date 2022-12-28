@@ -38,7 +38,12 @@
     <meta property="og:title" content="boardPage">
     <meta property="og:type" content="website">
   </head>
-  <%ZooMember user = (ZooMember)session.getAttribute("user"); %>
+<<<<<<< HEAD
+    <%	
+  ZooMember user = (ZooMember)session.getAttribute("user");
+  		
+  %>
+  <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><div class="u-clearfix u-sheet u-sheet-1">
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
   <div class="u-clearfix u-sheet u-sheet-1">
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
@@ -298,7 +303,7 @@
                         <div class="u-container-layout u-container-layout-5">
                           <h6 class="u-align-center u-text u-text-17">2022/12/22</h6>
                           <h6 class="u-align-center u-text u-text-grey-40 u-text-18">미답변</h6>
-                          <h6 class="u-text u-text-19">배송이 얼마나 걸릴까요?<% %></h6>
+                          <h6 class="u-text u-text-19">배송이 얼마나 걸릴까요?</h6>
                           <div class="u-clearfix u-custom-html u-custom-html-2">
                             <input type="checkbox">
                           </div>
