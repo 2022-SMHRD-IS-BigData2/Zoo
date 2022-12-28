@@ -3,43 +3,42 @@ package com.zoo.controller;
 import java.io.IOException;
 import java.util.List;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import org.apache.ibatis.reflection.SystemMetaObject;
-import org.eclipse.jdt.internal.compiler.ast.RequiresStatement;
-
 import com.zoo.dao.ZooProductListDAO;
 import com.zoo.entity.ZooProductList;
+import com.zoo.entity.ZooSeller;
 
-public class ZooGofoodformCon implements ZooController {
+public class ZooPdListSellerTypeCon implements ZooController {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		System.out.println("ZooProductListCon execute() 호출");
-		
+		System.out.println("ZooPdListSellerTypeCon execute() 호출");
+
+		// Encoding
 		request.setCharacterEncoding("UTF-8");
 
-		String category = request.getParameter("category");
-		ZooProductList dto = new ZooProductList();
-		
-		dto.setProd_category(category);
-		System.out.println(category + "로 이동");
+		// getParameter
+		String sellerType = request.getParameter("sellertype");
+		System.out.println("SellerType : " + sellerType);
 
-		// DAO 객체 생성
+		// set Parameter --> ZooSeller Object
+		ZooSeller dto = new ZooSeller();
+		dto.setSeller_type(sellerType);
+
+		// DAO method
 		ZooProductListDAO dao = new ZooProductListDAO();
-		List<ZooProductList> list = dao.productList1(dto);
+		List<ZooProductList> list = dao.pdSellerType(dto);
+		System.out.println("상품 : "+list.size()+"개");
 
-		System.out.println(list.size());
-		
 		HttpSession session = request.getSession();
 		session.setAttribute("list", list);
-		
+
 		return "foodform";
 	}
 

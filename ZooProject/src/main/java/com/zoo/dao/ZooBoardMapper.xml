@@ -2,33 +2,35 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zoo.entity.ZooBoard">
 
-<select id="boardList" resultType="com.zoo.entity.ZooBoard">
-		select * from tbl_board_r
-	</select>
+   <select id="boardList" resultType="com.zoo.entity.ZooBoard">
+      select * from tbl_board_r
+   </select>
 
-	<insert id="boardWrite" parameterType="com.zoo.entity.ZooBoard">
-		insert into tbl_board_r
-		values(
-			board_num_seq.nextval,
-			#{title},
-			#{content},
-			#{img, jdbcType=VARCHAR},
-			sysdate,
-			#{writer},
-			1,
-			1,
-			1
-		)
-	</insert>
-		
-		
-		<!-- 집어넣을 데이터가 한개라면, parameterType을 적지않아도 된다. -->
-		<select id="boardView" resultType="com.zoo.entity.ZooBoard">
-		select * from tbl_board_r
-		where num = #{num}
-		
-		</select>
-	
+<!-- =============================================================== -->
 
+   <insert id="boardWrite" parameterType="com.zoo.entity.ZooBoard">
+      insert into tbl_board_r
+      values(
+         board_num_seq.nextval,
+         #{title},
+         #{content},
+         #{img, jdbcType=VARCHAR},
+         sysdate,
+         #{writer},
+         1,
+         1,
+         1
+               )
+   </insert>
+
+<!-- =============================================================== -->
+
+   <!-- 집어넣을 데이터가 한개라면, parameterType을 적지않아도 된다. -->
+   <select id="boardView" resultType="com.zoo.entity.ZooBoard">
+      select * from tbl_board_r
+      where num = #{num}
+   </select>
+
+<!-- =============================================================== -->
 
 </mapper>

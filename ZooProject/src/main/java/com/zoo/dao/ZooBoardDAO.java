@@ -18,14 +18,15 @@ public class ZooBoardDAO {
 		List<ZooBoard> list = session.selectList("boardList");
 		session.close();
 		return list;
- }
+	}
+	// 2. 게시글 작성
 	public int boardWrite( ZooBoard dto ) {	
 		SqlSession session = sqlSessionFactory.openSession(true);
 		int cnt = session.insert("boardWrite", dto);
 		session.close();
 		return cnt;
 	}
-	
+	// 3. 게시글 상세보기
 	public ZooBoard boardView(int num) {
 		SqlSession session = sqlSessionFactory.openSession(true);
 		ZooBoard board = session.selectOne("boardView",num);

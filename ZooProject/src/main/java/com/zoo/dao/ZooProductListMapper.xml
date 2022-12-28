@@ -13,13 +13,14 @@
 	</select>
 
 
-	<!-- 2. 중분류 category까지 적용하여 상품정보 데이터 불러오기 -->
-	<select id="productList" parameterType="String"
+	<!-- 2. 중분류 category까지 적용하여 상품정보 데이터 불러오기 12/27 17:33 김원경 작성중 -->
+	<select id="prod_category2"
+		parameterType="com.zoo.entity.ZooProductList"
 		resultType="com.zoo.entity.ZooProductList">
 		select *
 		from tbl_product
-		where prod_category2 = #{prod_category2}
-		<!-- #{prod_category2} 대문자로 작성 -->
+		where prod_category2 =
+		#{prod_category2}
 	</select>
 
 
@@ -27,9 +28,10 @@
 	<select id="prod_budget"
 		parameterType="com.zoo.entity.ZooPdBudget"
 		resultType="com.zoo.entity.ZooProductList">
-		select * 
-		from tbl_product 
-		where prod_price between #{lonum} and #{hinum}
+		select *
+		from tbl_product
+		where prod_price between #{lonum}
+		and #{hinum}
 	</select>
 
 
@@ -37,9 +39,35 @@
 	<select id="prod_keyword"
 		parameterType="com.zoo.entity.ZooProductList"
 		resultType="com.zoo.entity.ZooProductList">
-		select * 
-		from tbl_product 
-		where prod_keyword1 = #{prod_keyword1}
+		select *
+		from tbl_product
+		where prod_keyword1 =
+		#{prod_keyword1}
 	</select>
+
+
+	<!-- 5. 상품 상세페이지에 출력할 정보 불러오기 -->
+	<select id="pddetail"
+		parameterType="com.zoo.entity.ZooProductList"
+		resultType="com.zoo.entity.ZooProductList">
+		select *
+		from tbl_product
+		where prod_id = #{prod_id}
+
+	</select>
+
+	<!-- 6. 기업 유형별 상품 리스트 불러오기 -->
+	<select id="prod_sellertype" parameterType="com.zoo.entity.ZooSeller"
+		resultType="com.zoo.entity.ZooProductList">
+		select tbl_product.*
+		from tbl_product
+		where
+		tbl_product.maker_id 
+		in (select tbl_seller.seller_id
+		from tbl_seller 
+		where tbl_seller.seller_type = #{seller_type})
+	</select>
+
+
 
 </mapper>
