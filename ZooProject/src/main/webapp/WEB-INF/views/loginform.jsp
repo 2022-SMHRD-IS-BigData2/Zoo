@@ -239,13 +239,16 @@
                 </div>
                 
             </div>
-            <div class="submit">
+            <div class="submit" style="
+    margin-top: 0px;
+">
                 <input type="submit" value="로그인">
             </div>
-            <button><a href="#">네이버 로그인</a></button>
             
             <!-- 네이버 로그인 버튼 노출 영역 -->
-  <div id="naver_id_login"></div>
+  <div id="naver_id_login" style="
+    margin-top: 15px;
+"></div>
   <!-- //네이버 로그인 버튼 노출 영역 -->
   <script type="text/javascript">
   	var naver_id_login = new naver_id_login("ocl43uCuwjsRNJJY5u6W", "http://localhost:8083/Zoo_Git/naver_js/callback.jsp");
