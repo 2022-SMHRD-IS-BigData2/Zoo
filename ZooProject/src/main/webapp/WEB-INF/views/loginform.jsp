@@ -91,7 +91,7 @@
         
         
         
-        <form action="#" method="get" class="u-border-1 u-border-grey-30 u-search u-search-right u-white u-search-1">
+        <form action="#" method="get" class="u-border-1 u-border-grey-30 u-search u-search-right u-white u-search-1" style="position: relative; left: 440px; top:-100px">
           <button class="u-search-button" type="submit">
             <span class="u-search-icon u-spacing-10 u-search-icon-1">
               <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 56.966 56.966"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-762a"></use></svg>
@@ -100,13 +100,13 @@
           </button>
           <input class="u-search-input" type="search" name="search" value="" placeholder="Search">
         </form>
-        <a href="gomainpage.do" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200"  title="메인페이지" >
+        <a href="gomainpage.do" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200"  title="메인페이지" style="position: relative; left: 440px; top:-100px">
           <img src="images/logo.png" class="u-logo-image u-logo-image-1" >
         </a>
         
         
         
-        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-2">
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-2" style="margin: -74px auto 36px;">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 700; text-transform: uppercase;">
             <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
               <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-7445"></use></svg>
