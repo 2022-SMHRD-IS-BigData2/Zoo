@@ -468,7 +468,9 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
     
     <section class="u-align-center u-clearfix u-section-6" id="sec-1524">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h2 class="u-text u-text-1">인증 기업별 추천 상품</h2>
+        <h2 class="u-text u-text-1" style="
+    margin-top: 100px;
+">인증 기업별 추천 상품</h2>
         
         <div class="u-list u-list-1">
           <div class="u-repeater u-repeater-1">
