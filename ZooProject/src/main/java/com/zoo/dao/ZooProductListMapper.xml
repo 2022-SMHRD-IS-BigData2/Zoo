@@ -19,7 +19,8 @@
 		resultType="com.zoo.entity.ZooProductList">
 		select *
 		from tbl_product
-		where prod_category2 = #{prod_category2}
+		where prod_category2 =
+		#{prod_category2}
 	</select>
 
 
@@ -29,7 +30,8 @@
 		resultType="com.zoo.entity.ZooProductList">
 		select *
 		from tbl_product
-		where prod_price between #{lonum} and #{hinum}
+		where prod_price between #{lonum}
+		and #{hinum}
 	</select>
 
 
@@ -39,15 +41,33 @@
 		resultType="com.zoo.entity.ZooProductList">
 		select *
 		from tbl_product
-		where prod_keyword1 = #{prod_keyword1}
+		where prod_keyword1 =
+		#{prod_keyword1}
 	</select>
-	
-	<select id="pddetail" parameterType="com.zoo.entity.ZooProductList"
-	resultType="com.zoo.entity.ZooProductList">
-	select * 
-		from tbl_product 
+
+
+	<!-- 5. 상품 상세페이지에 출력할 정보 불러오기 -->
+	<select id="pddetail"
+		parameterType="com.zoo.entity.ZooProductList"
+		resultType="com.zoo.entity.ZooProductList">
+		select *
+		from tbl_product
 		where prod_id = #{prod_id}
 
 	</select>
+
+	<!-- 6. 기업 유형별 상품 리스트 불러오기 -->
+	<select id="prod_sellertype" parameterType="com.zoo.entity.ZooSeller"
+		resultType="com.zoo.entity.ZooProductList">
+		select tbl_product.*
+		from tbl_product
+		where
+		tbl_product.maker_id 
+		in (select tbl_seller.seller_id
+		from tbl_seller 
+		where tbl_seller.seller_type = #{seller_type})
+	</select>
+
+
 
 </mapper>
