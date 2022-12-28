@@ -206,7 +206,7 @@ In-Demand Professions, ​Top ten most popular courses for international student
         <img class="u-image u-image-round u-radius-37 u-image-3" src="images/donation_pic1.jpg" alt="" data-image-width="1920" data-image-height="1280">
         <img class="u-image u-image-round u-radius-37 u-image-4" src="images/donation_pic2.jpg" alt="" data-image-width="1920" data-image-height="1280">
         <img class="u-image u-image-round u-radius-37 u-image-5" src="images/donation_write1.png" alt="" data-image-width="1080" data-image-height="278">
-        <a href="https://nicepage.com/website-design" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-dark-1 u-palette-2-dark-2 u-radius-14 u-btn-1"> &nbsp;기부하기</a>
+        <a href="javascript:void(0);" onclick="window.open('popup.do', 'pop01', 'top=200, left=900, width=350, height=450, status=no, menubar=no, toolbar=no, resizable=no');" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-dark-1 u-palette-2-dark-2 u-radius-14 u-btn-1"> &nbsp;기부하기</a>
         <img class="u-image u-image-default u-image-6" src="images/donation_write2.png" alt="" data-image-width="498" data-image-height="126">
         <img class="u-expanded-width u-image u-image-round u-radius-37 u-image-7" src="images/donation_back3.png" alt="" data-image-width="1080" data-image-height="1080">
         <div class="u-clearfix u-custom-html u-custom-html-1">
