@@ -9,7 +9,6 @@
     <meta charset="utf-8">
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <!-- 카테고리 클릭 시 전송받은 데이터값 >> pagename 출력 -->
     <title>productPage<% %></title>
     <link rel="stylesheet" href="assets/css/nicepage.css" media="screen">
 <link rel="stylesheet" href="assets/css/foodPage.css" media="screen">
@@ -40,7 +39,7 @@
     <meta property="og:type" content="website">
   </head>
   <% ZooMember user = (ZooMember)session.getAttribute("user"); %>
-  <%   List<ZooProductList> pdlist =(List<ZooProductList>)session.getAttribute("list");%>
+  <% List<ZooProductList> pdlist =(List<ZooProductList>)session.getAttribute("list"); %>
   
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
   <div class="u-clearfix u-sheet u-sheet-1">
@@ -206,6 +205,7 @@
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-clearfix u-custom-html u-custom-html-1">
           <ul class="breadcrumb"> Home  &gt; <select name="ps" id="ps" onchange="submitCatagory(1, this, '');">
+          <!-- Option 선택상품 노출 처리 필요 -->
               <option value="52" selected="selected">식품</option>
               <option value="2">생활용품</option>
               <option value="3">친환경</option>
@@ -219,8 +219,12 @@
         <div class="u-border-3 u-border-palette-4-light-3 u-container-style u-custom-color-1 u-expanded-width u-group u-radius-20 u-shape-round u-group-1" data-animation-name="" data-animation-duration="0" data-animation-direction="">
           <div class="u-container-layout u-container-layout-1">
             <div class="u-form u-form-1">
-              <form action="https://forms.nicepagesrv.com/Form/Process" class="u-clearfix u-form-horizontal u-form-spacing-15 u-inner-form" style="padding: 15px;" source="email" name="form">
+              <form action="
+              
+              
+              " class="u-clearfix u-form-horizontal u-form-spacing-15 u-inner-form" style="padding: 15px;" source="email" name="form">
                 <div class="u-form-checkbox u-form-group u-label-top">
+                <!-- checkbox -->
                   <input type="checkbox" id="checkbox-a10d" name="(예비)사회적기업" value="On">
                   <label for="checkbox-a10d" class="u-custom-font u-heading-font u-label u-text-grey-70 u-label-1">(예비)사회적기업</label>
                 </div>

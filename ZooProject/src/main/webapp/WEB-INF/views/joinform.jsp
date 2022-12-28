@@ -214,7 +214,7 @@
                 <input type="text" name="id" id="" placeholder="아이디">
             </div>
             <div class="join_pw">
-                <input type="text" name="pw" id="" placeholder="비밀번호">
+                <input type="password" name="pw" id="" placeholder="비밀번호">
             </div>
             
             <div class="join_nick">
@@ -229,9 +229,9 @@
             </div>
             
             <div class="info_box">
-              <button type="button" id="btnCancel" class="btn_member_cancel">취소</button>
-              <button type="button" id="btnJoin" class="btn_member_join">회원가입</button>
-              <input type="submit" value="전송">
+              <button type="reset" id="btnCancel" class="btn_member_cancel">취소</button>
+              <button type="submit" id="btnJoin" class="btn_member_join">회원가입</button>
+              <input type="submit" value="회원가입">
             </div>
             
         </div>
