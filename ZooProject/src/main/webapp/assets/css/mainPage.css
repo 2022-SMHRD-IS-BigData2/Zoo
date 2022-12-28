@@ -528,7 +528,7 @@
 .u-section-3 .u-text-2 {
   font-weight: 700;
   line-height: 1.6;
-  margin: 23px 16px 0;
+  margin: 10px 16px 20px;
 }
 
 .u-section-3 .u-text-3 {
@@ -1047,8 +1047,8 @@
 
 .u-section-6 .u-text-2 {
   font-weight: 700;
-  font-size: 0.875rem;
-  margin: 2px 0 0;
+  line-height: 1.6;
+  margin: 10px 16px 20px;
 }
 
 .u-section-6 .u-container-layout-2 {

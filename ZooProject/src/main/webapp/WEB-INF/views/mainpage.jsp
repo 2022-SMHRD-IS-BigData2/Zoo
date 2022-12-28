@@ -419,7 +419,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                   <div class="u-container-layout u-similar-container u-container-layout-2">
                     <img class="u-image u-image-1" src="<%=pdlist_budget.get(num).getProd_main_img() %>" data-image-width="1920" data-image-height="1406">
                     <h6 class="u-align-center u-text u-text-1"> 
-                    <a href="gopdDetailPage.do?prod_id=<%=pdlist_budget.get(num).getProd_id() %>"><%=pdlist_budget.get(num).getProd_name() %></a><br>
+                    <div class="test1" style="width: 268px; height: 50px;"><a href="gopdDetailPage.do?prod_id=<%=pdlist_budget.get(num).getProd_id() %>"><%=pdlist_budget.get(num).getProd_name() %></a></div>
                     </h6>
                     <h6 class="u-align-left u-text u-text-2"><%=pdlist_budget.get(num).getProd_price()%>원</h6>
                   </div>
@@ -451,7 +451,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                   <div class="u-container-layout u-similar-container u-container-layout-2">
                     <img class="u-image u-image-1" src="<%=pdlist_gift.get(num).getProd_main_img() %>" data-image-width="1920" data-image-height="1406">
                     <h6 class="u-align-center u-text u-text-1"> 
-                    <a href="gopdDetailPage.do?prod_id=<%=pdlist_gift.get(num).getProd_id() %>"><%=pdlist_gift.get(num).getProd_name() %></a><br>
+                    <div class="test2" style="width: 268px; height: 50px;"><a href="gopdDetailPage.do?prod_id=<%=pdlist_gift.get(num).getProd_id() %>"><%=pdlist_gift.get(num).getProd_name() %></a></div>
                     </h6>
                     <h6 class="u-align-left u-text u-text-2"><%=pdlist_gift.get(num).getProd_price()%>원</h6>
                   </div>
@@ -519,7 +519,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                   <div class="u-container-layout u-similar-container u-container-layout-2">
                     <img class="u-image u-image-1" src="<%=pdlist_budget.get(num).getProd_main_img() %>" data-image-width="1920" data-image-height="1406">
                     <h6 class="u-align-center u-text u-text-1"> 
-                    <a href="gopdDetailPage.do?prod_id=<%=pdlist_budget.get(num).getProd_id() %>"><%=pdlist_budget.get(num).getProd_name() %></a><br>
+                    <div class="test3" style="width: 268px; height: 50px;"><a href="gopdDetailPage.do?prod_id=<%=pdlist_budget.get(num).getProd_id() %>"><%=pdlist_budget.get(num).getProd_name() %></a></div>
                     </h6>
                     <h6 class="u-align-left u-text u-text-2"><%=pdlist_budget.get(num).getProd_price()%>원</h6>
                   </div>
