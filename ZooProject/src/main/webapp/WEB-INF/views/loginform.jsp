@@ -53,7 +53,10 @@
           </div>
           <div class="u-custom-menu u-nav-container">
           <%if(user==null){ %>
-        <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gologin.do">로그인</a>
+        <ul class="u-nav u-unstyled u-nav-1" style="
+    position: relative;
+    right: 60px;
+"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gologin.do">로그인</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gojoin.do">회원가입</a><%}else{ %>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gomyPageform.do"><%=user.getCust_name() %></a>
 
@@ -91,7 +94,7 @@
         
         
         
-        <form action="#" method="get" class="u-border-1 u-border-grey-30 u-search u-search-right u-white u-search-1">
+        <form action="#" method="get" class="u-border-1 u-border-grey-30 u-search u-search-right u-white u-search-1" style="position: relative; left: 475px; top:-100px">
           <button class="u-search-button" type="submit">
             <span class="u-search-icon u-spacing-10 u-search-icon-1">
               <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 56.966 56.966"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-762a"></use></svg>
@@ -100,13 +103,13 @@
           </button>
           <input class="u-search-input" type="search" name="search" value="" placeholder="Search">
         </form>
-        <a href="gomainpage.do" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200"  title="메인페이지" >
+        <a href="gomainpage.do" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200"  title="메인페이지" style="position: relative; left: 440px; top:-100px">
           <img src="images/logo.png" class="u-logo-image u-logo-image-1" >
         </a>
         
         
         
-        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-2">
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-2" style="margin: -74px auto 36px;">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 700; text-transform: uppercase;">
             <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
               <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-7445"></use></svg>
@@ -213,7 +216,10 @@
 </head>
 <body>
     <form action="login.do">
-    <div class="wrap">
+    <div class="wrap" style="
+    height: 600px;
+    padding-bottom: 60px;
+">
         <div class="login">
             <h2>회원 로그인</h2>
             <div class="login_sns">
@@ -233,13 +239,16 @@
                 </div>
                 
             </div>
-            <div class="submit">
+            <div class="submit" style="
+    margin-top: 0px;
+">
                 <input type="submit" value="로그인">
             </div>
-            <button><a href="#">네이버 로그인</a></button>
             
             <!-- 네이버 로그인 버튼 노출 영역 -->
-  <div id="naver_id_login"></div>
+  <div id="naver_id_login" style="
+    margin-top: 15px;
+"></div>
   <!-- //네이버 로그인 버튼 노출 영역 -->
   <script type="text/javascript">
   	var naver_id_login = new naver_id_login("ocl43uCuwjsRNJJY5u6W", "http://localhost:8083/Zoo_Git/naver_js/callback.jsp");
