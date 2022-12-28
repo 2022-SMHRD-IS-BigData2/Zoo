@@ -102,8 +102,6 @@ In-Demand Professions, ​Top ten most popular courses for international student
           </div>
         </nav>
         
-        
-        
         <form action="gosearchform.do" method="get" class="u-border-1 u-border-grey-30 u-search u-search-right u-white u-search-1">
           <button class="u-search-button" type="submit">
             <span class="u-search-icon u-spacing-10 u-search-icon-1">
@@ -160,7 +158,6 @@ In-Demand Professions, ​Top ten most popular courses for international student
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistkeyword.do?keyword=ECO">🌳 친환경</a> <!-- 친환경 href 예외처리 (김원경) -->
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=패션">👕 패션/잡화</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=헬스건강">💪🏻 헬스·건강</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=꽃/화훼">🌼 꽃·화훼</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=가구">🪑 가구</a>
 </li></ul>
 </div>
@@ -230,12 +227,14 @@ In-Demand Professions, ​Top ten most popular courses for international student
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=가구">🪑 가구</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">인기상품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=board">게시판</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link">공지사항</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link">기업유형</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=board">게시판</a>
+<!-- <div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+<li class="u-nav-item"><a class="u-button-style u-nav-link">공지사항</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=review">리뷰게시판</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=qna">문의사항</a>
 </li></ul>
-</div>
+</div> -->
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="">기부</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">ABOUT - 나누민족</a>
 </li></ul>
