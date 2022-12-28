@@ -261,7 +261,7 @@
                 </div>
                 <div class="u-form-group u-form-message u-label-none">
                   <label for="message-ec68" class="u-label">리뷰 쓰기</label>
-                  <textarea placeholder="내용을 입력하세요" rows="4" cols="50" id="message-ec68" name="writer" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required=""></textarea>
+                  <textarea placeholder="내용을 입력하세요" rows="4" cols="50" id="message-ec68" name="content" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required=""></textarea>
                 </div>
                 <div class="u-align-left u-form-group u-form-submit u-label-none">
                 <form action="write.do" method="post" enctype="multipart/form-data">
