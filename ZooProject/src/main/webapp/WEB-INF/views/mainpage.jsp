@@ -157,15 +157,43 @@ In-Demand Professions, ​Top ten most popular courses for international student
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=청소세탁용폼">청소·세탁용품</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistkeyword.do?keyword=친환경">🌳 친환경</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistkeyword.do?keyword=ECO">🌳 친환경</a> <!-- 친환경 href 예외처리 (김원경) -->
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=패션">👕 패션/잡화</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=헬스건강">💪🏻 헬스·건강</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=꽃/화훼">🌼 꽃·화훼</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=가구">🪑 가구</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">인기상품</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">공지사항</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">기업유형</a>
+
+<div class="u-nav-popup">
+            <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+            <li class="u-nav-item">
+            <a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=A">(예비)사회적기업</a>
+</li>
+	<li class="u-nav-item">
+	<a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=B">협동조합</a>
+</li>
+	<li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=C">마을기업</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=D">장애인기업</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=E">여성기업</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=F">자활기업</a>
+</li>
+</ul>
+</div>
+
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">게시판</a>
+
+<div class="u-nav-popup">
+            <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+            <!-- 게시판 href 경로 추가해주세요~~ To.정철 -->
+            <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="">공지사항</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="">리뷰게시판</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="">문의게시판</a>
+</li>
+</ul>
+</div>
+
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="godonation.do" style="padding: 10px 48px;">기부</a>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;"href="goaboutNanuform.do">ABOUT - 나누민족</a>
 </li></ul>

@@ -31,6 +31,10 @@ public class ZooPdListKeywordCon implements ZooController {
 		dto.setProd_keyword1(keyword);
 		System.out.println("상품키워드 : " + dto.getProd_keyword1());
 
+		if (keyword.equals("ECO")) {
+			request.setAttribute("keyword1", keyword);
+		}
+		
 		// prod_keyword 상품 data 가져오기
 		ZooProductListDAO dao = new ZooProductListDAO();
 		List<ZooProductList> list = dao.prod_keyword(dto);

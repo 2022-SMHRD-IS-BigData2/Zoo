@@ -40,9 +40,14 @@
   </head>
   <% ZooMember user = (ZooMember)session.getAttribute("user"); %>
 
-  <%   List<ZooProductList> pdlist =(List<ZooProductList>)session.getAttribute("list"); %>
+  <% List<ZooProductList> pdlist =(List<ZooProductList>)session.getAttribute("list"); %>
 
-
+  <% String seller = (String)request.getAttribute("seller"); %>
+  
+  <% String category2 = (String)request.getAttribute("category2"); %>
+  
+  <% String keyword1 = (String)request.getAttribute("keyword1"); %>
+  
   
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
   <div class="u-clearfix u-sheet u-sheet-1">
@@ -141,28 +146,26 @@
 </div>
 </li>
 	<li class="u-nav-item">
-	<a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=LIVING">🛒 생활용품</a>
+	<a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=생활용품">🛒 생활용품</a>
 	<div class="u-nav-popup">
 	<ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
-<li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=QT">방역</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=DECO">홈데코</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=BEAU">세안·뷰티</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=BABY">유아용품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=KITCH">주방용품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=CLEAN">청소·세탁용품</a>
+<li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=방역">방역</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=홈데코">홈데코</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=뷰티">세안·뷰티</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=유아용품">유아용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=주방용품">주방용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=청소세탁용품">청소·세탁용품</a>
 </li></ul>
 </div>
 </li>
 	<li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistkeyword.do?keyword=ECO">🌳 친환경</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FASHION">👕 패션/잡화</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=HEALTH">💪🏻 헬스·건강</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=패션">👕 패션/잡화</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=헬스건강">💪🏻 헬스·건강</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FLOWER">🌼 꽃·화훼</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FUR">🪑 가구</a>
-</li>
-</ul>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=가구">🪑 가구</a>
+</li></ul>
 </div>
-
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;" href="gopdlistsellertype.do?sellertype=A">기업유형</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">기업유형</a>
 
 <div class="u-nav-popup">
             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
@@ -185,7 +188,7 @@
 <div class="u-nav-popup">
             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
             <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="">공지사항</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="">리뷰게시판</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="writeReviewPage.do">리뷰게시판</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="">문의게시판</a>
 </li>
 </ul>
@@ -306,8 +309,21 @@
           </ul>
         </div>
         <h6 class="u-text u-text-1">
-        <!-- 상품개수 출력 -->
-          <span style="font-weight: 700;"><%=pdlist.get(0).getProd_category()%><br><%=pdlist.size() %></span>개의 상품
+        
+        <!-- 상품 카테고리 이름, 개수 출력 -->
+          <span style="font-weight: 700;">
+          <% if (keyword1 != null) { %>
+           친환경
+          <% } else if (category2 != null) { %>
+          <%=pdlist.get(0).getProd_category()%><br>
+          >> <%=category2 %>
+          <% } else if (seller != null) { %> 
+          <%=seller%> 
+          <% } else { %>
+          <%=pdlist.get(0).getProd_category()%>
+          <%} %><br>
+          
+          <%=pdlist.size() %></span>개의 상품
         </h6>
       </div>
     </section>   

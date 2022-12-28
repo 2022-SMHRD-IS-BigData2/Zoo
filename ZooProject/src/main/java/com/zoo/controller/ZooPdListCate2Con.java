@@ -35,6 +35,8 @@ public class ZooPdListCate2Con implements ZooController {
 
 		HttpSession session = request.getSession();
 		session.setAttribute("list", list);
+		
+		request.setAttribute("category2", category);
 
 		return "foodform";
 	}
