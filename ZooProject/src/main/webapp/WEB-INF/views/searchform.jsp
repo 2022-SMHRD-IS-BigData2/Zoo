@@ -121,7 +121,11 @@
             </a>
           </div>
           </div>
-          <div class="u-custom-menu u-nav-container">
+          <div class="u-custom-menu u-nav-container"style="
+    position: relative;
+    top: -40px;
+    left: 450px;
+">
             <ul class="u-nav u-spacing-30 u-unstyled u-nav-5"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">상품 카테고리</a>
             <div class="u-nav-popup">
             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
