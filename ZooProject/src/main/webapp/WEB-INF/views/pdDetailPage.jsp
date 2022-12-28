@@ -39,6 +39,17 @@
     <meta name="twitter:description" content="Site1">
     <meta property="og:title" content="pdDetailPage">
     <meta property="og:type" content="website">
+    
+    
+    
+    <meta charset="UTF-8">
+    <title>Sample Payment</title>
+    
+    
+    
+    
+    
+    
   </head>
   <% ZooMember user = (ZooMember)session.getAttribute("user"); %>
   
@@ -268,11 +279,19 @@
                     </div>
                   </div>
                   <div class="u-clearfix u-group-elements u-group-elements-4">
-                    <h6 class="u-align-right u-text u-text-grey-80 u-text-12"><%=detail.getProd_price() %>>원</h6>
+                    <h6 class="u-align-right u-text u-text-grey-80 u-text-12"><%=detail.getProd_price() %>원</h6>
                     <h6 class="u-text u-text-default u-text-grey-80 u-text-13">합계금액</h6>
                   </div>
                   <div class="u-clearfix u-group-elements u-group-elements-5">
+                   
+                   
                     <a href="#" class="u-border-2 u-border-white u-btn u-btn-round u-button-style u-hover-custom-color-2 u-palette-4-dark-1 u-radius-6 u-text-hover-white u-btn-1">바로 구매</a>
+                    
+                 
+                    
+                    
+                    
+                    
                     <a href="gocartform.do" class="u-align-center u-border-2 u-border-hover-palette-4-dark-2 u-border-palette-4-dark-2 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-2">장바구니</a>
                     <a href="gowishListform.do" class="u-border-2 u-border-hover-palette-4-dark-2 u-border-palette-4-dark-2 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-3">관심상품</a>
                   </div>
