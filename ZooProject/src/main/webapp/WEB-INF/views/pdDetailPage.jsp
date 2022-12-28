@@ -213,7 +213,7 @@
             <div class="u-layout-row">
               <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
                 <div class="u-container-layout u-valign-middle u-container-layout-1">
-                  <img class="u-image u-image-1" src="<%=detail.getProd_main_img() %>>" data-image-width="548" data-image-height="548">
+                  <img class="u-image u-image-1" src="<%=detail.getProd_main_img()%>" data-image-width="548" data-image-height="548">
                 </div>
               </div>
               <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
@@ -294,8 +294,8 @@
                   <a href="#Qbuy" class="u-border-2 u-border-hover-palette-4-light-3 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-3">구매문의 ( 1 )</a>
                   <a href="https://nicepage.com/c/contact-form-html-templates" class="u-border-2 u-border-hover-palette-4-light-3 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-4">상품구매안내</a>
                   <div class="u-border-1 u-border-grey-40 u-line u-line-horizontal u-line-2"></div>
-                  <img class="u-image u-image-default u-image-1" src="https://cdn-pro-web-212-222-godomall.spdycdn.net/gachi72852_godomall_com/data/editor/goods/220622/e5064242260d7cc267c0c255f73248ce_100656.jpg" id="detail" alt="" data-image-width="1000" data-image-height="8693">
-                  <img class="u-image u-image-default u-image-2" src="https://cdn-pro-web-212-222-godomall.spdycdn.net/gachi72852_godomall_com/data/editor/goods/220622/257e10fb846ba15f9ac2a9dd5bdcb7d4_100656.jpg" alt="" data-image-width="1000" data-image-height="9587">
+                  <img class="u-image u-image-default u-image-1" src="<%=detail.getProd_img() %>" id="detail" alt="" data-image-width="1000" data-image-height="9587">
+                  
                 </div>
               </div>
               <div class="u-container-style u-layout-cell u-size-17 u-layout-cell-2">

@@ -68,7 +68,8 @@ public class ZooFrontController extends HttpServlet {
 		handlerMapping.put("/goboardform.do", new ZooGoboardCon());
 		handlerMapping.put("/gowishListform.do", new ZooGowishListCon());
 		handlerMapping.put("/gopdDetailPage.do", new ZooGoDetailCon());
-		handlerMapping.put("/goaboutNanuform.do", new ZooGoaboutNanuCon());
+		handlerMapping.put("/goaboutNanuform.do", new ZooGoaboutNanuCon()
+				);
 		
 		//======================================
 		handlerMapping.put("/join.do",new ZooJoinCon() );
