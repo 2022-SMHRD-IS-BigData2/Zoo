@@ -11,23 +11,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.smhrd.controller.WriteCon;
 import com.zoo.controller.ZooController;
 import com.zoo.controller.ZooDeleteCon;
 import com.zoo.controller.ZooGoCartCon;
 import com.zoo.controller.ZooGoDetailCon;
 import com.zoo.controller.ZooGoJoinCon;
 import com.zoo.controller.ZooGoLoginCon;
-import com.zoo.controller.ZooGoWishListformCon;
+import com.zoo.controller.ZooGoaboutNanuCon;
 import com.zoo.controller.ZooGoboardCon;
-import com.zoo.controller.ZooGocouponCon;
 import com.zoo.controller.ZooGodonation;
 import com.zoo.controller.ZooGofoodformCon;
 import com.zoo.controller.ZooGomainCon;
 import com.zoo.controller.ZooGomemberDeleteCon;
 import com.zoo.controller.ZooGomemberUpdateCon;
 import com.zoo.controller.ZooGomyPageCon;
-import com.zoo.controller.ZooGomyPostformCon;
 import com.zoo.controller.ZooGowishListCon;
 import com.zoo.controller.ZooJoinCon;
 import com.zoo.controller.ZooLoginCon;
@@ -35,6 +32,7 @@ import com.zoo.controller.ZooLogoutCon;
 import com.zoo.controller.ZooPdListBudgetCon;
 import com.zoo.controller.ZooPdListCate2Con;
 import com.zoo.controller.ZooPdListKeywordCon;
+import com.zoo.controller.ZooPdListSellerTypeCon;
 import com.zoo.controller.ZooUpdateCon;
 import com.zoo.controller.ZooWriteCon;
 import com.zoo.controller.ZooWriteReviewCon;
@@ -63,16 +61,16 @@ public class ZooFrontController extends HttpServlet {
 		handlerMapping.put("/goPdListCate2.do",new ZooPdListCate2Con() ); // 중분류 카테고리별 상품목록 조회
 		handlerMapping.put("/gopdlistbudget.do",new ZooPdListBudgetCon() ); // 예산별 상품목록 조회
 		handlerMapping.put("/gopdlistkeyword.do",new ZooPdListKeywordCon() ); // 키워드별 상품목록 조회
+		handlerMapping.put("/gopdlistsellertype.do",new ZooPdListSellerTypeCon() ); // 기업유형별 상품목록 조회
 		handlerMapping.put("/godonation.do",new ZooGodonation() );
 		handlerMapping.put("/gomemberUpdate.do", new ZooGomemberUpdateCon() );
 		handlerMapping.put("/gomemberDelete.do", new ZooGomemberDeleteCon() );
 		handlerMapping.put("/gomyPageform.do", new ZooGomyPageCon()  );
 		handlerMapping.put("/gocartform.do", new ZooGoCartCon()  );
 		handlerMapping.put("/goboardform.do", new ZooGoboardCon());
-		handlerMapping.put("/gocoupon.do", new ZooGocouponCon());
-		handlerMapping.put("/gomyPostform.do", new ZooGomyPostformCon());
 		handlerMapping.put("/gowishListform.do", new ZooGowishListCon());
 		handlerMapping.put("/gopdDetailPage.do", new ZooGoDetailCon());
+		handlerMapping.put("/goaboutNanuform.do", new ZooGoaboutNanuCon());
 		
 		//======================================
 		handlerMapping.put("/join.do",new ZooJoinCon() );
