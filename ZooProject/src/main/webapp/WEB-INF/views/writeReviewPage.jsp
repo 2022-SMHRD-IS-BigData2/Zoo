@@ -36,6 +36,9 @@
     <meta property="og:title" content="writeReviewPage">
     <meta property="og:type" content="website">
   </head>
+ <%	
+  	ZooMember user = (ZooMember)session.getAttribute("user");
+ %>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><div class="u-clearfix u-sheet u-sheet-1">
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
@@ -46,14 +49,18 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-black" style="padding: 14px 10px;">로그인</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-black" style="padding: 14px 10px;">회원가입</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-black" style="padding: 14px 10px;">주문조회</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-black" style="padding: 14px 10px;">장바구니</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-black" href="myPage.html" style="padding: 14px 10px;">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="myPage.html">주문 내역</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="writeReviewPage.html">위시리스트</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">게시글</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">정보 수정</a>
+          <%if(user==null){ %>
+        <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gologin.do">로그인</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gojoin.do">회원가입</a><%}else{ %>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gomyPageform.do"><%=user.getCust_name() %></a>
+
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="logout.do">로그아웃</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;"href="gomyPageform.do">주문조회</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" href="gocartform.do" style="padding: 14px 10px;">장바구니</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" href="gomyPageform.do" style="padding: 14px 10px;">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white"href="gomyPageform.do">주문 내역</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white"href="gowishListform.do">위시리스트</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white"href="goboardform.do">게시글</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white"href="gomemberUpdate.do">정보 수정</a><%} %>
 </li></ul>
 </div>
 </li></ul>
@@ -226,22 +233,19 @@
               </div>
             </div>
             <div class="u-form u-form-1">
-              <form action="https://forms.nicepagesrv.com/Form/Process" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px;">
-                <div class="u-form-group u-label-none u-form-group-1">
+              <form action="write.do" method="post" enctype="multipart/form-data" source="email" name="form" style="padding: 10px;">                <div class="u-form-group u-label-none u-form-group-1">
                   <label for="text-ec9f" class="u-label">Input</label>
-                  <% ZooMember info = (ZooMember)session.getAttribute("info"); %>
                   <input type="text" placeholder="제목" id="text-ec9f" name="title" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
                 </div>
                 <div class="u-form-group u-form-message u-label-none">
                   <label for="message-ec68" class="u-label">리뷰 쓰기</label>
-                  <textarea placeholder="내용을 입력하세요" rows="4" cols="50" id="message-ec68" name="writer" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required=""></textarea>
+                  <textarea placeholder="내용을 입력하세요" rows="4" cols="50" id="message-ec68" name="contents" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required=""></textarea>
                 </div>
                 <div class="u-align-left u-form-group u-form-submit u-label-none">
-                <form action="write.do" method="post" enctype="multipart/form-data">
                   <input type="submit" value="등록">
                   <input type="submit" value="submit" class="u-form-control-hidden">
                 </div>
-                <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+                <div class="u-form-send-message u-form-send-success"> Thank you! 당신의 리뷰가 도움이 됩니다. </div>
                 <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
                 <input type="hidden" value="" name="recaptchaResponse">
                 <input type="hidden" name="formServices" value="5246bc5fabddefcb36d8ad6fa376e624">

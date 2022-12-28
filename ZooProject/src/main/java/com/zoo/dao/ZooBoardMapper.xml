@@ -3,11 +3,11 @@
 <mapper namespace="com.zoo.entity.ZooBoard">
 
 <select id="boardList" resultType="com.zoo.entity.ZooBoard">
-		select * from Zoo_board_r
+		select * from tbl_board_r
 	</select>
 
 	<insert id="boardWrite" parameterType="com.zoo.entity.ZooBoard">
-		insert into Zoo_board_r
+		insert into tbl_board_r
 		values(
 			board_num_seq.nextval,
 			#{title},
@@ -15,15 +15,16 @@
 			#{img, jdbcType=VARCHAR},
 			sysdate,
 			#{writer},
-			#{like},
-			#{score}
-			
+			1,
+			1,
+			1
 		)
 	</insert>
 		
+		
 		<!-- 집어넣을 데이터가 한개라면, parameterType을 적지않아도 된다. -->
 		<select id="boardView" resultType="com.zoo.entity.ZooBoard">
-		select * from Zoo_board_r
+		select * from tbl_board_r
 		where num = #{num}
 		
 		</select>
