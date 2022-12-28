@@ -206,7 +206,7 @@
       <!-- 
         <div class="u-clearfix u-custom-html u-custom-html-1">
           <ul class="breadcrumb"> Home  &gt; <select name="ps" id="ps" onchange="submitCatagory(1, this, '');">
-              <option value="52" selected="selected">식품</option>
+              <option value="52" selected="selected" >식품</option>
               <option value="2">생활용품</option>
               <option value="3">친환경</option>
               <option value="4">패션잡화</option>

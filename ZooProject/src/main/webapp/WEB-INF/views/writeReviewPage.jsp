@@ -36,7 +36,8 @@
     <meta property="og:title" content="writeReviewPage">
     <meta property="og:type" content="website">
   </head>
-  <% ZooMember user=(ZooMember)session.getAttribute("user"); %>
+  <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><div class="u-clearfix u-sheet u-sheet-1">
+  <% ZooMember user =(ZooMember)session.getAttribute("user"); %>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
   <div class="u-clearfix u-sheet u-sheet-1">
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
@@ -253,22 +254,19 @@
               </div>
             </div>
             <div class="u-form u-form-1">
-              <form action="https://forms.nicepagesrv.com/Form/Process" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px;">
-                <div class="u-form-group u-label-none u-form-group-1">
+              <form action="write.do" method="post" enctype="multipart/form-data" source="email" name="form" style="padding: 10px;">                <div class="u-form-group u-label-none u-form-group-1">
                   <label for="text-ec9f" class="u-label">Input</label>
-                  <% ZooMember info = (ZooMember)session.getAttribute("info"); %>
                   <input type="text" placeholder="제목" id="text-ec9f" name="title" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
                 </div>
                 <div class="u-form-group u-form-message u-label-none">
                   <label for="message-ec68" class="u-label">리뷰 쓰기</label>
-                  <textarea placeholder="내용을 입력하세요" rows="4" cols="50" id="message-ec68" name="content" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required=""></textarea>
+                  <textarea placeholder="내용을 입력하세요" rows="4" cols="50" id="message-ec68" name="contents" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required=""></textarea>
                 </div>
                 <div class="u-align-left u-form-group u-form-submit u-label-none">
-                <form action="write.do" method="post" enctype="multipart/form-data">
                   <input type="submit" value="등록">
                   <input type="submit" value="submit" class="u-form-control-hidden">
                 </div>
-                <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+                <div class="u-form-send-message u-form-send-success"> Thank you! 당신의 리뷰가 도움이 됩니다. </div>
                 <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
                 <input type="hidden" value="" name="recaptchaResponse">
                 <input type="hidden" name="formServices" value="5246bc5fabddefcb36d8ad6fa376e624">

@@ -73,6 +73,19 @@ public class ZooProductListDAO {
 		return pdDetail;
 	}
 
+	// 검색창 상품 검색 기능
+	public List<ZooProductList> Search(ZooProductList dto) {
+		SqlSession session = sqlsessionFactory.openSession(true);
+		
+		List<ZooProductList>searchlist = session.selectList("search", dto);
+		
+		
+		session.close();
+		return searchlist;
+	}
+	
+	
+
 	// 기업유형별 상품 리스트 출력
 	public List<ZooProductList> pdSellerType(ZooSeller dto) {
 		
@@ -83,5 +96,6 @@ public class ZooProductListDAO {
 		session.close();
 		return productList;
 	}
+
 
 }
