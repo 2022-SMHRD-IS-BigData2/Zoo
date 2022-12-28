@@ -17,6 +17,7 @@ import com.zoo.controller.ZooGoCartCon;
 import com.zoo.controller.ZooGoDetailCon;
 import com.zoo.controller.ZooGoJoinCon;
 import com.zoo.controller.ZooGoLoginCon;
+import com.zoo.controller.ZooGoSearchform;
 import com.zoo.controller.ZooGoaboutNanuCon;
 import com.zoo.controller.ZooGoboardCon;
 import com.zoo.controller.ZooGodonation;
@@ -36,6 +37,7 @@ import com.zoo.controller.ZooPdListSellerTypeCon;
 import com.zoo.controller.ZooUpdateCon;
 import com.zoo.controller.ZooWriteCon;
 import com.zoo.controller.ZooWriteReviewCon;
+import com.zoo.controller.ZoosearchCon;
 
 
 /**
@@ -71,6 +73,9 @@ public class ZooFrontController extends HttpServlet {
 		handlerMapping.put("/gowishListform.do", new ZooGowishListCon());
 		handlerMapping.put("/gopdDetailPage.do", new ZooGoDetailCon());
 		handlerMapping.put("/goaboutNanuform.do", new ZooGoaboutNanuCon());
+
+		handlerMapping.put("/gosearchform.do", new ZoosearchCon() );
+
 		
 		//======================================
 		handlerMapping.put("/join.do",new ZooJoinCon() );

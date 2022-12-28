@@ -5,11 +5,13 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 import com.zoo.dao.ZooBoardDAO;
 import com.zoo.entity.ZooBoard;
+import com.zoo.entity.ZooMember;
 
 public class ZooWriteCon implements ZooController {
 
@@ -22,8 +24,9 @@ public class ZooWriteCon implements ZooController {
 			// webapp 밑에 있는 images 폴더 경로
 			// request.getServletContext() : Tomcat이 복사해서 만든 폴더 정보들 == webapp
 			// webapp/images
+			HttpSession session = request.getSession();
 			String savePath=request.getServletContext().getRealPath("images");
-			
+			ZooMember user = (ZooMember)session.getAttribute("user");
 			// 최대사이즈
 			// byte 단위
 			int maxSize = 5 * 1024 * 1024; // 5MB
@@ -44,12 +47,11 @@ public class ZooWriteCon implements ZooController {
 			// 1. 데이터 가져오기
 			// 제목, 작성자, 내용, 이미지
 			String title = multi.getParameter("title");
-			String writer = multi.getParameter("writer");
-			String content = multi.getParameter("content");
-			
+			String content = multi.getParameter("contents");
 			// 이미지파일의 이름 가져오기
 			// 이때, 파일 저장이 일어난다.
 			String img = multi.getFilesystemName("file");
+			String writer = user.getCust_id();
 			
 			// 2. DTO로 묶기
 			ZooBoard dto = new ZooBoard();
@@ -68,7 +70,7 @@ public class ZooWriteCon implements ZooController {
 			}
 			
 			// 5. 페이지 이동
-			return "redirect:/goBoard.do";
+			return "redirect:/gomainpage.do";
 	}
 
 }
