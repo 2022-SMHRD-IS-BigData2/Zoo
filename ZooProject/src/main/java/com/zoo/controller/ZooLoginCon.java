@@ -34,7 +34,7 @@ public class ZooLoginCon implements ZooController {
 			nextPage = "redirect:/gologin.do";
 		}else {
 			System.out.println("로그인 성공");
-			
+			System.out.println(result.getCust_id());
 			// 세션에 사용자 정보 저장
 			HttpSession session = request.getSession();
 			session.setAttribute("user",result);

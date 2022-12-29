@@ -26,3 +26,6 @@ create sequence board_num_seq
 INSERT INTO tbl_board_r (re_title, re_content, re_file, re_dt, cust_id, re_likes, re_cnt, re_score) 
 VALUES ('re_title 1', 're_content 1', 're_file 1', sysdate, 'smart', 1, 1, 1);
 
+
+select * from TBL_BOARD_R
+order by re_seq

@@ -47,6 +47,9 @@ In-Demand Professions, ​Top ten most popular courses for international student
   </head>
   <%   
   ZooMember user = (ZooMember)session.getAttribute("user");
+  if(user != null){
+  	System.out.print(user.getCust_id());
+  }
   ZooProductList dto = new ZooProductList();
   List<ZooProductList> pdlist_budget = (List<ZooProductList>)session.getAttribute("pdlist_budget");
   List<ZooProductList> pdlist_gift = (List<ZooProductList>)session.getAttribute("pdlist_gift");
@@ -109,7 +112,7 @@ In-Demand Professions, ​Top ten most popular courses for international student
     position: relative;
     left: 400px;
     top: -45px;
-"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">상품 카테고리</a>
+"><ul class="u-nav u-spacing-30 u-unstyled u-nav-5"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">상품 카테고리</a>
             <div class="u-nav-popup">
             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
             <li class="u-nav-item">
