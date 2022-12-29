@@ -219,7 +219,12 @@
           <div class="u-container-layout u-container-layout-1">
             <div class="u-border-1 u-border-grey-50 u-line u-line-vertical u-line-1"></div>
             <div class="u-border-1 u-border-grey-50 u-line u-line-vertical u-line-2"></div>
-            <div class="u-container-style u-group u-shape-rectangle u-group-2">
+            <div class
+            ="u-container-style u-group u-shape-rectangle u-group-2">
+              
+              
+              
+              
               <div class="u-container-layout"><span class="u-align-left u-file-icon u-icon u-icon-1"><img src="images/cupon2.png" alt=""></span>
                 <p class="u-align-center u-text u-text-2">
                   <span style="font-weight: 700;"> 0</span>
@@ -268,6 +273,8 @@
         </div>
       </div>
     </section>
+    
+    
     <section class="u-clearfix u-section-2" id="sec-9301">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
@@ -302,8 +309,12 @@
                   <div class="u-clearfix u-custom-html u-custom-html-1">
                     <input type="checkbox">
                   </div>
+                  
+                  <div class="u-border-2 u-border-grey-60 u-line u-line-horizontal u-line-2">
                   <%for(int i =0; i<result.size();i++){ %>
-                  <div class="u-border-2 u-border-grey-60 u-line u-line-horizontal u-line-2"></div>
+                  
+                  
+                  
                   <div class="u-container-style u-group u-shape-rectangle u-group-2">
                     <div class="u-container-layout u-container-layout-4">
                       <img class="u-image u-image-default u-preserve-proportions u-image-1" src="<%=result.get(i).getProd_img() %>" alt="" data-image-width="600" data-image-height="600">
@@ -323,11 +334,18 @@
                       <div class="u-border-1 u-border-palette-5-light-1 u-line u-line-horizontal u-line-3"></div>
                     </div>
                   </div>
+                  
+                  
                   <div class="u-container-style u-group u-group-4">
                     <div class="u-container-layout">
                       <a href="https://nicepage.com/templates" class="u-border-1 u-border-grey-15 u-btn u-btn-round u-button-style u-grey-5 u-hover-grey-10 u-radius-6 u-btn-4"> 선택 상품 삭제</a>
                       <a href="https://nicepage.com/templates" class="u-border-1 u-border-grey-10 u-btn u-btn-round u-button-style u-grey-5 u-hover-grey-10 u-radius-6 u-btn-5"> 선택 상품 장바구니</a>
                     </div>
+                  </div>
+                  
+                  
+                  
+                  
                   </div>
                 </div>
               </div>
