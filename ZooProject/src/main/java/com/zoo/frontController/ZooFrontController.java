@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.zoo.controller.ZooController;
 import com.zoo.controller.ZooDeleteCon;
+import com.zoo.controller.ZooGoAfterpayCon;
 import com.zoo.controller.ZooGoCartCon;
 import com.zoo.controller.ZooGoDetailCon;
 import com.zoo.controller.ZooGoJoinCon;
@@ -38,7 +39,7 @@ import com.zoo.controller.ZooPdListSellerTypeCon;
 import com.zoo.controller.ZooPdListSortCon;
 import com.zoo.controller.ZooPopupCon;
 import com.zoo.controller.ZooUpdateCon;
-
+import com.zoo.controller.ZooViewReviewCon;
 import com.zoo.controller.ZooWriteCon;
 import com.zoo.controller.ZooWriteReviewCon;
 import com.zoo.controller.ZoosearchCon;
@@ -80,7 +81,8 @@ public class ZooFrontController extends HttpServlet {
 		handlerMapping.put("/goaboutNanuform.do", new ZooGoaboutNanuCon());
 		handlerMapping.put("/gosearchform.do", new ZoosearchCon() );
 		handlerMapping.put("/popup.do", new ZooPopupCon() );
-		handlerMapping.put("/gowishList.do", new ZooGowishlistCon()  );
+		handlerMapping.put("/gowishList.do", new ZooGowishlistCon());
+		handlerMapping.put("/gopayafter.do", new ZooGoAfterpayCon());
 		
 		//======================================
 		handlerMapping.put("/join.do",new ZooJoinCon() );
@@ -90,6 +92,7 @@ public class ZooFrontController extends HttpServlet {
 		handlerMapping.put("/writeReviewPage.do", new ZooWriteReviewCon());
 		handlerMapping.put("/write.do", new ZooWriteCon() );
 		handlerMapping.put("/delete.do", new ZooDeleteCon());
+		handlerMapping.put("/viewReviewPage.do", new ZooViewReviewCon());
 	}
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

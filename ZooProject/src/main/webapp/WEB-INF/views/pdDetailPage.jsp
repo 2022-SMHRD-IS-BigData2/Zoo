@@ -1,3 +1,4 @@
+<%@page import="com.zoo.entity.ZooBoard"%>
 <%@page import="com.zoo.entity.ZooProductList"%>
 <%@page import="java.util.List"%>
 <%@page import="com.zoo.entity.ZooMember"%>
@@ -41,6 +42,13 @@
   </head>
   <% ZooMember user = (ZooMember)session.getAttribute("user"); %>
   
+  <%List<ZooBoard> list= (List<ZooBoard>)session.getAttribute("dlist");
+  double avg = 0;
+  for( ZooBoard board : list){
+	  avg += board.getRe_score();
+  }
+  avg = avg / list.size();
+  %>
   <% ZooProductList detail = (ZooProductList)session.getAttribute("detail"); %>
   
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
@@ -324,7 +332,7 @@
                 <div class="u-container-layout u-container-layout-1">
                   <div class="u-border-1 u-border-grey-40 u-line u-line-horizontal u-line-1"></div>
                   <a href="#detail" class="u-border-2 u-border-hover-palette-4-light-3 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-1">상세설명</a>
-                  <a href="#review" class="u-border-2 u-border-hover-palette-4-light-3 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-2">구매후기 ( 1 )</a>
+                  <a href="#review" class="u-border-2 u-border-hover-palette-4-light-3 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-2">구매후기 ( <%= list.size() %> ) </a>
                   <a href="#Qbuy" class="u-border-2 u-border-hover-palette-4-light-3 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-3">구매문의 ( 1 )</a>
                   <a href="https://nicepage.com/c/contact-form-html-templates" class="u-border-2 u-border-hover-palette-4-light-3 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-4">상품구매안내</a>
                   <div class="u-border-1 u-border-grey-40 u-line u-line-horizontal u-line-2"></div>
@@ -344,7 +352,7 @@
                       <div class="u-clearfix u-group-elements u-group-elements-2">
                         <h6 class="u-text u-text-default u-text-grey-80 u-text-4">판매<span style="font-weight: 700;"></span>가
                         </h6>
-                        <h6 class="u-align-right u-text u-text-grey-80 u-text-5"><%=detail.getProd_price() %></h6>
+                        <h6 class="u-align-right u-text u-text-grey-80 u-text-5"><%=detail.getProd_price() %>원</h6>
                       </div>
                       <div class="u-border-1 u-border-grey-40 u-container-style u-group u-palette-5-light-3 u-group-2">
                         <div class="u-container-layout u-container-layout-4">
@@ -366,11 +374,11 @@
                               </div>
                             </div>
                           </div>
-                          <h6 class="u-align-right u-text u-text-grey-80 u-text-8"><%=detail.getProd_price() %></h6>
+                          <h6 class="u-align-right u-text u-text-grey-80 u-text-8"><%=detail.getProd_price() %>원</h6>
                         </div>
                       </div>
                       <div class="u-clearfix u-group-elements u-group-elements-3">
-                        <h6 class="u-align-right u-text u-text-grey-80 u-text-9"><%=detail.getProd_price() %></h6>
+                        <h6 class="u-align-right u-text u-text-grey-80 u-text-9"><%=detail.getProd_price() %>원</h6>
                         <h6 class="u-text u-text-default u-text-grey-80 u-text-10">합계금액</h6>
                       </div>
                       <a onclick="alert('결제창 이동')" href="#" class="u-border-2 u-border-white u-btn u-btn-round u-button-style u-hover-custom-color-2 u-palette-4-dark-1 u-radius-6 u-text-hover-white u-btn-5">바로 구매</a>
@@ -390,12 +398,14 @@
         <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
           <div class="u-layout">
             <div class="u-layout-row">
+            &nbsp;
+            &nbsp;
               <div class="u-container-style u-layout-cell u-size-43 u-layout-cell-1">
                 <div class="u-container-layout u-container-layout-1">
-                  <h6 class="u-text u-text-default u-text-1" id="review">구매후기 ( 1 )</h6>
+                  <h6 class="u-text u-text-default u-text-1" id="review">구매후기 ( <%= list.size() %> )</h6>
                   <div class="u-border-1 u-border-grey-40 u-expanded-width u-line u-line-horizontal u-line-1"></div>
-                  <h5 class="u-text u-text-default u-text-palette-3-base u-text-2"> ★★★★★</h5>
-                  <h6 class="u-text u-text-default u-text-3">박주* </h6>
+                  <h5 class="u-text u-text-default u-text-palette-3-base u-text-2"> ★ <%=avg %></h5>
+                  <h6 class="u-text u-text-default u-text-3">박주빈</h6>
                   <h6 class="u-text u-text-default u-text-4">2022.12.20</h6>
                   <h6 class="u-text u-text-default u-text-5">일단 맛은 있어요 살도 잘 빠졌으면 좋겠네요~</h6>
                   <div class="u-border-1 u-border-grey-40 u-expanded-width u-line u-line-horizontal u-line-2"></div>
@@ -405,8 +415,8 @@
                     </div>
                   </div>
                   <div class="u-clearfix u-group-elements u-group-elements-1">
-                    <a href="https://nicepage.com/one-page-template" class="u-border-2 u-border-hover-palette-5-dark-2 u-border-palette-5-dark-2 u-btn u-button-style u-hover-grey-5 u-none u-text-black u-btn-1">상품후기 전체보기</a>
-                    <a href="https://nicepage.com/one-page-template" class="u-border-2 u-border-hover-palette-5-dark-2 u-border-palette-5-dark-2 u-btn u-button-style u-hover-grey-5 u-none u-text-black u-text-hover-black u-btn-2">상품후기 글쓰기</a>
+                    <a href="viewReviewPage.do" class="u-border-2 u-border-hover-palette-5-dark-2 u-border-palette-5-dark-2 u-btn u-button-style u-hover-grey-5 u-none u-text-black u-btn-1">상품후기 전체보기</a>
+                    <a href="writeReviewPage.do" class="u-border-2 u-border-hover-palette-5-dark-2 u-border-palette-5-dark-2 u-btn u-button-style u-hover-grey-5 u-none u-text-black u-text-hover-black u-btn-2">상품후기 글쓰기</a>
                   </div>
                 </div>
               </div>

@@ -48,17 +48,18 @@ public class ZooWriteCon implements ZooController {
 			// 제목, 작성자, 내용, 이미지
 			String title = multi.getParameter("title");
 			String content = multi.getParameter("contents");
+			int rating = Integer.parseInt(multi.getParameter("rating"));
 			// 이미지파일의 이름 가져오기
 			// 이때, 파일 저장이 일어난다.
 			String img = multi.getFilesystemName("file");
 			String writer = user.getCust_id();
-			
 			// 2. DTO로 묶기
 			ZooBoard dto = new ZooBoard();
 			dto.setRe_title(title);
 			dto.setCust_id(writer);
 			dto.setRe_content(content);
 			dto.setRe_file(img);
+			dto.setRe_score(rating);
 			// 3. DAO의 boardWrite 사용
 			ZooBoardDAO dao = new ZooBoardDAO();
 			int cnt = dao.boardWrite(dto);

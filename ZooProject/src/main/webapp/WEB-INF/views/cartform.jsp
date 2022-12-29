@@ -35,6 +35,57 @@
     <meta name="twitter:description" content="Site1">
     <meta property="og:title" content="cartPage">
     <meta property="og:type" content="website">
+    
+    
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
+    <!-- iamport.payment.js -->
+    <script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.2.0.js"></script>
+    <script>
+        var IMP = window.IMP; 
+        IMP.init("imp04230075"); 
+    
+        function requestPay() {
+            IMP.request_pay({
+                pg : 'kakaopay',
+                pay_method : 'card',
+                merchant_uid: "57008833-33008", 
+                name : '사과10kg',
+                amount : 100,
+                buyer_email : 'Iamport@chai.finance',
+                buyer_name : '주토피아',
+                buyer_tel : '010-1234-5678',
+                buyer_addr : '남구 cgi센터',
+                buyer_postcode : '123-456'
+            }, function (rsp) { // callback
+                if (rsp.success) {
+                    console.log(rsp);
+                } else {
+                    console.log(rsp);
+                    location.href="gopayafter.do";
+                }
+            });
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title>Sample Payment</title>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
   </head>
    <% ZooMember user =(ZooMember)session.getAttribute("user"); %>
    <% List<ZooProductList> pdlist =(List<ZooProductList>)session.getAttribute("list"); %>
@@ -113,7 +164,11 @@
             </a>
           </div>
           </div>
-          <div class="u-custom-menu u-nav-container">
+          <div class="u-custom-menu u-nav-container"style="
+    position: relative;
+    left: 450px;
+    top: -30px;
+">
             <ul class="u-nav u-spacing-30 u-unstyled u-nav-5"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">상품 카테고리</a>
             <div class="u-nav-popup">
             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
@@ -272,7 +327,7 @@
         </table>
         <div class="cart__mainbtns">
             <button class="cart__bigorderbtn left">쇼핑 계속하기</button>
-            <button class="cart__bigorderbtn right">주문하기</button>
+            <button onclick="requestPay()" class="cart__bigorderbtn right">주문하기</button>
         </div>
     </section>
 

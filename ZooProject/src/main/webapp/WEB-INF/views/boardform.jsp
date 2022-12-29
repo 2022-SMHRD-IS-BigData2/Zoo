@@ -43,7 +43,7 @@
 
     <%	
   ZooMember user = (ZooMember)session.getAttribute("user");
-    List<ZooBoard> list=(List<ZooBoard>)session.getAttribute("list");
+    List<ZooBoard> list=(List<ZooBoard>)session.getAttribute("dlist");
   %>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><div class="u-clearfix u-sheet u-sheet-1">
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
@@ -292,7 +292,6 @@
                   <div class="u-container-style u-group u-group-1">
                     <div class="u-container-layout u-container-layout-3">
                       <p class="u-text u-text-grey-80 u-text-11">문의 내역</p>
-                      <a href="https://nicepage.com/templates" class="u-border-1 u-border-grey-15 u-btn u-btn-round u-button-style u-grey-5 u-hover-grey-10 u-radius-6 u-btn-1"> 선택 글 삭제</a>
                       <div class="u-border-2 u-border-grey-60 u-line u-line-horizontal u-line-1"></div>
                       <div class="u-container-style u-group u-palette-5-light-3 u-shape-rectangle u-group-2">
                         <div class="u-container-layout u-container-layout-4">
@@ -348,7 +347,6 @@
                   <div class="u-container-style u-group u-group-6">
                     <div class="u-container-layout u-container-layout-8">
                       <p class="u-text u-text-grey-80 u-text-28">리뷰 내역</p>
-                      <a href="https://nicepage.com/templates" class="u-border-1 u-border-grey-15 u-btn u-btn-round u-button-style u-grey-5 u-hover-grey-10 u-radius-6 u-btn-2"> 선택 글 삭제</a>
                       <div class="u-border-2 u-border-grey-60 u-line u-line-horizontal u-line-5"></div>
                       <div class="u-align-center u-container-style u-group u-palette-5-light-3 u-shape-rectangle u-group-7">
                         <div id="board">
@@ -357,7 +355,7 @@
 						<h6><td>번호</td></h6>
 						<h6><td>제목</td></h6>
 						<h6><td>작성일</td></h6>
-						<h6><td>만족도</td></h6>
+						<h6><td>평점</td></h6>
 					</tr>
 					<%for(int i=0; i<list.size(); i++){ %>
 					<tr background-color="white">
