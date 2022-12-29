@@ -114,7 +114,10 @@ In-Demand Professions, ​Top ten most popular courses for international student
             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
             <li class="u-nav-item">
             <a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=식품">🍴 식품</a>
-            <div class="u-nav-popup">
+            <div class="u-nav-popup"style="
+    left: 137px;
+    top: 0px;
+">
             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
      <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=농산물">농산물</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=축산물">축산물</a>
@@ -127,7 +130,10 @@ In-Demand Professions, ​Top ten most popular courses for international student
 </li></ul>
 </div>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=생활용품">🛒 생활용품</a>
-<div class="u-nav-popup">
+<div class="u-nav-popup"style="
+    left: 137px;
+    top: 0px;
+">
 <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
 <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=방역">방역</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=홈데코">홈데코</a>
@@ -250,7 +256,10 @@ In-Demand Professions, ​Top ten most popular courses for international student
             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
             <li class="u-nav-item">
             <a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=식품">🍴 식품</a>
-            <div class="u-nav-popup">
+            <div class="u-nav-popup"style="
+    left: 137px;
+    top: 0px;
+">
             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
      <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=농산물">농산물</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=축산물">축산물</a>
@@ -263,7 +272,10 @@ In-Demand Professions, ​Top ten most popular courses for international student
 </li></ul>
 </div>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=생활용품">🛒 생활용품</a>
-<div class="u-nav-popup">
+<div class="u-nav-popup"style="
+    left: 137px;
+    top: 0px;
+">
 <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
 <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=방역">방역</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=홈데코">홈데코</a>
