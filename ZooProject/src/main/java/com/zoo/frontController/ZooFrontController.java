@@ -34,6 +34,7 @@ import com.zoo.controller.ZooPdListBudgetCon;
 import com.zoo.controller.ZooPdListCate2Con;
 import com.zoo.controller.ZooPdListKeywordCon;
 import com.zoo.controller.ZooPdListSellerTypeCon;
+import com.zoo.controller.ZooPopupCon;
 import com.zoo.controller.ZooUpdateCon;
 
 import com.zoo.controller.ZooWriteCon;
@@ -75,6 +76,7 @@ public class ZooFrontController extends HttpServlet {
 		handlerMapping.put("/gopdDetailPage.do", new ZooGoDetailCon());
 		handlerMapping.put("/goaboutNanuform.do", new ZooGoaboutNanuCon());
 		handlerMapping.put("/gosearchform.do", new ZoosearchCon() );
+		handlerMapping.put("/popup.do", new ZooPopupCon() );
 		
 		
 		//======================================

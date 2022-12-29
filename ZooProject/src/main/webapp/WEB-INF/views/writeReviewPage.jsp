@@ -118,7 +118,10 @@
             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
             <li class="u-nav-item">
             <a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FOOD">🍴 식품</a>
-            <div class="u-nav-popup">
+            <div class="u-nav-popup"style="
+    left: 137px;
+    top: 0px;
+">
             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
      <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=NS">농산물</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=CS">축산물</a>
@@ -131,7 +134,10 @@
 </li></ul>
 </div>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=LIVING">🛒 생활용품</a>
-<div class="u-nav-popup">
+<div class="u-nav-popup"style="
+    left: 137px;
+    top: 0px;
+">
 <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
 <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=QT">방역</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=DECO">홈데코</a>
@@ -263,7 +269,7 @@
                   <textarea placeholder="내용을 입력하세요" rows="4" cols="50" id="message-ec68" name="contents" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required=""></textarea>
                 </div>
                 <div class="u-align-left u-form-group u-form-submit u-label-none">
-                  <input type="submit" value="등록">
+                  <input type="submit" value="등록" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-palette-4-base u-radius-6 u-text-white u-btn-1">
                   <input type="submit" value="submit" class="u-form-control-hidden">
                 </div>
                 <div class="u-form-send-message u-form-send-success"> Thank you! 당신의 리뷰가 도움이 됩니다. </div>

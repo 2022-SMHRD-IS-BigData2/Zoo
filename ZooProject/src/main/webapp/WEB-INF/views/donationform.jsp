@@ -98,7 +98,11 @@ In-Demand Professions, ​Top ten most popular courses for international student
           </button>
           <input class="u-search-input" type="search" name="search" value="" placeholder="Search">
         </form>
-        <a href="gomainpage.do" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200"  title="메인페이지" >
+        <a href="gomainpage.do" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200"  title="메인페이지" style="
+    position: relative;
+    top: 0px;
+    left: 50px;
+">
           <img src="images/logo.png" class="u-logo-image u-logo-image-1" >
         </a>
         
@@ -113,13 +117,20 @@ In-Demand Professions, ​Top ten most popular courses for international student
             </a>
           </div>
           </div>
-          <div class="u-custom-menu u-nav-container">
+          <div class="u-custom-menu u-nav-container" style="
+    position: relative;
+    top: -40px;
+    left: 450px;
+">
             <ul class="u-nav u-spacing-30 u-unstyled u-nav-5"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">상품 카테고리</a>
             <div class="u-nav-popup">
             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
             <li class="u-nav-item">
             <a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FOOD">🍴 식품</a>
-            <div class="u-nav-popup">
+            <div class="u-nav-popup"style="
+    left: 137px;
+    top: 0px;
+">
             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
      <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=NS">농산물</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=CS">축산물</a>
@@ -132,7 +143,10 @@ In-Demand Professions, ​Top ten most popular courses for international student
 </li></ul>
 </div>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=LIVING">🛒 생활용품</a>
-<div class="u-nav-popup">
+<div class="u-nav-popup"style="
+    left: 137px;
+    top: 0px;
+">
 <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
 <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=QT">방역</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=DECO">홈데코</a>
@@ -206,7 +220,7 @@ In-Demand Professions, ​Top ten most popular courses for international student
         <img class="u-image u-image-round u-radius-37 u-image-3" src="images/donation_pic1.jpg" alt="" data-image-width="1920" data-image-height="1280">
         <img class="u-image u-image-round u-radius-37 u-image-4" src="images/donation_pic2.jpg" alt="" data-image-width="1920" data-image-height="1280">
         <img class="u-image u-image-round u-radius-37 u-image-5" src="images/donation_write1.png" alt="" data-image-width="1080" data-image-height="278">
-        <a href="https://nicepage.com/website-design" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-dark-1 u-palette-2-dark-2 u-radius-14 u-btn-1"> &nbsp;기부하기</a>
+        <a href="javascript:void(0);" onclick="window.open('popup.do', 'pop01', 'top=200, left=900, width=350, height=450, status=no, menubar=no, toolbar=no, resizable=no');" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-dark-1 u-palette-2-dark-2 u-radius-14 u-btn-1"> &nbsp;기부하기</a>
         <img class="u-image u-image-default u-image-6" src="images/donation_write2.png" alt="" data-image-width="498" data-image-height="126">
         <img class="u-expanded-width u-image u-image-round u-radius-37 u-image-7" src="images/donation_back3.png" alt="" data-image-width="1080" data-image-height="1080">
         <div class="u-clearfix u-custom-html u-custom-html-1">

@@ -66,9 +66,128 @@ In-Demand Professions, ​Top ten most popular courses for international student
           </div>
           <div class="u-custom-menu u-nav-container">
           <%if(user==null){ %>
-        <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gologin.do">로그인</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gojoin.do">회원가입</a><%}else{ %>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gomyPageform.do"><%=user.getCust_name() %></a>
+        <ul class="u-nav u-unstyled u-nav-1"style="
+    position: relative;
+    left: 300px;
+"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gologin.do">로그인</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gojoin.do">회원가입</a>
+</li>
+</ul>
+</div>
+<form action="gosearchform.do" method="get" class="u-border-1 u-border-grey-30 u-search u-search-right u-white u-search-1" style="
+    position: relative;
+    right: 450px;
+">
+          <button class="u-search-button" type="submit">
+            <span class="u-search-icon u-spacing-10 u-search-icon-1">
+              <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 56.966 56.966"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-762a"></use></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="svg-762a" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve" class="u-svg-content"><path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"></path></svg>
+            </span>
+          </button>
+          <input class="u-search-input" type="search" name="search" value="" placeholder="Search">
+        </form>
+        <a href="gomainpage.do" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200"  title="메인페이지" style="
+    position: relative;
+    right: 400px;
+">
+          <img src="images/logo.png" class="u-logo-image u-logo-image-1" >
+        </a>
+        
+        
+        
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-2">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 700; text-transform: uppercase;">
+            <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-7445"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="svg-7445" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-spacing-30 u-unstyled u-nav-5" style="
+    position: relative;
+    left: 400px;
+    top: -45px;
+"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">상품 카테고리</a>
+            <div class="u-nav-popup">
+            <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+            <li class="u-nav-item">
+            <a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=식품">🍴 식품</a>
+            <div class="u-nav-popup"style="
+    left: 137px;
+    top: 0px;
+">
+            <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+     <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=농산물">농산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=축산물">축산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=수산물">수산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=간식">떡·쿠키·간식</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=음료">커피·차·음료</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=건강식품">건강식품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=반찬/밀키트">김치·반찬·밀키트</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=양념/소스">양념·소스·장류</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=생활용품">🛒 생활용품</a>
+<div class="u-nav-popup"style="
+    left: 137px;
+    top: 0px;
+">
+<ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+<li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=방역">방역</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=홈데코">홈데코</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=뷰티">세안·뷰티</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=유아용품">유아용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=주방용품">주방용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=청소세탁용폼">청소·세탁용품</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistkeyword.do?keyword=ECO">🌳 친환경</a> <!-- 친환경 href 예외처리 (김원경) -->
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=패션">👕 패션/잡화</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=헬스건강">💪🏻 헬스·건강</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=가구">🪑 가구</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">기업유형</a>
+
+<div class="u-nav-popup">
+            <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+            <li class="u-nav-item">
+            <a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=A">(예비)사회적기업</a>
+</li>
+	<li class="u-nav-item">
+	<a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=B">협동조합</a>
+</li>
+	<li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=C">마을기업</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=D">장애인기업</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=E">여성기업</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=F">자활기업</a>
+</li>
+</ul>
+</div>
+
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">게시판</a>
+
+<div class="u-nav-popup">
+            <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+            <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="">공지사항</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=review">리뷰게시판</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=qna">문의게시판</a>
+</li>
+</ul>
+</div>
+
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="godonation.do" style="padding: 10px 48px;">기부</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;"href="goaboutNanuform.do">ABOUT - 나누민족</a>
+</li></ul>
+          </div>
+
+
+<%}else{ %>
+<div class="u-custom-menu u-nav-container">
+<ul class="u-nav u-unstyled u-nav-1">
+<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gomyPageform.do"><%=user.getCust_name() %></a>
 
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="logout.do">로그아웃</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;"href="gomyPageform.do">주문조회</a>
@@ -76,11 +195,12 @@ In-Demand Professions, ​Top ten most popular courses for international student
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" href="gomyPageform.do" style="padding: 14px 10px;">마이페이지</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white"href="gomyPageform.do">주문 내역</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white"href="gowishList.do">위시리스트</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white"href="goboardform.do">게시글</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white"href="gomemberUpdate.do">정보 수정</a><%} %>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white"href="gomemberUpdate.do">정보 수정</a>
 </li></ul>
 </div>
 </li></ul>
           </div>
+          
           <div class="u-custom-menu u-nav-container-collapse">
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-inner-container-layout u-sidenav-overflow">
@@ -101,8 +221,6 @@ In-Demand Professions, ​Top ten most popular courses for international student
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
         </nav>
-        
-        
         
         <form action="gosearchform.do" method="get" class="u-border-1 u-border-grey-30 u-search u-search-right u-white u-search-1">
           <button class="u-search-button" type="submit">
@@ -129,12 +247,19 @@ In-Demand Professions, ​Top ten most popular courses for international student
           </div>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-spacing-30 u-unstyled u-nav-5"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">상품 카테고리</a>
+            <ul class="u-nav u-spacing-30 u-unstyled u-nav-5" style="
+    position: relative;
+    left: 400px;
+    top: -45px;
+"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">상품 카테고리</a>
             <div class="u-nav-popup">
             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
             <li class="u-nav-item">
             <a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=식품">🍴 식품</a>
-            <div class="u-nav-popup">
+            <div class="u-nav-popup"style="
+    left: 137px;
+    top: 0px;
+">
             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
      <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=농산물">농산물</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=축산물">축산물</a>
@@ -147,7 +272,10 @@ In-Demand Professions, ​Top ten most popular courses for international student
 </li></ul>
 </div>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=생활용품">🛒 생활용품</a>
-<div class="u-nav-popup">
+<div class="u-nav-popup"style="
+    left: 137px;
+    top: 0px;
+">
 <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
 <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=방역">방역</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=홈데코">홈데코</a>
@@ -157,19 +285,49 @@ In-Demand Professions, ​Top ten most popular courses for international student
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=청소세탁용폼">청소·세탁용품</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistkeyword.do?keyword=친환경">🌳 친환경</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistkeyword.do?keyword=ECO">🌳 친환경</a> <!-- 친환경 href 예외처리 (김원경) -->
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=패션">👕 패션/잡화</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=헬스건강">💪🏻 헬스·건강</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=꽃/화훼">🌼 꽃·화훼</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=가구">🪑 가구</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">인기상품</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">공지사항</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">기업유형</a>
+
+<div class="u-nav-popup">
+            <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+            <li class="u-nav-item">
+            <a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=A">(예비)사회적기업</a>
+</li>
+	<li class="u-nav-item">
+	<a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=B">협동조합</a>
+</li>
+	<li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=C">마을기업</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=D">장애인기업</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=E">여성기업</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=F">자활기업</a>
+</li>
+</ul>
+</div>
+
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">게시판</a>
+
+<div class="u-nav-popup">
+            <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+            <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="">공지사항</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=review">리뷰게시판</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=qna">문의게시판</a>
+</li>
+</ul>
+</div>
+
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="godonation.do" style="padding: 10px 48px;">기부</a>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;"href="goaboutNanuform.do">ABOUT - 나누민족</a>
 </li></ul>
-          </div>
+          </div><%} %>
+          
+          
+          
+          
           <div class="u-custom-menu u-nav-container-collapse">
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-inner-container-layout u-sidenav-overflow">
@@ -203,8 +361,14 @@ In-Demand Professions, ​Top ten most popular courses for international student
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=가구">🪑 가구</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">인기상품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">공지사항</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link">기업유형</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=board">게시판</a>
+<!-- <div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+<li class="u-nav-item"><a class="u-button-style u-nav-link">공지사항</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=review">리뷰게시판</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=qna">문의사항</a>
+</li></ul>
+</div> -->
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="">기부</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">ABOUT - 나누민족</a>
 </li></ul>
@@ -468,7 +632,9 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
     
     <section class="u-align-center u-clearfix u-section-6" id="sec-1524">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h2 class="u-text u-text-1">인증 기업별 추천 상품</h2>
+        <h2 class="u-text u-text-1" style="
+    margin-top: 100px;
+">인증 기업별 추천 상품</h2>
         
         <div class="u-list u-list-1">
           <div class="u-repeater u-repeater-1">

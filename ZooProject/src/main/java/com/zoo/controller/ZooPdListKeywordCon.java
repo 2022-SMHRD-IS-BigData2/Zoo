@@ -19,7 +19,6 @@ public class ZooPdListKeywordCon implements ZooController {
 
 		System.out.println("ZooPdListKeywordCon execute() 호출");
 
-		// 2022-12-27 오후 김원경 작성
 		// 인코딩
 		request.setCharacterEncoding("UTF-8");
 
@@ -31,6 +30,12 @@ public class ZooPdListKeywordCon implements ZooController {
 		dto.setProd_keyword1(keyword);
 		System.out.println("상품키워드 : " + dto.getProd_keyword1());
 
+		if (keyword.equals("ECO")) {
+			request.setAttribute("keywordEco", keyword);
+		} else {
+			request.setAttribute("keyword", keyword);
+		}
+		
 		// prod_keyword 상품 data 가져오기
 		ZooProductListDAO dao = new ZooProductListDAO();
 		List<ZooProductList> list = dao.prod_keyword(dto);

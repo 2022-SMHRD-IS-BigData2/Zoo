@@ -27,6 +27,23 @@ public class ZooPdListSellerTypeCon implements ZooController {
 		String sellerType = request.getParameter("sellertype");
 		System.out.println("SellerType : " + sellerType);
 
+		String seller = "";
+		switch (sellerType) {
+		case "A" : seller = "사회적기업";
+				break;
+		case "B" : seller = "협동조합";
+				break;
+		case "C" : seller = "마을기업";
+				break;
+		case "D" : seller = "장애인기업";
+				break;
+		case "E" : seller = "여성기업";
+				break;
+		case "F" : seller = "자활기업";
+				break;
+		}
+		
+		
 		// set Parameter --> ZooSeller Object
 		ZooSeller dto = new ZooSeller();
 		dto.setSeller_type(sellerType);
@@ -38,6 +55,8 @@ public class ZooPdListSellerTypeCon implements ZooController {
 
 		HttpSession session = request.getSession();
 		session.setAttribute("list", list);
+
+		request.setAttribute("seller", seller);
 
 		return "foodform";
 	}
