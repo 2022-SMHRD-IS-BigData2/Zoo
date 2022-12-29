@@ -26,7 +26,6 @@ import com.zoo.controller.ZooGomainCon;
 import com.zoo.controller.ZooGomemberDeleteCon;
 import com.zoo.controller.ZooGomemberUpdateCon;
 import com.zoo.controller.ZooGomyPageCon;
-import com.zoo.controller.ZooGowishlistCon;
 import com.zoo.controller.ZooCreatewishCon;
 import com.zoo.controller.ZooJoinCon;
 import com.zoo.controller.ZooLoginCon;
@@ -38,7 +37,7 @@ import com.zoo.controller.ZooPdListSellerTypeCon;
 import com.zoo.controller.ZooPdListSortCon;
 import com.zoo.controller.ZooPopupCon;
 import com.zoo.controller.ZooUpdateCon;
-
+import com.zoo.controller.ZooViewReviewCon;
 import com.zoo.controller.ZooWriteCon;
 import com.zoo.controller.ZooWriteReviewCon;
 import com.zoo.controller.ZoosearchCon;
@@ -80,7 +79,6 @@ public class ZooFrontController extends HttpServlet {
 		handlerMapping.put("/goaboutNanuform.do", new ZooGoaboutNanuCon());
 		handlerMapping.put("/gosearchform.do", new ZoosearchCon() );
 		handlerMapping.put("/popup.do", new ZooPopupCon() );
-		handlerMapping.put("/gowishList.do", new ZooGowishlistCon()  );
 		
 		
 		//======================================
@@ -91,7 +89,7 @@ public class ZooFrontController extends HttpServlet {
 		handlerMapping.put("/writeReviewPage.do", new ZooWriteReviewCon());
 		handlerMapping.put("/write.do", new ZooWriteCon() );
 		handlerMapping.put("/delete.do", new ZooDeleteCon());
-		
+		handlerMapping.put("/viewReviewPage.do", new ZooViewReviewCon());
 		
 		
 		

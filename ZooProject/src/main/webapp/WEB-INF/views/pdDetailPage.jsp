@@ -387,6 +387,8 @@
         <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
           <div class="u-layout">
             <div class="u-layout-row">
+            &nbsp;
+            &nbsp;
               <div class="u-container-style u-layout-cell u-size-43 u-layout-cell-1">
                 <div class="u-container-layout u-container-layout-1">
                   <h6 class="u-text u-text-default u-text-1" id="review">구매후기 ( 1 )</h6>
@@ -402,8 +404,8 @@
                     </div>
                   </div>
                   <div class="u-clearfix u-group-elements u-group-elements-1">
-                    <a href="https://nicepage.com/one-page-template" class="u-border-2 u-border-hover-palette-5-dark-2 u-border-palette-5-dark-2 u-btn u-button-style u-hover-grey-5 u-none u-text-black u-btn-1">상품후기 전체보기</a>
-                    <a href="https://nicepage.com/one-page-template" class="u-border-2 u-border-hover-palette-5-dark-2 u-border-palette-5-dark-2 u-btn u-button-style u-hover-grey-5 u-none u-text-black u-text-hover-black u-btn-2">상품후기 글쓰기</a>
+                    <a href="viewReviewPage.do" class="u-border-2 u-border-hover-palette-5-dark-2 u-border-palette-5-dark-2 u-btn u-button-style u-hover-grey-5 u-none u-text-black u-btn-1">상품후기 전체보기</a>
+                    <a href="writeReviewPage.do" class="u-border-2 u-border-hover-palette-5-dark-2 u-border-palette-5-dark-2 u-btn u-button-style u-hover-grey-5 u-none u-text-black u-text-hover-black u-btn-2">상품후기 글쓰기</a>
                   </div>
                 </div>
               </div>
