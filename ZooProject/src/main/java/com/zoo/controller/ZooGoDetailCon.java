@@ -16,7 +16,6 @@ public class ZooGoDetailCon implements ZooController {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// 인코딩
-		
 		request.setCharacterEncoding("UTF-8");
 		
 		// 타입 받아오기
@@ -25,7 +24,8 @@ public class ZooGoDetailCon implements ZooController {
 		ZooProductList dto = new ZooProductList();
 		
 		dto.setProd_id(prod_id);
-		// 카테고리별 파라미터값 수집 방법???
+		
+		// 파라미터 수집
 		System.out.println(prod_id + "로 이동");
 		ZooProductListDAO dao = new ZooProductListDAO();
 		ZooProductList detail = dao.pdDetail(dto);

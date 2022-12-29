@@ -16,6 +16,7 @@
 	<!-- 2. 중분류 category까지 적용하여 상품정보 데이터 불러오기 -->
 	<select id="prod_category2"
 		parameterType="com.zoo.entity.ZooProductList"
+		
 		resultType="com.zoo.entity.ZooProductList">
 		select *
 		from tbl_product

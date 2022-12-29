@@ -17,10 +17,6 @@
     <meta name="generator" content="Nicepage 5.2.0, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     
-    
-    
-    
-    
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
@@ -39,23 +35,13 @@
     <meta name="twitter:description" content="Site1">
     <meta property="og:title" content="pdDetailPage">
     <meta property="og:type" content="website">
-    
-    
-    
     <meta charset="UTF-8">
     <title>Sample Payment</title>
-    
-    
-    
-    
-    
     
   </head>
   <% ZooMember user = (ZooMember)session.getAttribute("user"); %>
   
-  <%ZooProductList detail = (ZooProductList)session.getAttribute("detail"); %>
-  
-  
+  <% ZooProductList detail = (ZooProductList)session.getAttribute("detail"); %>
   
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
   <div class="u-clearfix u-sheet u-sheet-1">
@@ -301,7 +287,7 @@
                     
                     
                     
-                    <a href="gocartform.do" class="u-align-center u-border-2 u-border-hover-palette-4-dark-2 u-border-palette-4-dark-2 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-2">장바구니</a>
+                    <a href="gocartform.do?prod_id=<%=detail.getProd_id() %>" class="u-align-center u-border-2 u-border-hover-palette-4-dark-2 u-border-palette-4-dark-2 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-2">장바구니</a>
                     <a href="gowishListform.do" class="u-border-2 u-border-hover-palette-4-dark-2 u-border-palette-4-dark-2 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-3">관심상품</a>
                   </div>
                 </div>
