@@ -13,7 +13,7 @@
 	</select>
 
 
-	<!-- 2. 중분류 category까지 적용하여 상품정보 데이터 불러오기 12/27 17:33 김원경 작성중 -->
+	<!-- 2. 중분류 category까지 적용하여 상품정보 데이터 불러오기 -->
 	<select id="prod_category2"
 		parameterType="com.zoo.entity.ZooProductList"
 		resultType="com.zoo.entity.ZooProductList">
@@ -76,7 +76,16 @@
 		where tbl_seller.seller_type = #{seller_type})
 	</select>
 
-
+	<!-- 7. 상품정렬하기 - 낮은가격순 -->
+	<!-- category 정보 수집해서 출력 -->
+	<select id="category_loprice"
+		parameterType="com.zoo.entity.ZooProductList"
+		resultType="com.zoo.entity.ZooProductList">
+		select *
+		from tbl_product
+		where prod_category = #{prod_category}
+		order by prod_price;		
+	</select>
 
 
 </mapper>

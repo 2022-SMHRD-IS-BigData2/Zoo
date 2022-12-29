@@ -58,9 +58,10 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-          <%if(user==null){ %>
+          <% if(user==null){ %>
         <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gologin.do">로그인</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gojoin.do">회원가입</a><%}else{ %>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gojoin.do">회원가입</a>
+			<%}else{ %>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gomyPageform.do"><%=user.getCust_name() %></a>
 
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="logout.do">로그아웃</a>
@@ -142,8 +143,8 @@
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=간식">떡·쿠키·간식</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=음료">커피·차·음료</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=건강식품">건강식품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=MK">김치·반찬·밀키트</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=SOURCE">양념·소스·장류</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=반찬/밀키트">김치·반찬·밀키트</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=양념/소스">양념·소스·장류</a>
 </li></ul>
 </div>
 </li>
@@ -243,7 +244,7 @@
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
         </nav>
-      </header>
+      </header> 
     <section class="u-clearfix u-section-1" id="sec-5216">
     
       <div class="u-clearfix u-sheet u-sheet-1">
@@ -251,12 +252,14 @@
           
         </div>
         
+        <!-- 상품정렬기능 -->
         <div class="u-clearfix u-custom-html u-custom-html-3">
-          <ul class="lineUp"> 정렬 &nbsp;&nbsp; <select name="lineUp" id="lineup" onchange="lineUp(81, this, '');">
-              <option value="81" selected="selected">등록순</option>
-              <option value="82">낮은가격순</option>
-              <option value="83">높은가격순</option>
-              <option value="84">인기순</option>
+          <ul class="lineUp"> 정렬 &nbsp;&nbsp; 
+          <select name="lineUp" id="lineup" onchange="location.href=this.value">
+              <option value="" selected="selected">등록순</option>
+              <option value="http://localhost:8083/ZooProject/goPdListCate2.do?category2=농산물">낮은가격순</option>
+              <option value="">높은가격순</option>
+              <!-- <option value="84">인기순</option>  -->
             </select>
           </ul>
         </div>
