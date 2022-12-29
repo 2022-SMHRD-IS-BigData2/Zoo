@@ -35,6 +35,7 @@ import com.zoo.controller.ZooPdListBudgetCon;
 import com.zoo.controller.ZooPdListCate2Con;
 import com.zoo.controller.ZooPdListKeywordCon;
 import com.zoo.controller.ZooPdListSellerTypeCon;
+import com.zoo.controller.ZooPdListSortCon;
 import com.zoo.controller.ZooPopupCon;
 import com.zoo.controller.ZooUpdateCon;
 
@@ -67,6 +68,7 @@ public class ZooFrontController extends HttpServlet {
 		handlerMapping.put("/gopdlistbudget.do",new ZooPdListBudgetCon() ); // 예산별 상품목록 조회
 		handlerMapping.put("/gopdlistkeyword.do",new ZooPdListKeywordCon() ); // 키워드별 상품목록 조회
 		handlerMapping.put("/gopdlistsellertype.do",new ZooPdListSellerTypeCon() ); // 기업유형별 상품목록 조회
+		handlerMapping.put("/gopdlistsort.do",new ZooPdListSortCon() ); // 상품정렬
 		handlerMapping.put("/godonation.do",new ZooGodonation() );
 		handlerMapping.put("/gomemberUpdate.do", new ZooGomemberUpdateCon() );
 		handlerMapping.put("/gomemberDelete.do", new ZooGomemberDeleteCon() );

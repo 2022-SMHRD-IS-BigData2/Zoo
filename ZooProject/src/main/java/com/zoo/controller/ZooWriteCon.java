@@ -55,10 +55,10 @@ public class ZooWriteCon implements ZooController {
 			
 			// 2. DTO로 묶기
 			ZooBoard dto = new ZooBoard();
-			dto.setTitle(title);
-			dto.setWriter(writer);
-			dto.setContent(content);
-			dto.setImg(img);
+			dto.setRe_title(title);
+			dto.setCust_id(writer);
+			dto.setRe_content(content);
+			dto.setRe_file(img);
 			// 3. DAO의 boardWrite 사용
 			ZooBoardDAO dao = new ZooBoardDAO();
 			int cnt = dao.boardWrite(dto);
