@@ -12,19 +12,15 @@
 	</insert>
 
 <select id="wish" parameterType="com.zoo.entity.ZooMember" resultType="com.zoo.entity.ZooProductList">
-	<!-- select p.prod_main_img,p.prod_name,p.prod_price
-	
-	 from tbl_product p,tlb_wishlist w
-	
-	where p.prod_id = w.#{prod_id}  -->
-	
-	select tbl_product.*
-	
-	from tbl_product, tlb_wishlist
-	
-	where tbl_product.prod_id = tlb_wishlist.prod_id
 
-	and tlb_wishlist.cust_id = #{cust_id}
+	
+select tbl_product.*
+	
+from tbl_product, tlb_wishlist
+	
+where tbl_product.prod_id = tlb_wishlist.prod_id
+
+and tlb_wishlist.cust_id = #{cust_id}
 
 
 </select>

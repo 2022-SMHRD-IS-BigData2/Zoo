@@ -50,6 +50,7 @@ In-Demand Professions, ​Top ten most popular courses for international student
   ZooProductList dto = new ZooProductList();
   List<ZooProductList> pdlist_budget = (List<ZooProductList>)session.getAttribute("pdlist_budget");
   List<ZooProductList> pdlist_gift = (List<ZooProductList>)session.getAttribute("pdlist_gift");
+   List<ZooProductList> pdlist =(List<ZooProductList>)session.getAttribute("list"); 
   %>
   
   

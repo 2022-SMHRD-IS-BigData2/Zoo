@@ -1,3 +1,5 @@
+<%@page import="com.zoo.entity.ZooProductList"%>
+<%@page import="java.util.List"%>
 <%@page import="com.zoo.entity.ZooMember"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -38,6 +40,7 @@
   ZooMember user =(ZooMember)session.getAttribute("user");
   		
   %>
+  <% List<ZooProductList> pdlist =(List<ZooProductList>)session.getAttribute("list"); %>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
   <div class="u-clearfix u-sheet u-sheet-1">
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">

@@ -26,7 +26,8 @@ import com.zoo.controller.ZooGomainCon;
 import com.zoo.controller.ZooGomemberDeleteCon;
 import com.zoo.controller.ZooGomemberUpdateCon;
 import com.zoo.controller.ZooGomyPageCon;
-import com.zoo.controller.ZooGowishListCon;
+import com.zoo.controller.ZooGowishlistCon;
+import com.zoo.controller.ZooCreatewishCon;
 import com.zoo.controller.ZooJoinCon;
 import com.zoo.controller.ZooLoginCon;
 import com.zoo.controller.ZooLogoutCon;
@@ -72,11 +73,12 @@ public class ZooFrontController extends HttpServlet {
 		handlerMapping.put("/gomyPageform.do", new ZooGomyPageCon()  );
 		handlerMapping.put("/gocartform.do", new ZooGoCartCon()  );
 		handlerMapping.put("/goboardform.do", new ZooGoboardCon());
-		handlerMapping.put("/gowishListform.do", new ZooGowishListCon());
+		handlerMapping.put("/gowishListform.do", new ZooCreatewishCon());
 		handlerMapping.put("/gopdDetailPage.do", new ZooGoDetailCon());
 		handlerMapping.put("/goaboutNanuform.do", new ZooGoaboutNanuCon());
 		handlerMapping.put("/gosearchform.do", new ZoosearchCon() );
 		handlerMapping.put("/popup.do", new ZooPopupCon() );
+		handlerMapping.put("/gowishList.do", new ZooGowishlistCon()  );
 		
 		
 		//======================================

@@ -42,7 +42,8 @@
   
     <%	
   ZooMember user = (ZooMember)session.getAttribute("user");
-  	List<ZooWishList>result = (List<ZooWishList>)session.getAttribute("wishlist"); 
+  	List<ZooProductList>result = (List<ZooProductList>)session.getAttribute("wishlist"); 
+  	
   %>
   <%ZooProductList detail = (ZooProductList)session.getAttribute("detail"); %>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
@@ -301,14 +302,15 @@
                   <div class="u-clearfix u-custom-html u-custom-html-1">
                     <input type="checkbox">
                   </div>
+                  <%for(int i =0; i<result.size();i++){ %>
                   <div class="u-border-2 u-border-grey-60 u-line u-line-horizontal u-line-2"></div>
                   <div class="u-container-style u-group u-shape-rectangle u-group-2">
                     <div class="u-container-layout u-container-layout-4">
-                      <img class="u-image u-image-default u-preserve-proportions u-image-1" src="<%= %>" alt="" data-image-width="600" data-image-height="600">
+                      <img class="u-image u-image-default u-preserve-proportions u-image-1" src="<%=result.get(i).getProd_img() %>" alt="" data-image-width="600" data-image-height="600">
                       <div class="u-container-style u-group u-group-3">
                         <div class="u-container-layout">
-                          <h6 class="u-text u-text-14">틔움긴생각</h6>
-                          <h6 class="u-text u-text-15"><%= %></h6>
+                          <h6 class="u-text u-text-14"></h6>
+                          <h6 class="u-text u-text-15"><%=result.get(i).getProd_name() %></h6>
                           <p class="u-text u-text-palette-5-dark-1 u-text-16">옵션 : 없음</p>
                         </div>
                       </div>
@@ -316,7 +318,7 @@
                       <div class="u-clearfix u-custom-html u-custom-html-2">
                         <input type="checkbox">
                       </div>
-                      <h6 class="u-text u-text-17"><%= %></h6>
+                      <h6 class="u-text u-text-17"><%=result.get(i).getProd_price() %></h6>
                       <a href="https://nicepage.com/templates" class="u-border-2 u-border-grey-75 u-btn u-btn-round u-button-style u-hover-palette-5-light-1 u-palette-5-light-2 u-radius-6 u-btn-3">상품 삭제</a>
                       <div class="u-border-1 u-border-palette-5-light-1 u-line u-line-horizontal u-line-3"></div>
                     </div>
@@ -333,6 +335,7 @@
           </div>
         </div>
       </div>
+      <%} %>
     </section>
     
 <footer class="u-align-center u-clearfix u-footer u-gradient u-footer" id="sec-e204"><div class="u-clearfix u-sheet u-sheet-1">

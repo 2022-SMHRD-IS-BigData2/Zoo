@@ -13,7 +13,7 @@ import com.zoo.entity.ZooMember;
 import com.zoo.entity.ZooProductList;
 import com.zoo.entity.ZooWishList;
 
-public class ZooGowishListCon implements ZooController {
+public class ZooCreatewishCon implements ZooController {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
@@ -30,8 +30,7 @@ public class ZooGowishListCon implements ZooController {
 		ZooWishList dto = new ZooWishList(wish.getProd_id(), name.getCust_id());
 		ZooWishListDAO dao = new ZooWishListDAO();
 		
-		ZooProductList dto1 = new ZooProductList();
-		dto1.setProd_id(wish.getProd_id());
+		
 		int cnt = dao.wishlist(dto);
 		
 		if(cnt>0) {
