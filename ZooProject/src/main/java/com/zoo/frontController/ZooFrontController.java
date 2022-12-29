@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.zoo.controller.ZooController;
 import com.zoo.controller.ZooDeleteCon;
+import com.zoo.controller.ZooGoAfterpayCon;
 import com.zoo.controller.ZooGoCartCon;
 import com.zoo.controller.ZooGoDetailCon;
 import com.zoo.controller.ZooGoJoinCon;
@@ -26,6 +27,7 @@ import com.zoo.controller.ZooGomainCon;
 import com.zoo.controller.ZooGomemberDeleteCon;
 import com.zoo.controller.ZooGomemberUpdateCon;
 import com.zoo.controller.ZooGomyPageCon;
+import com.zoo.controller.ZooGowishlistCon;
 import com.zoo.controller.ZooCreatewishCon;
 import com.zoo.controller.ZooJoinCon;
 import com.zoo.controller.ZooLoginCon;
@@ -79,6 +81,8 @@ public class ZooFrontController extends HttpServlet {
 		handlerMapping.put("/goaboutNanuform.do", new ZooGoaboutNanuCon());
 		handlerMapping.put("/gosearchform.do", new ZoosearchCon() );
 		handlerMapping.put("/popup.do", new ZooPopupCon() );
+		handlerMapping.put("/gowishList.do", new ZooGowishlistCon());
+		handlerMapping.put("/gopayafter.do", new ZooGoAfterpayCon());
 		
 		
 		//======================================
