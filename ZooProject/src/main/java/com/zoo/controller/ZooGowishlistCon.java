@@ -18,7 +18,6 @@ public class ZooGowishlistCon implements ZooController {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-
 		HttpSession session = request.getSession();
 	      
 	      ZooMember name = (ZooMember)session.getAttribute("user");
@@ -42,6 +41,8 @@ public class ZooGowishlistCon implements ZooController {
 	      
 	      
 	      return "wishListform";
+		
+
 	}
 
 }

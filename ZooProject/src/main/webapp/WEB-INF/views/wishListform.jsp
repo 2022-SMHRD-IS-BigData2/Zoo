@@ -315,10 +315,8 @@
                   </div>
                   
                   <div class="u-border-2 u-border-grey-60 u-line u-line-horizontal u-line-2">
-                  <%for(int i =0; i<result.size();i++){ %>
-                  
-                  
-                  
+                 
+				<%for(int i =0; i<result.size();i++){ %>
                   <div class="u-container-style u-group u-shape-rectangle u-group-2">
                     <div class="u-container-layout u-container-layout-4">
                       <img class="u-image u-image-default u-preserve-proportions u-image-1" src="<%=result.get(i).getProd_main_img() %>" alt="" data-image-width="600" data-image-height="600">
@@ -334,11 +332,11 @@
                         <input type="checkbox">
                       </div>
                       <h6 class="u-text u-text-17"><%=result.get(i).getProd_price() %></h6>
-                      <a href="https://nicepage.com/templates" class="u-border-2 u-border-grey-75 u-btn u-btn-round u-button-style u-hover-palette-5-light-1 u-palette-5-light-2 u-radius-6 u-btn-3">상품 삭제</a>
+                      <a href="#" class="u-border-2 u-border-grey-75 u-btn u-btn-round u-button-style u-hover-palette-5-light-1 u-palette-5-light-2 u-radius-6 u-btn-3">상품 삭제</a>
                       <div class="u-border-1 u-border-palette-5-light-1 u-line u-line-horizontal u-line-3"></div>
                     </div>
                   </div>
-                  
+				<%} %>
                   
                   <div class="u-container-style u-group u-group-4">
                     <div class="u-container-layout">
@@ -347,9 +345,6 @@
                     </div>
                   </div>
                   
-                  
-                  
-                  
                   </div>
                 </div>
               </div>
@@ -357,7 +352,6 @@
           </div>
         </div>
       </div>
-      <%} %>
     </section>
     
 <footer class="u-align-center u-clearfix u-footer u-gradient u-footer" id="sec-e204"><div class="u-clearfix u-sheet u-sheet-1">
