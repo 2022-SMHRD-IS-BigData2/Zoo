@@ -86,6 +86,17 @@
 		where prod_category = #{prod_category}
 		order by prod_price;		
 	</select>
+	
+	<!-- 8. 상품정렬하기 - 높은가격순 -->
+	<!-- category 정보 수집해서 출력 -->
+	<select id="category_loprice"
+		parameterType="com.zoo.entity.ZooProductList"
+		resultType="com.zoo.entity.ZooProductList">
+		select *
+		from tbl_product
+		where prod_category = #{prod_category}
+		order by prod_price desc;		
+	</select>
 
 
 </mapper>

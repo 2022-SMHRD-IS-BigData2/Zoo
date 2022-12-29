@@ -26,7 +26,7 @@ public class ZooProductListDAO {
 		return productList;
 	}
 
-	// 중분류 카테고리 클릭했을 때 상품정보 출력 12/27
+	// 중분류 카테고리 클릭했을 때 상품정보 출력
 	public List<ZooProductList> productList2(ZooProductList dto) {
 
 		SqlSession session = sqlsessionFactory.openSession(true);
@@ -80,13 +80,22 @@ public class ZooProductListDAO {
 		return productList;
 	}
 
-	// 상품정렬 - 낮은가격순
+	// 상품정렬 - 대분류 - 낮은가격순
 	public List<ZooProductList> pdLoPrice(ZooProductList dto) {
 		
 		SqlSession session = sqlsessionFactory.openSession(true);
-		List<ZooProductList> productList = session.selectList("", dto);
+		List<ZooProductList> productList = session.selectList("category_loprice", dto);
 		session.close();
 		return productList;
 	}
 
+	// 상품정렬 - 대분류 - 높은가격순
+		public List<ZooProductList> pdHiPrice(ZooProductList dto) {
+			
+			SqlSession session = sqlsessionFactory.openSession(true);
+			List<ZooProductList> productList = session.selectList("category_hiprice", dto);
+			session.close();
+			return productList;
+	}
+	
 }

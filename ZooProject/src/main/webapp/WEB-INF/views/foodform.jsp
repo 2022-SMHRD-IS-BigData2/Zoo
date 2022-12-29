@@ -263,7 +263,7 @@
           <ul class="lineUp"> 정렬 &nbsp;&nbsp; 
           <select name="lineUp" id="lineup" onchange="location.href=this.value">
               <option value="" selected="selected">등록순</option>
-              <option value="http://localhost:8083/ZooProject/goPdListCate2.do?category2=농산물">낮은가격순</option>
+              <option value="gopdlistsort.do?sort=low">낮은가격순</option>
               <option value="">높은가격순</option>
               <!-- <option value="84">인기순</option>  -->
             </select>
