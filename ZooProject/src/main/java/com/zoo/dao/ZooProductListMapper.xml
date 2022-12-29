@@ -76,7 +76,7 @@
 		where tbl_seller.seller_type = #{seller_type})
 	</select>
 
-
+	
 
 
 </mapper>

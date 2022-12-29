@@ -245,6 +245,8 @@
                         
                         <td align="center">없음</td>
                     </tr>
+                    
+                    
                     <tr class="cart__list__detail">
                         <td style="width: 2%;"><input type="checkbox"></td>
                         <td style="width: 13%;">
