@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zoo.dao.ZooWishListDAO">
+
+
+<insert id="wishlist" parameterType="com.zoo.entity.ZooWishList">
+	
+	insert into tlb_wishlist(prod_id,cust_id)
+	
+	values(#{prod_id},#{cust_id})
+	
+	</insert>
+
+<select id="wish" parameterType="com.zoo.entity.ZooMember" resultType="com.zoo.entity.ZooProductList">
+
+	
+select tbl_product.*
+	
+from tbl_product, tlb_wishlist
+	
+where tbl_product.prod_id = tlb_wishlist.prod_id
+
+and tlb_wishlist.cust_id = #{cust_id}
+
+
+</select>
+
+
+
+</mapper>
