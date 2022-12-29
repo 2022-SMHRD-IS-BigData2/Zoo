@@ -75,8 +75,13 @@
 		from tbl_seller 
 		where tbl_seller.seller_type = #{seller_type})
 	</select>
-
-
+	
+	<!-- 페이징 ????? -->
+	<select id="prod_category" resultType="com.zoo.controller.ZooGoProductListCon">
+	   SELECT * FROM GUESTBOOK
+	   WHERE RNUM <![CDATA[>]]> (#{page}-1) * 10
+	   AND RNUM <![CDATA[<]]> #{page} * 10 +  1
+	</select>
 
 
 </mapper>
