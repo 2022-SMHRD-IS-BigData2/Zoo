@@ -292,7 +292,6 @@
                   <div class="u-container-style u-group u-group-1">
                     <div class="u-container-layout u-container-layout-3">
                       <p class="u-text u-text-grey-80 u-text-11">문의 내역</p>
-                      <a href="https://nicepage.com/templates" class="u-border-1 u-border-grey-15 u-btn u-btn-round u-button-style u-grey-5 u-hover-grey-10 u-radius-6 u-btn-1"> 선택 글 삭제</a>
                       <div class="u-border-2 u-border-grey-60 u-line u-line-horizontal u-line-1"></div>
                       <div class="u-container-style u-group u-palette-5-light-3 u-shape-rectangle u-group-2">
                         <div class="u-container-layout u-container-layout-4">
@@ -343,7 +342,6 @@
                   <div class="u-container-style u-group u-group-6">
                     <div class="u-container-layout u-container-layout-8">
                       <p class="u-text u-text-grey-80 u-text-28">리뷰 내역</p>
-                      <a href="https://nicepage.com/templates" class="u-border-1 u-border-grey-15 u-btn u-btn-round u-button-style u-grey-5 u-hover-grey-10 u-radius-6 u-btn-2"> 선택 글 삭제</a>
                       <div class="u-border-2 u-border-grey-60 u-line u-line-horizontal u-line-5"></div>
                       <div class="u-align-center u-container-style u-group u-palette-5-light-3 u-shape-rectangle u-group-7">
                         <div id="board">
