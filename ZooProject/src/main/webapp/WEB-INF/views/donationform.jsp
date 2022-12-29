@@ -53,7 +53,7 @@ In-Demand Professions, ​Top ten most popular courses for international student
           </div>
           <div class="u-custom-menu u-nav-container">
           
-        <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gologin.do">로그인</a>
+        <ul class="u-nav u-unstyled u-nav-1" style="right:50px;"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gologin.do">로그인</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gojoin.do">회원가입</a>
 
 
@@ -63,7 +63,10 @@ In-Demand Professions, ​Top ten most popular courses for international student
 
 
         
-        <form action="#" method="get" class="u-border-1 u-border-grey-30 u-search u-search-right u-white u-search-1">
+        <form action="#" method="get" class="u-border-1 u-border-grey-30 u-search u-search-right u-white u-search-1"style="
+    position: relative;
+    left: 85px;
+">
           <button class="u-search-button" type="submit">
             <span class="u-search-icon u-spacing-10 u-search-icon-1">
               <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 56.966 56.966"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-762a"></use></svg>
@@ -72,7 +75,10 @@ In-Demand Professions, ​Top ten most popular courses for international student
           </button>
           <input class="u-search-input" type="search" name="search" value="" placeholder="Search">
         </form>
-        <a href="gomainpage.do" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200"  title="메인페이지" >
+        <a href="gomainpage.do" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200"  title="메인페이지" style="
+    position: relative;
+    left: 85px;
+">
           <img src="images/logo.png" class="u-logo-image u-logo-image-1" >
         </a>
         
@@ -235,11 +241,11 @@ In-Demand Professions, ​Top ten most popular courses for international student
             </a>
           </div>
           </div>
-          <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-spacing-30 u-unstyled u-nav-5"style="
+          <div class="u-custom-menu u-nav-container"style="
     position: relative;
     left: 450px;
-"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">상품 카테고리</a>
+">
+            <ul class="u-nav u-spacing-30 u-unstyled u-nav-5"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">상품 카테고리</a>
             <div class="u-nav-popup">
             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
             <li class="u-nav-item">
