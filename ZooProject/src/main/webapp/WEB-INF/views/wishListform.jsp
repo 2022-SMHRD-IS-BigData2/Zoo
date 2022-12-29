@@ -315,7 +315,7 @@
 				<%for(int i =0; i<result.size();i++){ %>
                   <div class="u-container-style u-group u-shape-rectangle u-group-2">
                     <div class="u-container-layout u-container-layout-4">
-                      <img class="u-image u-image-default u-preserve-proportions u-image-1" src="<%=result.get(i).getProd_img() %>" alt="" data-image-width="600" data-image-height="600">
+                      <img class="u-image u-image-default u-preserve-proportions u-image-1" src="<%=result.get(i).getProd_main_img() %>" alt="" data-image-width="600" data-image-height="600">
                       <div class="u-container-style u-group u-group-3">
                         <div class="u-container-layout">
                           <h6 class="u-text u-text-14"></h6>
