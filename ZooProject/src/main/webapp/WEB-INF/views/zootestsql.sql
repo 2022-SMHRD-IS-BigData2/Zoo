@@ -30,4 +30,3 @@ VALUES ('re_title 1', 're_content 1', 're_file 1', sysdate, 'smart', 1, 1, 1);
 
 select * from TBL_BOARD_R
 order by re_seq
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-BigData2/Zoo.git
