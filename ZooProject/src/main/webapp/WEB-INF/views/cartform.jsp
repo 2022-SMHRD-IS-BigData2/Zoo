@@ -35,6 +35,57 @@
     <meta name="twitter:description" content="Site1">
     <meta property="og:title" content="cartPage">
     <meta property="og:type" content="website">
+    
+    
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
+    <!-- iamport.payment.js -->
+    <script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.2.0.js"></script>
+    <script>
+        var IMP = window.IMP; 
+        IMP.init("imp04230075"); 
+    
+        function requestPay() {
+            IMP.request_pay({
+                pg : 'kakaopay',
+                pay_method : 'card',
+                merchant_uid: "57008833-33008", 
+                name : '사과10kg',
+                amount : 100,
+                buyer_email : 'Iamport@chai.finance',
+                buyer_name : '주토피아',
+                buyer_tel : '010-1234-5678',
+                buyer_addr : '남구 cgi센터',
+                buyer_postcode : '123-456'
+            }, function (rsp) { // callback
+                if (rsp.success) {
+                    console.log(rsp);
+                } else {
+                    console.log(rsp);
+                    location.href="gopayafter.do";
+                }
+            });
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title>Sample Payment</title>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
   </head>
    <%	
   ZooMember user =(ZooMember)session.getAttribute("user");
@@ -292,7 +343,7 @@
         </table>
         <div class="cart__mainbtns">
             <button class="cart__bigorderbtn left">쇼핑 계속하기</button>
-            <button class="cart__bigorderbtn right">주문하기</button>
+            <button onclick="requestPay()" class="cart__bigorderbtn right">주문하기</button>
         </div>
     </section>
 
