@@ -16,6 +16,7 @@
 	<!-- 2. 중분류 category까지 적용하여 상품정보 데이터 불러오기 -->
 	<select id="prod_category2"
 		parameterType="com.zoo.entity.ZooProductList"
+
 		resultType="com.zoo.entity.ZooProductList">
 		select *
 		from tbl_product
@@ -58,21 +59,23 @@
 
 	<!-- 검색창 검색 기능 -->
 	<select id="search" resultType="com.zoo.entity.ZooProductList"
-	parameterType="com.zoo.entity.ZooProductList">
-	select*from tbl_product
-	where prod_name like '%'||#{prod_name}||'%'
+		parameterType="com.zoo.entity.ZooProductList">
+		select*from tbl_product
+		where prod_name like
+		'%'||#{prod_name}||'%'
 	</select>
 
 
 	<!-- 6. 기업 유형별 상품 리스트 불러오기 -->
-	<select id="prod_sellertype" parameterType="com.zoo.entity.ZooSeller"
+	<select id="prod_sellertype"
+		parameterType="com.zoo.entity.ZooSeller"
 		resultType="com.zoo.entity.ZooProductList">
 		select tbl_product.*
 		from tbl_product
 		where
-		tbl_product.maker_id 
+		tbl_product.maker_id
 		in (select tbl_seller.seller_id
-		from tbl_seller 
+		from tbl_seller
 		where tbl_seller.seller_type = #{seller_type})
 	</select>
 	
@@ -91,10 +94,11 @@
 		resultType="com.zoo.entity.ZooProductList">
 		select *
 		from TBL_PRODUCT
-		where prod_category = #{prod_category}
+		where prod_category =
+		#{prod_category}
 		order by prod_price
 	</select>
-	
+
 	<!-- 8. 상품정렬하기 - 높은가격순 -->
 	<!-- category 정보 수집해서 출력 -->
 	<select id="category_hiprice"
@@ -102,10 +106,11 @@
 		resultType="com.zoo.entity.ZooProductList">
 		select *
 		from tbl_product
-		where prod_category = #{prod_category}
-		order by prod_price desc	
+		where prod_category =
+		#{prod_category}
+		order by prod_price desc
 	</select>
-	
+
 	<!-- 9. 상품정렬하기 - 낮은가격순 -->
 	<!-- 친환경제품 -->
 	<select id="pdEco_loprice"
@@ -114,10 +119,11 @@
 		select *
 		from tbl_product
 		where prod_keyword1 = 'ECO'
-		order by prod_price	
+		order by
+		prod_price
 	</select>
-	
-	<!-- 9. 상품정렬하기 - 낮은가격순 -->
+
+	<!-- 10. 상품정렬하기 - 높은가격순 -->
 	<!-- 친환경제품 -->
 	<select id="pdEco_hiprice"
 		parameterType="com.zoo.entity.ZooProductList"
@@ -125,9 +131,25 @@
 		select *
 		from tbl_product
 		where prod_keyword1 = 'ECO'
-		order by prod_price	desc
+		order by
+		prod_price desc
 	</select>
 
-
+	<!-- 11. 장바구니 상품 가져오기 -->
+	<select id="prod_cart"
+		parameterType="com.zoo.entity.ZooCart"
+		resultType="com.zoo.entity.ZooProductList">
+		select tbl_product.*
+		from tbl_product, tbl_cart
+		where tbl_product.prod_id = tbl_cart.prod_id
+		and tbl_cart.cust_id = #{cust_id}
+	</select>
+	
+	<!-- 12. 장바구니 상품 저장하기 -->
+	<insert id="insert_cart" parameterType="com.zoo.entity.ZooCart">
+		insert into tbl_cart(cust_id, prod_id)
+		values (#{cust_id}, #{prod_id})
+	
+	</insert>
 
 </mapper>
