@@ -43,7 +43,7 @@
 
     <%	
   ZooMember user = (ZooMember)session.getAttribute("user");
-    List<ZooBoard> list=(List<ZooBoard>)request.getAttribute("list");
+    List<ZooBoard> list=(List<ZooBoard>)session.getAttribute("list");
   %>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><div class="u-clearfix u-sheet u-sheet-1">
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
@@ -349,26 +349,23 @@
                         <div id="board">
 				<table id = "list">
 					<tr>
-						<td>상품명</td>
-						<td>번호</td>
-						<td>제목</td>
-						<td>작성일</td>
-						<td>만족도</td>
+						<h6><td>번호</td></h6>
+						<h6><td>제목</td></h6>
+						<h6><td>작성일</td></h6>
+						<h6><td>만족도</td></h6>
 					</tr>
-					<%for( ZooBoard board : list ){ %>
-					<tr>
-						<td><%=board.getTitle() %></td>
-						<td><%=board.getNum() %></td>
-						<td><%=board.getWriter() %></td>
-						<td><%=board.getIndate() %></td>
-						<td><%=board.getScore() %>
+					<%for(int i=0; i<list.size(); i++){ %>
+					<tr background-color="white">
+						<td><%=list.get(i).getRe_seq() %></td>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=list.get(i).getRe_title() %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=list.get(i).getRe_dt() %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=list.get(i).getRe_score() %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 					</tr>
 				<%} %>
 				</table>
                       </div>
                       <div class="u-container-style u-group u-shape-rectangle u-group-10">
                         <div class="u-container-layout u-container-layout-12">
-                          <p class="u-align-center u-large-text u-text u-text-variant u-text-44">1 </p><span class="u-file-icon u-icon u-icon-3"><img src="images/my_arrow_left.png" alt=""></span><span class="u-file-icon u-icon u-icon-4"><img src="images/my_arrow_right.png" alt=""></span>
                         </div>
                       </div>
                     </div>
@@ -441,14 +438,6 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
       </div></footer>
     <section class="u-backlink u-clearfix u-grey-80">
       <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
-        <span>Website Templates</span>
-      </a>
-      <p class="u-text">
-        <span>created with</span>
-      </p>
-      <a class="u-link" href="" target="_blank">
-        <span>Website Builder Software</span>
-      </a>. 
     </section>
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" ></script>

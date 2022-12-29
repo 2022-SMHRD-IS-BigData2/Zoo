@@ -47,6 +47,9 @@ In-Demand Professions, ​Top ten most popular courses for international student
   </head>
   <%   
   ZooMember user = (ZooMember)session.getAttribute("user");
+  if(user != null){
+  	System.out.print(user.getCust_id());
+  }
   ZooProductList dto = new ZooProductList();
   List<ZooProductList> pdlist_budget = (List<ZooProductList>)session.getAttribute("pdlist_budget");
   List<ZooProductList> pdlist_gift = (List<ZooProductList>)session.getAttribute("pdlist_gift");
