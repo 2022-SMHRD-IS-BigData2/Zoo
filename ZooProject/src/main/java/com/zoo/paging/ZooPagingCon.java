@@ -1,4 +1,4 @@
-package com.zoo.controller;
+package com.zoo.paging;
 
 import java.io.IOException;
 
@@ -6,16 +6,16 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.zoo.controller.ZooController;
 import com.zoo.dao.ZooProductListDAO;
 import com.zoo.entity.ZooProductList;
-import com.zoo.paging.ZooPaging;
 
 public class ZooPagingCon implements ZooController {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+/*
 		// Paging Calculation
 		int currentPageNo = 1;
 		int recordsPerPage = 0;
@@ -51,7 +51,7 @@ public class ZooPagingCon implements ZooController {
 		
 		// 
 		
+ */
 		return null;
 	}
-
 }

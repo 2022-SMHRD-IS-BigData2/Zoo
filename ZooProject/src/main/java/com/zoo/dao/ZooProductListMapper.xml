@@ -76,13 +76,14 @@
 		where tbl_seller.seller_type = #{seller_type})
 	</select>
 	
-	<!-- 페이징 ????? -->
+	<!-- 페이징 ?????
 	<select id="prod_category" resultType="com.zoo.controller.ZooGoProductListCon">
 	   SELECT * FROM GUESTBOOK
 	   WHERE RNUM <![CDATA[>]]> (#{page}-1) * 10
 	   AND RNUM <![CDATA[<]]> #{page} * 10 +  1
 	</select>
-	
+	 -->
+	 
 	<!-- 7. 상품정렬하기 - 낮은가격순 -->
 	<!-- category 정보 수집해서 출력 -->
 	<select id="category_loprice"
@@ -125,7 +126,6 @@
 		from tbl_product
 		where prod_keyword1 = 'ECO'
 		order by prod_price	desc
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-BigData2/Zoo.git
 	</select>
 
 

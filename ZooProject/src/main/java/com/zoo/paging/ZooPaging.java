@@ -1,7 +1,7 @@
 package com.zoo.paging;
 
 public class ZooPaging {
-
+/*
 	private int recordsPerPage;		// 페이지당 레코드 수
 	private int firstPageNo;		// 첫번째 페이지 번호
 	private int prevPageNo;			// 이전 페이지 번호
@@ -164,5 +164,5 @@ public class ZooPaging {
 		
 	}
 		
-		
+	*/	
 }
