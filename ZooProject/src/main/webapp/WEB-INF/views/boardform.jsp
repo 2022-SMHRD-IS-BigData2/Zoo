@@ -43,7 +43,7 @@
 
     <%	
   ZooMember user = (ZooMember)session.getAttribute("user");
-    List<ZooBoard> list=(List<ZooBoard>)session.getAttribute("list");
+    List<ZooBoard> list=(List<ZooBoard>)session.getAttribute("dlist");
   %>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><div class="u-clearfix u-sheet u-sheet-1">
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
@@ -355,7 +355,7 @@
 						<h6><td>번호</td></h6>
 						<h6><td>제목</td></h6>
 						<h6><td>작성일</td></h6>
-						<h6><td>만족도</td></h6>
+						<h6><td>평점</td></h6>
 					</tr>
 					<%for(int i=0; i<list.size(); i++){ %>
 					<tr background-color="white">
