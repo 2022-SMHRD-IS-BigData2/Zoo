@@ -268,7 +268,7 @@
         </div>
       </div>
     </section>
-        <section class="u-clearfix u-section-2" id="sec-9301">
+           <section class="u-clearfix u-section-2" id="sec-9301">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
           <div class="u-layout">
@@ -303,31 +303,23 @@
                         </div>
                       </div>
                       <div class="u-clearfix u-custom-html u-custom-html-1">
-                        <input type="checkbox">
                       </div>
                       <div class="u-border-2 u-border-grey-60 u-line u-line-horizontal u-line-2"></div>
                       <div class="u-container-style u-group u-shape-rectangle u-group-3">
-                        
                         <div class="u-container-layout u-container-layout-5">
                           <h6 class="u-align-center u-text u-text-17">2022/12/22</h6>
                           <h6 class="u-align-center u-text u-text-grey-40 u-text-18">미답변</h6>
                           <h6 class="u-text u-text-19">배송이 얼마나 걸릴까요?</h6>
                           <div class="u-clearfix u-custom-html u-custom-html-2">
-                            <input type="checkbox">
                           </div>
                           <h6 class="u-align-center u-text u-text-20">002</h6>
                           <h6 class="u-align-center u-text u-text-21">다향 아로마 힐..</h6>
                           <div class="u-border-1 u-border-palette-5-light-1 u-line u-line-horizontal u-line-3"></div>
                         </div>
-                        
-                        
-                        
-                        
                       </div>
                       <div class="u-container-style u-group u-shape-rectangle u-group-4">
                         <div class="u-container-layout u-container-layout-6">
                           <div class="u-clearfix u-custom-html u-custom-html-3">
-                            <input type="checkbox">
                           </div>
                           <h6 class="u-align-center u-text u-text-22">2022/12/10</h6>
                           <h6 class="u-align-center u-text u-text-grey-90 u-text-23">답변완료 </h6>
@@ -349,26 +341,42 @@
                       <p class="u-text u-text-grey-80 u-text-28">리뷰 내역</p>
                       <div class="u-border-2 u-border-grey-60 u-line u-line-horizontal u-line-5"></div>
                       <div class="u-align-center u-container-style u-group u-palette-5-light-3 u-shape-rectangle u-group-7">
-                        <div id="board">
-				<table id = "list">
-					<tr>
-						<h6><td>번호</td></h6>
-						<h6><td>제목</td></h6>
-						<h6><td>작성일</td></h6>
-						<h6><td>평점</td></h6>
-					</tr>
-					<%for(int i=0; i<list.size(); i++){ %>
-					<tr background-color="white">
-						<td><%=list.get(i).getRe_seq() %></td>
-						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=list.get(i).getRe_title() %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=list.get(i).getRe_dt() %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=list.get(i).getRe_score() %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-					</tr>
-				<%} %>
-				</table>
+                        <div class="u-container-layout u-container-layout-9">
+                          <h6 class="u-text u-text-29">제목</h6>
+                          <h6 class="u-text u-text-30">번호</h6>
+                          <h6 class="u-text u-text-31">내용</h6>
+                          <h6 class="u-text u-text-32">작성일</h6>
+                          <h6 class="u-text u-text-33">만족도</h6>
+                        </div>
+                      </div>
+                      <div class="u-clearfix u-custom-html u-custom-html-4">
+                      </div>
+                      <div class="u-border-2 u-border-grey-60 u-line u-line-horizontal u-line-6"></div>
+                      <div class="u-container-style u-group u-shape-rectangle u-group-8">
+                      <% 
+                      for (ZooBoard board : list) {
+                      int i = 34;
+                      %>
+                        <div class="u-container-layout u-container-layout-10">
+                          <h6 class="u-align-center u-text u-text-<%=i %>"><%=board.getRe_dt() %></h6>
+                          <% i= i+1 ; %>
+                          <h6 class="u-align-center u-text u-text-palette-3-base u-text-<%=i %>">★<%=board.getRe_score() %></h6>
+                          <% i= i+1 ; %>
+                          <div class="u-clearfix u-custom-html u-custom-html-5">
+                          </div>
+                          <h6 class="u-text u-text-<%=i %>"><%=board.getRe_content() %></h6>
+                          <% i= i+1 ; %>
+                          <h6 class="u-align-center u-text u-text-<%=i %>"><%=board.getRe_seq() %></h6>
+                          <% i= i+1 ; %>
+                          <h6 class="u-align-center u-text u-text-<%=i %>"><%=board.getRe_title() %></h6>
+                          <% i= i+1 ; %>
+                          <div class="u-border-1 u-border-palette-5-light-1 u-line u-line-horizontal u-line-7"></div>
+                          <% } %>
+                        </div>
                       </div>
                       <div class="u-container-style u-group u-shape-rectangle u-group-10">
                         <div class="u-container-layout u-container-layout-12">
+                          <p class="u-align-center u-large-text u-text u-text-variant u-text-44">1 </p><span class="u-file-icon u-icon u-icon-3"><img src="images/my_arrow_left.png" alt=""></span><span class="u-file-icon u-icon u-icon-4"><img src="images/my_arrow_right.png" alt=""></span>
                         </div>
                       </div>
                     </div>
