@@ -1,3 +1,5 @@
+<%@page import="com.zoo.entity.ZooBoard"%>
+<%@page import="java.util.List"%>
 <%@page import="com.zoo.entity.ZooMember"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -41,7 +43,7 @@
 
     <%	
   ZooMember user = (ZooMember)session.getAttribute("user");
-  		
+    List<ZooBoard> list=(List<ZooBoard>)request.getAttribute("list");
   %>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><div class="u-clearfix u-sheet u-sheet-1">
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
@@ -260,7 +262,7 @@
         </div>
       </div>
     </section>
-    <section class="u-clearfix u-section-2" id="sec-9301">
+        <section class="u-clearfix u-section-2" id="sec-9301">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
           <div class="u-layout">
@@ -268,15 +270,15 @@
               <div class="u-align-left u-container-style u-layout-cell u-size-11 u-layout-cell-1">
                 <div class="u-container-layout u-container-layout-1">
                   <p class="u-text u-text-1">나의 쇼핑 정보</p>
-                  <p class="u-text u-text-grey-70 u-text-2"><a href="gomyPageform.do">주문내역 조회</a></p>
-                  <p class="u-text u-text-grey-70 u-text-3"><a>적립금 내역</a></p>
-                  <p class="u-text u-text-grey-70 u-text-4"><a>쿠폰 내역</a></p>
+                  <p class="u-text u-text-grey-70 u-text-2">주문내역 조회</p>
+                  <p class="u-text u-text-grey-70 u-text-3">적립금 내역</p>
+                  <p class="u-text u-text-grey-70 u-text-4">쿠폰 내역</p>
                   <p class="u-text u-text-5">활동 정보</p>
-                  <p class="u-text u-text-grey-70 u-text-6"><a href="gowishListform.do">나의 위시리스트</a></p>
-                  <p class="u-text u-text-grey-70 u-text-7"><a href="goboardform.do">나의 게시글</a></p>
+                  <p class="u-text u-text-grey-70 u-text-6">나의 위시리스트</p>
+                  <p class="u-text u-text-grey-70 u-text-7">나의 게시글</p>
                   <p class="u-text u-text-8">나의 정보</p>
-                  <p class="u-text u-text-grey-70 u-text-9"><a href="gomemberUpdate.do">회원 정보 수정</a></p>
-                  <p class="u-text u-text-grey-70 u-text-10"><a href="gomemberDelete.do">회원 탈퇴</a></p>
+                  <p class="u-text u-text-grey-70 u-text-9">회원 정보 수정</p>
+                  <p class="u-text u-text-grey-70 u-text-10">회원 탈퇴</p>
                 </div>
               </div>
               <div class="u-container-style u-layout-cell u-shape-rectangle u-size-49 u-layout-cell-2">
@@ -338,43 +340,25 @@
                       <a href="https://nicepage.com/templates" class="u-border-1 u-border-grey-15 u-btn u-btn-round u-button-style u-grey-5 u-hover-grey-10 u-radius-6 u-btn-2"> 선택 글 삭제</a>
                       <div class="u-border-2 u-border-grey-60 u-line u-line-horizontal u-line-5"></div>
                       <div class="u-align-center u-container-style u-group u-palette-5-light-3 u-shape-rectangle u-group-7">
-                        <div class="u-container-layout u-container-layout-9">
-                          <h6 class="u-text u-text-29">상품명</h6>
-                          <h6 class="u-text u-text-30">번호</h6>
-                          <h6 class="u-text u-text-31">제목</h6>
-                          <h6 class="u-text u-text-32">작성일</h6>
-                          <h6 class="u-text u-text-33">만족도</h6>
-                        </div>
-                      </div>
-                      <div class="u-clearfix u-custom-html u-custom-html-4">
-                        <input type="checkbox">
-                      </div>
-                      <div class="u-border-2 u-border-grey-60 u-line u-line-horizontal u-line-6"></div>
-                      <div class="u-container-style u-group u-shape-rectangle u-group-8">
-                        <div class="u-container-layout u-container-layout-10">
-                          <h6 class="u-align-center u-text u-text-34">2022/12/26</h6>
-                          <h6 class="u-align-center u-text u-text-palette-3-base u-text-35">★★★★★</h6>
-                          <div class="u-clearfix u-custom-html u-custom-html-5">
-                            <input type="checkbox">
-                          </div>
-                          <h6 class="u-text u-text-36">냄새가 좋아서 힐링돼요~</h6>
-                          <h6 class="u-align-center u-text u-text-37">002</h6>
-                          <h6 class="u-align-center u-text u-text-38">다향 아로마 힐..</h6>
-                          <div class="u-border-1 u-border-palette-5-light-1 u-line u-line-horizontal u-line-7"></div>
-                        </div>
-                      </div>
-                      <div class="u-container-style u-group u-shape-rectangle u-group-9">
-                        <div class="u-container-layout u-container-layout-11">
-                          <div class="u-clearfix u-custom-html u-custom-html-6">
-                            <input type="checkbox">
-                          </div>
-                          <h6 class="u-align-center u-text u-text-39">2022/12/20</h6>
-                          <h6 class="u-align-center u-text u-text-palette-3-base u-text-40">★★★☆☆</h6>
-                          <h6 class="u-align-center u-text u-text-41">001</h6>
-                          <h6 class="u-text u-text-42">제 취향은 아니지만 괜찮은 것 같아요</h6>
-                          <h6 class="u-align-center u-text u-text-43"> 패브릭 섬유 향..</h6>
-                          <div class="u-border-1 u-border-palette-5-light-1 u-line u-line-horizontal u-line-8"></div>
-                        </div>
+                        <div id="board">
+				<table id = "list">
+					<tr>
+						<td>상품명</td>
+						<td>번호</td>
+						<td>제목</td>
+						<td>작성일</td>
+						<td>만족도</td>
+					</tr>
+					<%for( ZooBoard board : list ){ %>
+					<tr>
+						<td><%=board.getTitle() %></td>
+						<td><%=board.getNum() %></td>
+						<td><%=board.getWriter() %></td>
+						<td><%=board.getIndate() %></td>
+						<td><%=board.getScore() %>
+					</tr>
+				<%} %>
+				</table>
                       </div>
                       <div class="u-container-style u-group u-shape-rectangle u-group-10">
                         <div class="u-container-layout u-container-layout-12">
