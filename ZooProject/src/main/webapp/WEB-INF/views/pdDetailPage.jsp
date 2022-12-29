@@ -1,3 +1,4 @@
+<%@page import="com.zoo.entity.ZooBoard"%>
 <%@page import="com.zoo.entity.ZooProductList"%>
 <%@page import="java.util.List"%>
 <%@page import="com.zoo.entity.ZooMember"%>
@@ -17,20 +18,16 @@
     <meta name="generator" content="Nicepage 5.2.0, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     
-    
-    
-    
-    
     <script type="application/ld+json">{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": "Site1",
-		"logo": "images/logo.png",
-		"sameAs": [
-				"https://facebook.com/name",
-				"https://twitter.com/name",
-				"https://instagram.com/name"
-		]
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "Site1",
+      "logo": "images/logo.png",
+      "sameAs": [
+            "https://facebook.com/name",
+            "https://twitter.com/name",
+            "https://instagram.com/name"
+      ]
 }</script>
     <meta name="theme-color" content="#478ac9">
     <meta name="twitter:site" content="@">
@@ -39,23 +36,20 @@
     <meta name="twitter:description" content="Site1">
     <meta property="og:title" content="pdDetailPage">
     <meta property="og:type" content="website">
-    
-    
-    
     <meta charset="UTF-8">
     <title>Sample Payment</title>
-    
-    
-    
-    
-    
     
   </head>
   <% ZooMember user = (ZooMember)session.getAttribute("user"); %>
   
-  <%ZooProductList detail = (ZooProductList)session.getAttribute("detail"); %>
-  
-  
+  <%List<ZooBoard> list= (List<ZooBoard>)session.getAttribute("dlist");
+  double avg = 0;
+  for( ZooBoard board : list){
+     avg += board.getRe_score();
+  }
+  avg = avg / list.size();
+  %>
+  <% ZooProductList detail = (ZooProductList)session.getAttribute("detail"); %>
   
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
   
@@ -140,45 +134,69 @@
             <div class="u-nav-popup">
             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
             <li class="u-nav-item">
-            <a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FOOD">🍴 식품</a>
+            <a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=식품">🍴 식품</a>
             <div class="u-nav-popup"style="
     left: 137px;
     top: 0px;
 ">
             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
-     <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=NS">농산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=CS">축산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=SS">수산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=SNACK">떡·쿠키·간식</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=DRINK">커피·차·음료</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=HFOOD">건강식품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=MK">김치·반찬·밀키트</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=SOURCE">양념·소스·장류</a>
+     <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=농산물">농산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=축산물">축산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=수산물">수산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=간식">떡·쿠키·간식</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=음료">커피·차·음료</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=건강식품">건강식품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=반찬/밀키트">김치·반찬·밀키트</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=양념/소스">양념·소스·장류</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=LIVING">🛒 생활용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=생활용품">🛒 생활용품</a>
 <div class="u-nav-popup"style="
     left: 137px;
     top: 0px;
 ">
 <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
-<li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=QT">방역</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=DECO">홈데코</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=BEAU">세안·뷰티</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=BABY">유아용품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=KITCH">주방용품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=CLEAN">청소·세탁용품</a>
+<li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=방역">방역</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=홈데코">홈데코</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=뷰티">세안·뷰티</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=유아용품">유아용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=주방용품">주방용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=청소세탁용폼">청소·세탁용품</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=ECO">🌳 친환경 (click X)</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FASHION">👕 패션/잡화</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=HEALTH">💪🏻 헬스·건강</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FLOWER">🌼 꽃·화훼</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FUR">🪑 가구</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistkeyword.do?keyword=ECO">🌳 친환경</a> <!-- 친환경 href 예외처리 (김원경) -->
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=패션">👕 패션/잡화</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=헬스건강">💪🏻 헬스·건강</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=가구">🪑 가구</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">인기상품</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">공지사항</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">기업유형</a>
+
+<div class="u-nav-popup">
+            <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+            <li class="u-nav-item">
+            <a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=A">(예비)사회적기업</a>
+</li>
+	<li class="u-nav-item">
+	<a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=B">협동조합</a>
+</li>
+	<li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=C">마을기업</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=D">장애인기업</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=E">여성기업</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=F">자활기업</a>
+</li>
+</ul>
+</div>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">게시판</a>
+
+<div class="u-nav-popup">
+            <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+            <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="">공지사항</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=review">리뷰게시판</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=qna">문의게시판</a>
+</li>
+</ul>
+</div>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="godonation.do" style="padding: 10px 48px;">기부</a>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">ABOUT - 나누민족</a>
 </li></ul>
@@ -296,13 +314,7 @@
                    
                    
                     <a href="#" class="u-border-2 u-border-white u-btn u-btn-round u-button-style u-hover-custom-color-2 u-palette-4-dark-1 u-radius-6 u-text-hover-white u-btn-1">바로 구매</a>
-                    
-                 
-                    
-                    
-                    
-                    
-                    <a onclick="alert('장바구니로 이동')" href="gocartform.do" class="u-align-center u-border-2 u-border-hover-palette-4-dark-2 u-border-palette-4-dark-2 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-2">장바구니</a>
+                    <a onclick="alert('장바구니로 이동')" href="gocartform.do?prod_id=<%=detail.getProd_id() %>" class="u-align-center u-border-2 u-border-hover-palette-4-dark-2 u-border-palette-4-dark-2 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-2">장바구니</a>
                     <a onclick="alert('관심상품등록 완료')" href="gowishListform.do" class="u-border-2 u-border-hover-palette-4-dark-2 u-border-palette-4-dark-2 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-3">관심상품</a>
                   </div>
                 </div>
@@ -320,9 +332,14 @@
               <div class="u-container-style u-layout-cell u-size-43 u-layout-cell-1">
                 <div class="u-container-layout u-container-layout-1">
                   <div class="u-border-1 u-border-grey-40 u-line u-line-horizontal u-line-1"></div>
+<<<<<<< HEAD
                   
                   <div><a href="#detail" class="u-border-2 u-border-hover-palette-4-light-3 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-1">상세설명</a>
                   <a href="#review" class="u-border-2 u-border-hover-palette-4-light-3 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-2">구매후기 ( 1 )</a>
+=======
+                  <a href="#detail" class="u-border-2 u-border-hover-palette-4-light-3 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-1">상세설명</a>
+                  <a href="#review" class="u-border-2 u-border-hover-palette-4-light-3 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-2">구매후기 ( <%= list.size() %> ) </a>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-BigData2/Zoo.git
                   <a href="#Qbuy" class="u-border-2 u-border-hover-palette-4-light-3 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-3">구매문의 ( 1 )</a>
                   <a href="https://nicepage.com/c/contact-form-html-templates" class="u-border-2 u-border-hover-palette-4-light-3 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-4">상품구매안내</a>
                   </div>
@@ -344,7 +361,7 @@
                       <div class="u-clearfix u-group-elements u-group-elements-2">
                         <h6 class="u-text u-text-default u-text-grey-80 u-text-4">판매<span style="font-weight: 700;"></span>가
                         </h6>
-                        <h6 class="u-align-right u-text u-text-grey-80 u-text-5"><%=detail.getProd_price() %></h6>
+                        <h6 class="u-align-right u-text u-text-grey-80 u-text-5"><%=detail.getProd_price() %>원</h6>
                       </div>
                       <div class="u-border-1 u-border-grey-40 u-container-style u-group u-palette-5-light-3 u-group-2">
                         <div class="u-container-layout u-container-layout-4">
@@ -366,15 +383,15 @@
                               </div>
                             </div>
                           </div>
-                          <h6 class="u-align-right u-text u-text-grey-80 u-text-8"><%=detail.getProd_price() %></h6>
+                          <h6 class="u-align-right u-text u-text-grey-80 u-text-8"><%=detail.getProd_price() %>원</h6>
                         </div>
                       </div>
                       <div class="u-clearfix u-group-elements u-group-elements-3">
-                        <h6 class="u-align-right u-text u-text-grey-80 u-text-9"><%=detail.getProd_price() %></h6>
+                        <h6 class="u-align-right u-text u-text-grey-80 u-text-9"><%=detail.getProd_price() %>원</h6>
                         <h6 class="u-text u-text-default u-text-grey-80 u-text-10">합계금액</h6>
                       </div>
                       <a onclick="alert('결제창 이동')" href="#" class="u-border-2 u-border-white u-btn u-btn-round u-button-style u-hover-custom-color-2 u-palette-4-dark-1 u-radius-6 u-text-hover-white u-btn-5">바로 구매</a>
-                      <a onclick="alert('장바구니로 이동')" href="gocartform.do" class="u-border-2 u-border-hover-palette-4-dark-2 u-border-palette-4-dark-2 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-6">장바구니</a>
+                      <a onclick="alert('장바구니로 이동')" href="gocartform.do?prod_id=<%=detail.getProd_id() %>" class="u-border-2 u-border-hover-palette-4-dark-2 u-border-palette-4-dark-2 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-6">장바구니</a>
                       <a onclick="alert('관심상품등록완료')" href="gowishListform.do" class="u-border-2 u-border-hover-palette-4-dark-2 u-border-palette-4-dark-2 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-7">관심상품</a>
                     </div>
                   </div>
@@ -390,14 +407,24 @@
         <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
           <div class="u-layout">
             <div class="u-layout-row">
+            &nbsp;
+            &nbsp;
               <div class="u-container-style u-layout-cell u-size-43 u-layout-cell-1">
                 <div class="u-container-layout u-container-layout-1">
-                  <h6 class="u-text u-text-default u-text-1" id="review">구매후기 ( 1 )</h6>
-                  <div class="u-border-1 u-border-grey-40 u-expanded-width u-line u-line-horizontal u-line-1"></div>
-                  <h5 class="u-text u-text-default u-text-palette-3-base u-text-2"> ★★★★★</h5>
-                  <h6 class="u-text u-text-default u-text-3">박주* </h6>
-                  <h6 class="u-text u-text-default u-text-4">2022.12.20</h6>
-                  <h6 class="u-text u-text-default u-text-5">일단 맛은 있어요 살도 잘 빠졌으면 좋겠네요~</h6>
+                  <h6 class="u-text u-text-default u-text-1" id="review">구매후기 ( <%= list.size() %> ) ★ <%=avg %></h6>
+                  <% for (ZooBoard board : list) { 
+                	  int j = 1;
+                  %>
+                  <div class="u-border-1 u-border-grey-40 u-expanded-width u-line u-line-horizontal u-line-<%= j%>"></div>
+                  <% j=j+1; %>
+                  <h5 class="u-text u-text-default u-text-palette-3-base u-text-<%=j%>"> ★ <%=board.getRe_score() %></h5>
+                  <% j=j+1; %>
+                  <h6 class="u-text u-text-default u-text-<%= j%>"><%=board.getCust_id() %></h6>
+                  <% j=j+1; %>
+                  <h6 class="u-text u-text-default u-text-<%= j%>"><%=board.getRe_dt() %></h6>
+                  <% j=j+1; %>
+                  <h6 class="u-text u-text-default u-text-<%= j%>"><%=board.getRe_title() %></h6>
+                  	<% } %>
                   <div class="u-border-1 u-border-grey-40 u-expanded-width u-line u-line-horizontal u-line-2"></div>
                   <div class="u-align-center u-border-1 u-border-palette-5-light-1 u-container-style u-group u-group-1">
                     <div class="u-container-layout">
@@ -405,8 +432,8 @@
                     </div>
                   </div>
                   <div class="u-clearfix u-group-elements u-group-elements-1">
-                    <a href="https://nicepage.com/one-page-template" class="u-border-2 u-border-hover-palette-5-dark-2 u-border-palette-5-dark-2 u-btn u-button-style u-hover-grey-5 u-none u-text-black u-btn-1">상품후기 전체보기</a>
-                    <a href="https://nicepage.com/one-page-template" class="u-border-2 u-border-hover-palette-5-dark-2 u-border-palette-5-dark-2 u-btn u-button-style u-hover-grey-5 u-none u-text-black u-text-hover-black u-btn-2">상품후기 글쓰기</a>
+                    <a href="viewReviewPage.do" class="u-border-2 u-border-hover-palette-5-dark-2 u-border-palette-5-dark-2 u-btn u-button-style u-hover-grey-5 u-none u-text-black u-btn-1">상품후기 전체보기</a>
+                    <a href="writeReviewPage.do" class="u-border-2 u-border-hover-palette-5-dark-2 u-border-palette-5-dark-2 u-btn u-button-style u-hover-grey-5 u-none u-text-black u-text-hover-black u-btn-2">상품후기 글쓰기</a>
                   </div>
                 </div>
               </div>
@@ -460,15 +487,15 @@
 c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
           </a>
           <a class="u-social-url" title="twitter" target="_blank" href="https://twitter.com/name"><span class="u-icon u-social-icon u-social-twitter u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-04cb"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-04cb"><path fill="currentColor" d="M92.2,38.2c0,0.8,0,1.6,0,2.3c0,24.3-18.6,52.4-52.6,52.4c-10.6,0.1-20.2-2.9-28.5-8.2
-	c1.4,0.2,2.9,0.2,4.4,0.2c8.7,0,16.7-2.9,23-7.9c-8.1-0.2-14.9-5.5-17.3-12.8c1.1,0.2,2.4,0.2,3.4,0.2c1.6,0,3.3-0.2,4.8-0.7
-	c-8.4-1.6-14.9-9.2-14.9-18c0-0.2,0-0.2,0-0.2c2.5,1.4,5.4,2.2,8.4,2.3c-5-3.3-8.3-8.9-8.3-15.4c0-3.4,1-6.5,2.5-9.2
-	c9.1,11.1,22.7,18.5,38,19.2c-0.2-1.4-0.4-2.8-0.4-4.3c0.1-10,8.3-18.2,18.5-18.2c5.4,0,10.1,2.2,13.5,5.7c4.3-0.8,8.1-2.3,11.7-4.5
-	c-1.4,4.3-4.3,7.9-8.1,10.1c3.7-0.4,7.3-1.4,10.6-2.9C98.9,32.3,95.7,35.5,92.2,38.2z"></path></svg></span>
+   c1.4,0.2,2.9,0.2,4.4,0.2c8.7,0,16.7-2.9,23-7.9c-8.1-0.2-14.9-5.5-17.3-12.8c1.1,0.2,2.4,0.2,3.4,0.2c1.6,0,3.3-0.2,4.8-0.7
+   c-8.4-1.6-14.9-9.2-14.9-18c0-0.2,0-0.2,0-0.2c2.5,1.4,5.4,2.2,8.4,2.3c-5-3.3-8.3-8.9-8.3-15.4c0-3.4,1-6.5,2.5-9.2
+   c9.1,11.1,22.7,18.5,38,19.2c-0.2-1.4-0.4-2.8-0.4-4.3c0.1-10,8.3-18.2,18.5-18.2c5.4,0,10.1,2.2,13.5,5.7c4.3-0.8,8.1-2.3,11.7-4.5
+   c-1.4,4.3-4.3,7.9-8.1,10.1c3.7-0.4,7.3-1.4,10.6-2.9C98.9,32.3,95.7,35.5,92.2,38.2z"></path></svg></span>
           </a>
           <a class="u-social-url" title="instagram" target="_blank" href="https://instagram.com/name"><span class="u-icon u-social-icon u-social-instagram u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-7561"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-7561"><path fill="currentColor" d="M55.9,32.9c-12.8,0-23.2,10.4-23.2,23.2s10.4,23.2,23.2,23.2s23.2-10.4,23.2-23.2S68.7,32.9,55.9,32.9z
-	 M55.9,69.4c-7.4,0-13.3-6-13.3-13.3c-0.1-7.4,6-13.3,13.3-13.3s13.3,6,13.3,13.3C69.3,63.5,63.3,69.4,55.9,69.4z"></path><path fill="#FFFFFF" d="M79.7,26.8c-3,0-5.4,2.5-5.4,5.4s2.5,5.4,5.4,5.4c3,0,5.4-2.5,5.4-5.4S82.7,26.8,79.7,26.8z"></path><path fill="currentColor" d="M78.2,11H33.5C21,11,10.8,21.3,10.8,33.7v44.7c0,12.6,10.2,22.8,22.7,22.8h44.7c12.6,0,22.7-10.2,22.7-22.7
-	V33.7C100.8,21.1,90.6,11,78.2,11z M91,78.4c0,7.1-5.8,12.8-12.8,12.8H33.5c-7.1,0-12.8-5.8-12.8-12.8V33.7
-	c0-7.1,5.8-12.8,12.8-12.8h44.7c7.1,0,12.8,5.8,12.8,12.8V78.4z"></path></svg></span>
+    M55.9,69.4c-7.4,0-13.3-6-13.3-13.3c-0.1-7.4,6-13.3,13.3-13.3s13.3,6,13.3,13.3C69.3,63.5,63.3,69.4,55.9,69.4z"></path><path fill="#FFFFFF" d="M79.7,26.8c-3,0-5.4,2.5-5.4,5.4s2.5,5.4,5.4,5.4c3,0,5.4-2.5,5.4-5.4S82.7,26.8,79.7,26.8z"></path><path fill="currentColor" d="M78.2,11H33.5C21,11,10.8,21.3,10.8,33.7v44.7c0,12.6,10.2,22.8,22.7,22.8h44.7c12.6,0,22.7-10.2,22.7-22.7
+   V33.7C100.8,21.1,90.6,11,78.2,11z M91,78.4c0,7.1-5.8,12.8-12.8,12.8H33.5c-7.1,0-12.8-5.8-12.8-12.8V33.7
+   c0-7.1,5.8-12.8,12.8-12.8h44.7c7.1,0,12.8,5.8,12.8,12.8V78.4z"></path></svg></span>
           </a>
         </div>
         <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
@@ -513,14 +540,6 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
       </div></footer>
     <section class="u-backlink u-clearfix u-grey-80">
       <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
-        <span>Website Templates</span>
-      </a>
-      <p class="u-text">
-        <span>created with</span>
-      </p>
-      <a class="u-link" href="" target="_blank">
-        <span>Website Builder Software</span>
-      </a>. 
     </section>
   
 </body></html>

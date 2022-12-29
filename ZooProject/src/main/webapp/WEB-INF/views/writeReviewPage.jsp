@@ -1,3 +1,4 @@
+<%@page import="com.zoo.entity.ZooProductList"%>
 <%@page import="com.zoo.entity.ZooMember"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -38,6 +39,7 @@
   </head>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><div class="u-clearfix u-sheet u-sheet-1">
   <% ZooMember user =(ZooMember)session.getAttribute("user"); %>
+  <%ZooProductList detail = (ZooProductList)session.getAttribute("detail"); %>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
   <div class="u-clearfix u-sheet u-sheet-1">
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
@@ -224,12 +226,12 @@
                     <div class="u-layout-row">
                       <div class="u-container-style u-layout-cell u-size-20 u-layout-cell-2">
                         <div class="u-border-1 u-border-grey-40 u-container-layout u-container-layout-3">
-                          <img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/pd_4.jpg" alt="" data-image-width="600" data-image-height="600">
+                          <img class="u-image u-image-default u-preserve-proportions u-image-1" src="<%=detail.getProd_main_img() %>" alt="" data-image-width="600" data-image-height="600">
                         </div>
                       </div>
                       <div class="u-container-style u-layout-cell u-size-40 u-layout-cell-3">
                         <div class="u-border-1 u-border-grey-40 u-container-layout u-container-layout-4">
-                          <h5 class="u-text u-text-2">마카롱꼬끄 100% 아몬드 가루<br>마카롱 쿠키
+                          <h5 class="u-text u-text-2"><%=detail.getProd_name() %>
                           </h5>
                           <div class="u-clearfix u-custom-html u-custom-html-1">
                             <meta charset="UTF-8">
@@ -237,20 +239,19 @@
                             <meta name="viewport" content="width=device-width, initial-scale=1.0">
                             <title></title>
                             <link rel="stylesheet" href="writeReviewPage.css">
-                            <form name="myform" id="myform" method="post" action="./save">
+              <form action="write.do" method="post" enctype="multipart/form-data" source="email" name="form" style="padding: 10px;">                
                               <fieldset>
-                                <input type="radio" name="rating" value="5" id="rate1">
-                                <label for="rate1">⭐</label>
-                                <input type="radio" name="rating" value="4" id="rate2">
-                                <label for="rate2">⭐</label>
-                                <input type="radio" name="rating" value="3" id="rate3">
-                                <label for="rate3">⭐</label>
-                                <input type="radio" name="rating" value="2" id="rate4">
-                                <label for="rate4">⭐</label>
                                 <input type="radio" name="rating" value="1" id="rate5">
-                                <label for="rate5">⭐</label>
+                                <label for="rate5">⭐1</label>
+                                <input type="radio" name="rating" value="2" id="rate4">
+                                <label for="rate4">⭐2</label>
+                                <input type="radio" name="rating" value="3" id="rate3">
+                                <label for="rate3">⭐3</label>
+                                <input type="radio" name="rating" value="4" id="rate2">
+                                <label for="rate2">⭐4</label>
+                                <input type="radio" name="rating" value="5" id="rate1">
+                                <label for="rate1">⭐5</label>
                               </fieldset>
-                            </form>
                           </div>
                         </div>
                       </div>
@@ -260,7 +261,7 @@
               </div>
             </div>
             <div class="u-form u-form-1">
-              <form action="write.do" method="post" enctype="multipart/form-data" source="email" name="form" style="padding: 10px;">                <div class="u-form-group u-label-none u-form-group-1">
+              <div class="u-form-group u-label-none u-form-group-1">
                   <label for="text-ec9f" class="u-label">Input</label>
                   <input type="text" placeholder="제목" id="text-ec9f" name="title" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
                 </div>
