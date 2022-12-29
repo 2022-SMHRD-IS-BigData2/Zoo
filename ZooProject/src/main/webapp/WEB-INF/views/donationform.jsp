@@ -98,7 +98,11 @@ In-Demand Professions, ​Top ten most popular courses for international student
           </button>
           <input class="u-search-input" type="search" name="search" value="" placeholder="Search">
         </form>
-        <a href="gomainpage.do" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200"  title="메인페이지" >
+        <a href="gomainpage.do" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200"  title="메인페이지" style="
+    position: relative;
+    top: 0px;
+    left: 50px;
+">
           <img src="images/logo.png" class="u-logo-image u-logo-image-1" >
         </a>
         
@@ -123,7 +127,10 @@ In-Demand Professions, ​Top ten most popular courses for international student
             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
             <li class="u-nav-item">
             <a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FOOD">🍴 식품</a>
-            <div class="u-nav-popup">
+            <div class="u-nav-popup"style="
+    left: 137px;
+    top: 0px;
+">
             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
      <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=NS">농산물</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=CS">축산물</a>
@@ -136,7 +143,10 @@ In-Demand Professions, ​Top ten most popular courses for international student
 </li></ul>
 </div>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=LIVING">🛒 생활용품</a>
-<div class="u-nav-popup">
+<div class="u-nav-popup"style="
+    left: 137px;
+    top: 0px;
+">
 <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
 <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=QT">방역</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=DECO">홈데코</a>
