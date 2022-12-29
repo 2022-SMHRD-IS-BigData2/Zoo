@@ -1,3 +1,6 @@
+<%@page import="com.zoo.entity.ZooWishList"%>
+<%@page import="java.util.List"%>
+<%@page import="com.zoo.entity.ZooProductList"%>
 <%@page import="com.zoo.entity.ZooMember"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -39,9 +42,10 @@
   
     <%	
   ZooMember user = (ZooMember)session.getAttribute("user");
-  		
+  	List<ZooProductList>result = (List<ZooProductList>)session.getAttribute("wishlist"); 
+  	
   %>
-  
+  <%ZooProductList detail = (ZooProductList)session.getAttribute("detail"); %>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
   <div class="u-clearfix u-sheet u-sheet-1">
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
@@ -228,7 +232,7 @@
             <div class="u-container-style u-group u-shape-rectangle u-group-3">
               <div class="u-container-layout u-container-layout-3"><span class="u-align-left u-file-icon u-icon u-icon-2"><img src="images/user.png" alt=""></span>
                 <p class="u-align-center u-text u-text-3">
-                  <span style="font-size: 1.5rem;"><b>안​녕하세요 smart 님!</b>
+                  <span style="font-size: 1.5rem;"><b>안​녕하세요 <%=user.getCust_name() %> 님!</b>
                   </span>
                   <br>
                   <span style="font-size: 1.125rem;">고객님의 회원등급은 <span style="font-weight: 700;">SILVER</span>
@@ -298,14 +302,15 @@
                   <div class="u-clearfix u-custom-html u-custom-html-1">
                     <input type="checkbox">
                   </div>
+                  <%for(int i =0; i<result.size();i++){ %>
                   <div class="u-border-2 u-border-grey-60 u-line u-line-horizontal u-line-2"></div>
                   <div class="u-container-style u-group u-shape-rectangle u-group-2">
                     <div class="u-container-layout u-container-layout-4">
-                      <img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/pd_4.jpg" alt="" data-image-width="600" data-image-height="600">
+                      <img class="u-image u-image-default u-preserve-proportions u-image-1" src="<%=result.get(i).getProd_img() %>" alt="" data-image-width="600" data-image-height="600">
                       <div class="u-container-style u-group u-group-3">
                         <div class="u-container-layout">
-                          <h6 class="u-text u-text-14">틔움긴생각</h6>
-                          <h6 class="u-text u-text-15"> 마카롱꼬끄 후레이크 100%아몬드 가루로 만든 마카롱쿠키 답례품 틔움긴생각</h6>
+                          <h6 class="u-text u-text-14"></h6>
+                          <h6 class="u-text u-text-15"><%=result.get(i).getProd_name() %></h6>
                           <p class="u-text u-text-palette-5-dark-1 u-text-16">옵션 : 없음</p>
                         </div>
                       </div>
@@ -313,7 +318,7 @@
                       <div class="u-clearfix u-custom-html u-custom-html-2">
                         <input type="checkbox">
                       </div>
-                      <h6 class="u-text u-text-17">5,000 원</h6>
+                      <h6 class="u-text u-text-17"><%=result.get(i).getProd_price() %></h6>
                       <a href="https://nicepage.com/templates" class="u-border-2 u-border-grey-75 u-btn u-btn-round u-button-style u-hover-palette-5-light-1 u-palette-5-light-2 u-radius-6 u-btn-3">상품 삭제</a>
                       <div class="u-border-1 u-border-palette-5-light-1 u-line u-line-horizontal u-line-3"></div>
                     </div>
@@ -330,6 +335,7 @@
           </div>
         </div>
       </div>
+      <%} %>
     </section>
     
 <footer class="u-align-center u-clearfix u-footer u-gradient u-footer" id="sec-e204"><div class="u-clearfix u-sheet u-sheet-1">
