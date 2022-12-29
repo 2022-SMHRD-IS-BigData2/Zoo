@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.zoo.entity.ZooBoard">
+<mapper namespace="com.zoo.dao.ZooBoardDAO">
 
    <select id="boardList" resultType="com.zoo.entity.ZooBoard">
       select * from tbl_board_r
+      where cust_id=#{cust_id}
+      order by re_seq
+      
    </select>
 
 <!-- =============================================================== -->
@@ -12,11 +15,11 @@
       insert into tbl_board_r
       values(
          board_num_seq.nextval,
-         #{title},
-         #{content},
-         #{img, jdbcType=VARCHAR},
+         #{re_title},
+         #{re_content},
+         #{re_file, jdbcType=VARCHAR},
          sysdate,
-         #{writer},
+         #{cust_id},
          1,
          1,
          1
@@ -28,7 +31,7 @@
    <!-- 집어넣을 데이터가 한개라면, parameterType을 적지않아도 된다. -->
    <select id="boardView" resultType="com.zoo.entity.ZooBoard">
       select * from tbl_board_r
-      where num = #{num}
+      where re_seq = #{re_seq}
    </select>
 
 <!-- =============================================================== -->

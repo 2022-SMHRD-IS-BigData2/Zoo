@@ -13,9 +13,15 @@ public class ZooBoardDAO {
 	SqlSessionFactory sqlSessionFactory = SessionManager.getSqlSessionFactory();
 	
 	// 1. 게시글 전체 조회
-	public List<ZooBoard> boardList() {
+//	public List<ZooBoard> boardList() {
+//		SqlSession session = sqlSessionFactory.openSession(true);
+//		List<ZooBoard> list = session.selectList("boardList");
+//		session.close();
+//		return list;
+//	}
+	public List<ZooBoard> boardList(String id) {
 		SqlSession session = sqlSessionFactory.openSession(true);
-		List<ZooBoard> list = session.selectList("boardList");
+		List<ZooBoard> list = session.selectList("boardList",id);
 		session.close();
 		return list;
 	}
