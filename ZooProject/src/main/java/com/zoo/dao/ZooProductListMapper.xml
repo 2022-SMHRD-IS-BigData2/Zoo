@@ -83,7 +83,7 @@
 	   AND RNUM <![CDATA[<]]> #{page} * 10 +  1
 	</select>
 	 -->
-	 
+
 	<!-- 7. 상품정렬하기 - 낮은가격순 -->
 	<!-- category 정보 수집해서 출력 -->
 	<select id="category_loprice"
@@ -127,6 +127,7 @@
 		where prod_keyword1 = 'ECO'
 		order by prod_price	desc
 	</select>
+
 
 
 </mapper>
