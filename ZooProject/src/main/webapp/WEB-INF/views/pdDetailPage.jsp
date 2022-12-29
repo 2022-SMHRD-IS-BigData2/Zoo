@@ -41,15 +41,16 @@
     
   </head>
   <% ZooMember user = (ZooMember)session.getAttribute("user"); %>
-  
-  <%List<ZooBoard> list= (List<ZooBoard>)session.getAttribute("dlist");
-  double avg = 0;
-  for( ZooBoard board : list){
-	  avg += board.getRe_score();
-  }
-  avg = avg / list.size();
-  %>
+
   <% ZooProductList detail = (ZooProductList)session.getAttribute("detail"); %>
+  
+  <% List<ZooBoard> list= (List<ZooBoard>)session.getAttribute("dlist");
+  		double avg = 0;
+  		for( ZooBoard board : list){
+	 		 avg += board.getRe_score();
+ 			 }
+ 		 avg = avg / list.size();
+  %>
   
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
   
@@ -404,7 +405,7 @@
                 <div class="u-container-layout u-container-layout-1">
                   <h6 class="u-text u-text-default u-text-1" id="review">구매후기 ( <%= list.size() %> )</h6>
                   <div class="u-border-1 u-border-grey-40 u-expanded-width u-line u-line-horizontal u-line-1"></div>
-                  <h5 class="u-text u-text-default u-text-palette-3-base u-text-2"> ★ <%=avg %></h5>
+                  <h5 class="u-text u-text-default u-text-palette-3-base u-text-2"> ★ <%=avg %> </h5>
                   <h6 class="u-text u-text-default u-text-3">박주빈</h6>
                   <h6 class="u-text u-text-default u-text-4">2022.12.20</h6>
                   <h6 class="u-text u-text-default u-text-5">일단 맛은 있어요 살도 잘 빠졌으면 좋겠네요~</h6>

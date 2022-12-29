@@ -19,7 +19,6 @@ public class ZooPdListSellerTypeCon implements ZooController {
 			throws ServletException, IOException {
 
 		System.out.println("ZooPdListSellerTypeCon execute() 호출");
-
 		// Encoding
 		request.setCharacterEncoding("UTF-8");
 
@@ -42,8 +41,6 @@ public class ZooPdListSellerTypeCon implements ZooController {
 		case "F" : seller = "자활기업";
 				break;
 		}
-		
-		
 		// set Parameter --> ZooSeller Object
 		ZooSeller dto = new ZooSeller();
 		dto.setSeller_type(sellerType);
