@@ -3,6 +3,7 @@ package com.zoo.entity;
 public class ZooWishList {
 private String prod_id = "";
 private String cust_id = "";
+
 public String getProd_id() {
 	return prod_id;
 }
