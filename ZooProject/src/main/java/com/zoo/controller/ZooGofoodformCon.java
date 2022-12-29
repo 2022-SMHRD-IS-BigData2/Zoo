@@ -29,7 +29,7 @@ public class ZooGofoodformCon implements ZooController {
 		ZooProductList dto = new ZooProductList();
 		
 		dto.setProd_category(category);
-		System.out.println(category + "로 이동");
+		System.out.println(category + "(으)로 이동");
 
 		// DAO 객체 생성
 		ZooProductListDAO dao = new ZooProductListDAO();

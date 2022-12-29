@@ -82,20 +82,42 @@
 		parameterType="com.zoo.entity.ZooProductList"
 		resultType="com.zoo.entity.ZooProductList">
 		select *
-		from tbl_product
+		from TBL_PRODUCT
 		where prod_category = #{prod_category}
-		order by prod_price;		
+		order by prod_price
 	</select>
 	
 	<!-- 8. 상품정렬하기 - 높은가격순 -->
 	<!-- category 정보 수집해서 출력 -->
-	<select id="category_loprice"
+	<select id="category_hiprice"
 		parameterType="com.zoo.entity.ZooProductList"
 		resultType="com.zoo.entity.ZooProductList">
 		select *
 		from tbl_product
 		where prod_category = #{prod_category}
-		order by prod_price desc;		
+		order by prod_price desc	
+	</select>
+	
+	<!-- 9. 상품정렬하기 - 낮은가격순 -->
+	<!-- 친환경제품 -->
+	<select id="pdEco_loprice"
+		parameterType="com.zoo.entity.ZooProductList"
+		resultType="com.zoo.entity.ZooProductList">
+		select *
+		from tbl_product
+		where prod_keyword1 = 'ECO'
+		order by prod_price	
+	</select>
+	
+	<!-- 9. 상품정렬하기 - 낮은가격순 -->
+	<!-- 친환경제품 -->
+	<select id="pdEco_hiprice"
+		parameterType="com.zoo.entity.ZooProductList"
+		resultType="com.zoo.entity.ZooProductList">
+		select *
+		from tbl_product
+		where prod_keyword1 = 'ECO'
+		order by prod_price	desc
 	</select>
 
 

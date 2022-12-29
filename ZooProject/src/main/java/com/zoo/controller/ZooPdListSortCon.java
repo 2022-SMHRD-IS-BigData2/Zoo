@@ -19,28 +19,46 @@ public class ZooPdListSortCon implements ZooController {
 
 		System.out.println("ZooPdListSortCon execute() 호출");
 		request.setCharacterEncoding("UTF-8");
-		
-		String sort = request.getParameter("sort");
-		System.out.println(sort);
-		
-		ZooProductList dto = new ZooProductList();
-		
-		List<ZooProductList> list = (List<ZooProductList>) request.getAttribute("list");
 
-		dto.setProd_category(list.get(0).getProd_category());
-		
-		ZooProductListDAO dao = new ZooProductListDAO();
-		
-		if (sort.equals("low")) {
-			list = dao.pdLoPrice(dto);
-			
-		} else if (sort.equals("hi")) {
-			list = dao.pdHiPrice(dto);
-		}
+		String sort = request.getParameter("sort");
+		String cate = request.getParameter("cate");
+		String eco = request.getParameter("eco");
+		System.out.println(sort);
+		System.out.println(cate);
+		System.out.println(eco);
+
+		ZooProductList dto = new ZooProductList();
+		dto.setProd_category(cate);
 
 		HttpSession session = request.getSession();
-		session.setAttribute("list", list);
-		
+
+		// dto.setProd_category(list.get(0).getProd_category());
+
+		ZooProductListDAO dao = new ZooProductListDAO();
+
+		if (eco.equals("ECO")) {
+			dto.setProd_keyword1("ECO");
+
+			if (sort.equals("low")) {
+				List<ZooProductList> list = dao.pdEcoLoPrice(dto);
+				System.out.println(list.size());
+				session.setAttribute("list", list);
+				request.setAttribute("keywordEco", "ECO");
+
+			} else if (sort.equals("hi")) {
+				List<ZooProductList> list = dao.pdEcoHiPrice(dto);
+				session.setAttribute("list", list);
+				request.setAttribute("keywordEco", "ECO");
+			}
+		} else if (sort.equals("low")) {
+			List<ZooProductList> list = dao.pdLoPrice(dto);
+			session.setAttribute("list", list);
+			
+		} else if (sort.equals("hi")) {
+			List<ZooProductList> list = dao.pdHiPrice(dto);
+			session.setAttribute("list", list);
+		}
+
 		return "foodform";
 	}
 
