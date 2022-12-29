@@ -126,45 +126,69 @@
             <div class="u-nav-popup">
             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
             <li class="u-nav-item">
-            <a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FOOD">🍴 식품</a>
+            <a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=식품">🍴 식품</a>
             <div class="u-nav-popup"style="
     left: 137px;
     top: 0px;
 ">
             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
-     <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=NS">농산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=CS">축산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=SS">수산물</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=SNACK">떡·쿠키·간식</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=DRINK">커피·차·음료</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=HFOOD">건강식품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=MK">김치·반찬·밀키트</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=SOURCE">양념·소스·장류</a>
+     <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=농산물">농산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=축산물">축산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=수산물">수산물</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=간식">떡·쿠키·간식</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=음료">커피·차·음료</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=건강식품">건강식품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=반찬/밀키트">김치·반찬·밀키트</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=양념/소스">양념·소스·장류</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=LIVING">🛒 생활용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=생활용품">🛒 생활용품</a>
 <div class="u-nav-popup"style="
     left: 137px;
     top: 0px;
 ">
 <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
-<li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=QT">방역</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=DECO">홈데코</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=BEAU">세안·뷰티</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=BABY">유아용품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=KITCH">주방용품</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=CLEAN">청소·세탁용품</a>
+<li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=방역">방역</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=홈데코">홈데코</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=뷰티">세안·뷰티</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=유아용품">유아용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=주방용품">주방용품</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="goPdListCate2.do?category2=청소세탁용폼">청소·세탁용품</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=ECO">🌳 친환경 (click X)</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FASHION">👕 패션/잡화</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=HEALTH">💪🏻 헬스·건강</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FLOWER">🌼 꽃·화훼</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=FUR">🪑 가구</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistkeyword.do?keyword=ECO">🌳 친환경</a> <!-- 친환경 href 예외처리 (김원경) -->
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=패션">👕 패션/잡화</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=헬스건강">💪🏻 헬스·건강</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=가구">🪑 가구</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">인기상품</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">공지사항</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">기업유형</a>
+
+<div class="u-nav-popup">
+            <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+            <li class="u-nav-item">
+            <a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=A">(예비)사회적기업</a>
+</li>
+	<li class="u-nav-item">
+	<a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=B">협동조합</a>
+</li>
+	<li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=C">마을기업</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=D">장애인기업</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=E">여성기업</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gopdlistsellertype.do?sellertype=F">자활기업</a>
+</li>
+</ul>
+</div>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">게시판</a>
+
+<div class="u-nav-popup">
+            <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+            <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="">공지사항</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=review">리뷰게시판</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=qna">문의게시판</a>
+</li>
+</ul>
+</div>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="godonation.do" style="padding: 10px 48px;">기부</a>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">ABOUT - 나누민족</a>
 </li></ul>
@@ -265,7 +289,6 @@
                         </div>
                       </div>
                       <h6 class="u-align-right u-text u-text-grey-80 u-text-10"></h6>
-                      <h4 class="u-text u-text-default u-text-11"> 빠지는 죽 늙은호박 1박스 (150g*14ea)</h4>
 
                       <!-- 사이드 쪽  -->
                       <h6 class="u-align-right u-text u-text-grey-80 u-text-10"></h6>
@@ -351,7 +374,7 @@
                         <h6 class="u-text u-text-default u-text-grey-80 u-text-10">합계금액</h6>
                       </div>
                       <a onclick="alert('결제창 이동')" href="#" class="u-border-2 u-border-white u-btn u-btn-round u-button-style u-hover-custom-color-2 u-palette-4-dark-1 u-radius-6 u-text-hover-white u-btn-5">바로 구매</a>
-                      <a onclick="alert('장바구니로 이동')" href="gocartform.do" class="u-border-2 u-border-hover-palette-4-dark-2 u-border-palette-4-dark-2 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-6">장바구니</a>
+                      <a onclick="alert('장바구니로 이동')" href="gocartform.do?prod_id=<%=detail.getProd_id() %>" class="u-border-2 u-border-hover-palette-4-dark-2 u-border-palette-4-dark-2 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-6">장바구니</a>
                       <a onclick="alert('관심상품등록완료')" href="gowishListform.do" class="u-border-2 u-border-hover-palette-4-dark-2 u-border-palette-4-dark-2 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-7">관심상품</a>
                     </div>
                   </div>

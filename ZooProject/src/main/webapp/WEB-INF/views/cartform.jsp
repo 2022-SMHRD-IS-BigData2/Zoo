@@ -36,11 +36,9 @@
     <meta property="og:title" content="cartPage">
     <meta property="og:type" content="website">
   </head>
-   <%	
-  ZooMember user =(ZooMember)session.getAttribute("user");
-  		
-  %>
-  <% List<ZooProductList> pdlist =(List<ZooProductList>)session.getAttribute("list"); %>
+   <% ZooMember user =(ZooMember)session.getAttribute("user"); %>
+   <% List<ZooProductList> pdlist =(List<ZooProductList>)session.getAttribute("list"); %>
+   
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
   <div class="u-clearfix u-sheet u-sheet-1">
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
@@ -212,9 +210,9 @@
       <section class="cart">
         <div class="cart__information">
             <ul>
-                <li>장바구니 상품은 최대 30일간 저장됩니다.</li>
+                <li>장바구니 상품은 삭제할 때까지 저장됩니다.</li>
                 <li>가격, 옵션 등 정보가 변경된 경우 주문이 불가할 수 있습니다.</li>
-                <li>오늘출발 상품은 판매자 설정 시점에 따라 오늘출발 여부가 변경될 수 있으니 주문 시 꼭 다시 확인해 주시기 바랍니다.</li>
+                <li>주문 시 주문내역을 꼭 다시 확인해 주시기 바랍니다.</li>
             </ul>
         </div>
         <table class="cart__list" align="center">
@@ -230,60 +228,42 @@
                     </tr>
                 </thead>
                 <tbody>
+                	<% int sum = 0; %>
+                    <% for (int i = 0; i < pdlist.size(); i ++) { %>
+                    <% // 합계 금액 구하기
+                    	sum += (int) pdlist.get(i).getProd_price(); %>
                     <tr class="cart__list__detail">
+                    
                         <td><input type="checkbox"></td>
-                        <td><img src="https://contents.lotteon.com/itemimage/_v150350/LO/19/60/56/81/17/_1/96/05/68/11/8/LO1960568117_1960568118_1.jpg/dims/resize/256x256" alt="magic cat"></td>
-                        <td><a href="#">냥냥이 공식 브랜드스토어</a><span class="cart__list__smartstore"> 냥냥이스토어</span>
-                            <p>냥냥이가 환장하는 개 쩌는 장난감</p>
-                            <sapn class="price">5,000원</sapn>
-                            <span
-                                style="text-decoration: line-through; color: lightgray;">119,000</span>
+                        <td><img src="<%=pdlist.get(i).prod_main_img %>" alt="magic cat"></td>
+                        <td><a href="#">품번 : <%=pdlist.get(i).getProd_id() %></a><span class="cart__list__smartstore"></span>
+                            <p><%=pdlist.get(i).prod_name %></p>
+                            <sapn class="price"><%= pdlist.get(i).getProd_price() %>원</sapn>
                         </td>
 
                         <td class="cart__list__option">
-                            <p>모델명 : 고양이장난감</p>
+                            <p>주문 수량 : 1개</p>
                             <button class="cart__list__optionbtn">주문조건 추가/변경</button>
                         </td>
-                        <td><span class="price">5,000원</span><br>
+                        <td><span class="price"><%= pdlist.get(i).getProd_price() %>원</span><br>
                             
                         </td>
 
-                        <td><span class="price">5,000원</span><br>
+                        <td><span class="price"><%= pdlist.get(i).getProd_price() %>원</span><br>
                           <button class="cart__list__orderbtn">주문하기</button>
                       </td>
                         
                         <td align="center">없음</td>
                     </tr>
+                    <% } %>
                     
-                    
-                    <tr class="cart__list__detail">
-                        <td style="width: 2%;"><input type="checkbox"></td>
-                        <td style="width: 13%;">
-                            <img src="https://cdn.imweb.me/thumbnail/20210202/08dc048ec6877.jpg" alt="magic cat">
-                        </td>
-                        <td style="width: 27%;"><a href="#">냥냥이 공식 브랜드스토어</a><span class="cart__list__smartstore"> 냥냥이스토어</span>
-                            <p>냥냥이가 즐거워 하는 로보트</p>
-                            <span class=" price">18,000원</span>
-                        </td>
-                        <td class="cart__list__option" style="width: 20%;">
-                            <p>상품 주문 수량: 1개</p>
-                            <button class="cart__list__optionbtn">주문조건 추가/변경</button>
-                        </td>
-                        <td style="width: 15%;"><span class="price">18,000원</span><br>
-                            
-                        </td>
-                        <td style="width: 15%;"><span class="price">18,000원</span><br>
-                          <button class="cart__list__orderbtn">주문하기</button>
-                      </td>
-                        <td style="width: 15%;"align = "center">없음</td>
-                    </tr>
                 </tbody>
                 <tfoot>
                     <tr>
                         <td colspan="3"><input type="checkbox"> <button class="cart__list__optionbtn">선택상품 삭제</button>
                             <button class="cart__list__optionbtn">선택상품 찜</button>
                         </td>
-                        <td><button style="background-color: greenyellow;">포인트적용하기(쿠폰)</button></td>
+                        <td><button style="background-color: greenyellow;"> 합계금액 : <%=sum %>원</button></td>
                         <td></td>
                         <td></td>
                     </tr>
@@ -298,10 +278,6 @@
 
 
       <div class="u-clearfix u-sheet u-sheet-1"></div>
-  
-
-
-      
 
     </section>
     

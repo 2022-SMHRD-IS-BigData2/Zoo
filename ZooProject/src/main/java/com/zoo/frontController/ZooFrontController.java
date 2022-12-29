@@ -82,7 +82,6 @@ public class ZooFrontController extends HttpServlet {
 		handlerMapping.put("/popup.do", new ZooPopupCon() );
 		handlerMapping.put("/gowishList.do", new ZooGowishlistCon()  );
 		
-		
 		//======================================
 		handlerMapping.put("/join.do",new ZooJoinCon() );
 		handlerMapping.put("/login.do", new ZooLoginCon());
@@ -91,12 +90,7 @@ public class ZooFrontController extends HttpServlet {
 		handlerMapping.put("/writeReviewPage.do", new ZooWriteReviewCon());
 		handlerMapping.put("/write.do", new ZooWriteCon() );
 		handlerMapping.put("/delete.do", new ZooDeleteCon());
-		
-		
-		
-		
 	}
-
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -115,25 +109,14 @@ public class ZooFrontController extends HttpServlet {
 				// UrlMapping : /join.do 정보만 가져오기
 				String mapping = uri.substring(cpath.length());
 				System.out.println(mapping);
-				
-				
 				//======================================================================
-				
-				
-				
 				String nextPage = null;
 				// Controller Interface로 업캐스팅해서 모든 Con들을 담아줄 수 있게 만듦
 				ZooController con = null;
 				
 				// 요청에 맞는 POJO 꺼내기
 				con = handlerMapping.get(mapping);
-				
-				
-				
-				
-
 				//======================================================================
-				
 				
 				if(con!=null) {
 				nextPage = con.execute(request, response);
@@ -153,13 +136,6 @@ public class ZooFrontController extends HttpServlet {
 						RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/views/"+nextPage+".jsp");
 						rd.forward(request, response);
 					}
-		
-		
-	
-	
-	
-	
-	}
-
+				}
 	}
 }
