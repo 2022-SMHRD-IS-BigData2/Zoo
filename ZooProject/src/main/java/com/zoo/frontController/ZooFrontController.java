@@ -12,12 +12,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.zoo.controller.ZooController;
-import com.zoo.controller.ZooCreatewishCon;
 import com.zoo.controller.ZooDeleteCon;
 import com.zoo.controller.ZooGoCartCon;
 import com.zoo.controller.ZooGoDetailCon;
 import com.zoo.controller.ZooGoJoinCon;
 import com.zoo.controller.ZooGoLoginCon;
+import com.zoo.controller.ZooGoSearchform;
 import com.zoo.controller.ZooGoaboutNanuCon;
 import com.zoo.controller.ZooGoboardCon;
 import com.zoo.controller.ZooGodonation;
@@ -38,11 +38,15 @@ import com.zoo.controller.ZooPdListSellerTypeCon;
 import com.zoo.controller.ZooPdListSortCon;
 import com.zoo.controller.ZooPopupCon;
 import com.zoo.controller.ZooUpdateCon;
+
 import com.zoo.controller.ZooWriteCon;
 import com.zoo.controller.ZooWriteReviewCon;
 import com.zoo.controller.ZoosearchCon;
 
 
+/**
+ * Servlet implementation class FrontController
+ */
 @WebServlet("*.do")
 public class ZooFrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -74,12 +78,9 @@ public class ZooFrontController extends HttpServlet {
 		handlerMapping.put("/gowishListform.do", new ZooCreatewishCon());
 		handlerMapping.put("/gopdDetailPage.do", new ZooGoDetailCon());
 		handlerMapping.put("/goaboutNanuform.do", new ZooGoaboutNanuCon());
-
 		handlerMapping.put("/gosearchform.do", new ZoosearchCon() );
-
 		handlerMapping.put("/popup.do", new ZooPopupCon() );
-		
-		handlerMapping.put("/gowishList.do", new ZooGowishlistCon());
+		handlerMapping.put("/gowishList.do", new ZooGowishlistCon()  );
 		
 		
 		//======================================
