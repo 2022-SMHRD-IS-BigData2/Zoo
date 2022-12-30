@@ -381,8 +381,8 @@ In-Demand Professions, ​Top ten most popular courses for international student
 	    </div> 
 	    
 	    <div class="col-md-6">
-	      <div class="center-block" id="thermometer">
-	        <h1 class="thermH1Text">온도계</h1>
+	      <div class="center-block" id="thermometer" style="border-radius: 50px; background: #fcefd6; box-shadow: 0px 0px 9px #4b4b4b;">
+	        <h1 class="thermH1Text" style="color: #fcefd6; text-shadow: 0px 0px 0px;">온도계</h1>
 	        <div class="track">
 	          <div>
 	            <div class="soFar" style="bottom:95%;">1,201,000원</div>
@@ -392,7 +392,7 @@ In-Demand Professions, ​Top ten most popular courses for international student
 	            <div class="goal4"><h4>40%</h4></div>
 	            <div class="goal5"><h4>20%</h4></div>
 	          </div>
-	             <div id="progress" style="height:300px;";>
+	             <div id="progress" style="height:300px; background: linear-gradient(to bottom left, #f5ff5d, #78cdff)";>
 	            </div>
 	        </div>
 	      </div> 

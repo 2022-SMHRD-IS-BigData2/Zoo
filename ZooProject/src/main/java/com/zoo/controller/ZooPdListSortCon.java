@@ -29,11 +29,7 @@ public class ZooPdListSortCon implements ZooController {
 
 		ZooProductList dto = new ZooProductList();
 		dto.setProd_category(cate);
-
 		HttpSession session = request.getSession();
-
-		// dto.setProd_category(list.get(0).getProd_category());
-
 		ZooProductListDAO dao = new ZooProductListDAO();
 
 		if (eco.equals("ECO")) {
