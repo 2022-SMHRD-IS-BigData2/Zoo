@@ -1,3 +1,4 @@
+<%@page import="com.zoo.entity.ZooBoard"%>
 <%@page import="java.util.Random"%>
 <%@page import="java.util.List"%>
 <%@page import="com.zoo.entity.ZooProductList"%>
@@ -51,6 +52,7 @@ In-Demand Professions, ​Top ten most popular courses for international student
   	System.out.print(user.getCust_id());
   }
   ZooProductList dto = new ZooProductList();
+ List<ZooBoard> list= (List<ZooBoard>)session.getAttribute("dlist");
   List<ZooProductList> pdlist_budget = (List<ZooProductList>)session.getAttribute("pdlist_budget");
   List<ZooProductList> pdlist_gift = (List<ZooProductList>)session.getAttribute("pdlist_gift");
    List<ZooProductList> pdlist =(List<ZooProductList>)session.getAttribute("list"); 
@@ -173,7 +175,7 @@ In-Demand Professions, ​Top ten most popular courses for international student
 <div class="u-nav-popup">
             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
             <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="">공지사항</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="reviewpage.do">리뷰게시판</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=review">리뷰게시판</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=qna">문의게시판</a>
 </li>
 </ul>
@@ -315,7 +317,7 @@ In-Demand Professions, ​Top ten most popular courses for international student
 <div class="u-nav-popup">
             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
             <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="">공지사항</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="reviewpage.do">리뷰게시판</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=review">리뷰게시판</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="gofoodform.do?category=qna">문의게시판</a>
 </li>
 </ul>
@@ -364,12 +366,12 @@ In-Demand Professions, ​Top ten most popular courses for international student
 </div>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">기업유형</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=board">게시판</a>
-<!-- <div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+<div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
 <li class="u-nav-item"><a class="u-button-style u-nav-link">공지사항</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=review">리뷰게시판</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="gofoodform.do?category=qna">문의사항</a>
 </li></ul>
-</div> -->
+</div> 
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="">기부</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">ABOUT - 나누민족</a>
 </li></ul>
@@ -485,222 +487,41 @@ In-Demand Professions, ​Top ten most popular courses for international student
     position: absolute;
     right: -58px;
   }
+  table {
+    width: 100%;
+    border-top: 1px solid #444444;
+    border-collapse: collapse;
+    margin: auto;
+    text-align:center;
+  }
+  th, td {
+    border-bottom: 1px solid #444444;
+    padding: 10px;
+  }
 }</style>
-      <div class="u-carousel u-expanded-width u-gallery u-layout-carousel u-lightbox u-no-transition u-show-text-none u-gallery-1" data-interval="5000" data-u-ride="carousel" id="carousel-9387" style="position: relative; height: 720px;">
-        <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1">
-          <li data-u-target="#carousel-9387" data-u-slide-to="0" class="u-active u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
-          <li data-u-target="#carousel-9387" data-u-slide-to="1" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
-          <li data-u-target="#carousel-9387" data-u-slide-to="2" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
-        </ol>
-        <div class="u-carousel-inner u-gallery-inner" role="listbox">
-          <div class="u-active u-carousel-item u-gallery-item u-carousel-item-1">
-            <div class="u-back-slide" data-image-width="1080" data-image-height="787">
-              <img class="u-back-image u-expanded u-back-image-1" src="images/mainBanner1_newyear5.png">
-            </div>
-            <div class="u-over-slide u-over-slide-1">
-              <h3 class="u-gallery-heading"></h3>
-              <p class="u-gallery-text"></p>
-            </div>
-          </div>
-          <div class="u-carousel-item u-gallery-item u-carousel-item-2">
-            <div class="u-back-slide u-back-slide-2" data-image-width="1064" data-image-height="595">
-              <img class="u-back-image u-expanded" src="images/mainBanner2_brand.png">
-            </div>
-            <div class="u-over-slide u-over-slide-2">
-              <h3 class="u-gallery-heading"></h3>
-              <p class="u-gallery-text"></p>
-            </div>
-          </div>
-          <div class="u-carousel-item u-gallery-item u-carousel-item-3" data-image-width="1920" data-image-height="1012">
-            <div class="u-back-slide" data-image-width="1564" data-image-height="880">
-              <img class="u-back-image u-expanded" src="images/mainBanner3_donation3.png">
-            </div>
-            <div class="u-over-slide u-over-slide-3">
-              <h3 class="u-gallery-heading"></h3>
-              <p class="u-gallery-text"></p>
-            </div>
-            <style data-mode="XL"></style>
-            <style data-mode="LG"></style>
-            <style data-mode="MD"></style>
-            <style data-mode="SM"></style>
-            <style data-mode="XS"></style>
-          </div>
-        </div>
-        <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-1" href="#carousel-9387" role="button" data-u-slide="prev">
-          <span aria-hidden="true">
-            <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
-c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
-c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
-          </span>
-          <span class="sr-only">
-            <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
-c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
-c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
-          </span>
-        </a>
-        <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-2" href="#carousel-9387" role="button" data-u-slide="next">
-          <span aria-hidden="true">
-            <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
-L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
-c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
-          </span>
-          <span class="sr-only">
-            <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
-L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
-c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
-          </span>
-        </a>
-      </div>
+      <h6>리뷰 게시판</h6>
+      <div>
+				<table id="board">
+					<tr>
+						<td>번호</td>
+						<td>제목</td>
+						<td>내용</td>
+						<td>작성자</td>
+						<td>시간</td>
+					</tr>
+					<%for( ZooBoard board : list ){ %>
+					<tr>
+						<td><%=board.getRe_seq() %></td>
+						<td><%=board.getRe_title() %></td>
+						<td><%=board.getRe_content() %></td>
+						<td><%=board.getCust_id() %></td>
+						<td><%=board.getRe_dt() %></td>
+					</tr>
+				<%} %>
+				</table>
+				</div>
+      
     </section>
-    <section class="u-align-center u-clearfix u-white u-section-2" id="sec-a1a3">
-      <div class="u-container-style u-expanded-width u-group u-shape-rectangle u-white u-group-1">
-        <div class="u-container-layout u-container-layout-1">
-          <h2 class="u-text u-text-default u-text-1">가격대별 추천 상품</h2>
-          <div class="u-container-style u-group u-shape-rectangle u-group-2">
-            <div class="u-container-layout u-container-layout-2">
-              <div class="u-container-style u-group u-shape-rectangle u-group-3">
-                  <a href="gopdlistbudget.do?budget=a"><h5 class="u-text u-text-2">1만원 미만</h5></a>
-              </div>
-              <div class="u-container-style u-group u-shape-rectangle u-group-4">
-                  <a href="gopdlistbudget.do?budget=b"><h5 class="u-text u-text-3">1-2만원대</h5></a>
-              </div>
-              <div class="u-container-style u-group u-shape-rectangle u-group-5">
-                  <a href="gopdlistbudget.do?budget=c"><h5 class="u-text u-text-4">3-4만원대</h5></a>
-              </div>
-              <div class="u-container-style u-group u-shape-rectangle u-group-6">
-                  <a href="gopdlistbudget.do?budget=d"><h5 class="u-text u-text-5">5~10만원</h5></a>
-              </div>
-            </div>
-          </div>
-          <div class="u-border-3 u-border-white u-container-style u-group u-group-7">
-            <div class="u-container-layout u-container-layout-7">
-              <div class="u-list u-list-1">
-               <div class="u-repeater u-repeater-1">
-				 <!-- ============ 가격대별 추천 상품 출력=========== -->                
-                <%for(int i = 0; i < 4; i++){ %>
-                <% Random rd = new Random(); %>
-                <% int num = rd.nextInt(630); %>
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-2">
-                    <img class="u-image u-image-1" src="<%=pdlist_budget.get(num).getProd_main_img() %>" data-image-width="1920" data-image-height="1406">
-                    <h6 class="u-align-center u-text u-text-1"> 
-                    <div class="test1" style="width: 268px; height: 50px;"><a href="gopdDetailPage.do?prod_id=<%=pdlist_budget.get(num).getProd_id() %>"><%=pdlist_budget.get(num).getProd_name() %></a></div>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-2"><%=pdlist_budget.get(num).getProd_price()%>원</h6>
-                  </div>
-                </div>
-                <%} %>
-                </div>
-              </div> 
-              <!-- 가격대별 추천 상품 더보기 -->
-              <a href="gopdlistbudget.do?budget=e" class="u-active-none u-align-center u-border-1 u-border-active-grey-60 u-border-black u-border-hover-grey-60 u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-1">more</a>
-            </div>
-          </div>
-        </div>
-     </div>
-    </section>
-    <section class="u-clearfix u-section-3" id="sec-6815">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h2 class="u-text u-text-default u-text-1">선물 추천 상품</h2>
-        
-        <div class="u-border-3 u-border-white u-container-style u-group u-group-1">
-          <div class="u-container-layout u-container-layout-1">
-            <div class="u-list u-list-1">
-              <div class="u-repeater u-repeater-1">
-              
-              <!-- ============ 선물 추천 상품 출력=========== -->                
-                <%for(int i = 0; i < 8; i++){ %>
-                <% Random rd = new Random(); %>
-                <% int num = rd.nextInt(pdlist_gift.size()); %>
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-2">
-                    <img class="u-image u-image-1" src="<%=pdlist_gift.get(num).getProd_main_img() %>" data-image-width="1920" data-image-height="1406">
-                    <h6 class="u-align-center u-text u-text-1"> 
-                    <div class="test2" style="width: 268px; height: 50px;"><a href="gopdDetailPage.do?prod_id=<%=pdlist_gift.get(num).getProd_id() %>"><%=pdlist_gift.get(num).getProd_name() %></a></div>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-2"><%=pdlist_gift.get(num).getProd_price()%>원</h6>
-                  </div>
-                </div>
-                <%} %>        
-              </div>
-            </div>
-            <!-- 선물 추천 상품 더보기 -->
-            <a href="gopdlistkeyword.do?keyword=GIFT" class="u-active-none u-align-center u-border-1 u-border-active-grey-60 u-border-black u-border-hover-grey-60 u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-1">more</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section class="u-align-center u-clearfix u-section-6" id="sec-1524">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h2 class="u-text u-text-1" style="
-    margin-top: 100px;
-">인증 기업별 추천 상품</h2>
-        
-        <div class="u-list u-list-1">
-          <div class="u-repeater u-repeater-1">
-          
-            <div class="u-container-style u-list-item u-repeater-item u-shape-rectangle">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1"><span class="u-align-left u-file-icon u-icon u-icon-1"><a href="gopdlistsellertype.do?sellertype=A"><img src="images/giup_sociey.png" alt=""></span>
-                <p class="u-align-center u-text u-text-2">사회적기업 </p></a>
-              </div>
-            </div>
-            <div class="u-container-style u-list-item u-repeater-item u-shape-rectangle">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2"><span class="u-align-left u-file-icon u-icon u-icon-2"><a href="gopdlistsellertype.do?sellertype=B"><img src="images/giup_cooperation.png" alt=""></span>
-                <p class="u-align-center u-text u-text-3">협동조합</p></a>
-              </div>
-            </div>
-            <div class="u-container-style u-list-item u-repeater-item u-shape-rectangle">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3"><span class="u-align-left u-file-icon u-icon u-icon-3"><a href="gopdlistsellertype.do?sellertype=C"><img src="images/giup_village.png" alt=""></span>
-                <p class="u-align-center u-text u-text-4">마을기업 </p></a>
-              </div>
-            </div>
-            <div class="u-container-style u-list-item u-repeater-item u-shape-rectangle">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4"><span class="u-align-left u-file-icon u-icon u-icon-4"><a href="gopdlistsellertype.do?sellertype=D"><img src="images/giup_disabled.png" alt=""></span>
-                <p class="u-align-center u-text u-text-5">장애인기업 </p></a>
-              </div>
-            </div>
-            <div class="u-container-style u-list-item u-repeater-item u-shape-rectangle">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-5"><span class="u-align-left u-file-icon u-icon u-icon-5"><a href="gopdlistsellertype.do?sellertype=E"><img src="images/giup_women.png" alt=""></span>
-                <p class="u-align-center u-text u-text-6">여성기업 </p></a>
-              </div>
-            </div>
-            <div class="u-container-style u-list-item u-repeater-item u-shape-rectangle">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-6"><span class="u-align-left u-file-icon u-icon u-icon-6"><a href="gopdlistsellertype.do?sellertype=F"><img src="images/giup_self.png" alt=""></span>
-                <p class="u-align-center u-text u-text-7">자활기업 </p></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="u-border-3 u-border-white u-container-style u-group u-group-1">
-          <div class="u-container-layout u-container-layout-7">
-            <div class="u-list u-list-2">
-              <div class="u-repeater u-repeater-2">
-                
-                <!-- ============ 기업별 추천 상품 출력=========== -->                
-                <%for(int i = 0; i < 4; i++){ %>
-                <% Random rd = new Random(); %>
-                <% int num = rd.nextInt(200); %>
-                <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-2">
-                    <img class="u-image u-image-1" src="<%=pdlist_budget.get(num).getProd_main_img() %>" data-image-width="1920" data-image-height="1406">
-                    <h6 class="u-align-center u-text u-text-1"> 
-                    <div class="test3" style="width: 268px; height: 50px;"><a href="gopdDetailPage.do?prod_id=<%=pdlist_budget.get(num).getProd_id() %>"><%=pdlist_budget.get(num).getProd_name() %></a></div>
-                    </h6>
-                    <h6 class="u-align-left u-text u-text-2"><%=pdlist_budget.get(num).getProd_price()%>원</h6>
-                  </div>
-                </div>
-                <%} %>        
-                
-              </div>
-            </div>
-            <a href="gopdlistsellertype.do?sellertype=A" class="u-active-none u-align-center u-border-1 u-border-active-grey-60 u-border-black u-border-hover-grey-60 u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-1">more</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    
     
     <footer class="u-align-center u-clearfix u-footer u-gradient u-footer" id="sec-e204"><div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-social-icons u-spacing-10 u-social-icons-1">

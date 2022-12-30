@@ -325,17 +325,19 @@
       </div>
     </section>
     <section class="u-clearfix u-section-2" id="sec-2708">
-      <div class="u-clearfix u-sheet u-sheet-1">
+      <div class="u-clearfix u-sheet u-sheet-1"style="
+    min-height: 100%;
+">
         <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
           <div class="u-layout">
             <div class="u-layout-row">
-              <div class="u-container-style u-layout-cell u-size-43 u-layout-cell-1">
+              <div class="u-container-style u-layout-cell u-size-43 u-layout-cell-1"style="
+    min-height: 100%;
+">
                 <div class="u-container-layout u-container-layout-1">
                   <div class="u-border-1 u-border-grey-40 u-line u-line-horizontal u-line-1"></div>
                   
                   <div><a href="#detail" class="u-border-2 u-border-hover-palette-4-light-3 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-1">상세설명</a>
-                  <a href="#review" class="u-border-2 u-border-hover-palette-4-light-3 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-2">구매후기 ( 1 )</a>
-                  <a href="#detail" class="u-border-2 u-border-hover-palette-4-light-3 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-1">상세설명</a>
                   <a href="#review" class="u-border-2 u-border-hover-palette-4-light-3 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-2">구매후기 ( <%= list.size() %> ) </a>
                   <a href="#Qbuy" class="u-border-2 u-border-hover-palette-4-light-3 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-3">구매문의 ( 1 )</a>
                   <a href="https://nicepage.com/c/contact-form-html-templates" class="u-border-2 u-border-hover-palette-4-light-3 u-btn u-btn-round u-button-style u-hover-palette-4-light-3 u-radius-6 u-text-hover-black u-white u-btn-4">상품구매안내</a>
@@ -346,7 +348,9 @@
                 </div>
                 
               </div>
-              <div class="u-container-style u-layout-cell u-size-17 u-layout-cell-2">
+              <div class="u-container-style u-layout-cell u-size-17 u-layout-cell-2"style="
+    min-height: 100%;
+">
                 <div class="u-border-1 u-border-grey-40 u-container-layout u-container-layout-2">
                   <div class="u-container-style u-group u-white u-group-1" id="stickybox">
                     <div class="u-container-layout u-container-layout-3">

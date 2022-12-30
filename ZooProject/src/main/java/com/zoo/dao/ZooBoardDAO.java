@@ -13,15 +13,16 @@ public class ZooBoardDAO {
 	SqlSessionFactory sqlSessionFactory = SessionManager.getSqlSessionFactory();
 	
 	// 1. 게시글 전체 조회
-//	public List<ZooBoard> boardList() {
-//		SqlSession session = sqlSessionFactory.openSession(true);
-//		List<ZooBoard> list = session.selectList("boardList");
-//		session.close();
-//		return list;
-//	}
-	public List<ZooBoard> boardList(String id) {
+	public List<ZooBoard> boardList() {
 		SqlSession session = sqlSessionFactory.openSession(true);
-		List<ZooBoard> list = session.selectList("boardList",id);
+		List<ZooBoard> list = session.selectList("boardList");
+		session.close();
+		return list;
+	}
+	// 아이디를 통해 내가쓴 글을 조회
+	public List<ZooBoard> boardListid(String id) {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		List<ZooBoard> list = session.selectList("boardListid",id);
 		session.close();
 		return list;
 	}

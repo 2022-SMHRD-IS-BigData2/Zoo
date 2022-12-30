@@ -37,5 +37,6 @@
     <mapper resource="com/zoo/dao/ZooMemberMapper.xml"/>
     <mapper resource="com/zoo/dao/ZooProductListMapper.xml"/>
     <mapper resource="com/zoo/dao/ZooWishListMapper.xml"/>
+   
   </mappers>
 </configuration>

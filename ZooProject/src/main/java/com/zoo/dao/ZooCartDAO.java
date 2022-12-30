@@ -24,17 +24,23 @@ public class ZooCartDAO {
    // 1. 상품 저장하기
    public int cartInsert(ZooCart dto) {
 
+
       SqlSession session = sqlsessionFactory.openSession(true);
 
-      int cnt = session.insert("insert_cart", dto);
-      session.close();
-      return cnt;
-   }
+		int cnt = session.insert("insert_cart", dto);
+		
+		return cnt;
+	}
+	
+	
+	
+
    
    // 2. 상품 불러오기
    public List<ZooProductList> cartPdList(ZooCart dto) {
 
       SqlSession session = sqlsessionFactory.openSession(true);
+
 
       List<ZooProductList> pdDetail = session.selectList("prod_cart", dto);
       session.close();
@@ -87,3 +93,7 @@ public class ZooCartDAO {
 
    
 }
+
+	
+
+

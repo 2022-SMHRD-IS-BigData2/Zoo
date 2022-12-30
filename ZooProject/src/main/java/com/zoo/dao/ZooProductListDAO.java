@@ -6,6 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.smhrd.database.SessionManager;
+import com.zoo.entity.ZooCart;
 import com.zoo.entity.ZooPdBudget;
 import com.zoo.entity.ZooProductList;
 import com.zoo.entity.ZooSeller;
@@ -116,4 +117,13 @@ public class ZooProductListDAO {
 		return productList;
 	}
 
+	
+//	public int cancel(ZooCart dto) {
+//		
+//		SqlSession session = sqlsessionFactory.openSession(true);
+//		
+//		int cnt = session.delete("cancel", dto);
+//		
+//		return cnt;
+//	}
 }
