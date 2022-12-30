@@ -227,7 +227,11 @@
         <div class="frame">
             <div class="wrap">
                 <div class="update">
-                    <section class="usermodify">
+                    <section class="usermodify"style="
+    position: relative;
+    left: 200px;
+    top: -100px;
+">
                         <h3>회원정보수정</h3>
                         <table class="usermodify-table">
                             <tbody>
