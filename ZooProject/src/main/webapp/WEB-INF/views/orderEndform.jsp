@@ -1,3 +1,5 @@
+<%@page import="com.zoo.entity.ZooProductList"%>
+<%@page import="java.util.List"%>
 <%@page import="com.zoo.entity.ZooMember"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -35,6 +37,7 @@
     <meta property="og:type" content="website">
   </head>
   <% ZooMember user= (ZooMember)session.getAttribute("user"); %>
+  <% List<ZooProductList>paylist =(List<ZooProductList>)session.getAttribute("paylist"); %>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
   <div class="u-clearfix u-sheet u-sheet-1">
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
@@ -225,25 +228,26 @@
       <tr>
         <td colspan="2" align="center"><h4>주문이 완료되었습니다.</h4></td>
       </tr>
+      <%for(int i =0; i<paylist.size();i++){ %>
       <tr>
         <td><h6 align="right">주문번호 :</h6></td>
-        <td><h6>20221220</h6></td> <!-- 주문 번호-->
+        <td><h6><%=paylist.get(i).getProd_id() %></h6></td> <!-- 주문 번호-->
       </tr>
       <tr>
-        <td><h6 align="right">주문일시 :</h6></td>
-        <td><h6>2022-12-20 16:40</h6></td> <!--주문 시각 sysdate-->
+        <td><h6 align="right">상품이름</h6></td>
+        <td><h6><%=paylist.get(i).getProd_name() %></h6></td> <!--주문 시각 sysdate-->
       </tr>
-
+	<%} %>
       <tr>
         <td colspan="2" align="center"><h4>주문자 정보</h4></td>
       </tr>
       <tr>
         <td><h6 align="right">구매자명 :</h6></td>
-        <td><h6>문승주</h6></td> <!--구매한 사람-->
+        <td><h6><%=user.getCust_name() %></h6></td> <!--구매한 사람-->
       </tr>
       <tr>
         <td><h6 align="right">휴대폰 번호 :</h6></td>
-        <td><h6>010-0000-0000</h6></td>
+        <td><h6><%=user.getCust_tel() %></h6></td>
       </tr>
       <tr>
         <td><h6 align="right">포인트 적립 :</h6></td>
@@ -254,18 +258,18 @@
       <tr>
       <tr>
         <td><h6 align="right">우편번호 :</h6></td>
-        <td><h6>31422</h6></td>
+        <td><h6>???</h6></td>
       </tr>
         <td><h6 align="right">배송지주소 :</h6></td>
-        <td><h6>광주광역시 남구 송암로 60</h6></td>
+        <td><h6><%=user.getCust_addr() %></h6></td>
       </tr>
       <tr>
         <td><h6 align="right">배송예정날짜 :</h6></td>
-        <td><h6>2022-12-24</h6></td>
+        <td><h6>?????</h6></td>
       </tr>
     </tbody>
 </table>
-   
+   <button ><a href="gomainpage.do">완료</a></button>
 
   </div>
     
