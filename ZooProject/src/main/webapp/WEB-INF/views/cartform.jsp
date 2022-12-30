@@ -298,14 +298,12 @@
 
                         <td class="cart__list__option">
                             <p>주문 수량 : 1개</p>
-                            <button class="cart__list__optionbtn">주문조건 추가/변경</button>
                         </td>
                         <td><span class="price"><%= pdlist.get(i).getProd_price() %>원</span><br>
                             
                         </td>
 
                         <td><span class="price"><%= pdlist.get(i).getProd_price() %>원</span><br>
-                          <button class="cart__list__orderbtn">주문하기</button>
                       </td>
                         
                         <td align="center">없음</td>
@@ -326,7 +324,7 @@
             </form>
         </table>
         <div class="cart__mainbtns">
-            <button class="cart__bigorderbtn left">쇼핑 계속하기</button>
+            <button class="cart__bigorderbtn left"><a href="gomainpage.do">쇼핑 계속하기</a></button>
             <button onclick="requestPay()" class="cart__bigorderbtn right">주문하기</button>
         </div>
     </section>
