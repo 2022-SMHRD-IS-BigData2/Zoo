@@ -72,7 +72,7 @@ In-Demand Professions, ​Top ten most popular courses for international student
           <%if(user==null){ %>
         <ul class="u-nav u-unstyled u-nav-1"style="
     position: relative;
-    left: 300px;
+    left: 400px;
 "><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gologin.do">로그인</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base" style="padding: 14px 10px;" href="gojoin.do">회원가입</a>
 </li>
@@ -92,7 +92,7 @@ In-Demand Professions, ​Top ten most popular courses for international student
         </form>
         <a href="gomainpage.do" class="u-image u-logo u-image-1" data-image-width="342" data-image-height="200"  title="메인페이지" style="
     position: relative;
-    right: 400px;
+    right: 500px;
 ">
           <img src="images/logo.png" class="u-logo-image u-logo-image-1" >
         </a>
@@ -111,7 +111,7 @@ In-Demand Professions, ​Top ten most popular courses for international student
           <div class="u-custom-menu u-nav-container">
             <ul class="u-nav u-spacing-30 u-unstyled u-nav-5" style="
     position: relative;
-    left: 400px;
+    left: 500px;
     top: -45px;
 "><ul class="u-nav u-spacing-30 u-unstyled u-nav-5"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">상품 카테고리</a>
             <div class="u-nav-popup">
@@ -250,7 +250,7 @@ In-Demand Professions, ​Top ten most popular courses for international student
           <div class="u-custom-menu u-nav-container">
             <ul class="u-nav u-spacing-30 u-unstyled u-nav-5" style="
     position: relative;
-    left: 400px;
+    left: 565px;
     top: -45px;
 "><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 48px;">상품 카테고리</a>
             <div class="u-nav-popup">
@@ -686,7 +686,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                   <div class="u-container-layout u-similar-container u-container-layout-2">
                     <img class="u-image u-image-1" src="<%=pdlist_budget.get(num).getProd_main_img() %>" data-image-width="1920" data-image-height="1406">
                     <h6 class="u-align-center u-text u-text-1"> 
-                    <div class="test3" style="width: 268px; height: 50px;"><a href="gopdDetailPage.do?prod_id=<%=pdlist_budget.get(num).getProd_id() %>"><%=pdlist_budget.get(num).getProd_name() %></a></div>
+                    <div class="test3" ="width: 268px; height: 50px;"><a href="gopdDetailPage.do?prod_id=<%=pdlist_budget.get(num).getProd_id() %>"><%=pdlist_budget.get(num).getProd_name() %></a></div>
                     </h6>
                     <h6 class="u-align-left u-text u-text-2"><%=pdlist_budget.get(num).getProd_price()%>원</h6>
                   </div>
