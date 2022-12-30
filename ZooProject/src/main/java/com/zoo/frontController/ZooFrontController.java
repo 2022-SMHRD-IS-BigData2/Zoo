@@ -43,6 +43,7 @@ import com.zoo.controller.ZooViewReviewCon;
 import com.zoo.controller.ZooWriteCon;
 import com.zoo.controller.ZooWriteReviewCon;
 import com.zoo.controller.ZoosearchCon;
+import com.zoo.controller.ZoowishDelCon;
 
 
 /**
@@ -83,6 +84,7 @@ public class ZooFrontController extends HttpServlet {
 		handlerMapping.put("/popup.do", new ZooPopupCon() );
 		handlerMapping.put("/gowishList.do", new ZooGowishlistCon());
 		handlerMapping.put("/gopayafter.do", new ZooGoAfterpayCon());
+		handlerMapping.put("/godelwish.do", new ZoowishDelCon());
 		
 		//======================================
 		handlerMapping.put("/join.do",new ZooJoinCon() );

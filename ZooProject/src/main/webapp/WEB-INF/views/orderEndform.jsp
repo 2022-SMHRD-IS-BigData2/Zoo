@@ -18,15 +18,15 @@
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     
     <script type="application/ld+json">{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": "Site1",
-		"logo": "images/logo.png",
-		"sameAs": [
-				"https://facebook.com/name",
-				"https://twitter.com/name",
-				"https://instagram.com/name"
-		]
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "Site1",
+      "logo": "images/logo.png",
+      "sameAs": [
+            "https://facebook.com/name",
+            "https://twitter.com/name",
+            "https://instagram.com/name"
+      ]
 }</script>
     <meta name="theme-color" content="#478ac9">
     <meta name="twitter:site" content="@">
@@ -213,60 +213,54 @@
   
   <table cellspacing="1" cellpadding="1"; align="center">
       <tbody>
-      <tr>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
+      <tr height="200px">
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td colspan="2" align="center"><h4>주문이 완료되었습니다.</h4></td>
+      <tr>
+        <td colspan="2" align="center"><h4>[주문상품 정보]</h4></td>
+      <tr>
       </tr>
       <%for(int i =0; i<paylist.size();i++){ %>
       <tr>
-        <td><h6 align="right">주문번호 :</h6></td>
+        <td><h6 align="right">상품번호 : </h6></td>
         <td><h6><%=paylist.get(i).getProd_id() %></h6></td> <!-- 주문 번호-->
       </tr>
       <tr>
-        <td><h6 align="right">상품이름</h6></td>
+        <td><h6 align="right">상품이름 : </h6></td>
         <td><h6><%=paylist.get(i).getProd_name() %></h6></td> <!--주문 시각 sysdate-->
       </tr>
-	<%} %>
+   <%} %>
       <tr>
-        <td colspan="2" align="center"><h4>주문자 정보</h4></td>
+        <td colspan="2" align="center"><h4>[주문자 정보]</h4></td>
       </tr>
       <tr>
-        <td><h6 align="right">구매자명 :</h6></td>
+        <td><h6 align="right">구매자명 : </h6></td>
         <td><h6><%=user.getCust_name() %></h6></td> <!--구매한 사람-->
       </tr>
       <tr>
-        <td><h6 align="right">휴대폰 번호 :</h6></td>
+        <td><h6 align="right">휴대폰 번호 : </h6></td>
         <td><h6><%=user.getCust_tel() %></h6></td>
       </tr>
       <tr>
-        <td><h6 align="right">포인트 적립 :</h6></td>
+        <td><h6 align="right">포인트 적립 : </h6></td>
         <td><h6> + 100</h6></td>
       </tr>
       <tr>
-        <td colspan="2" align="center"><h4>배송지 정보</h4></td>
+        <td colspan="2" align="center"><h4>[배송지 정보]</h4></td>
       <tr>
-      <tr>
+      <!-- <tr>
         <td><h6 align="right">우편번호 :</h6></td>
         <td><h6>???</h6></td>
-      </tr>
-        <td><h6 align="right">배송지주소 :</h6></td>
+      </tr>  -->
+        <td><h6 align="right">배송지주소 : </h6></td>
         <td><h6><%=user.getCust_addr() %></h6></td>
       </tr>
-      <tr>
+      <!-- <tr>
         <td><h6 align="right">배송예정날짜 :</h6></td>
         <td><h6>?????</h6></td>
-      </tr>
+      </tr>  -->
     </tbody>
 </table>
    <button ><a href="gomainpage.do">완료</a></button>

@@ -26,5 +26,11 @@ public class ZooWishListDAO {
 	List<ZooProductList>result= session.selectList("wish", dto);
 	return result;
 	}
+	// 위시리스트 선택 삭제
+	public int delwish(ZooWishList dto) {
+		SqlSession session = sqlSessionFactory.openSession(true);
+	int cnt = session.delete("delwish",dto);
+	return cnt;
+	}
 	
 }

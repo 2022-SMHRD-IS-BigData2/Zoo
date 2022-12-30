@@ -2,167 +2,194 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zoo.dao.ZooProductListDAO">
 
-	<!-- 1. 대분류 category만 사용하여 상품정보 데이터 불러오기 -->
-	<select id="prod_category"
-		parameterType="com.zoo.entity.ZooProductList"
-		resultType="com.zoo.entity.ZooProductList">
-		select *
-		from tbl_product
-		where prod_category = #{prod_category}
-		<!-- #{prod_category} 대문자로 작성; FOOD, LIVING, FASHION ... -->
-	</select>
+   <!-- 1. 대분류 category만 사용하여 상품정보 데이터 불러오기 -->
+   <select id="prod_category"
+      parameterType="com.zoo.entity.ZooProductList"
+      resultType="com.zoo.entity.ZooProductList">
+      select *
+      from tbl_product
+      where prod_category = #{prod_category}
+      <!-- #{prod_category} 대문자로 작성; FOOD, LIVING, FASHION ... -->
+   </select>
 
 
-	<!-- 2. 중분류 category까지 적용하여 상품정보 데이터 불러오기 -->
-	<select id="prod_category2"
-		parameterType="com.zoo.entity.ZooProductList"
+   <!-- 2. 중분류 category까지 적용하여 상품정보 데이터 불러오기 -->
+   <select id="prod_category2"
+      parameterType="com.zoo.entity.ZooProductList"
 
-		resultType="com.zoo.entity.ZooProductList">
-		select *
-		from tbl_product
-		where prod_category2 =
-		#{prod_category2}
-	</select>
-
-
-	<!-- 3. 가격대별 상품 리스트 뷸러오기 -->
-	<select id="prod_budget"
-		parameterType="com.zoo.entity.ZooPdBudget"
-		resultType="com.zoo.entity.ZooProductList">
-		select *
-		from tbl_product
-		where prod_price between #{lonum}
-		and #{hinum}
-	</select>
+      resultType="com.zoo.entity.ZooProductList">
+      select *
+      from tbl_product
+      where prod_category2 =
+      #{prod_category2}
+   </select>
 
 
-	<!-- 4. 키워드별 상품 리스트 불러오기 : 키워드가 1개일 때 -->
-	<select id="prod_keyword"
-		parameterType="com.zoo.entity.ZooProductList"
-		resultType="com.zoo.entity.ZooProductList">
-		select *
-		from tbl_product
-		where prod_keyword1 =
-		#{prod_keyword1}
-	</select>
+   <!-- 3. 가격대별 상품 리스트 뷸러오기 -->
+   <select id="prod_budget"
+      parameterType="com.zoo.entity.ZooPdBudget"
+      resultType="com.zoo.entity.ZooProductList">
+      select *
+      from tbl_product
+      where prod_price between #{lonum}
+      and #{hinum}
+   </select>
 
 
-	<!-- 5. 상품 상세페이지에 출력할 정보 불러오기 -->
-	<select id="pddetail"
-		parameterType="com.zoo.entity.ZooProductList"
-		resultType="com.zoo.entity.ZooProductList">
-		select *
-		from tbl_product
-		where prod_id = #{prod_id}
-
-	</select>
-
-	<!-- 검색창 검색 기능 -->
-	<select id="search" resultType="com.zoo.entity.ZooProductList"
-		parameterType="com.zoo.entity.ZooProductList">
-		select*from tbl_product
-		where prod_name like
-		'%'||#{prod_name}||'%'
-	</select>
+   <!-- 4. 키워드별 상품 리스트 불러오기 : 키워드가 1개일 때 -->
+   <select id="prod_keyword"
+      parameterType="com.zoo.entity.ZooProductList"
+      resultType="com.zoo.entity.ZooProductList">
+      select *
+      from tbl_product
+      where prod_keyword1 =
+      #{prod_keyword1}
+   </select>
 
 
-	<!-- 6. 기업 유형별 상품 리스트 불러오기 -->
-	<select id="prod_sellertype"
-		parameterType="com.zoo.entity.ZooSeller"
-		resultType="com.zoo.entity.ZooProductList">
-		select tbl_product.*
-		from tbl_product
-		where
-		tbl_product.maker_id
-		in (select tbl_seller.seller_id
-		from tbl_seller
-		where tbl_seller.seller_type = #{seller_type})
-	</select>
-	
-	<!-- 페이징 ?????
-	<select id="prod_category" resultType="com.zoo.controller.ZooGoProductListCon">
-	   SELECT * FROM GUESTBOOK
-	   WHERE RNUM <![CDATA[>]]> (#{page}-1) * 10
-	   AND RNUM <![CDATA[<]]> #{page} * 10 +  1
-	</select>
-	 -->
+   <!-- 5. 상품 상세페이지에 출력할 정보 불러오기 -->
+   <select id="pddetail"
+      parameterType="com.zoo.entity.ZooProductList"
+      resultType="com.zoo.entity.ZooProductList">
+      select *
+      from tbl_product
+      where prod_id = #{prod_id}
 
-	<!-- 7. 상품정렬하기 - 낮은가격순 -->
-	<!-- category 정보 수집해서 출력 -->
-	<select id="category_loprice"
-		parameterType="com.zoo.entity.ZooProductList"
-		resultType="com.zoo.entity.ZooProductList">
-		select *
-		from TBL_PRODUCT
-		where prod_category =
-		#{prod_category}
-		order by prod_price
-	</select>
+   </select>
 
-	<!-- 8. 상품정렬하기 - 높은가격순 -->
-	<!-- category 정보 수집해서 출력 -->
-	<select id="category_hiprice"
-		parameterType="com.zoo.entity.ZooProductList"
-		resultType="com.zoo.entity.ZooProductList">
-		select *
-		from tbl_product
-		where prod_category =
-		#{prod_category}
-		order by prod_price desc
-	</select>
+   <!-- 검색창 검색 기능 -->
+   <select id="search" resultType="com.zoo.entity.ZooProductList"
+      parameterType="com.zoo.entity.ZooProductList">
+      select*from tbl_product
+      where prod_name like
+      '%'||#{prod_name}||'%'
+   </select>
 
-	<!-- 9. 상품정렬하기 - 낮은가격순 -->
-	<!-- 친환경제품 -->
-	<select id="pdEco_loprice"
-		parameterType="com.zoo.entity.ZooProductList"
-		resultType="com.zoo.entity.ZooProductList">
-		select *
-		from tbl_product
-		where prod_keyword1 = 'ECO'
-		order by
-		prod_price
-	</select>
 
-	<!-- 10. 상품정렬하기 - 높은가격순 -->
-	<!-- 친환경제품 -->
-	<select id="pdEco_hiprice"
-		parameterType="com.zoo.entity.ZooProductList"
-		resultType="com.zoo.entity.ZooProductList">
-		select *
-		from tbl_product
-		where prod_keyword1 = 'ECO'
-		order by
-		prod_price desc
-	</select>
+   <!-- 6. 기업 유형별 상품 리스트 불러오기 -->
+   <select id="prod_sellertype"
+      parameterType="com.zoo.entity.ZooSeller"
+      resultType="com.zoo.entity.ZooProductList">
+      select tbl_product.*
+      from tbl_product
+      where
+      tbl_product.maker_id
+      in (select tbl_seller.seller_id
+      from tbl_seller
+      where tbl_seller.seller_type = #{seller_type})
+   </select>
 
-	<!-- 11. 장바구니 상품 가져오기 -->
-	<select id="prod_cart"
-		parameterType="com.zoo.entity.ZooCart"
-		resultType="com.zoo.entity.ZooProductList">
-		select tbl_product.*
-		from tbl_product, tbl_cart
-		where tbl_product.prod_id = tbl_cart.prod_id
-		and tbl_cart.cust_id = #{cust_id}
-	</select>
-	
-	<!-- 12. 장바구니 상품 저장하기 -->
-	<insert id="insert_cart" parameterType="com.zoo.entity.ZooCart">
-		insert into tbl_cart(cust_id, prod_id)
-		values (#{cust_id}, #{prod_id})
-	
-	</insert>
-	
-	<!-- 13. 결제를 위한 상품 가져오기  -->
-	<select id="paycart" parameterType="com.zoo.entity.ZooMember" resultType="com.zoo.entity.ZooProductList">
-	
-	select tbl_product.*
-	
-	from tbl_product, tbl_cart
-	
-	where tbl_product.prod_id = tbl_cart.prod_id
+   <!-- 페이징 ????? <select id="prod_category" resultType="com.zoo.controller.ZooGoProductListCon"> 
+      SELECT * FROM GUESTBOOK WHERE RNUM <![CDATA[>]]> (#{page}-1) * 10 AND RNUM 
+      <![CDATA[<]]> #{page} * 10 + 1 </select> -->
 
-	and tbl_cart.cust_id = #{cust_id}
-	
-	</select>
+   <!-- 7. 상품정렬하기 - 낮은가격순 -->
+   <!-- category 정보 수집해서 출력 -->
+   <select id="category_loprice"
+      parameterType="com.zoo.entity.ZooProductList"
+      resultType="com.zoo.entity.ZooProductList">
+      select *
+      from TBL_PRODUCT
+      where prod_category =
+      #{prod_category}
+      order by prod_price
+   </select>
+
+   <!-- 8. 상품정렬하기 - 높은가격순 -->
+   <!-- category 정보 수집해서 출력 -->
+   <select id="category_hiprice"
+      parameterType="com.zoo.entity.ZooProductList"
+      resultType="com.zoo.entity.ZooProductList">
+      select *
+      from tbl_product
+      where prod_category =
+      #{prod_category}
+      order by prod_price desc
+   </select>
+
+   <!-- 9. 상품정렬하기 - 낮은가격순 -->
+   <!-- 친환경제품 -->
+   <select id="pdEco_loprice"
+      parameterType="com.zoo.entity.ZooProductList"
+      resultType="com.zoo.entity.ZooProductList">
+      select *
+      from tbl_product
+      where prod_keyword1 = 'ECO'
+      order by
+      prod_price
+   </select>
+
+   <!-- 10. 상품정렬하기 - 높은가격순 -->
+   <!-- 친환경제품 -->
+   <select id="pdEco_hiprice"
+      parameterType="com.zoo.entity.ZooProductList"
+      resultType="com.zoo.entity.ZooProductList">
+      select *
+      from tbl_product
+      where prod_keyword1 = 'ECO'
+      order by
+      prod_price desc
+   </select>
+
+   <!-- 11. 장바구니 상품 가져오기 -->
+   <select id="prod_cart" parameterType="com.zoo.entity.ZooCart"
+      resultType="com.zoo.entity.ZooProductList">
+      select tbl_product.*
+      from tbl_product, tbl_cart
+      where
+      tbl_product.prod_id = tbl_cart.prod_id
+      and tbl_cart.cust_id =
+      #{cust_id}
+   </select>
+
+   <!-- 12. 장바구니 상품 저장하기 -->
+   <insert id="insert_cart" parameterType="com.zoo.entity.ZooCart">
+      insert into
+      tbl_cart(cust_id, prod_id)
+      values (#{cust_id}, #{prod_id})
+
+   </insert>
+
+   <!-- 13. 결제를 위한 상품 가져오기 -->
+   <select id="paycart" parameterType="com.zoo.entity.ZooMember"
+      resultType="com.zoo.entity.ZooProductList">
+
+      select tbl_product.*
+      from tbl_product, tbl_cart
+      where
+      tbl_product.prod_id = tbl_cart.prod_id
+      and tbl_cart.cust_id =
+      #{cust_id}
+   </select>
+   
+
+   <!-- 14. ZooCartDAO 4번 : 결제한 상품 정보를 ORDER TABLE에 저장하기 -->
+   <insert id="order_insert"
+      parameterType="com.zoo.entity.ZooOrder">
+      <selectKey keyProperty="order_seq" resultType="int" order="BEFORE">
+         select order_seq.nextval
+         from dual
+      </selectKey>
+      insert into tbl_order
+      (order_date, cust_id, total_amount)
+      values
+      (sysdate, #{cust_id}, #{total_amount})
+   </insert>
+
+   <!-- 15. ZooCartDAO 5번 : 결제한 상품 정보를 ORDER_DETAIL_TABLE에 저장하기 -->
+   <insert id="order_detail_insert"
+      parameterType="com.zoo.entity.ZooOrder">
+      insert into tbl_order_detail
+      (order_seq, prod_id, od_cnt)
+      values (#{order_seq}, #{prod_id}, 1)
+   </insert>
+
+   <!-- 16. 주문완료 후 장바구니에 있는 데이터 삭제하기 -->
+   <delete id="delete_all_cart"
+      parameterType="com.zoo.entity.ZooCart">
+      delete from tbl_cart
+      where cust_id = #{cust_id}
+   </delete>
+
 
 </mapper>

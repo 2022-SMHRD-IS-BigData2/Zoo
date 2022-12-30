@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zoo.dao.ZooWishListDAO">
 
-
+<!-- 위시 리스트 테이블 데이터 생성 -->
 <insert id="wishlist" parameterType="com.zoo.entity.ZooWishList">
 	
 	insert into tlb_wishlist(prod_id,cust_id)
@@ -10,7 +10,7 @@
 	values(#{prod_id},#{cust_id})
 	
 	</insert>
-
+<!-- 위시 리스트 상품 가져오기 -->
 <select id="wish" parameterType="com.zoo.entity.ZooMember" resultType="com.zoo.entity.ZooProductList">
 
 	
@@ -24,7 +24,11 @@ and tlb_wishlist.cust_id = #{cust_id}
 
 
 </select>
+<!-- 위시 리스트 상품 선택 삭제 -->
+	<delete id="delwish" parameterType="com.zoo.entity.ZooWishList" >
+	delete tlb_wishlist
+	where prod_id = #{prod_id}
+	and cust_id = #{cust_id}
 
-
-
+</delete>
 </mapper>

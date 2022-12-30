@@ -2,31 +2,45 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zoo.dao.ZooBoardDAO">
 
+   <select id="boardListid" resultType="com.zoo.entity.ZooBoard">
+      select * from tbl_board_r
+      where cust_id=#{cust_id}
+      order by re_seq
+
+   </select>
+
+   <!-- 사용자 아이디를 기준으로 모든 리뷰 가져오기 -->
    <select id="boardList" resultType="com.zoo.entity.ZooBoard">
       select * from tbl_board_r
       where cust_id=#{cust_id}
       order by re_seq
-      
    </select>
+   <!-- =============================================================== -->
 
-<!-- =============================================================== -->
+   <!--<select id="boardList" resultType="com.zoo.entity.ZooBoard"> select 
+      * from tbl_board_r order by re_seq </select> -->
+
+   <!-- =============================================================== -->
+
+   <!-- =============================================================== -->
 
    <insert id="boardWrite" parameterType="com.zoo.entity.ZooBoard">
       insert into tbl_board_r
       values(
-         board_num_seq.nextval,
-         #{re_title},
-         #{re_content},
-         #{re_file, jdbcType=VARCHAR},
-         sysdate,
-         #{cust_id},
-         1,
-         1,
-         #{re_score}
-               )
+      board_num_seq.nextval,
+      #{re_title},
+      #{re_content},
+      #{re_file,
+      jdbcType=VARCHAR},
+      sysdate,
+      #{cust_id},
+      1,
+      1,
+      #{re_score}
+      )
    </insert>
 
-<!-- =============================================================== -->
+   <!-- =============================================================== -->
 
    <!-- 집어넣을 데이터가 한개라면, parameterType을 적지않아도 된다. -->
    <select id="boardView" resultType="com.zoo.entity.ZooBoard">
@@ -34,6 +48,6 @@
       where re_seq = #{re_seq}
    </select>
 
-<!-- =============================================================== -->
+   <!-- =============================================================== -->
 
 </mapper>

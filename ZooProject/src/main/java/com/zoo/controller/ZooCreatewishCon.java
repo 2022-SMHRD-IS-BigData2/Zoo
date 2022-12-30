@@ -27,7 +27,9 @@ public class ZooCreatewishCon implements ZooController {
 		System.out.println("상품 아이디: "+wish.getProd_id());
 		System.out.println("상품 명:"+wish.getProd_name());
 		
-		ZooWishList dto = new ZooWishList(wish.getProd_id(), name.getCust_id());
+		ZooWishList dto = new ZooWishList();
+		dto.setCust_id(name.getCust_id());
+		dto.setProd_id(wish.getProd_id());
 		ZooWishListDAO dao = new ZooWishListDAO();
 		
 		

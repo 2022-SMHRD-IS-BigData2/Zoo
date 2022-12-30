@@ -332,7 +332,7 @@
                         <input type="checkbox">
                       </div>
                       <h6 class="u-text u-text-17"><%=result.get(i).getProd_price() %></h6>
-                      <a href="#" class="u-border-2 u-border-grey-75 u-btn u-btn-round u-button-style u-hover-palette-5-light-1 u-palette-5-light-2 u-radius-6 u-btn-3">상품 삭제</a>
+                      <a href="godelwish.do?prod_id=<%=result.get(i).getProd_id() %>" class="u-border-2 u-border-grey-75 u-btn u-btn-round u-button-style u-hover-palette-5-light-1 u-palette-5-light-2 u-radius-6 u-btn-3">상품 삭제</a>
                       <div class="u-border-1 u-border-palette-5-light-1 u-line u-line-horizontal u-line-3"></div>
                     </div>
                   </div>
