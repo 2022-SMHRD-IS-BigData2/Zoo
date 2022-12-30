@@ -41,7 +41,7 @@ public class ZooGoDetailCon implements ZooController {
 		
 		ZooBoardDAO daoboard = new ZooBoardDAO();
 		System.out.println(user.getCust_id());
-		List<ZooBoard> list = daoboard.boardList(user.getCust_id());
+		List<ZooBoard> list = daoboard.boardListid(user.getCust_id());
 
 		// dao에서 selectList 선택했는데 아무것도 없어서 오류발생하는거 맞네요
 		// 객체바인딩

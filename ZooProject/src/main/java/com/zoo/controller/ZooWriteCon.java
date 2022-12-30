@@ -19,14 +19,14 @@ public class ZooWriteCon implements ZooController {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 			
+		HttpSession session = request.getSession();
+		ZooMember user = (ZooMember)session.getAttribute("user");
 			// 0. MultiPartRequest 생성
 			// 저장할 폴더 경로
 			// webapp 밑에 있는 images 폴더 경로
 			// request.getServletContext() : Tomcat이 복사해서 만든 폴더 정보들 == webapp
 			// webapp/images
-			HttpSession session = request.getSession();
 			String savePath=request.getServletContext().getRealPath("images");
-			ZooMember user = (ZooMember)session.getAttribute("user");
 			// 최대사이즈
 			// byte 단위
 			int maxSize = 5 * 1024 * 1024; // 5MB
