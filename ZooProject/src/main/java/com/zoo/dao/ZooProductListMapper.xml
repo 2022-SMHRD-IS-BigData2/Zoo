@@ -151,5 +151,18 @@
 		values (#{cust_id}, #{prod_id})
 	
 	</insert>
+	
+	<!-- 13. 결제를 위한 상품 가져오기  -->
+	<select id="paycart" parameterType="com.zoo.entity.ZooMember" resultType="com.zoo.entity.ZooProductList">
+	
+	select tbl_product.*
+	
+	from tbl_product, tbl_cart
+	
+	where tbl_product.prod_id = tbl_cart.prod_id
+
+	and tbl_cart.cust_id = #{cust_id}
+	
+	</select>
 
 </mapper>

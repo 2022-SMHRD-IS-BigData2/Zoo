@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 import com.zoo.dao.ZooBoardDAO;
 import com.zoo.entity.ZooBoard;
 
-public class ZooViewReviewCon implements ZooController {
+public class ZooGoReviewBoardCon implements ZooController {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
@@ -20,7 +20,7 @@ public class ZooViewReviewCon implements ZooController {
 		ZooBoardDAO dao = new ZooBoardDAO();
 		List<ZooBoard> list = dao.boardList();
 		session.setAttribute("dlist", list);
-		return "viewReviewPage";
+		return "reviewpage";
 	}
 
 }

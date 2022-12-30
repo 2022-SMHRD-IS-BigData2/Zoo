@@ -10,6 +10,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.smhrd.database.SessionManager;
 import com.zoo.entity.ZooCart;
+import com.zoo.entity.ZooMember;
 import com.zoo.entity.ZooProductList;
 
 public class ZooCartDAO {
@@ -35,6 +36,13 @@ public class ZooCartDAO {
 		List<ZooProductList> pdDetail = session.selectList("prod_cart", dto);
 		
 		return pdDetail;
+	}
+	
+	// 3. 결제를 위한 메소드
+	public List<ZooProductList> cartpay(ZooMember dto) {
+		SqlSession session = sqlsessionFactory.openSession(true);
+	List<ZooProductList>paylist = session.selectList("paycart", dto);
+	return paylist;
 	}
 
 }
