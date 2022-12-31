@@ -192,6 +192,17 @@
    </delete>
 
 
+<select id="buylist" parameterType="com.zoo.entity.ZooMember" resultType="com.zoo.entity.ZooProductList">
+	select tbl_order_detail.prod_id
+	from tbl_order ,tbl_order_detail 
+	where tbl_order.cust_id = #{cust_id} 
+	and tbl_order.order_seq = tbl_order_detail.order_seq
+</select>
 
+<select id="buylist2" parameterType="com.zoo.entity.ZooOrderDetail" resultType="com.zoo.entity.ZooProductList">
+	select *
+	from tbl_product
+	where prod_id = #{prod_id}
+</select>
 
 </mapper>

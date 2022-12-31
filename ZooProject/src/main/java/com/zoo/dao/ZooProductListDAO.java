@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.smhrd.database.SessionManager;
 import com.zoo.entity.ZooCart;
+import com.zoo.entity.ZooMember;
 import com.zoo.entity.ZooPdBudget;
 import com.zoo.entity.ZooProductList;
 import com.zoo.entity.ZooSeller;
@@ -116,14 +117,21 @@ public class ZooProductListDAO {
 		session.close();
 		return productList;
 	}
-
 	
-//	public int cancel(ZooCart dto) {
-//		
-//		SqlSession session = sqlsessionFactory.openSession(true);
-//		
-//		int cnt = session.delete("cancel", dto);
-//		
-//		return cnt;
-//	}
+	// 구매내역 - 상품아이디만
+	public List<ZooProductList> buylist(ZooMember dto) {
+		SqlSession session = sqlsessionFactory.openSession(true);
+		List<ZooProductList> result = session.selectList("buylist",dto);
+		session.close();
+		return result;
+	}
+	
+	// 구매내역 - 상품정보
+	public ZooProductList buylist2(ZooProductList dto) {
+		SqlSession session = sqlsessionFactory.openSession(true);
+		ZooProductList result = session.selectOne("buylist2",dto);
+		session.close();
+		return result;
+	}
+
 }

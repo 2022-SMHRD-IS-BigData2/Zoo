@@ -16,6 +16,7 @@ import com.zoo.controller.ZooDeleteCon;
 import com.zoo.controller.ZooGoAfterpayCon;
 import com.zoo.controller.ZooGoCartCon;
 import com.zoo.controller.ZooGoDetailCon;
+import com.zoo.controller.ZooGoIntroPageCon;
 import com.zoo.controller.ZooGoJoinCon;
 import com.zoo.controller.ZooGoLoginCon;
 import com.zoo.controller.ZooGoReviewBoardCon;
@@ -87,6 +88,7 @@ public class ZooFrontController extends HttpServlet {
 		handlerMapping.put("/gopayafter.do", new ZooGoAfterpayCon());
 
 		handlerMapping.put("/godelwish.do", new ZoowishDelCon());
+		handlerMapping.put("/gointropage.do", new ZooGoIntroPageCon());
 		
 
 		

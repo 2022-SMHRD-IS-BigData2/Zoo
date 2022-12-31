@@ -24,7 +24,7 @@ public class ZoosearchCon implements ZooController {
 		String search = request.getParameter("search");
 		System.out.println(search);
 
-		// 여기서 에러 발생
+		
 		ZooProductList dto = new ZooProductList();
 		dto.setProd_name(search);
 		ZooProductListDAO dao = new ZooProductListDAO();

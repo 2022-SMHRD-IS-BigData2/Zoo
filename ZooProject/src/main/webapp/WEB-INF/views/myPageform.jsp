@@ -1,3 +1,5 @@
+<%@page import="com.zoo.entity.ZooProductList"%>
+<%@page import="java.util.List"%>
 <%@page import="com.zoo.entity.ZooMember"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -37,6 +39,7 @@
     <meta property="og:type" content="website">
   </head>
   <%ZooMember user =(ZooMember)session.getAttribute("user"); %>
+  <% List<ZooProductList> buylist = (List<ZooProductList>)session.getAttribute("buylist"); %>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-gradient u-header u-header" id="sec-d939" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
   <div class="u-clearfix u-sheet u-sheet-1">
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
@@ -298,17 +301,38 @@
                   <div class="u-border-2 u-border-grey-60 u-line u-line-horizontal u-line-2"></div>
                   <div class="u-container-style u-group u-shape-rectangle u-group-2">
                     <div class="u-container-layout u-container-layout-4">
-                      <img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/pd_4.jpg" alt="" data-image-width="600" data-image-height="600">
+             
+             
+             
+             
+      <%////////////////////////////////////for문 자리//////////////////////////////// %>       
+             
+      
+             
+                      <img class="u-image u-image-default u-preserve-proportions u-image-1" src="<%=buylist.get(0).getProd_main_img() %>" alt="" data-image-width="600" data-image-height="600">
                       <a href="https://nicepage.com/templates" class="u-border-2 u-border-grey-75 u-btn u-btn-round u-button-style u-hover-palette-5-light-1 u-palette-5-light-2 u-radius-6 u-btn-1"> 주 문 취 소</a>
-                      <h6 class="u-text u-text-14"> 마카롱꼬끄 100% 아몬드 가루<br>마카롱 쿠키
+                      <h6 class="u-text u-text-14"> <%=buylist.get(0).getProd_name() %>
                       </h6>
                       <div class="u-clearfix u-custom-html u-custom-html-2">
                         <input type="checkbox">
                       </div>
-                      <h6 class="u-text u-text-15">5,000 원</h6>
+                      <h6 class="u-text u-text-15"><%=buylist.get(0).getProd_price() %></h6>
                       <a href="writeReviewPage.do" class="u-border-2 u-border-grey-75 u-btn u-btn-round u-button-style u-hover-palette-5-light-1 u-palette-5-light-2 u-radius-6 u-btn-2">리 뷰 작 성</a>
                       <div class="u-border-1 u-border-palette-5-light-1 u-line u-line-horizontal u-line-3"></div>
                     </div>
+                    
+                    
+                         <%/////////////////////////////for 문 자리/////////////////////////////////////// %>  
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                   </div>
                   <div class="u-container-style u-group u-shape-rectangle u-group-3">
                     <div class="u-container-layout u-container-layout-5"><span class="u-file-icon u-icon u-icon-1"><img src="images/my_arrow_left.png" alt=""></span><span class="u-file-icon u-icon u-icon-2"><img src="images/my_arrow_right.png" alt=""></span>
