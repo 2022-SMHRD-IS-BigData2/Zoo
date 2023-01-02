@@ -13,7 +13,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
   </style>
-<link rel="stylesheet" href="introPage.css">
+<link rel="stylesheet" href="assets/css/introPage.css">
 </head>
 <body>
   <!-- <img src="images/logo.png" id="logo" alt=""> -->
@@ -21,8 +21,8 @@
   <h1 id="top" data-text="brand of week">brand of week</h1>
   <iframe class="play" width="1500" height="650" src="https://www.youtube.com/embed/Iir25boA5BY?autoplay=1&mute=1&amp;playlist=Iir25boA5BY&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-  <button type="button" class="btn btn-success btn_"><a href="gomainpage.do">홈으로</a></button>&nbsp;&nbsp;&nbsp;&nbsp;
-  <button type="button" class="btn btn-warning btn_">구매하러</button>
+  <button type="button" class="btn btn-success btn_"style="left: -33.3%;"><a href="gomainpage.do">홈으로</a></button>&nbsp;&nbsp;&nbsp;&nbsp;
+  <button type="button" class="btn btn-warning btn_"style="left: -33.3%;">구매하러</button>
 
   <div class="box child3">
     <a href="#top"><i class="fa-solid fa-arrow-up"></i></a>
